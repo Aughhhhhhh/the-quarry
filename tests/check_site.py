@@ -83,5 +83,5 @@ assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 40, "infected": 26, "dead": 54}, epilogue.fates
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
-assert epilogue.list_items["headline-asset-outros"] == 20, epilogue.list_items
+assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items
 print("Guide counts, anchors, and assets verified.")
