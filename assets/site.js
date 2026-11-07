@@ -43,13 +43,6 @@ search.addEventListener("input", () => {
   }
 });
 
-document.addEventListener("keydown", event => {
-  if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey ||
-    event.target.closest("input, textarea, select, [contenteditable]")) return;
-  event.preventDefault();
-  search.focus();
-});
-
 const checklist = document.querySelector("#collectibles");
 const chapterGroups = Array.from(checklist.querySelectorAll("[data-chapter]"));
 const items = Array.from(checklist.querySelectorAll("[data-type]"));
