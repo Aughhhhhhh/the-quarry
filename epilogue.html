@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111513">
+  <meta name="description" content="Look up 120 epilogue card records from The Quarry, with the choices that lead to each recorded outcome.">
+  <title>Epilogue cards · The Quarry Field Guide</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/epilogue.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./"><img src="assets/mark.svg" width="36" height="36" alt=""><span>THE QUARRY<small>FIELD GUIDE</small></span></a>
+      <nav aria-label="Main">
+        <a href="./#walkthrough">Walkthrough</a>
+        <a href="./#endings">Ending routes</a>
+        <a href="./#collectibles">Collectibles</a>
+        <a href="./#achievements">Achievements</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero archive-hero" aria-labelledby="title">
+      <img src="assets/lodge.webp" alt="" width="840" height="351" fetchpriority="high">
+      <div class="wrap hero-content">
+        <p class="eyebrow"><span class="signal"></span> HACKETT’S QUARRY <span class="line"></span> AFTER DAWN</p>
+        <h1 id="title">Epilogue cards</h1>
+        <p class="hero-copy">Find the choices behind 120 documented fate-card records for 17 characters.</p>
+        <div class="actions"><a class="button primary" href="#cards">Browse the cards</a><a class="button secondary" href="#after-the-night">Eliza and the headlines</a><a class="button secondary" href="./#endings">See ending routes</a></div>
+      </div>
+    </section>
+    <div class="wrap">
+      <section class="section" id="cards" aria-labelledby="cards-title">
+        <p class="eyebrow">01 / FATE CARDS</p>
+        <h2 id="cards-title">Find an outcome</h2>
+        <p class="section-intro">Choose a character, outcome, or search term. Steps describe the choices that matter and assume the characters reach the relevant scene.</p>
+        <p class="notice"><strong>Story spoilers.</strong> Some cards share a scene or differ only in wording. The catalog counts card records. Entries with conflicting or incomplete conditions are marked for further verification. <a href="#audit">Read the audit notes.</a></p>
+        <div class="tools archive-tools" id="fate-filters" hidden>
+          <div><label for="fate-search">Search cards</label><input type="search" id="fate-search" placeholder="Try freezer or blood vial" autocomplete="off"></div>
+          <div><label for="fate-character">Character</label><select id="fate-character"><option value="">Everyone</option><option value="abi">Abigail Blyg</option><option value="dylan">Dylan Lenivy</option><option value="emma">Emma Mountebank</option><option value="jacob">Jacob Custos</option><option value="kaitlyn">Kaitlyn Ka</option><option value="laura">Laura Kearney</option><option value="max">Max Brinly</option><option value="nick">Nick Furcillo</option><option value="ryan">Ryan Erzahler</option><option value="bobby">Bobby Hackett</option><option value="caleb">Caleb Hackett</option><option value="chris">Chris Hackett</option><option value="constance">Constance Hackett</option><option value="jedediah">Jedediah Hackett</option><option value="kaylee">Kaylee Hackett</option><option value="travis">Travis Hackett</option><option value="silas">Silas Vorez</option></select></div>
+          <div><label for="fate-outcome">Outcome</label><select id="fate-outcome"><option value="">Any outcome</option><option value="alive">Alive</option><option value="infected">Still infected</option><option value="dead">Deceased</option></select></div>
+        </div>
+        <p class="meta" id="fate-count" role="status" hidden></p>
+        <div class="stack">
+          <details class="entry" id="abi" data-character="abi">
+            <summary><strong>Abigail Blyg</strong><span class="meta">5 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-abi-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-abi-1">Safe in the surveillance room</a></h3>
+              <p>Shoot Nick in the Chapter 6 pool house. Keep Emma uninfected to avoid both later attacks, then get Abi from the shelter to Chris’s office.</p>
+            </li>
+            <li class="fate-card" id="card-abi-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-abi-2">Escapes werewolf Emma in the shelter</a></h3>
+              <p>Give Emma her first bite in Chapter 6, keep Abi alive at the pool, then choose Ladder in Chapter 9. If Dylan loosened a rung in Chapter 2, pass the recovery prompt.</p>
+            </li>
+            <li class="fate-card" id="card-abi-3" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-abi-3">Killed by Nick at the pool house</a></h3>
+              <p>In Chapter 6, let Abi’s shot expire as Nick transforms.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=617s">Scene footage at 10:17</a></p>
+            </li>
+            <li class="fate-card" id="card-abi-4" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-abi-4">Killed by Emma at the van</a></h3>
+              <p>Infect Emma on the island in Chapter 4. With Abi alive at the van in Chapter 8, let Emma reach Abi before Kaitlyn lands the shot.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=723s">Scene footage at 12:03</a></p>
+            </li>
+            <li class="fate-card" id="card-abi-5" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-abi-5">Killed by Emma in the storm shelter</a></h3>
+              <p>Infect Emma in Chapter 6 only. When she turns with Abi in the shelter, choose Stairs, or choose Ladder and fail the rung recovery if it appears.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1593s">Scene footage at 26:33</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Abigail_Blyg">Epilogue catalog · Abigail Blyg</a> · <a href="https://thequarry.fandom.com/wiki/Abigail">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="dylan" data-character="dylan">
+            <summary><strong>Dylan Lenivy</strong><span class="meta">12 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-dylan-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-dylan-1">Survives the lodge after Caleb is shot</a></h3>
+              <p>Keep Dylan with Kaitlyn. At the Chapter 10 office, Investigate when silver is available and shoot Caleb.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-dylan-2">Survives after Kaitlyn traps Caleb</a></h3>
+              <p>Keep Dylan with Kaitlyn and reach the kitchen. Use the Chapter 1 rabbit and complete the freezer-door mash.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-dylan-3">Hides in a classroom, uninfected</a></h3>
+              <p>Keep Dylan uninfected and with Kaitlyn at the lodge. Hide in the upstairs rooms and fail Kaitlyn’s breathing check. Caleb goes after Kaitlyn.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-4" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-dylan-4">Lives with the radio-hut infection</a></h3>
+              <p>Break into the cabin in Chapter 1 to set up Dylan’s bite. Leave his hand intact in Chapter 5 and leave Silas alive.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-5" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-dylan-5">Spared by Caleb in the kitchen</a></h3>
+              <p>Use a late bite so Dylan still reaches the lodge. A kitchen escape failure can leave him alive because of the bite. Keep his infection active.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-6" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-dylan-6">Spared during the lodge chase</a></h3>
+              <p>Bring a late-infected Dylan to the lodge. Choose Wait and withhold fire so Caleb reaches him and leaves him behind. Keep his infection active.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-7" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-dylan-7">Hides in a classroom, infected</a></h3>
+              <p>Bring a late-infected Dylan to the lodge, hide upstairs and fail the breathing check. Keep his infection active.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-8" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-dylan-8">Takes refuge after Kaitlyn misses the silver shot</a></h3>
+              <p>Bring a late-infected Dylan to the lodge. As Kaitlyn, Investigate and miss the shot at Caleb. Keep Dylan’s infection active.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-dylan-9">Killed by Emma after the van opens</a></h3>
+              <p>Infect Emma on the island and keep Dylan uninfected. Repel Emma’s first charge at Abi, then miss the later shots as Emma goes after Dylan.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=766s">Scene footage at 12:46</a></p>
+            </li>
+            <li class="fate-card" id="card-dylan-10" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-dylan-10">Killed inside the van</a></h3>
+              <p>Infect Emma on the island. Let Nick kill Abi in Chapter 6. With Dylan still uninfected, miss the shot when Emma attacks him inside the van.</p>
+            </li>
+            <li class="fate-card" id="card-dylan-11" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-dylan-11">Killed at the scrapyard crane</a></h3>
+              <p>Keep Dylan uninfected. Warn Kaitlyn, Sound Horn and fail the blowtorch mash.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1326s">Scene footage at 22:06</a></p>
+            </li>
+            <li class="fate-card" id="card-dylan-12" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-dylan-12">Killed by Caleb before dawn</a></h3>
+              <p>Bring an uninfected Dylan into the Chapter 10 kitchen and choose Run instead of the freezer route. Other failed lodge encounters can also kill him.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2915s">Scene footage at 48:35</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Dylan_Lenivy">Epilogue catalog · Dylan Lenivy</a> · <a href="https://thequarry.fandom.com/wiki/Dylan">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="emma" data-character="emma">
+            <summary><strong>Emma Mountebank</strong><span class="meta">8 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-emma-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-emma-1">Safe in the surveillance room</a></h3>
+              <p>Escape the treehouse without a bite and avoid the later bite in Chapter 6. Reach Chris’s office from the shelter.</p>
+            </li>
+            <li class="fate-card" id="card-emma-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-emma-2">Fends off infected Jacob with the bracelet</a></h3>
+              <p>Pick up Emma’s bracelet as Jacob in Chapter 1. Infect Emma on the island and Jacob in Chapter 6. Repel Emma with regular shells and free Jacob. Kill Chris so Emma reaches the woods, then use the bracelet prompt when Jacob turns.</p>
+            </li>
+            <li class="fate-card" id="card-emma-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-emma-3">Reunites with Jacob in the woods</a></h3>
+              <p>Get Emma bitten on the island, drive her off at the van without silver, and shoot Chris in Chapter 9. Free Jacob and keep him uninfected to get the conversation.</p>
+            </li>
+            <li class="fate-card" id="card-emma-4" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-emma-4">Survives after transforming at the van</a></h3>
+              <p>Take the island bite, then survive Chapter 8 without a silver shot. Leave Chris, Caleb and Silas alive to preserve that infection.</p>
+            </li>
+            <li class="fate-card" id="card-emma-5" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-emma-5">Survives after transforming in the shelter</a></h3>
+              <p>Avoid the island bite, take the Chapter 6 bite and let the shelter scene play. Leave the curse active.</p>
+            </li>
+            <li class="fate-card" id="card-emma-6" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-emma-6">Killed by Max at the treehouse</a></h3>
+              <p>Choose Open Trapdoor immediately in Chapter 4. Several failed chase or zipline prompts can also kill Emma on the island.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=166s">Scene footage at 02:46</a></p>
+            </li>
+            <li class="fate-card" id="card-emma-7" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-emma-7">Shot with silver at the van</a></h3>
+              <p>Infect Emma on the island and keep Abi alive to supply silver. As Kaitlyn, land the shot that protects Abi, then choose a silver shell when it is offered.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=835s">Scene footage at 13:55</a></p>
+            </li>
+            <li class="fate-card" id="card-emma-8" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-emma-8">Killed by an infected Jacob</a></h3>
+              <p>Do not pick up Emma’s bracelet. Infect Emma on the island and Jacob in Chapter 6, keep both alive and free Jacob. Shoot Chris to return Emma to human form before the woods reunion.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2119s">Scene footage at 35:19</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Emma_Mountebank">Epilogue catalog · Emma Mountebank</a> · <a href="https://thequarry.fandom.com/wiki/Emma">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="jacob" data-character="jacob">
+            <summary><strong>Jacob Custos</strong><span class="meta">12 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-jacob-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-jacob-1">Freed from the cages and survives</a></h3>
+              <p>Keep Jacob uninfected and solve the breakers in Chapter 8. Shoot Chris in Chapter 9 so Jacob avoids the woods chase.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-jacob-2">Escapes Chris’s snare in the woods</a></h3>
+              <p>Free uninfected Jacob but leave Chris alive. Choose to flee in Chapter 10 and pass the escape prompts.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-jacob-3">Cured when Silas dies</a></h3>
+              <p>Infect Jacob in Chapter 6 and keep him alive through the cages. Kill Silas at the end.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-4" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-jacob-4">Reunites with Emma</a></h3>
+              <p>Use the Nobody’s Fool setup. Keep Jacob uninfected and free him. Cure Emma’s Chapter 4 bite by shooting Chris.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-5" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-jacob-5">Survives the basement with the curse</a></h3>
+              <p>Infect Jacob in Chapter 6, then free him or let his infection protect him in the basement. Keep Caleb and Silas alive.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-6" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-jacob-6">Turns and kills Emma</a></h3>
+              <p>Free infected Jacob, then shoot Chris to cure island-infected Emma. Without the bracelet, Emma can die when Jacob turns. Jacob remains infected if the rest of the curse is left active.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-7" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-7">Shot through the bushes</a></h3>
+              <p>In Chapter 4, shoot into the bushes as Ryan during the second aiming window.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=81s">Scene footage at 01:21</a></p>
+            </li>
+            <li class="fate-card" id="card-jacob-8" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-8">Killed by Chris in the woods</a></h3>
+              <p>Keep Jacob uninfected and able to reach the woods. Leave Chris alive and fail the Chapter 10 escape.</p>
+            </li>
+            <li class="fate-card" id="card-jacob-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-9">Nick kills Jacob after a failed rescue</a></h3>
+              <p>Keep both alive and leave Jacob uninfected. Start the Chapter 8 breaker puzzle and fail to free Jacob before the cages open.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=955s">Scene footage at 15:55</a></p>
+            </li>
+            <li class="fate-card" id="card-jacob-10" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-10">Nick kills Jacob after Ryan leaves him</a></h3>
+              <p>Keep Nick alive and Jacob uninfected. Refuse to help Jacob in Chapter 8 and let the power go out in Chapter 9.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1286s">Scene footage at 21:26</a></p>
+            </li>
+            <li class="fate-card" id="card-jacob-11" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-11">Drowns looking for the rotor arm</a></h3>
+              <p>Steal the arm in Chapter 1. Dive and grab it in Chapter 3, then choose Pull twice when Jacob is snagged.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=0s">Scene footage at 00:00</a></p>
+            </li>
+            <li class="fate-card" id="card-jacob-12" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jacob-12">Killed by a second bear trap</a></h3>
+              <p>Keep Jacob uninfected. At the Chapter 6 trap, choose Pull Free and fail the recovery prompt.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=541s">Scene footage at 09:01</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Jacob_Custos">Epilogue catalog · Jacob Custos</a> · <a href="https://thequarry.fandom.com/wiki/Jacob">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="kaitlyn" data-character="kaitlyn">
+            <summary><strong>Kaitlyn Ka</strong><span class="meta">18 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-kaitlyn-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-kaitlyn-1">Shoots Caleb with silver</a></h3>
+              <p>Keep a counselor alive to hand Kaitlyn silver at the office. Investigate the knocking, then hit Caleb.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2723s">Scene footage at 45:23</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-kaitlyn-2">Traps Caleb with the rabbit</a></h3>
+              <p>Keep the rabbit from Chapter 1. Reach the kitchen, choose Freezer and Use Decoy, then pass the door mash.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-kaitlyn-3">Rescued from the freezer with Caleb, then cured</a></h3>
+              <p>Infect Kaitlyn in Chapter 9 and keep Dylan at the lodge. Use the rabbit decoy and fail the door mash, trapping both inside. Dylan must still be able to free them. Kill Silas to cure them.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-4" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-kaitlyn-4">Spared in the kitchen, then cured</a></h3>
+              <p>Get Kaitlyn bitten at the scrapyard. At the lodge, let Caleb catch her in the kitchen and spare her. Kill Silas.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-5" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-5">Spared in the kitchen</a></h3>
+              <p>With an active bite, fail the kitchen breathing check or try to Run. Leave her source of infection alive.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-6" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-6">Spared on the window route</a></h3>
+              <p>With an active bite, choose Window and fail the escape prompt. Caleb can spare her, leaving her infected at dawn.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-7" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-7">Survives under the scrapyard debris</a></h3>
+              <p>Get Kaitlyn to the scrapyard alone after Dylan dies. Let her be bitten while hiding in the car, then fail the final support-rod prompt. Leave the curse active.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-8" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-8">Survives the cold alone</a></h3>
+              <p>Enter the freezer to hide while infected. Keep the curse active and leave her trapped until the recap.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-9" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-9">Rescued from the freezer with Caleb, still cursed</a></h3>
+              <p>Infect Kaitlyn, keep Dylan at the lodge, lure Caleb inside and fail the door mash. The paired rescue variation requires Dylan to free them and the curse to remain active.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-10" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-10">Survives a fall from the beam</a></h3>
+              <p>With Kaitlyn infected, choose Beam and fail the two prompts. Leave her infection active.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-11" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-11">Spared in the upstairs rooms</a></h3>
+              <p>With Kaitlyn infected, choose Hide upstairs and fail the breathing check. Leave her infection active.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-12" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-kaitlyn-12">Misses the shot after receiving silver</a></h3>
+              <p>Have infected Kaitlyn Investigate the office. Withhold or miss the silver shot and leave Caleb and Silas alive.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-13" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-13">Freezes while hiding inside</a></h3>
+              <p>As an uninfected Kaitlyn, hide inside the freezer without a rescue. This is separate from using the rabbit decoy.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2948s">Scene footage at 49:08</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-14" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-14">Killed at the start of the lodge attack</a></h3>
+              <p>With Kaitlyn alone and uninfected, choose Wait and let the shot expire.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2359s">Scene footage at 39:19</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-15" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-15">Killed in the kitchen</a></h3>
+              <p>Bring an uninfected Kaitlyn to the kitchen and choose Run or fail the breathing check.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2871s">Scene footage at 47:51</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-16" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-16">Crushed at the scrapyard</a></h3>
+              <p>Reach the scrapyard without Dylan, keep Kaitlyn uninfected, and fail to dislodge the support at the end of the encounter.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1560s">Scene footage at 26:00</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-17" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-17">Killed while alone at the scrapyard</a></h3>
+              <p>After losing Dylan, miss a critical shot or escape prompt as uninfected Kaitlyn. One route is to go for the gun and then miss the shot.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1382s">Scene footage at 23:02</a></p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-18" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-18">Pulled into the freezer by Caleb</a></h3>
+              <p>With Kaitlyn uninfected, use the rabbit as a decoy and fail the mash to close the door. Caleb drags her in.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2993s">Scene footage at 49:53</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Kaitlyn_Ka">Epilogue catalog · Kaitlyn Ka</a> · <a href="https://thequarry.fandom.com/wiki/Kaitlyn">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="laura" data-character="laura">
+            <summary><strong>Laura Kearney</strong><span class="meta">10 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-laura-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-laura-1">Kills Silas at his nest</a></h3>
+              <p>Keep Travis friendly enough to work with Laura, have Ryan accept the bite and kill Chris, survive the car attack, then raise the gun and shoot Silas.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3655s">Scene footage at 1:00:55</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-laura-2">Reunites with Max on the island</a></h3>
+              <p>Spare Travis in Chapter 7. Have Ryan refuse the bite and shoot Chris. Win Laura’s later gun struggle and shoot Travis, then walk Max across the island.</p>
+            </li>
+            <li class="fate-card" id="card-laura-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-laura-3">Protected by the blood vial</a></h3>
+              <p>Get the vial by shooting Bobby in Chapter 3. Reach the nest and take the vial as Laura. Let the shot at Silas expire.</p>
+            </li>
+            <li class="fate-card" id="card-laura-4" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-laura-4">Cured and locked in the basement</a></h3>
+              <p>Use the motel reunion setup through Ryan’s death, then lose the later struggle or withhold fire instead of shooting Travis.</p>
+            </li>
+            <li class="fate-card" id="card-laura-5" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-5">Kills Silas after the crash and dies</a></h3>
+              <p>Crash the car in Chapter 10. Complete the escape and firing prompts to kill Silas before Laura dies.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3304s">Scene footage at 55:04</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-6" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-6">Killed crawling out of the car</a></h3>
+              <p>Crash the car and fail the escape prompts after the crash.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3217s">Scene footage at 53:37</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-7" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-7">Stabbed by Travis in revenge</a></h3>
+              <p>Shoot Travis during the Chapter 7 escape. In Chapter 9, have Ryan shoot Chris. Travis stabs Laura after she changes back.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1904s">Scene footage at 31:44</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-8" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-8">Dies fighting Travis</a></h3>
+              <p>Let Ryan’s Chapter 9 attic shot expire. Chris kills Ryan and the still-transformed Laura and Travis kill one another.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1803s">Scene footage at 30:03</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-9">Killed by Silas at the nest</a></h3>
+              <p>Reach the nest, leave Laura without the vial’s protection and withhold the final shot.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3395s">Scene footage at 56:35</a></p>
+            </li>
+            <li class="fate-card" id="card-laura-10" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-laura-10">Shot by Ryan at the Hackett house</a></h3>
+              <p>At the attic shootout, aim right and shoot the transformed Laura instead of Chris.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2057s">Scene footage at 34:17</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Laura_Kearney">Epilogue catalog · Laura Kearney</a> · <a href="https://thequarry.fandom.com/wiki/Laura">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="max" data-character="max">
+            <summary><strong>Max Brinly</strong><span class="meta">5 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-max-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-max-1">Cured and stays on the island</a></h3>
+              <p>Shoot Chris in Chapter 9 and choose Stay when Max reaches the dock.</p>
+            </li>
+            <li class="fate-card" id="card-max-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-max-2">Cured and waits for Laura</a></h3>
+              <p>Cure Max and keep him on the island. Laura dies or fails to return. The game can use a different recap line about him waiting.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-max-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-max-3">Reunites with Laura</a></h3>
+              <p>Follow the motel route. With Chris dead and Travis shot by Laura after Ryan bleeds out, walk Max to the other side of the island.</p>
+            </li>
+            <li class="fate-card" id="card-max-4" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-max-4">Still has Chris’s curse</a></h3>
+              <p>Leave Chris alive and avoid a later cure through the remaining infection chain. Max’s playable island scene is skipped.</p>
+            </li>
+            <li class="fate-card" id="card-max-5" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-max-5">Killed after swimming to shore</a></h3>
+              <p>Shoot Chris to make Max playable. At the dock choose Swim to Shore.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2067s">Scene footage at 34:27</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Max_Brinly">Epilogue catalog · Max Brinly</a> · <a href="https://thequarry.fandom.com/wiki/Max">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="nick" data-character="nick">
+            <summary><strong>Nick Furcillo</strong><span class="meta">4 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-nick-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-nick-1">Cured when Silas dies</a></h3>
+              <p>Stop Laura’s cage shot in Chapter 8. Kill Silas at the end.</p>
+            </li>
+            <li class="fate-card" id="card-nick-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-nick-2">Cured when Caleb dies</a></h3>
+              <p>Stop Laura’s cage shot. In Chapter 10 use silver to kill Caleb.</p>
+            </li>
+            <li class="fate-card" id="card-nick-3" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-nick-3">Survives the full moon infected</a></h3>
+              <p>Stop Laura’s cage shot. Leave both Caleb and Silas alive.</p>
+            </li>
+            <li class="fate-card" id="card-nick-4" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-nick-4">Shot by Laura in the cage</a></h3>
+              <p>Do not interrupt Laura when she aims at the caged werewolf in Chapter 8.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=922s">Scene footage at 15:22</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Nick_Furcillo">Epilogue catalog · Nick Furcillo</a> · <a href="https://thequarry.fandom.com/wiki/Nick">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="ryan" data-character="ryan">
+            <summary><strong>Ryan Erzahler</strong><span class="meta">9 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-ryan-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-ryan-1">Survives the Silas hunt</a></h3>
+              <p>Accept Laura’s bite and shoot Chris. Keep Travis allied with Laura, then survive the car attack and kill Silas.</p>
+            </li>
+            <li class="fate-card" id="card-ryan-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-ryan-2">Protected by Bobby’s blood vial</a></h3>
+              <p>Shoot Bobby while he drags Nick. At the hunt, give the vial to Ryan and let Silas live.</p>
+            </li>
+            <li class="fate-card" id="card-ryan-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-ryan-3">Shoots Travis after Laura dies</a></h3>
+              <p>Shoot Travis in Chapter 7. As Ryan, keep the knife and stab Bobby, accept Laura’s bite, and shoot Chris. Win the gun struggle after Travis kills Laura and shoot Travis.</p>
+            </li>
+            <li class="fate-card" id="card-ryan-4" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-4">Bleeds out after the attic fight</a></h3>
+              <p>Decline Laura’s bite, then shoot Chris in Chapter 9.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1839s">Scene footage at 30:39</a></p>
+            </li>
+            <li class="fate-card" id="card-ryan-5" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-5">Killed by Chris in the attic</a></h3>
+              <p>Do not shoot Chris during Ryan’s aiming window. Aiming at Laura instead also leaves Chris free to kill Ryan.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1784s">Scene footage at 29:44</a></p>
+            </li>
+            <li class="fate-card" id="card-ryan-6" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-6">Dies in the car crash</a></h3>
+              <p>Reach the Silas hunt and fail to recover control of the car.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3197s">Scene footage at 53:17</a></p>
+            </li>
+            <li class="fate-card" id="card-ryan-7" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-7">Shot by Travis</a></h3>
+              <p>Shoot Travis in Chapter 7. Kill Chris and fail Ryan’s struggle for the gun when Travis attacks him.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1944s">Scene footage at 32:24</a></p>
+            </li>
+            <li class="fate-card" id="card-ryan-8" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-8">Killed by Silas at the nest</a></h3>
+              <p>Reach the nest. Leave Ryan without the vial’s protection and let Laura’s shot expire.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3334s">Scene footage at 55:34</a></p>
+            </li>
+            <li class="fate-card" id="card-ryan-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-ryan-9">Killed by Bobby after the shootout</a></h3>
+              <p>Shoot Travis in Chapter 7 and leave Bobby unstabbed. Shoot Chris and win Ryan’s fight with Travis. Bobby can then finish Ryan.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1995s">Scene footage at 33:15</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Ryan_Erzahler">Epilogue catalog · Ryan Erzahler</a> · <a href="https://thequarry.fandom.com/wiki/Ryan">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="bobby" data-character="bobby">
+            <summary><strong>Bobby Hackett</strong><span class="meta">2 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-bobby-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-bobby-1">Fights off Chris</a></h3>
+              <p>Leave Bobby unstabbed in Chapter 9. Pulling the knife out early also prevents Ryan from stabbing him.</p>
+            </li>
+            <li class="fate-card" id="card-bobby-2" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-bobby-2">Killed by Chris after being wounded</a></h3>
+              <p>Keep the knife in, barricade the door successfully so Bobby does not remove it, then Stab when Ryan gets the chance.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1743s">Scene footage at 29:03</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Bobby_Hackett">Epilogue catalog · Bobby Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Bobby">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="caleb" data-character="caleb">
+            <summary><strong>Caleb Hackett</strong><span class="meta">11 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-caleb-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-caleb-1">Cured when Laura kills Silas</a></h3>
+              <p>Keep Caleb alive and out of the freezer, then kill Silas. The catalog records two recap phrasings with overlapping instructions.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-caleb-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-caleb-2">Returns to human form permanently</a></h3>
+              <p>Spare Caleb at the lodge and kill Silas. The available reports do not identify which extra choice selects this phrasing over the other cured card.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-caleb-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-caleb-3">Freed from the freezer with Kaitlyn, then cured</a></h3>
+              <p>Use the infected-Kaitlyn freezer setup with Dylan available to rescue both, then kill Silas. Reports differ on whether the rescue appears consistently.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-caleb-4" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-caleb-4">Survives the freezer alone</a></h3>
+              <p>Use the rabbit to lock Caleb in, then leave Silas alive. Caleb retains the protection that lets him survive the cold.</p>
+            </li>
+            <li class="fate-card" id="card-caleb-5" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-caleb-5">Returns to human form at dawn</a></h3>
+              <p>Spare Caleb in the lodge and leave Silas alive. Turning human at sunrise leaves the curse active.</p>
+            </li>
+            <li class="fate-card" id="card-caleb-6" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-caleb-6">Stays in the woods until dawn</a></h3>
+              <p>Prevent the lodge fight by losing Dylan at the van and letting Kaitlyn die or get stranded at the scrapyard. Leave Silas alive for the infected outcome.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-caleb-7" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-caleb-7">Rescued from the freezer with Kaitlyn, still cursed</a></h3>
+              <p>Use the infected-Kaitlyn freezer setup with Dylan present to free them. Leave Silas alive. The rescue itself has conflicting reports.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-caleb-8" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-caleb-8">Kills Kaitlyn in the freezer</a></h3>
+              <p>Keep Kaitlyn uninfected. Use Decoy and fail the door mash while Dylan is still in the lodge. Leave Silas alive if you want Caleb to survive too.</p>
+            </li>
+            <li class="fate-card" id="card-caleb-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-caleb-9">Shot using silver passed by the shelter group</a></h3>
+              <p>Keep both Abi and Emma uninfected at the lodge finale, collect the silver in the shelter, and use the Investigate branch to kill Caleb.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2723s">Scene footage at 45:23</a></p>
+            </li>
+            <li class="fate-card" id="card-caleb-10" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-caleb-10">Shot using silver passed by Abi alone</a></h3>
+              <p>Kill or remove Emma before the lodge handoff and keep Abi alive. Collect the shelter silver, then Investigate and shoot Caleb as Kaitlyn.</p>
+            </li>
+            <li class="fate-card" id="card-caleb-11" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-caleb-11">Freezes after losing the curse</a></h3>
+              <p>Trap Caleb alone with the rabbit decoy, then kill Silas while Caleb is still inside.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3069s">Scene footage at 51:09</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Caleb_Hackett">Epilogue catalog · Caleb Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Caleb">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="chris" data-character="chris">
+            <summary><strong>Chris Hackett</strong><span class="meta">3 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-chris-1" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-chris-1">Survives the attic confrontation</a></h3>
+              <p>Let the shotgun window expire or shoot transformed Laura instead. Chris lives and Silas’s hunt is skipped.</p>
+            </li>
+            <li class="fate-card" id="card-chris-2" data-fate="infected">
+              <span class="tag">Still infected</span>
+              <h3><a href="#card-chris-2">Survives after chasing Jacob</a></h3>
+              <p>Free Jacob and keep him uninfected, spare Chris at the attic and have Jacob escape Chris’s woods chase.</p>
+            </li>
+            <li class="fate-card" id="card-chris-3" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-chris-3">Shot by Ryan</a></h3>
+              <p>Shoot Chris during the Chapter 9 attic encounter.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1822s">Scene footage at 30:22</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Chris_Hackett">Epilogue catalog · Chris Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Chris">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="constance" data-character="constance">
+            <summary><strong>Constance Hackett</strong><span class="meta">3 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-constance-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-constance-1">Protected by Bobby</a></h3>
+              <p>Fail the shotgun struggle and leave Bobby unstabbed so he can fight off Chris.</p>
+            </li>
+            <li class="fate-card" id="card-constance-2" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-constance-2">Shot during the struggle</a></h3>
+              <p>Win the Chapter 9 button mash when Constance grabs Laura’s shotgun.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1076s">Scene footage at 17:56</a></p>
+            </li>
+            <li class="fate-card" id="card-constance-3" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-constance-3">Killed by Chris</a></h3>
+              <p>Fail the shotgun struggle so Constance survives it, then have Ryan stab Bobby. Chris can kill her during the house attack.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1765s">Scene footage at 29:25</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Constance_Hackett">Epilogue catalog · Constance Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Constance">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="jedediah" data-character="jedediah">
+            <summary><strong>Jedediah Hackett</strong><span class="meta">3 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-jedediah-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-jedediah-1">Protected by Bobby</a></h3>
+              <p>Run instead of attacking Jedediah and leave Bobby unstabbed.</p>
+            </li>
+            <li class="fate-card" id="card-jedediah-2" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jedediah-2">Killed by Laura</a></h3>
+              <p>Pass the preceding Chapter 9 fight prompts, then choose Attack and win the struggle.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1180s">Scene footage at 19:40</a></p>
+            </li>
+            <li class="fate-card" id="card-jedediah-3" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-jedediah-3">Killed by Chris</a></h3>
+              <p>Run from Jedediah as Laura. Stab Bobby as Ryan so he cannot defend Jedediah in the house attack.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1773s">Scene footage at 29:33</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Jedediah_Hackett">Epilogue catalog · Jedediah Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Jedediah">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="kaylee" data-character="kaylee">
+            <summary><strong>Kaylee Hackett</strong><span class="meta">1 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-kaylee-1" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaylee-1">Killed before the pool scene</a></h3>
+              <p>This is scripted. Laura shoots Kaylee after mistaking her for Chris. No player choice saves her.</p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Kaylee_Hackett">Epilogue catalog · Kaylee Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Kaylee">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="travis" data-character="travis">
+            <summary><strong>Travis Hackett</strong><span class="meta">10 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-travis-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-travis-1">Survives when the curse is lifted</a></h3>
+              <p>Sedate or spare Travis in Chapter 7, keep Ryan and Laura alive at the house, survive the car and shoot Silas at the first opportunity.</p>
+            </li>
+            <li class="fate-card" id="card-travis-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-travis-2">Keeps the gun after Ryan bleeds out</a></h3>
+              <p>Keep Travis uninjured in Chapter 7. Have Ryan decline the bite and shoot Chris, then have Laura lose the gun struggle. The catalog’s suggestion to shoot Travis in Chapter 7 conflicts with the revenge branch.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+            <li class="fate-card" id="card-travis-3" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-travis-3">Escapes the attic fight when Ryan shoots Laura</a></h3>
+              <p>Aim right and shoot transformed Laura during the Chapter 9 shootout. Chris kills Ryan while Travis escapes.</p>
+            </li>
+            <li class="fate-card" id="card-travis-4" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-travis-4">Survives after killing Laura and Ryan</a></h3>
+              <p>Shoot Travis in Chapter 7. In Chapter 9 shoot Chris, then lose Ryan’s gun struggle after Travis stabs Laura.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1944s">Scene footage at 32:24</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-5" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-5">Accidentally shot at the nest</a></h3>
+              <p>Reach the nest, let Raise Gun expire and fail the prompt when Travis lunges for Laura’s gun.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3462s">Scene footage at 57:42</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-6" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-6">Dies fighting Laura</a></h3>
+              <p>Let the attic shot expire so Laura stays transformed and kills Travis as he stabs her.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1803s">Scene footage at 30:03</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-7" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-7">Shot by Ryan after killing Laura</a></h3>
+              <p>Shoot Travis in Chapter 7, then shoot Chris. Win Ryan’s struggle after Travis kills Laura and fire at Travis.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1978s">Scene footage at 32:58</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-8" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-8">Killed in the car</a></h3>
+              <p>During the hunt, go for the gun instead of recovering the wheel. Silas attacks Travis and the car crashes.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3130s">Scene footage at 52:10</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-9" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-9">Killed by Silas in the woods</a></h3>
+              <p>At the nest, raise the gun or fend off Travis, then let the shot at Silas expire. Silas can kill Travis and whoever lacks the vial’s protection.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3598s">Scene footage at 59:58</a></p>
+            </li>
+            <li class="fate-card" id="card-travis-10" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-travis-10">Killed by Silas after the gun struggle</a></h3>
+              <p>Let Raise Gun expire and win the struggle with Travis. Withhold the final shot. The catalog also lists shooting Travis in Chapter 7, which conflicts with reaching this scene.</p>
+              <p class="source-note"><strong>Exact card conditions unverified.</strong></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Travis_Hackett">Epilogue catalog · Travis Hackett</a> · <a href="https://thequarry.fandom.com/wiki/Travis">Character reference</a></p>
+            </div>
+          </details>
+          <details class="entry" id="silas" data-character="silas">
+            <summary><strong>Silas Vorez</strong><span class="meta">4 records</span></summary>
+            <div class="entry-body">
+              <ul class="fate-list" role="list">
+            <li class="fate-card" id="card-silas-1" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-silas-1">Survives the car crash</a></h3>
+              <p>Fail to regain control of the car, then fail Laura’s last prompts so she cannot shoot him.</p>
+            </li>
+            <li class="fate-card" id="card-silas-2" data-fate="alive">
+              <span class="tag">Alive</span>
+              <h3><a href="#card-silas-2">Survives until the next full moon</a></h3>
+              <p>Skip the hunt by leaving Chris alive, or reach the nest and withhold the final shot.</p>
+            </li>
+            <li class="fate-card" id="card-silas-3" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-silas-3">Shot at the nest</a></h3>
+              <p>Reach the nest and hit Silas with silver. This ends the curse.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3655s">Scene footage at 1:00:55</a></p>
+            </li>
+            <li class="fate-card" id="card-silas-4" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-silas-4">Shot after the car crash</a></h3>
+              <p>Crash the car, then complete Laura’s prompts to shoot Silas as she is dying.</p>
+              <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=3304s">Scene footage at 55:04</a></p>
+            </li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://thequarry.fandom.com/wiki/Epilogue#Silas_Vorez_/_The_White_Wolf">Epilogue catalog · Silas Vorez</a> · <a href="https://thequarry.fandom.com/wiki/Silas">Character reference</a></p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="section" id="after-the-night" aria-labelledby="after-the-night-title">
+        <p class="eyebrow">02 / AFTER DAWN</p>
+        <h2 id="after-the-night-title">Eliza and the headlines</h2>
+        <div class="stack">
+          <details class="entry" id="eliza">
+            <summary><strong>Eliza’s final speech</strong><span class="meta">Four documented branches</span></summary>
+            <div class="entry-body">
+              <p>Use the first condition that matches your ending.</p>
+              <ol>
+                <li><strong>Silas dies.</strong> Eliza threatens the player after losing her son. Killing him after the crash also counts. <a href="./#white-wolf">Kill Silas</a></li>
+                <li><strong>Laura reaches the nest and Silas lives.</strong> Eliza gloats that the attempt failed. <a href="./#silas-spared">Spare Silas at the nest</a></li>
+                <li><strong>Caleb dies and the hunt never reaches the nest.</strong> Eliza thanks the player for leaving Silas alive.</li>
+                <li><strong>The other branches.</strong> Eliza is disappointed and warns the player about returning. This includes the early ending that skips Chapter 10. <a href="./#skip-chapter-10">Skip Chapter 10</a></li>
+              </ol>
+              <p class="source-note">Source · <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · Eliza’s ending speeches</a></p>
+            </div>
+          </details>
+          <details class="entry" id="headlines">
+            <summary><strong>The podcast’s opening and closing headlines</strong><span class="meta">Survivors, deaths and evidence</span></summary>
+            <div class="entry-body">
+              <p>The newspaper shown when the podcast starts reports the immediate aftermath. The last newspaper can change after Grace and Anton go through the evidence.</p>
+              <ul>
+                <li>A run where the counselors survive and several Hacketts die can open with the teens being charged. A high death toll can instead open with a massacre report.</li>
+                <li>The route that kills all the counselors, all seven Hacketts and Silas can open with the no-survivor headline. A fatal crash in the Silas hunt can produce a separate car-crash report. <a href="./#no-soul-left">No soul left alive route</a></li>
+                <li>The recorded acquittal run keeps all nine counselors alive and gathers all ten evidence items. Other players report a different final headline with all ten, so read the result after the podcast. <a href="./#teens-acquitted">Recorded acquittal route</a></li>
+                <li>The Bloated Corpse, Memory Card and Torn Bags are the pieces about the missing hikers. A documented run that spares the Hacketts and keeps the curse reaches a hiker-remains headline. Other reported results include a reopened case and unidentified animals in the forest. The exact selection thresholds remain unverified.</li>
+              </ul>
+              <p class="source-note">Sources · <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · podcast and headlines</a> · <a href="https://nintendosmash.com/the-quarry-save-all-hacketts-ending/">Nintendo Smash · recorded Hackett survival outcome</a> · <a href="https://www.youtube.com/watch?v=3yioZpGoxdc&amp;t=2292s">Video Game Sophistry · acquittal epilogue</a> · <a href="https://thequarry.fandom.com/wiki/Talk:Epilogue">The Quarry Wiki · reported headline exceptions</a></p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="section" id="audit" aria-labelledby="audit-title">
+        <p class="eyebrow">03 / SOURCES</p>
+        <h2 id="audit-title">How the cards were checked</h2>
+        <ul>
+          <li>The 120 records correspond to rows in the community epilogue catalog. The labels here describe the cards in plain language. A single playthrough can produce several of these records, including separate cards about the same event. <a href="https://thequarry.fandom.com/wiki/Epilogue#Ending_Slide_Variations">The Quarry Wiki · epilogue catalog</a></li>
+          <li>Chapter walkthroughs and character death and infection lists were used to check prerequisites. “Exact card conditions unverified” means the event is documented but the particular card’s trigger is disputed or unclear. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · choice and consequence guide</a> · <a href="https://thequarry.fandom.com/wiki/Chapter_9">Chapter 9</a> · <a href="https://thequarry.fandom.com/wiki/Chapter_10">Chapter 10</a></li>
+          <li>Scene links go to timestamps supplied by the creator who captured the gameplay. They show the branch playing out. They may end before the recap card appears. <a href="https://www.reddit.com/user/GamingwithAbyss/comments/ve44zc/all_characters_death_scenes_in_the_quarry_all/">Gaming With Abyss · footage index</a></li>
+          <li>Creative director Will Byles reported 186 endings. The 120 card records are a separate count from that figure. The research found no official list that maps the 186 endings to exact inputs. <a href="https://www.gamespot.com/videos/there-are-186-endings-in-the-game-the-quarry-developer-interview/2300-6458528/">Will Byles interview</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap bar">
+      <a class="brand" href="./"><img src="assets/mark.svg" width="36" height="36" alt=""><span>THE QUARRY<small>FIELD GUIDE</small></span></a>
+      <p>Unofficial fan guide. Game and screenshots © 2K / Supermassive Games.</p>
+      <a href="#top">Back to top ↑</a>
+      <a href="https://github.com/Aughhhhhhh/the-quarry">GitHub ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
