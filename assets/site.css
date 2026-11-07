@@ -123,6 +123,8 @@ input::placeholder { color: #b2bcb2; }
 .entry-body ol, .entry-body ul { margin-block: .45rem .8rem; }
 .entry-body .checklist { padding: 0; margin-top: 0; }
 .walkthrough-shot { height: auto; border-radius: .3rem; }
+.reference-shot { margin: .9rem 0; }
+.reference-shot figcaption { margin-top: .35rem; }
 .chapter-choices { margin-block: .9rem; background: var(--bg); }
 .choice-list { margin: 0; }
 .choice-list dt { font-weight: 750; }

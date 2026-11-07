@@ -14,6 +14,8 @@ class Guide(HTMLParser):
         self.anchors = set()
         self.files = set()
         self.page_links = set()
+        self.list_ids = []
+        self.list_items = Counter()
 
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
@@ -27,6 +29,10 @@ class Guide(HTMLParser):
             self.fates[attrs["data-fate"]] += 1
         if "data-character" in attrs:
             self.characters.add(attrs["data-character"])
+        if tag in ("ol", "ul"):
+            self.list_ids.append(attrs.get("id"))
+        if tag == "li" and self.list_ids and self.list_ids[-1]:
+            self.list_items[self.list_ids[-1]] += 1
         href = attrs.get("href", "")
         if href.startswith("#"):
             self.anchors.add(href[1:])
@@ -39,6 +45,10 @@ class Guide(HTMLParser):
             self.files.add(href)
         if tag in ("img", "script"):
             self.files.add(attrs["src"])
+
+    def handle_endtag(self, tag):
+        if tag in ("ol", "ul"):
+            self.list_ids.pop()
 
 
 root = Path(__file__).resolve().parents[1]
@@ -63,6 +73,7 @@ assert guide.entries["Walkthrough"] == 12, guide.entries
 assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()
 assert guide.entries["Puzzle"] == 1 and "cage-puzzle" in guide.ids
 assert guide.entries["Story path"] == 15, guide.entries
+assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6}, guide.list_items
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 40, "infected": 26, "dead": 54}, epilogue.fates
