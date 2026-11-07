@@ -77,4 +77,5 @@ assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-t
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 40, "infected": 26, "dead": 54}, epilogue.fates
+assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 print("Guide counts, anchors, and assets verified.")
