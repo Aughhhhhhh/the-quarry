@@ -73,6 +73,10 @@ assert guide.entries["Walkthrough"] == 12, guide.entries
 assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()
 assert guide.entries["Puzzle"] == 1 and "cage-puzzle" in guide.ids
 assert guide.entries["Story path"] == 15, guide.entries
+assert {
+    "sole-abi", "sole-dylan", "sole-emma", "sole-jacob", "final-girl",
+    "sole-laura", "sole-max", "sole-nick", "last-man-standing",
+} <= guide.ids.keys()
 assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6}, guide.list_items
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
