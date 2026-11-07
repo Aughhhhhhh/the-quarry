@@ -80,7 +80,7 @@ assert {
 assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6}, guide.list_items
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
-assert epilogue.fates == {"alive": 40, "infected": 26, "dead": 65}, epilogue.fates
+assert epilogue.fates == {"alive": 40, "infected": 26, "dead": 69}, epilogue.fates
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
 assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items
