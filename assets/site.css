@@ -122,6 +122,18 @@ input::placeholder { color: #b2bcb2; }
 .entry-body h3, .entry-body h4 { margin-block: .9rem .4rem; }
 .entry-body ol, .entry-body ul { margin-block: .45rem .8rem; }
 .entry-body .checklist { padding: 0; margin-top: 0; }
+.chapter-choices { margin-block: .9rem; background: var(--bg); }
+.choice-list { margin: 0; }
+.choice-list dt { font-weight: 750; }
+.choice-list dd { margin: .2rem 0 .8rem; }
+.choice-list dd + dt { border-top: 1px solid var(--line); padding-top: .65rem; }
+.cage-layout { display: grid; grid-template-columns: repeat(5, auto); align-items: stretch; gap: .25rem; max-width: 34rem; margin: 1rem 0; }
+.cage-layout span { display: grid; place-items: center; min-width: 0; padding: .5rem .22rem; border: 1px solid var(--line); border-radius: .3rem; font-size: .85rem; text-align: center; }
+.cage-layout b { color: var(--accent); }
+.cage-layout .exit { grid-column: 3; }
+.choice-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.choice-table th, .choice-table td { padding: .4rem .55rem; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.choice-table th[scope="row"] { white-space: nowrap; }
 .entry .meta { font-size: .82rem; }
 .subhead { margin-block: 1.5rem .7rem; }
 .subhead .meta { margin-left: .35rem; font: 700 .8rem var(--mono); }

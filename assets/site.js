@@ -102,14 +102,16 @@ checklist.addEventListener("change", event => {
 function revealTarget(hash) {
   const entry = document.getElementById(hash.slice(1));
   if (!entry) return;
-  const group = entry.closest("details");
-  if (entry.hidden || group?.hidden) {
+  const collectibleGroup = entry.closest("[data-chapter]");
+  if (entry.hidden || collectibleGroup?.hidden) {
     type.value = "";
     chapter.value = "";
     unchecked.checked = false;
     filterChecklist();
   }
-  if (group) group.open = true;
+  for (let group = entry.closest("details"); group; group = group.parentElement.closest("details")) {
+    group.open = true;
+  }
   if (entry === find) search.focus({ preventScroll: true });
 }
 
