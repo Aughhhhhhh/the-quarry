@@ -57,6 +57,7 @@ for page in pages.values():
 
 guide = pages["index.html"]
 assert guide.items == {"clue": 40, "evidence": 10, "tarot": 22}, guide.items
+assert {f"vision-{card}" for card in range(1, 23)} <= guide.ids.keys()
 assert guide.entries["Achievement"] == 41, guide.entries
 assert guide.entries["Walkthrough"] == 12, guide.entries
 assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()

@@ -111,10 +111,10 @@ input::placeholder { color: #b2bcb2; }
 .stack { display: grid; gap: .55rem; }
 .entry { border: 1px solid var(--line); border-radius: .4rem; background: var(--panel); }
 .entry:target, .collectible:target { border-color: var(--accent); }
-.entry summary { padding: .85rem 2.55rem .85rem 1rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .8rem; list-style: none; position: relative; }
-.entry summary::-webkit-details-marker { display: none; }
-.entry summary:hover { color: var(--accent); }
-.entry summary::after { content: "+"; position: absolute; right: 1rem; top: .7rem; color: var(--accent); font-size: 1.15rem; }
+.entry > summary { padding: .85rem 2.55rem .85rem 1rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .8rem; list-style: none; position: relative; }
+.entry > summary::-webkit-details-marker { display: none; }
+.entry > summary:hover { color: var(--accent); }
+.entry > summary::after { content: "+"; position: absolute; right: 1rem; top: .7rem; color: var(--accent); font-size: 1.15rem; }
 .entry[open] > summary::after { content: "−"; }
 .entry[open] > summary { border-bottom: 1px solid var(--line); }
 .entry-body { padding: .85rem 1rem 1rem; max-width: 86ch; }
@@ -122,6 +122,7 @@ input::placeholder { color: #b2bcb2; }
 .entry-body h3, .entry-body h4 { margin-block: .9rem .4rem; }
 .entry-body ol, .entry-body ul { margin-block: .45rem .8rem; }
 .entry-body .checklist { padding: 0; margin-top: 0; }
+.walkthrough-shot { height: auto; border-radius: .3rem; }
 .chapter-choices { margin-block: .9rem; background: var(--bg); }
 .choice-list { margin: 0; }
 .choice-list dt { font-weight: 750; }
@@ -143,6 +144,10 @@ input::placeholder { color: #b2bcb2; }
 .collectible label { font-weight: 750; }
 .collectible p { margin: .12rem 0 0; }
 .collectible .tag { display: inline-block; margin-left: .5rem; }
+.pickup-video, .tarot-vision summary { font-size: .88rem; }
+.tarot-vision { margin-top: .3rem; }
+.tarot-vision summary { color: var(--accent); }
+.tarot-vision[open] p { border-left: 1px solid var(--line); padding-left: .7rem; margin-block: .4rem .15rem; }
 .tools { gap: .65rem 1.2rem; }
 .tools > div { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
 .tools label { font-size: .88rem; font-weight: 650; }

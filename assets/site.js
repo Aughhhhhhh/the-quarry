@@ -103,7 +103,7 @@ function revealTarget(hash) {
   const entry = document.getElementById(hash.slice(1));
   if (!entry) return;
   const collectibleGroup = entry.closest("[data-chapter]");
-  if (entry.hidden || collectibleGroup?.hidden) {
+  if (collectibleGroup?.hidden || entry.closest("[data-type]")?.hidden) {
     type.value = "";
     chapter.value = "";
     unchecked.checked = false;
