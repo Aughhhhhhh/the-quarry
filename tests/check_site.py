@@ -155,6 +155,10 @@ for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endi
 assert rough_night.list_items["route-counselors"] == 9
 assert rough_night.list_items["route-checkpoints"] == 13
 assert ("rough-night.html", "route-checklist") in endings.page_links
+recoveries = {f"recover-{scene}" for scene in ("woods", "emma", "jacob", "jail", "van", "cages", "attic", "lodge", "car", "nest")}
+assert {"recover", "lodge-call", *recoveries} <= rough_night.ids.keys()
+assert {"recover", *recoveries} <= set(rough_night.anchors)
+assert ("rough-night.html", "recover") in endings.page_links
 for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
     for number in range(1, count + 1):
         assert f"{kind}-{number}" in rough_night.ids

@@ -42,6 +42,7 @@
           <a href="#pickup-index">Find a pickup</a>
           <a href="#route-cast">Who survives</a>
           <a href="#route-checklist">Playthrough checklist</a>
+          <a href="#recover">Recover after a miss</a>
           <a href="#prologue">Prologue</a>
           <a href="#chapter-1">1 · Camp departure</a>
           <a href="#chapter-2">2 · Truth or Dare</a>
@@ -60,7 +61,7 @@
         <section class="section" id="setup">
           <h2>Before you start</h2>
           <p>Start an interactive single-player game. Use manual directional prompts, button mashes, interrupts and Don’t Breathe. Set <strong>Aim Assist to Off</strong>. Pass each prompt unless the steps call for a miss or a timeout. During Don’t Breathe, release when the threat has turned away and the red danger effect clears.</p>
-          <p>Dialogue in these steps gives you one consistent path. Directions such as <strong>Up</strong> refer to the on-screen quick-time prompt. <strong>Let it expire</strong> means wait without pressing anything.</p>
+          <p>Dialogue in these steps gives you one consistent path. Directions such as <strong>Up</strong> refer to the on-screen quick-time prompt. <strong>Let it expire</strong> means wait without pressing anything. If a scene changes after a missed prompt, check <a href="#recover">the recovery steps</a>.</p>
           <p class="notice">Choose <strong>Rocky Road</strong> in Chapter 2 for all 22 tarot cards. The <a href="#clue-h2">Ranger Box</a> needs <strong>Shady Glade</strong> instead. All ten evidence items work on either trail. Both versions deliberately get Kaitlyn bitten in Chapter 9 to save her and Caleb.</p>
           <details class="route-pickup" id="all-clues-plan">
             <summary>Alternate route · Collect all 40 clues and save everyone</summary>
@@ -304,7 +305,7 @@
           <ol>
             <li>Choose <strong>Worried → Assertive</strong>. At the first fork, choose <strong>Take Shortcut</strong>. Press <strong>Up, Up, Left</strong> and pass the climb mash.</li>
             <li>Choose <strong>Take Shortcut</strong> again. Press <strong>Up, Left, Left</strong> at the stones, then <strong>Up, Right</strong> at the stairs. Passing the full sequence earns <strong>Nick of Time</strong>.</li>
-            <li>When you see the hunter holding Nick, take <strong>Shout?</strong> and hit the hunter, Bobby. The shot leaves him alive and gives Ryan the blood vial. If you reach the bushes after Bobby has left, hold fire. <a href="chapters.html#nick-rescue-timing">Missed shortcut prompts</a></li>
+            <li>When you see the hunter holding Nick, take <strong>Shout?</strong> and hit the hunter, Bobby. The shot leaves him alive and gives Ryan the blood vial. If you reach the bushes after Bobby has left, hold fire. <a href="#recover-woods">Recover from a late arrival or a dive mistake</a></li>
           </ol>
           <h3>Jacob · The snare</h3>
           <ol><li>Let <strong>Call Out?</strong> expire, pass the struggle mash and choose <strong>Pleading</strong>. Let <strong>Throw Dirt?</strong> expire so Bobby marks Jacob with protective blood. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
@@ -340,13 +341,13 @@
           <details class="route-pickup" id="evidence-4"><summary>Optional evidence · Attack Photo</summary><p>Take <strong>Take Photo</strong> immediately after Emma uses the taser. Missing the interrupt loses the evidence and the chase still continues. <a href="collectibles.html#item-e4">Pickup video</a></p></details>
           <ol start="4">
             <li>Press <strong>Down</strong> at the first obstacle and pass the zipline mash. Choose <strong>Spray</strong> and pass both <strong>Up</strong> prompts.</li>
-            <li>On the second visit inside, choose <strong>Use Trapdoor</strong> as soon as it appears. Press <strong>Down</strong> at the cabinet and pass the ladder mash. <a href="chapters.html#island-chase">Recovery inputs after a miss</a></li>
+            <li>On the second visit inside, choose <strong>Use Trapdoor</strong> as soon as it appears. Press <strong>Down</strong> at the cabinet and pass the ladder mash. <a href="#recover-emma">Recovery inputs after a miss</a></li>
           </ol>
-          <h3>Dylan · The lodge</h3>
+          <h3 id="lodge-call">Dylan · Call for help and give Kaitlyn a gun</h3>
           <details class="route-pickup" id="tarot-6"><summary>Optional tarot · Strength</summary><p>Get ready before the group carries Nick through the lodge doorway. Take the card during that cutscene. The base prompt is 3.5 seconds and this moment has no exploration retry. <a href="collectibles.html#item-t6">Card and pickup video</a></p></details>
           <ol>
-            <li>Choose <strong>Optimistic</strong>. In Chris’s office, choose <strong>Hopeful → Determined → Suspicious → Calm</strong> through the phone call and blackout.</li>
-            <li>Choose <strong>Defensive → Give Gun</strong> to arm Kaitlyn.</li>
+            <li>Choose <strong>Optimistic</strong> while the group brings Nick inside. In Chris’s office, choose <strong>Hopeful → Determined</strong> to suggest calling the police.</li>
+            <li>When the phone cuts out, choose <strong>Suspicious → Calm</strong>. After the power goes out, choose <strong>Defensive → Give Gun</strong>. Kaitlyn takes a shotgun and Dylan and Ryan leave for the radio hut. <a href="chapters.html#chapter-4-lodge">Other lodge dialogue</a></li>
           </ol>
           <h3>Emma · The second zipline</h3>
           <ol><li>Choose <strong>Reel Slowly</strong> at the crank. Let <strong>Speed Up?</strong> expire. Emma should leave the island unbitten. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
@@ -410,7 +411,7 @@
           <details class="route-pickup" id="tarot-10"><summary>Optional tarot · Justice</summary><p>After leaving the walkway, turn left and take the card at the camera change. The path to the right starts the scene with Emma. <a href="collectibles.html#item-t10">Card and pickup video</a></p></details>
           <ol start="2">
             <li>Take the path to the right. Choose <strong>Delighted → Apologetic</strong> and press <strong>Right</strong> when the werewolf attacks.</li>
-            <li>Choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong>. Choose <strong>Pry Open</strong> at the trap. Jacob reaches the cages alive. <a href="chapters.html#jacob-chase">Chase and trap variations</a></li>
+            <li>Choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong>. Choose <strong>Pry Open</strong> at the trap. Jacob reaches the cages alive. <a href="#recover-jacob">After a missed dodge or Pull Free</a></li>
           </ol>
           <h3 id="pool-house">Kaitlyn and Abi · The pool house</h3>
           <ol>
@@ -471,7 +472,7 @@
           <ol>
             <li>Choose <strong>Honest</strong> when Travis returns, then <strong>Confident</strong> during his explanation. Let <strong>Take Gun</strong> expire.</li>
             <li>Choose <strong>Confused → Encouraging → Resigned → Empathetic</strong>. Press <strong>Up</strong> to hear more of Travis and Chris’s conversation.</li>
-            <li>When Travis comes into the cell, press <strong>Left</strong> to inject him. If you miss the syringe prompt, take the gun, pass the <strong>Right</strong> prompts and choose <strong>Apologetic</strong> to lock him in unharmed. <a href="chapters.html#jail-escape">Gun escape and recovery inputs</a></li>
+            <li>When Travis comes into the cell, press <strong>Left</strong> to inject him. If you miss it, <a href="#recover-jail">use the gun escape without shooting him</a>.</li>
             <li>Choose <strong>Anxious</strong> after the escape. At the pool house choose <strong>Reassuring</strong>, then <strong>Show Bite</strong> after the island flashback. As Jacob in the cage, choose <strong>Pleading</strong>. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 7 navigation"><a href="#chapter-6">← Chapter 6</a><a href="#chapters">Chapter list</a><a href="#chapter-8">Chapter 8 →</a></nav>
@@ -502,7 +503,7 @@
           <details class="route-pickup" id="tarot-16"><summary>Optional tarot · Wheel of Fortune</summary><p>Follow the tunnel and take the card when the camera swings around. If it expires, back out of the trigger and approach again before leaving through the basement door. <a href="collectibles.html#item-t16">Card and pickup video</a></p></details>
           <ol start="4"><li>Continue through the tunnel and open the basement door when you’re done exploring.</li></ol>
           <h3>Kaitlyn · Back at camp</h3>
-          <ol><li>Choose <strong>Honest → Encouraging</strong>. If Emma stayed unbitten, there’s no werewolf fight at the van. If she attacks, <a href="chapters.html#van-fight">follow the van rescue steps and use Regular Shot</a>.</li></ol>
+          <ol><li>Choose <strong>Honest → Encouraging</strong>. If Emma stayed unbitten, there’s no werewolf fight at the van. If she attacks, <a href="#recover-van">use the van rescue steps and choose Regular Shot</a>.</li></ol>
           <h3 id="cages">Ryan · Basement and the cages</h3>
           <ol><li>Use the side room and the straight corridor to explore before entering the red-lit passage.</li></ol>
           <details class="route-pickup" id="clue-8-distillery"><summary>Optional clue · Rum Still</summary><p id="clue-h13">Turn left into the distillery. Inspect the equipment for the <strong>Rum Still</strong> clue. <a href="collectibles.html#item-h13">Journal and video</a></p></details>
@@ -511,7 +512,7 @@
           <ol start="2">
             <li>Go into the red-lit passage and press <strong>Down</strong> at the slippery floor. Let <strong>Open Cage?</strong> expire.</li>
             <li>Take <strong>Stop Laura?</strong> when Laura aims at the werewolf. That’s Nick. Then choose <strong>Help Jacob</strong>.</li>
-            <li>Select <strong>breaker 1, then breaker 2</strong> to open Jacob’s cage. Choose <strong>Continue</strong>. Select <strong>breaker 2, then breaker 3</strong> to open the passage. Nick stays safely inside his cage. <a href="chapters.html#cage-retry">Recover after a wrong pair</a></li>
+            <li>Select <strong>breaker 1, then breaker 2</strong> to open Jacob’s cage. Choose <strong>Continue</strong>. Select <strong>breaker 2, then breaker 3</strong> to open the passage. Nick stays safely inside his cage. <a href="#recover-cages">Recover after a wrong pair</a></li>
             <li>At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 8 navigation"><a href="#chapter-7">← Chapter 7</a><a href="#chapters">Chapter list</a><a href="#chapter-9">Chapter 9 →</a></nav>
@@ -572,7 +573,7 @@
           <h3 id="attic">Laura and Ryan · The attic</h3>
           <ol>
             <li>As Laura, approach Chris after inspecting anything you want in the attic. She transforms and the two fall through the floor. Bobby fends off Chris if you spared him.</li>
-            <li><strong>Shoot Chris as Ryan.</strong> Aim at the werewolf in front of Ryan. The target farther right is Laura. A timeout lets Chris kill Ryan. <a href="chapters.html#attic-targets">Compare the two targets</a></li>
+            <li><strong>Shoot Chris as Ryan.</strong> Aim at the werewolf in front of Ryan within the 4.1-second base window. The target farther right is Laura. A timeout lets Chris kill Ryan. <a href="#recover-attic">After a missed shot or a different attic outcome</a></li>
             <li>Choose <strong>Suspicious</strong> after Travis stands down. This sets up the hunt and earns <strong>Above the Law</strong>.</li>
             <li>If you took The Hierophant, Eliza’s flashback replaces her usual offer. Press <strong>Left</strong> at the flying stake. Otherwise choose <strong>Move On</strong> if she offers a reading.</li>
           </ol>
@@ -610,13 +611,13 @@
           </ol>
           <details class="route-pickup" id="silver-fallback">
             <summary>Fallback · Kaitlyn reached the lodge unbitten</summary>
-            <p>With Abi in the office and carrying silver, choose <strong>Run → Beam</strong> and <strong>pass</strong> the balance mash or the Up recovery. Choose <strong>Run</strong> again, then <strong>Investigate</strong> when Abi knocks. Take the shell and hit Caleb within the three-second base aiming window. Caleb dies. Both counselors survive. <a href="chapters.html#lodge-silver">Silver handoff conditions</a></p>
+            <p>With Abi or Emma in the office and carrying silver, choose <strong>Run → Beam</strong> and <strong>pass</strong> the balance mash or the Up recovery. Choose <strong>Run</strong> again, then <strong>Investigate</strong> when you hear knocking. Take the shell and hit Caleb within the three-second base aiming window. Caleb dies. Both counselors survive. <a href="#recover-lodge">Other lodge recoveries</a> · <a href="chapters.html#lodge-silver">Silver handoff conditions</a></p>
           </details>
           <h3 id="silas-hunt">Laura · Stop the car and kill Silas</h3>
           <ol>
-            <li>In the car, choose <strong>Inquisitive</strong>. Press <strong>Right</strong> when Silas attacks. Choose <strong>Grab Gun → Take Cover</strong>, then press <strong>Down</strong> to pull the handbrake.</li>
+            <li>In the car, choose <strong>Inquisitive</strong>. Press <strong>Right</strong> when Silas attacks. Choose <strong>Grab Gun → Take Cover</strong>, then press <strong>Down</strong> to pull the handbrake. <a href="#recover-car">If the first dodge or handbrake fails</a></li>
             <li>Choose <strong>Determined</strong> once out of the car. Choose <strong>Give to Ryan</strong> if he offers the blood vial. The vial is optional when you hit Silas on the first shot.</li>
-            <li>In the woods, choose <strong>Probing → Reflective</strong>. At the nest take <strong>Raise Gun?</strong> and <strong>shoot Silas</strong> in the cage. This keeps Travis, Laura and Ryan alive and lifts the remaining infections. <a href="endings.html#nest-outcomes">Nest prompt outcomes</a></li>
+            <li>In the woods, choose <strong>Probing → Reflective</strong>. At the nest take <strong>Raise Gun?</strong> and <strong>shoot Silas</strong> in the cage. This keeps Travis, Laura and Ryan alive and lifts the remaining infections. <a href="#recover-nest">If Raise Gun expires or the first shot misses</a></li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 10 navigation"><a href="#chapter-9">← Chapter 9</a><a href="#chapters">Chapter list</a><a href="#epilogue">Epilogue →</a></nav>
         </section>
@@ -630,6 +631,92 @@
           <p><a href="#route-cast">Who survives this route</a> · <a href="epilogue.html#cards">Compare your character recaps</a> · <a href="epilogue.html#headline-assets">Newspaper variants</a> · <a href="achievements.html#ending-replays">Choose a replay starting point</a></p>
           <p class="source-note">Route audit · Steam PC build 11105655 scene rules and English prompts, cross-checked against recorded survival and pickup routes. The clue branches check the Chapter 2 trail choice, Abi’s Chapter 3 camera pickup, the radio-hut bite and amputation, and the fallen frame. <a href="reference.html#sources">Game-file and footage notes</a> · <a href="https://www.speedrun.com/the_quarry/guides/h7v74">Recorded Rough Night route notes</a> · <a href="https://www.youtube.com/watch?v=wOZFC2bBcME">Recorded collectible locations</a></p>
           <nav class="jump chapter-nav" aria-label="Epilogue navigation"><a href="#chapter-10">← Chapter 10</a><a href="#chapters">Chapter list</a><a href="endings.html#endings">Other endings</a></nav>
+        </section>
+
+        <section class="section" id="recover">
+          <h2>Recover after a missed prompt</h2>
+          <p>Open the scene you’re in. The nine counselors count toward <strong>Rough Night</strong>. The 14-survivor route also needs Caleb, Travis, Bobby, Constance and Jedediah.</p>
+          <p>If a counselor dies and <strong>Retry?</strong> appears, <a href="reference.html#death-rewind">Death Rewind</a> can load an earlier checkpoint. Read the confirmation before spending a life. If you need <a href="reference.html#saves">Chapter Select</a>, finish the story first, then start from the earliest chapter where the outcome needs to change. Choices and pickups from that chapter onward must be played again.</p>
+
+          <details class="route-pickup" id="recover-woods">
+            <summary>Chapter 3 · The dive or Nick’s rescue goes wrong</summary>
+            <ul>
+              <li><strong>Jacob pulled at the wire once.</strong> Choose <strong>Detangle</strong> on the second choice. Pulling twice or waiting out the wire prompt drowns him. If he surfaced before the wire, he survived and missed the corpse evidence. <a href="chapters.html#jacob-dive">All dive outcomes</a></li>
+              <li><strong>Ryan missed a shortcut or arrived late.</strong> If Bobby is holding Nick, shoot Bobby for the vial. If Ryan aims at empty bushes, hold fire and let Nick emerge. Continue the survival route without the vial. <a href="chapters.html#nick-rescue-timing">Timing and achievement conditions</a></li>
+            </ul>
+          </details>
+          <details class="route-pickup" id="recover-emma">
+            <summary>Chapter 4 · Emma misses a treehouse or zipline prompt</summary>
+            <ol>
+              <li>If the first <strong>Down</strong> fails, press <strong>Left</strong> to retrieve the taser. If the first zipline mash fails, press <strong>Up</strong> to catch the zipline.</li>
+              <li>If you miss the first walkway <strong>Up</strong> with the taser still in hand, press <strong>Right</strong> to recover. Pass the next <strong>Up</strong>. If you chose <strong>Block Door</strong> on the second visit, choose <strong>Use Trapdoor</strong> and press the extra <strong>Down</strong> before the cabinet dodge.</li>
+              <li>If you miss <strong>Down</strong> at the cabinet, press <strong>Right</strong> to survive with an arm bite. If you fail the ladder mash with the taser in hand, press <strong>Up</strong> to survive with a leg bite. Continue to the second zipline. If either bite occurred, prepare for <a href="#recover-van">the van fight</a>.</li>
+              <li>If you chose <strong>Reel Quickly</strong> or took <strong>Speed Up?</strong>, choose <strong>Jump</strong> and press <strong>Up</strong> to catch the handle. <strong>Reel In → Right</strong> also works. <a href="chapters.html#island-chase">All treehouse and zipline outcomes</a></li>
+            </ol>
+          </details>
+          <details class="route-pickup" id="recover-jacob">
+            <summary>Chapter 6 · Jacob misses the dodge or chooses Pull Free</summary>
+            <p>With Emma alive, missing <strong>Right</strong> lets Caleb bite Jacob unless Bobby marked him in Chapter 3. Both versions continue to the chase. Choose <strong>Hide</strong>, pass <strong>Don’t Breathe</strong>, then choose <strong>Pry Open</strong>. If you already chose <strong>Pull Free</strong>, press the recovery <strong>Up</strong> to escape the next trap. <a href="chapters.html#jacob-chase">Blood-mark and chase variants</a></p>
+          </details>
+          <details class="route-pickup" id="recover-jail">
+            <summary>Chapter 7 · The syringe is missing or the injection fails</summary>
+            <ol>
+              <li>When Laura fakes an injury, press <strong>Right, Right</strong> in the gun struggle. If either prompt fails, pass the extra <strong>Right</strong> recovery.</li>
+              <li>Choose <strong>Apologetic</strong>. Press <strong>Up</strong> to catch the keys. A missed catch still lets Laura lock the cell. If you chose <strong>Demanding</strong>, choose <strong>Plead</strong>. If that choice expires, press <strong>Down</strong> when Travis lunges to keep him unharmed.</li>
+              <li>If Travis was shot during the escape, the attic revenge takes the place of the alliance after Chris dies. Replay from Chapter 7 to restore the hunt. <a href="chapters.html#jail-escape">All escape branches</a></li>
+            </ol>
+          </details>
+          <details class="route-pickup" id="recover-van">
+            <summary>Chapters 8–9 · Emma transforms at the van or in the shelter</summary>
+            <ul>
+              <li><strong>At the van with Abi alive.</strong> Choose <strong>Shoot</strong> and hit Emma within 2.2 seconds to save Abi. Hit Emma again on the roof within about three seconds. If the roof shot misses and Dylan takes a bite, hit Emma within the 3.9-second rescue window. Choose <strong>Regular Shot</strong> to spare Emma. Pick before time runs out, which selects Silver Shot.</li>
+              <li><strong>In the shelter with Abi.</strong> Emma’s Chapter 6 bite can make her transform here instead. As Abi choose <strong>Ladder</strong>. If the rung breaks because Dylan climbed through the office hatch in Chapter 2, pass the recovery mash. Take replacement silver from the lit fuse box during exploration if Abi’s first shell was used. <a href="chapters.html#van-fight">Van branches</a> · <a href="chapters.html#shelter-escape">Shelter branches</a></li>
+            </ul>
+          </details>
+          <details class="route-pickup" id="recover-cages">
+            <summary>Chapter 8 · Ryan flips the wrong breaker pair</summary>
+            <ol>
+              <li>After one shock choose <strong>Continue</strong>. If only Jacob’s door is open, use <strong>2 + 3</strong>. If only the exit is open, use <strong>1 + 2</strong>.</li>
+              <li>If both doors are closed after the first shock, use <strong>1 + 2 → Continue → 2 + 3</strong>. The earlier <strong>Open Cage?</strong> shock is separate from the two breaker shocks.</li>
+              <li>Avoid <strong>3 + 4</strong>, which opens Nick’s door. After two shocks, the rescue ends. With Nick alive and an uninfected Jacob still caged, Nick kills him when the power goes out. Replay the basement from Chapter 8 or take the rewind if offered. <a href="chapters.html#cage-puzzle">Breaker map and other states</a></li>
+            </ol>
+          </details>
+          <details class="route-pickup" id="recover-attic">
+            <summary>Chapter 9 · The house fight or attic shot goes off route</summary>
+            <ul>
+              <li><strong>Ryan lost the knife.</strong> The later Stab prompt can disappear. To keep Bobby alive, continue to the bite offer. Choose <strong>Accept</strong>. If you pressed <strong>Pull Away?</strong>, Ryan still gets the bite. <a href="chapters.html#ryan-bedroom-choice">Bedroom recovery prompts</a></li>
+              <li><strong>Constance, Jedediah or Bobby died.</strong> You can still save the nine counselors. To restore all 14, replay Chapter 9. Fail the shotgun mash, run from Jedediah and leave Bobby unstabbed.</li>
+              <li><strong>Ryan’s first shot missed both werewolves.</strong> If time remains, aim at Chris directly ahead and fire again. The second miss or a timeout kills Ryan. Hitting Laura kills her and leaves Chris alive to kill Ryan. If Ryan declined the bite, hitting Chris still leaves Ryan on the bleed-out branch. <a href="ryan-travis-routes.html#attic">Attic targets and follow-up branches</a></li>
+            </ul>
+          </details>
+          <details class="route-pickup" id="recover-lodge">
+            <summary>Chapter 10 · Kaitlyn is unbitten or gets across the beam</summary>
+            <ul>
+              <li><strong>Unbitten Kaitlyn with silver available.</strong> Pass the beam mash or <strong>Up</strong>, choose <strong>Run → Investigate</strong> and hit Caleb. This preserves Rough Night and costs Caleb’s life. <a href="#silver-fallback">Silver-shot steps</a></li>
+              <li><strong>Unbitten Kaitlyn with late-bitten Dylan beside her.</strong> Pass the beam mash or <strong>Up</strong>. Choose <strong>Run</strong> downstairs and <strong>Run</strong> again if the office choice appears. Pass <strong>Don’t Breathe</strong> and choose <strong>Freezer</strong>, then <strong>Hide</strong> if offered. Caleb spares Dylan, who opens the door for Kaitlyn. Caleb leaves alive. Use a van or crane bite for Dylan so he can reach the lodge. <a href="alternate-endings.html#dylan-freezer">Full setup</a></li>
+              <li><strong>Bitten Kaitlyn already crossed the beam.</strong> Choose <strong>Hide</strong> upstairs and fail <strong>Don’t Breathe</strong>. If you already ran downstairs and can take silver, choose <strong>Investigate</strong> and hold fire for the full aiming window. Either way Caleb spares Kaitlyn and Dylan survives if he’s still there. Finish the hunt to cure them and Caleb. <a href="kaitlyn-routes.html#dormitory">Upstairs outcome</a> · <a href="kaitlyn-routes.html#silver-miss">Silver outcome</a></li>
+              <li><strong>Unbitten Kaitlyn with the rabbit.</strong> Cross the beam safely and choose <strong>Run</strong>. Run again if the office choice appears. Pass <strong>Don’t Breathe</strong>, choose <strong>Freezer → Use Decoy</strong> and pass the door mash. Kaitlyn and Dylan survive. Caleb freezes if you kill Silas. <a href="kaitlyn-routes.html#decoy-success">Rabbit setup and outcome</a></li>
+            </ul>
+            <p>Replay from Chapter 9 to change who was bitten at the crane or to collect the replacement silver shell. Keeping the rabbit requires the cabin choice in Chapter 1.</p>
+          </details>
+          <details class="route-pickup" id="recover-car">
+            <summary>Chapter 10 · Laura misses the car dodge or the handbrake</summary>
+            <ol>
+              <li>If the first <strong>Right</strong> fails, choose <strong>Take Cover</strong> when it appears and press <strong>Down</strong> at the handbrake.</li>
+              <li>If you took <strong>Take Wheel</strong>, pass the mash and press <strong>Down</strong> at the handbrake. If the wheel mash or handbrake fails, or you choose <strong>Grab Gun</strong> when offered <strong>Take Cover</strong>, press the next <strong>Down</strong> to pull Travis out of Silas’s reach. This saves all three and keeps the hunt going.</li>
+              <li>Once the car crashes, Travis and Ryan are dead. Laura can still shoot Silas by passing the crawl mash and the final <strong>Up</strong>, but she dies afterward. <a href="endings.html#car-outcomes">All car and roadside branches</a></li>
+            </ol>
+          </details>
+          <details class="route-pickup" id="recover-nest">
+            <summary>Chapter 10 · Raise Gun expires or Laura misses Silas</summary>
+            <ol>
+              <li>If <strong>Raise Gun?</strong> expires, press <strong>Right</strong> when Travis lunges. This leaves Travis on the ground and Silas in the cage. Aim at <strong>Silas</strong> to save all three hunters.</li>
+              <li>After a missed shot, fire again if time remains. Two misses or a timeout let Silas attack. The blood vial only protects its recipient.</li>
+              <li>If the <strong>Right</strong> struggle fails, Travis is shot. You can still hit Silas to save Laura and Ryan and finish Rough Night with the nine counselors. <a href="endings.html#nest-outcomes">All seven nest branches</a></li>
+            </ol>
+          </details>
+          <p class="source-note">Recovery audit · Steam PC build 11105655 scene transitions, aiming windows, infection checks and rewind checkpoints. <a href="https://www.youtube.com/watch?v=ZchCC5IEpu0">Recorded death and recovery branches</a> · <a href="https://www.youtube.com/watch?v=fz48KZj4HJs&amp;t=198s">Recorded freezer rescue</a> · <a href="https://support.2k.com/hc/en-us/articles/4657147955603-The-Quarry-FAQ">2K’s Death Rewind FAQ</a></p>
+          <nav class="jump chapter-nav" aria-label="After checking a recovery"><a href="#chapters">Chapter list</a><a href="#route-checklist">Playthrough checklist</a></nav>
         </section>
       </article>
     </div>
