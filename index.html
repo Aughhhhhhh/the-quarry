@@ -7,8 +7,8 @@
   <meta name="description" content="A fan guide to The Quarry with chapter walkthroughs, ending routes, every collectible and every achievement.">
   <title>The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/site.js" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=2">
+  <script src="assets/site.js?v=2" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -47,9 +47,26 @@
       <section id="find" class="find" aria-labelledby="find-title" hidden>
         <label id="find-title" for="search">Search the guide</label>
         <div class="searchbox"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Try “silver shells” or “Ticket Stub”" autocomplete="off"></div>
-        <p class="meta">Search walkthroughs, collectibles, achievements and ending outcomes, or browse <a href="epilogue.html#cards">Epilogue cards</a>.</p>
+        <div class="tools">
+          <div>
+            <label for="search-section">Search in</label>
+            <select id="search-section">
+              <option value="">All sections</option>
+              <option value="walkthrough">Walkthroughs</option>
+              <option value="collectibles">Collectibles</option>
+              <option value="achievements">Achievements</option>
+              <option value="endings">Ending routes</option>
+              <option value="epilogue">Epilogue cards</option>
+              <option value="paths">Story paths</option>
+              <option value="cast">Characters</option>
+              <option value="reference">Reference</option>
+            </select>
+          </div>
+        </div>
+        <p class="meta">You can also <a href="epilogue.html#cards">browse the epilogue cards by character</a>.</p>
         <p id="search-count" role="status"></p>
         <ul id="search-results"></ul>
+        <button class="button secondary" id="search-more" type="button" aria-controls="search-results" hidden>Show more results</button>
       </section>
       <section class="section browse" id="guide-index" aria-labelledby="browse-title">
         <p class="eyebrow">01 / GUIDE INDEX</p>
@@ -77,7 +94,7 @@
     <ol>
       <li>After the crash, help with the car and explore the woods as Laura. Collect The Fool and the three freakshow clues before returning to Max.</li>
       <li>Be honest and cooperative with the sheriff. He tells them to go to the Harbinger Motel, but Laura and Max go to camp anyway.</li>
-      <li>At the lodge, head down to the storm shelter and break in. Take the collar as you enter and choose to help Max when he is attacked. The bite is scripted.</li>
+      <li>At the lodge, head down to the storm shelter and break in. Walk forward to collect the Bloodied Collar automatically, then choose to help Max when he is attacked. The bite is scripted.</li>
       <li>At Eliza’s first interlude, choose See More for a tarot reading, or Move On if this run is for Hard Pass.</li>
     </ol>
     <p><a href="#collect-0">Prologue collectibles</a> · <a href="#tarot-readings">Tarot readings</a></p>
@@ -90,7 +107,7 @@
           <dt>Talk to Travis after the crash</dt>
           <dd>Honesty and cooperation set the tone of their relationship. Travis tells them to go to the Harbinger Motel, but every branch still takes them to the camp. <a href="#path-2">Above the Law</a></dd>
           <dt>The tools at the shelter</dt>
-          <dd>Either tool opens the shelter. Collect the Bloodied Collar as the scene advances.</dd>
+          <dd>Either tool opens the shelter. Walking forward inside triggers the Bloodied Collar pickup.</dd>
           <dt>Help Max or leave him</dt>
           <dd>The rescue attempt changes their relationship and what Max says later. Chris bites Max either way, and the prologue cannot kill him. <a href="#path-1">Laura &amp; Max</a></dd>
           <dt>See More or Move On</dt>
@@ -140,7 +157,7 @@
   <div class="entry-body">
     <ol>
       <li>As Emma, check the store and ask Jacob to open the locked storeroom. Examine the shotgun for the safe code, then return to the safe. Leave the fireworks to follow this route. Taking them can give Emma another way to escape in Chapter 6.</li>
-      <li>As Dylan, inspect the family photo and floor hatch in Chris’s office. Climb down, then choose Playful at the desk to get the counselor ledger.</li>
+      <li>As Dylan, inspect the family photo and floor hatch in Chris’s office. Choose Shut Trapdoor to keep the ladder intact, then finish the desk conversation to get the Counselor’s Ledger.</li>
       <li>As Nick, choose Rocky Road for The Hanged Man or Shady Glade for the Trail Camera and Ranger Box. Explore your branch before rejoining the group.</li>
       <li>In the shooting contest, hit the prompted targets if you are planning a manual Butterpops run. The campfire game leads into Nick and Abi leaving the group.</li>
     </ol>
@@ -152,7 +169,7 @@
           <dt>The locked store room and safe</dt>
           <dd>Have Jacob open the locked door, then inspect the shotgun to get the safe code. Emma opens the safe on the way out. Take the fireworks for a defense in Chapter 6, or leave them if you want her later Run interrupt to lead to a bite. <a href="#path-5">Playing with Fire</a></dd>
           <dt>Open the floor hatch</dt>
-          <dd>Dylan can shut the hatch or climb down. Climbing down weakens a rung, which can add a recovery prompt in the Chapter 9 shelter escape. Inspect the hatch and choose Playful at the desk for the ledger on the documented route. <a href="#path-6">Watch Your Step</a></dd>
+          <dd>Shut Trapdoor and Climb Down both lead to the Counselor’s Ledger after the desk conversation. Climbing down weakens a rung and can add a recovery prompt in the Chapter 9 shelter escape. <a href="#item-c7">Ledger pickup</a> · <a href="#path-6">Watch Your Step</a></dd>
           <dt>Rocky Road or Shady Glade</dt>
           <dd>Rocky Road has The Hanged Man. Shady Glade has the Ranger Box and a Trail Camera pickup. The Trail Camera can also be found as Abi in Chapter 3, but the Ranger Box requires Shady Glade. <a href="#collect-2">Chapter 2 collectibles</a></dd>
           <dt>Take a photo of the island treehouse</dt>
@@ -173,7 +190,7 @@
   <summary><strong>Trouble in Paradise</strong><span class="meta">Chapter 3</span></summary>
   <div class="entry-body">
     <ol>
-      <li>As Abi, find The Tower before the woods scene ends. Nick is bitten regardless of your dialogue. Help Nick, pass the dodge, choose Run, pass the mash, skip Climb Tree and succeed at Don’t Breathe behind the rocks. For Blood Pact, fail the breathing event.</li>
+      <li>As Abi, find The Tower and pick up the <a href="#item-h3">Trail Camera</a> if you missed it in Chapter 2. Nick is bitten regardless of your dialogue. Help Nick, pass the dodge, choose Run, pass the mash, skip Climb Tree and succeed at Don’t Breathe behind the rocks. For Blood Pact, fail the breathing event.</li>
       <li>As Jacob, check the boathouse before getting the towels. When Abi screams, choose Dive In if you stole the rotor arm. Choose Grab, pass the prompt, and then choose Detangle to get the corpse evidence and surface safely.</li>
       <li>As Ryan, take both shortcuts and pass every prompt to reach Nick in time for Nick of Time. Shout. Hitting Bobby with the gun makes him drop the vial used in some versions of the finale.</li>
       <li>As Jacob in the snare, pass the struggle and ask Bobby to let you down. Skip Throw Dirt so Bobby can smear Jacob with blood. For Blood Pact, throw dirt to leave Jacob vulnerable to a later bite.</li>
@@ -1202,7 +1219,7 @@
       <input type="checkbox" id="check-c1">
       <div><label for="check-c1">Bloodied Collar</label><span class="tag">Camp History 1</span>
         <p class="meta">Laura · camp</p>
-        <p>Go down the steps outside the locked lodge, break into the storm shelter and walk inside.</p>
+        <p>Go down the steps outside the locked lodge, break into the storm shelter and walk forward inside. Laura picks up the collar automatically.</p>
         <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=108s" aria-label="Pickup video for Bloodied Collar at 1:48">Pickup video <span class="meta">· 1:48</span></a></p>
       </div>
     </li>
@@ -1318,7 +1335,7 @@
       <input type="checkbox" id="check-c7">
       <div><label for="check-c7">Counselor’s Ledger</label><span class="tag">Camp History 7</span>
         <p class="meta">Dylan · Chris’s office</p>
-        <p>Investigate the hatch, climb down, then choose Playful after Dylan sits at the desk. He checks the drawer after picking up the phone.</p>
+        <p>Investigate the hatch and choose Shut Trapdoor or Climb Down. Finish either dialogue choice after Dylan sits at the desk. He checks the drawer and collects the ledger. Shut Trapdoor keeps the ladder intact. <a href="#path-6">Watch Your Step</a></p>
         <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=549s" aria-label="Pickup video for Counselor’s Ledger at 9:09">Pickup video <span class="meta">· 9:09</span></a></p>
       </div>
     </li>
@@ -1337,9 +1354,9 @@
     <li class="collectible" id="item-h3" data-type="clue" data-search="Collectible">
       <input type="checkbox" id="check-h3">
       <div><label for="check-h3">Trail Camera</label><span class="tag">Hackett History 3</span>
-        <p class="meta">Nick · Shady Glade</p>
-        <p>Choose Shady Glade and follow its right edge to the camera fixed to a tree.</p>
-        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=650s" aria-label="Pickup video for Trail Camera at 10:50">Pickup video <span class="meta">· 10:50</span></a></p>
+        <p class="meta">Nick in Chapter 2 or Abigail in Chapter 3 · Shady Glade</p>
+        <p>In Chapter 2, choose Shady Glade and follow its right edge to the camera fixed to a tree. If you missed it, inspect the same tree as Abi at the start of Chapter 3, before leaving the glade to meet Nick.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=650s" aria-label="Chapter 2 pickup video for Trail Camera at 10:50">Chapter 2 pickup <span class="meta">· 10:50</span></a> · <a href="https://www.youtube.com/watch?v=lpfmXrij0Wc&amp;t=75s">Chapter 3 pickup <span class="meta">· 1:15</span></a></p>
       </div>
     </li>
     <li class="collectible" id="item-h2" data-type="clue" data-search="Collectible">
@@ -1357,6 +1374,7 @@
 <details class="entry" id="collect-3" data-search="Collectibles" data-chapter="3">
   <summary><strong>Chapter 3 collectibles</strong><span class="meta">6 locations</span></summary>
   <div class="entry-body">
+    <p>Missed the <a href="#item-h3">Trail Camera</a> in Chapter 2? Abi can pick up the same clue before she leaves the woods. The Ranger Box requires the Chapter 2 Shady Glade route.</p>
     <ul class="checklist" role="list">
     <li class="collectible" id="item-t5" data-type="tarot" data-search="Collectible">
       <input type="checkbox" id="check-t5">
@@ -2584,7 +2602,7 @@
   <summary><strong>Watch Your Step</strong><span class="meta">06 · Chapter 2</span></summary>
   <div class="entry-body">
     <ul>
-      <li>Inspect the trapdoor in Chris’s office. Climb down to record what happens to the ladder rung before the storm shelter escape later.</li>
+      <li>Inspect the trapdoor in Chris’s office. Either Shut Trapdoor or Climb Down starts this path. Climb Down weakens the rung Abi can step on in the Chapter 9 shelter chase. Both choices lead to the <a href="#item-c7">Counselor’s Ledger</a>.</li>
     </ul>
     <p class="source-note">Sources · <a href="https://www.powerpyx.com/the-quarry-how-to-unlock-all-paths/">PowerPyx · 15 paths</a> · <a href="https://www.neoseeker.com/the-quarry/walkthrough/Story_Paths">Neoseeker · story paths</a></p>
   </div>
@@ -2708,7 +2726,7 @@
   <p class="section-intro">The platform lists establish the achievement names and counts. The publisher’s support pages establish the modes, platforms and edition differences. Walkthroughs, location guides and captured footage support the route instructions.</p>
 <ul>
   <li><strong>Achievements.</strong> All 40 award IDs in Steam PC build 11105655 match the Steam achievement list. The PC audit also checked the refusal, interrupt and Don’t Breathe counters and traced the Butterpops and Flesh Wound award triggers. <a href="#achievements">Achievement routes</a> · <a href="https://steamcommunity.com/stats/1577120/achievements/">Steam achievement list</a></li>
-  <li><strong>Collectible inventory.</strong> Checked 72 unique entries against the published chapter and category counts. Chapter 2’s Shady Glade and Rocky Road split is called out in the walkthrough and checklist.</li>
+  <li><strong>Collectible inventory.</strong> Checked 72 unique entries against the published chapter and category counts. The PC scene rules confirm that both trapdoor choices lead to the Counselor’s Ledger and that Abi can find the Trail Camera in Chapter 3 if Nick missed it. <a href="#item-c7">Ledger pickup</a> · <a href="#item-h3">Trail Camera routes</a></li>
   <li><strong>Tarot readings.</strong> All 22 card notes cover the documented scenes and link to pickup footage. The four branching selectors were traced in Steam PC build 11105655. The Sun’s Emma-in-the-woods clip still needs a verified route in ordinary play. <a href="#tarot-branches">Selection rules and sources</a></li>
   <li><strong>Different versions.</strong> 2K’s July 7, 2022 notes identify fixes for Hard Pass and Should’ve Gone to the Motel. Manual and automatic combat routes for Butterpops are cited separately. <a href="https://steamcommunity.com/games/1577120/announcements/detail/3335493590068003898">July 7 patch notes</a></li>
   <li><strong>Chapter branches.</strong> The chapter notes cover decisions that change later scenes, collectible access, or character outcomes, plus select dialogue branches. Puzzle outcomes were checked against a tested choice guide. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · choices and outcomes</a> · <a href="https://www.powerpyx.com/the-quarry-breaker-puzzle-solution-chapter-8-save-jacob-from-cage/">PowerPyx · breaker sequence</a></li>

@@ -54,9 +54,9 @@ class Guide(HTMLParser):
         if tag == "label" and "for" in attrs:
             self.anchors.add(attrs["for"])
         if href.startswith("assets/"):
-            self.files.add(href)
+            self.files.add(href.partition("?")[0])
         if tag in ("img", "script"):
-            self.files.add(attrs["src"])
+            self.files.add(attrs["src"].partition("?")[0])
 
     def handle_endtag(self, tag):
         if tag in ("ol", "ul"):

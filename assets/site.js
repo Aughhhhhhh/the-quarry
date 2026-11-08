@@ -1,17 +1,22 @@
 const find = document.querySelector("#find");
 const search = document.querySelector("#search");
+const searchSection = document.querySelector("#search-section");
 const searchResults = document.querySelector("#search-results");
 const searchCount = document.querySelector("#search-count");
+const searchMore = document.querySelector("#search-more");
+const resultPageSize = 12;
 const normalize = value => value.toLowerCase().replace(/[’']/g, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry => {
   const title = entry.querySelector("summary strong, label, h3").textContent;
-  const heading = entry.closest(".section").querySelector("h2").textContent;
+  const section = entry.closest(".section");
+  const heading = section.querySelector("h2").textContent;
   const parent = entry.matches(".collectible") ? entry.closest("details").querySelector("summary strong").textContent : "";
   const chapter = entry.dataset.search === "Walkthrough" ? entry.querySelector("summary .meta").textContent : "";
   return {
     href: `#${entry.id}`,
     title: /^Chapter \d+$/.test(chapter) ? `${chapter} · ${title}` : title,
     label: entry.dataset.search,
+    section: section.id,
     name: normalize(title),
     chapter: normalize(chapter),
     text: normalize(`${title} ${chapter} ${heading} ${parent} ${entry.textContent}`),
@@ -19,16 +24,22 @@ const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry
 });
 let archiveRequest;
 let archiveStatus = "";
+let resultLimit = resultPageSize;
 
 function renderSearch() {
   const query = normalize(search.value).replace(/\bch (?=\d+\b)/g, "chapter ");
   searchResults.replaceChildren();
   searchCount.textContent = "";
-  if (!query) return;
+  if (!query) {
+    searchMore.hidden = true;
+    return;
+  }
   const words = query.split(" ");
-  const matches = searchIndex.filter(entry => words.every(word => /^\d+$/.test(word)
-    ? ` ${entry.text} `.includes(` ${word} `)
-    : entry.text.includes(word)));
+  const section = searchSection.value;
+  const matches = searchIndex.filter(entry => (!section || entry.section === section) &&
+    words.every(word => /^\d+$/.test(word)
+      ? ` ${entry.text} `.includes(` ${word} `)
+      : entry.text.includes(word)));
   function rank(entry) {
     if (entry.chapter === query) return 5;
     if (entry.name === query) return 4;
@@ -37,11 +48,12 @@ function renderSearch() {
     return Number(entry.text.includes(query));
   }
   matches.sort((a, b) => rank(b) - rank(a));
-  searchCount.textContent = matches.length > 12
-    ? `Showing 12 of ${matches.length} matches. Add another word to narrow the list.`
-    : matches.length === 1 ? "1 match" : `${matches.length} matches`;
-  if (archiveStatus) searchCount.textContent += ` · ${archiveStatus}`;
-  for (const entry of matches.slice(0, 12)) {
+  searchMore.hidden = matches.length <= resultLimit;
+  searchCount.textContent = searchMore.hidden
+    ? matches.length === 1 ? "1 match" : `${matches.length} matches`
+    : `Showing ${resultLimit} of ${matches.length} matches`;
+  if (archiveStatus && (!section || section === "epilogue")) searchCount.textContent += ` · ${archiveStatus}`;
+  for (const entry of matches.slice(0, resultLimit)) {
     const row = document.createElement("li");
     const link = document.createElement("a");
     const label = document.createElement("small");
@@ -67,6 +79,7 @@ async function loadArchive() {
         href: `epilogue.html#${card.id}`,
         title,
         label: character || "Epilogue",
+        section: "epilogue",
         name: normalize(character ? `${character} ${title}` : title),
         text: normalize(`Epilogue ${character || ""} ${title} ${card.textContent}`),
       });
@@ -85,12 +98,21 @@ async function loadArchive() {
 
 find.hidden = false;
 document.querySelector(".search-link").hidden = false;
-search.addEventListener("input", () => {
-  if (!archiveRequest && normalize(search.value)) {
+function updateSearch() {
+  resultLimit = resultPageSize;
+  if (!archiveRequest && normalize(search.value) && (!searchSection.value || searchSection.value === "epilogue")) {
     archiveStatus = "Loading epilogue cards…";
     archiveRequest = loadArchive();
   }
   renderSearch();
+}
+search.addEventListener("input", updateSearch);
+searchSection.addEventListener("change", updateSearch);
+searchMore.addEventListener("click", () => {
+  const firstNewResult = resultLimit;
+  resultLimit += resultPageSize;
+  renderSearch();
+  searchResults.children[firstNewResult]?.querySelector("a").focus();
 });
 
 const checklist = document.querySelector("#collectibles");
