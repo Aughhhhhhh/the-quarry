@@ -62,16 +62,10 @@ function indexEntries(content, page) {
       route = routeLink(entry.querySelector('a[href^="story-paths.html#tape-"]'), "Unlock steps");
     } else if (entry.id === "completion-plan") {
       route = routeLink(entry.querySelector('a[href="achievement-replays.html"]'), "Replay guide");
-    } else if (entry.id === "decked-out") {
-      route = routeLink(entry.querySelector('a[href="tarot-route.html"]'), "Tarot walkthrough");
-    } else if (entry.id === "hard-pass") {
-      route = routeLink(entry.querySelector('a[href="tarot-route.html#hard-pass"]'), "Hard Pass walkthrough");
-    } else if (entry.id === "butterpops") {
-      route = routeLink(entry.querySelector('a[href="completion.html#manual-combat"]'), "Manual combat walkthrough");
-    } else if (entry.id === "conspiracy-theorist") {
-      route = routeLink(entry.querySelector('a[href="evidence-route.html"]'), "Evidence walkthrough");
-    } else if (entry.id === "meddling-kids") {
-      route = routeLink(entry.querySelector('a[href="clues-route.html"]'), "Clues walkthrough");
+    } else if (entry.dataset.search === "Achievement") {
+      const guide = entry.querySelector("a[data-award-route]");
+      route = routeLink(guide, guide?.dataset.awardRoute || "Walkthrough");
+      if (route?.href.startsWith("#")) route.href = page + route.href;
     }
     return {
       href: `${page}#${entry.id}`,

@@ -210,6 +210,12 @@ assert len(collectibles.pickup_times) == sum(collectibles.pickup_times.values())
 assert {f"vision-{card}" for card in range(1, 23)} <= collectibles.ids.keys()
 assert achievements.entries["Achievement"] == 41, achievements.entries
 award_section = (root / "achievements.html").read_text(encoding="utf-8").split('id="achievements"', 1)[1].split("</section>", 1)[0]
+award_cards = re.findall(r'<details class="entry" id="([^"]+)" data-search="Achievement"[^>]*>(.*?)</details>', award_section, re.S)
+assert len(award_cards) == achievements.entries["Achievement"]
+for award, body in award_cards:
+    assert len(re.findall(r'<a [^>]*href="(?:[a-z-]+\.html(?:#[^"]+)?|#[^"]+)" data-award-route\b', body)) == 1, award
+assert achievements.list_items["reactionist-steps"] == 16
+assert achievements.list_items["breath-pass-steps"] == 5
 award_values = re.findall(r"(Bronze|Silver|Gold)\s*·\s*(\d+)G\s*</span>", unescape(award_section))
 assert Counter(grade for grade, _ in award_values) == {"Bronze": 29, "Silver": 7, "Gold": 4}, award_values
 assert sum(int(score) for _, score in award_values) == 1000, award_values
@@ -352,7 +358,7 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 achievement_replays = pages["achievement-replays.html"]
 replay_stages = {"reunions", "massacre", "final-girl", "last-man-standing", "blood-pact"}
-assert replay_stages | {"setup", "single-awards"} <= achievement_replays.ids.keys()
+assert replay_stages | {"setup", "single-awards", "input-awards"} <= achievement_replays.ids.keys()
 assert {("achievement-replays.html", stage) for stage in replay_stages} <= completion.page_links & achievements.page_links
 assert ("achievement-replays.html", "") in walkthroughs.page_links & reference.page_links
 assert {("blood-pact.html", "clue-checkpoints"), ("massacre.html", "final-girl-rabbit"),
