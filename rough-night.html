@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111513">
-  <meta name="description" content="A chapter-by-chapter Rough Night walkthrough for The Quarry. Save all nine counselors and Caleb, with optional tarot and evidence steps in play order.">
+  <meta name="description" content="A chapter-by-chapter Rough Night walkthrough for The Quarry. Save all nine counselors and Caleb, with tarot, evidence and clue steps in play order.">
   <title>Rough Night Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css?v=15">
@@ -30,7 +30,7 @@
         <p class="eyebrow">Complete route · Story spoilers</p>
         <h1>Rough Night</h1>
         <p class="hero-sub">Save all nine counselors</p>
-        <p class="hero-copy">Keep Dylan’s hand, save Caleb and four other Hacketts, and end the curse. Open the optional tarot and evidence steps as you play.</p>
+        <p class="hero-copy">Save Caleb and four other Hacketts and end the curse. Open tarot, evidence and clue steps as you play, or take the all-clues branch for Meddling Kids!</p>
         <div class="actions"><a class="button primary" href="#prologue">Start at the prologue</a><a class="button secondary" href="#route-checklist">Open the playthrough checklist</a></div>
       </div>
     </div>
@@ -61,14 +61,24 @@
           <h2>Before you start</h2>
           <p>Start an interactive single-player game. Use manual directional prompts, button mashes, interrupts and Don’t Breathe. Set <strong>Aim Assist to Off</strong>. Pass each prompt unless the steps call for a miss or a timeout. During Don’t Breathe, release when the threat has turned away and the red danger effect clears.</p>
           <p>Dialogue in these steps gives you one consistent path. Directions such as <strong>Up</strong> refer to the on-screen quick-time prompt. <strong>Let it expire</strong> means wait without pressing anything.</p>
-          <p class="notice">This route uses <strong>Leave Bags</strong> in Chapter 1 and deliberately gets Kaitlyn bitten in Chapter 9. You can collect all 22 tarot cards and all 10 evidence items along the way. The full clue set needs a different Chapter 2 path and the cabin break-in. <a href="achievements.html#meddling-kids">Clue achievement requirements</a></p>
+          <p class="notice">Choose <strong>Rocky Road</strong> in Chapter 2 for all 22 tarot cards. The <a href="#clue-h2">Ranger Box</a> needs <strong>Shady Glade</strong> instead. All ten evidence items work on either trail. Both versions deliberately get Kaitlyn bitten in Chapter 9 to save her and Caleb.</p>
+          <details class="route-pickup" id="all-clues-plan">
+            <summary>Alternate route · Collect all 40 clues and save everyone</summary>
+            <ol>
+              <li>In Chapter 1 choose <a href="#clue-f4"><strong>Break In</strong></a> and collect the newspaper. Replay Chapter 1 if the cabin stayed locked. Start at Chapter 2 if the cabin was opened and you have the earlier clues. Dylan can recover the newspaper and the two outdoor cabin clues in Chapter 5. Start earlier if you missed other pickups.</li>
+              <li>In Chapter 2 choose <a href="#clue-h2"><strong>Shady Glade</strong></a> for the Ranger Box. You can get 21 tarot cards on this branch. For the full deck, replay Chapter 2 on Rocky Road and collect every later card again.</li>
+              <li>In Chapter 5 use <a href="#ticket-setup">Kaitlyn’s table encounter</a> to expose the Ticket Stub. When Dylan gets bitten at the radio hut, choose <a href="#amputation-branch"><strong>Desperate → Chainsaw</strong></a> so he stays available for the crane and lodge.</li>
+              <li>Open the clue steps as you play and collect all five lodge clues before preparing for the attack. The 40th clue awards <a href="achievements.html#meddling-kids">Meddling Kids!</a> Follow the same beam and Silas steps to finish Rough Night.</li>
+            </ol>
+          </details>
           <div class="route-options" hidden>
             <button class="button secondary" type="button" data-pickups="tarot" aria-expanded="false">Show all tarot steps</button>
             <button class="button secondary" type="button" data-pickups="evidence" aria-expanded="false">Show all evidence steps</button>
+            <button class="button secondary" type="button" data-pickups="clue" aria-expanded="false">Show all clue steps</button>
           </div>
           <details class="route-pickup" id="pickup-index">
             <summary>Find a pickup on this route</summary>
-            <p>All 22 tarot cards and all ten evidence items are listed in play order. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <p>Jump to any tarot, evidence or clue step. The newspaper, Ranger Box and Ticket Stub have setup choices. Check the <a href="#all-clues-plan">all-clues route</a> before starting. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
             <form class="tools archive-tools" hidden>
               <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
               <button class="button secondary" type="submit">Jump to pickup</button>
@@ -99,7 +109,7 @@
           <p>Mark each checkpoint as you play. Use the chapter links to jump to the full instructions for each scene.</p>
           <p class="meta" data-route-progress role="status" hidden></p>
           <ul class="route-checkpoints" id="route-checkpoints" role="list">
-            <li><label><input type="checkbox" value="bags"><span>Choose <strong>Leave Bags</strong> to keep Dylan’s hand.</span></label> <a href="#leave-bags">Chapter 1 · Locked cabin</a></li>
+            <li><label><input type="checkbox" value="bags"><span>Choose <strong>Leave Bags</strong> to keep Dylan’s hand, or <strong>Break In</strong> for the newspaper and amputate in Chapter 5.</span></label> <a href="#leave-bags">Chapter 1 · Cabin choice</a></li>
             <li><label><input type="checkbox" value="nick"><span>Choose <strong>Help Nick</strong> as Abi, then let <strong>Throw Dirt?</strong> expire as Jacob.</span></label> <a href="#chapter-3">Chapter 3 · Woods and snare</a></li>
             <li><label><input type="checkbox" value="island"><span>Hold fire in both windows, then choose <strong>Search Bag → Use Taser</strong> as Emma. Choose <strong>Reel Slowly</strong> and let <strong>Speed Up?</strong> expire.</span></label> <a href="#chapter-4">Chapter 4 · Bushes and island</a></li>
             <li><label><input type="checkbox" value="pool"><span>Hit Nick with the shotgun as Abi.</span></label> <a href="#pool-house">Chapter 6 · Pool house</a></li>
@@ -128,7 +138,14 @@
             <li>Take the trail past the left side of the big rock. Check for optional pickups before going deeper into the woods.</li>
           </ol>
           <details class="route-pickup" id="tarot-1"><summary>Optional tarot · The Fool</summary><p>Pass left of the big rock near the start of the trail. Press Interact when the camera cuts to the card. If the prompt expires, walk back out and approach again. <a href="collectibles.html#item-t1">Card and pickup video</a></p></details>
-          <p class="meta">Optional clues are on the tree and the two side trails before the chase. <a href="collectibles.html#collect-0">Prologue pickups</a></p>
+          <details class="route-pickup" id="clue-0-woods">
+            <summary>Optional clues · Three pickups in the woods</summary>
+            <ol>
+              <li id="clue-f1"><strong>Harum Scarum Poster.</strong> Inspect the tree on the right just after the large rock. <a href="collectibles.html#item-f1">Journal and video</a></li>
+              <li id="clue-f2"><strong>Escapology Trunk.</strong> Take the next left fork and inspect the trunk at the end. <a href="collectibles.html#item-f2">Journal and video</a></li>
+              <li id="clue-f3"><strong>Broken Cage.</strong> Backtrack from the trunk and take the right side trail to the cage. <a href="collectibles.html#item-f3">Journal and video</a></li>
+            </ol>
+          </details>
           <ol start="5">
             <li>Follow the main trail until Laura runs. Press <strong>Down</strong> at the branch and <strong>Up</strong> at the root.</li>
             <li>At the traffic stop, choose <strong>Honest → Honest → Friendly → Compliant</strong>. Choose <strong>Relieved</strong> after Travis leaves.</li>
@@ -137,8 +154,9 @@
           <ol>
             <li>Walk down the steps to the yellow storm shelter doors below the lodge, in the direction of the car’s headlights.</li>
             <li>Choose <strong>Take Wrenches</strong>, then <strong>Confident</strong>. Go down and walk to the far end for the Bloodied Collar. Head back toward Max.</li>
-            <li>Choose <strong>Help Max</strong> when he’s attacked. He is bitten on every route. At Eliza, choose <strong>Move On</strong> if she offers a reading.</li>
           </ol>
+          <details class="route-pickup" id="clue-0-shelter"><summary>Story clue · Bloodied Collar</summary><p id="clue-c1">Laura collects the <strong>Bloodied Collar</strong> automatically as you walk forward inside the shelter. <a href="collectibles.html#item-c1">Journal and video</a></p></details>
+          <ol start="3"><li>Choose <strong>Help Max</strong> when he’s attacked. He is bitten on every route. At Eliza, choose <strong>Move On</strong> if she offers a reading.</li></ol>
           <nav class="jump chapter-nav" aria-label="After the prologue"><a href="#chapters">Chapter list</a><a href="#chapter-1">Chapter 1 →</a></nav>
         </section>
 
@@ -149,25 +167,44 @@
           <h3>Jacob · Get the bags and sabotage the van</h3>
           <ol>
             <li>Choose <strong>Reflective</strong> as Jacob talks to Kaitlyn. Pick up Emma’s bracelet in the grass near the van if you want the Keepsakes entry.</li>
-            <li>Go up the lodge steps. After trying the front door, walk left along the porch and climb through the open library window. Collect Temperance before touching the bags if you want the deck.</li>
           </ol>
+          <details class="route-pickup" id="clue-1-lodge">
+            <summary>Optional clues · Hunting Notice and Camp Plaque</summary>
+            <ol>
+              <li id="clue-c2"><strong>Hunting Notice.</strong> From the van, walk between the cars and inspect the sign at the edge of the grounds. <a href="collectibles.html#item-c2">Journal and video</a></li>
+              <li id="clue-c3"><strong>Camp Plaque.</strong> Go up the steps and inspect the plaque just left of the main lodge door. <a href="collectibles.html#item-c3">Journal and video</a></li>
+            </ol>
+          </details>
+          <ol start="2"><li>Go up the lodge steps. After trying the front door, walk left along the porch and climb through the open library window. Collect Temperance before touching the bags if you want the deck.</li></ol>
           <details class="route-pickup" id="tarot-2"><summary>Optional tarot · Temperance</summary><p>From the library, cross the dining hall toward the main entrance, then go into the kitchen. Take the card at the camera change. If the prompt expires, step out and return. <a href="collectibles.html#item-t2">Card and pickup video</a></p></details>
           <ol start="3">
             <li>Pick up the bags beside the stairs to return to Kaitlyn. Choose <strong>Playful → Mischievous → Brave</strong>.</li>
             <li>Choose <strong>Steal Rotor Arm</strong> to allow the Chapter 3 evidence dive. Press <strong>Up</strong> to catch the phone and choose <strong>Friendly</strong>.</li>
           </ol>
-          <h3 id="leave-bags">Abi · Locked cabin and buggy</h3>
+          <h3 id="leave-bags">Abi · The cabin and buggy</h3>
           <ol>
-            <li>Press <strong>Up</strong> at the opening prompt. Choose <strong>Leave Bags</strong>. This keeps the cabin locked and lets Dylan avoid his radio-hut bite in Chapter 5.</li>
-            <li>Explore the cabins before talking to Emma at the buggy. The rabbit inside the locked cabin is unavailable on this route.</li>
+            <li>Press <strong>Up</strong> at the opening prompt. Choose <strong>Leave Bags</strong> to keep the cabin locked and avoid Dylan’s radio-hut bite. Choose <strong>Break In</strong> if you want the newspaper.</li>
+            <li>Explore the cabins before talking to Emma at the buggy.</li>
           </ol>
+          <details class="route-pickup" id="clue-1-newspaper">
+            <summary>Optional clue · Newspaper Headline Scrap and the cabin branch</summary>
+            <p id="clue-f4" data-pickup-name="Newspaper Headline Scrap">Choose <strong>Break In</strong> instead of Leave Bags. Check the floor between the first two rows of bunks on the left for the <strong>Newspaper Headline Scrap</strong>. Dylan can recover it in Chapter 5 if Abi opened the cabin. The rabbit is on the shelf if you want it. <a href="collectibles.html#item-f4">Journal and video</a></p>
+            <p>Back at the lodge take <strong>Nudge?</strong> in place of the missing-bag dialogue. In Chapter 5, <a href="#amputation-branch">use the amputation branch</a> to keep Dylan available for the scrapyard and lodge.</p>
+          </details>
+          <details class="route-pickup" id="clue-1-cabins">
+            <summary>Optional clues · Camp Song Recording and Information Signpost</summary>
+            <ol>
+              <li id="clue-c4"><strong>Camp Song Recording.</strong> Look for the recorder by the foot of Room 08’s steps. <a href="collectibles.html#item-c4">Journal and video</a></li>
+              <li id="clue-c5"><strong>Information Signpost.</strong> Inspect the signpost beyond the central tree. <a href="collectibles.html#item-c5">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="evidence-1"><summary>Optional evidence · Empty Vial</summary><p>Inspect the big tree next to the central swing while playing as Abi. Dylan’s visit in Chapter 5 is too late for the evidence. <a href="collectibles.html#item-e1">Pickup video</a></p></details>
           <ol start="3">
             <li>Talk to Emma and choose <strong>Enthusiastic</strong> once you’re ready. Press <strong>Right</strong> at the buggy prompt, choose <strong>Scenic Route</strong>, then <strong>Supportive</strong>.</li>
           </ol>
           <h3>Back at the lodge · Chris and the keys</h3>
           <ol>
-            <li>Choose <strong>Questioning</strong> when the group asks about the missing bags. Then choose <strong>Friendly → Supportive → Understanding</strong>. Leaving the bags skips the bag-carrying <strong>Nudge?</strong> interrupt.</li>
+            <li>If you left the bags, choose <strong>Questioning</strong> when the group asks about them. If you broke in, take <strong>Nudge?</strong> instead. Then choose <strong>Friendly → Supportive → Understanding</strong>.</li>
             <li>Follow Chris into his office as Ryan. Take <strong>Eavesdrop</strong> when Chris takes the call, then choose <strong>Concerned → Apologetic → Inquisitive</strong>.</li>
             <li>Outside, press <strong>Up</strong> to catch the keys. Choose <strong>Compliant → Insistent → Supportive → Reluctant</strong> as the group discusses the night. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
@@ -181,24 +218,44 @@
           <img class="chapter-banner" src="assets/chapters/2.webp" width="1350" height="138" alt="" loading="lazy">
           <h3>Emma · The camp store</h3>
           <ol>
-            <li>Take <strong>Kick Door?</strong> as Jacob works on the front lock. Go past the shelves to the locked door in the back and choose <strong>Call Jacob</strong>.</li>
-            <li>Pick up the shotgun in the storeroom. Emma finds the safe code, <strong>7739</strong>. Search the room before returning to the entrance.</li>
+            <li>Take <strong>Kick Door?</strong> as Jacob works on the front lock. Get any clues from the shelves before asking Jacob to open the rear door.</li>
           </ol>
+          <details class="route-pickup" id="clue-2-store">
+            <summary>Optional clues · Two pickups in the main storeroom</summary>
+            <ol>
+              <li id="clue-f5"><strong>Damaged Memorabilia.</strong> Go behind the first shelf on the left and check the flyers. <a href="collectibles.html#item-f5">Journal and video</a></li>
+              <li id="clue-c6"><strong>Lodge Renovation Plans.</strong> At the far end, check beside the large wooden table. <a href="collectibles.html#item-c6">Journal and video</a></li>
+            </ol>
+          </details>
+          <ol start="2"><li>At the locked door in the back, choose <strong>Call Jacob</strong>. Pick up the shotgun in the storeroom. Emma finds the safe code, <strong>7739</strong>. Search the room before returning to the entrance.</li></ol>
           <details class="route-pickup" id="evidence-2"><summary>Optional evidence · Torn Bags</summary><p>After Jacob gets the beer, look in the right-hand corner near the shotgun. <a href="collectibles.html#item-e2">Pickup video</a></p></details>
           <ol start="3"><li>Talk to Jacob to leave the storeroom, then return to the safe by the entrance. Emma enters the code in the cutscene. Choose <strong>Leave Fireworks</strong>, then <strong>Affectionate</strong> when Jacob finds the snacks.</li></ol>
           <h3>Dylan · Chris’s office</h3>
           <ol>
-            <li>Choose <strong>Friendly</strong>. Check the desk for the family photo. Inspect the floor hatch and choose <strong>Suspicious → Shut Trapdoor</strong> to leave the ladder intact for Chapter 9. Choose <strong>Playful</strong> in the desk scene to find the Counselor’s Ledger.</li>
+            <li>Choose <strong>Friendly</strong>. Inspect the floor hatch and choose <strong>Suspicious → Shut Trapdoor</strong> to leave the ladder intact for Chapter 9. Choose <strong>Playful</strong> in the desk scene.</li>
+          </ol>
+          <details class="route-pickup" id="clue-2-office">
+            <summary>Optional clues · Family Photo and Counselor’s Ledger</summary>
+            <ol>
+              <li id="clue-h1"><strong>Family Photo.</strong> Inspect the picture on the desk to the left. <a href="collectibles.html#item-h1">Journal and video</a></li>
+              <li id="clue-c7"><strong>Counselor’s Ledger.</strong> Inspect the floor hatch, choose <strong>Suspicious → Shut Trapdoor</strong>, then <strong>Playful</strong> at the desk. Dylan opens the drawer and finds the ledger. Shut Trapdoor keeps the shelter ladder intact for Chapter 9. <a href="collectibles.html#item-c7">Journal and video</a></li>
+            </ol>
+          </details>
+          <ol start="2">
             <li>Use the door next to the shotgun and press <strong>Up</strong> to catch the keys. Inspect the wardrobe to open the hidden surveillance room. Choose <strong>Mischievous</strong>.</li>
             <li>Return to the charging phones and choose <strong>Head to Party</strong> once you’re done exploring.</li>
           </ol>
           <h3>Nick · Firewood and the boar</h3>
           <ol>
-            <li>Choose <strong>Rocky Road</strong> for the tarot route. Take the left fork at the falling rocks sign, and explore before heading down the stairs.</li>
+            <li>Choose <strong>Rocky Road</strong> for The Hanged Man. Take the left fork at the falling rocks sign before heading down the stairs. For the Ranger Box, choose <strong>Shady Glade</strong> and use the clue steps below instead.</li>
           </ol>
           <details class="route-pickup" id="tarot-3"><summary>Optional tarot · The Hanged Man</summary><p>On Rocky Road, use Interact when the camera cuts to the ledge on the left fork. Shady Glade leads to the same story scene but has no Hanged Man. <a href="collectibles.html#item-t3">Card and pickup video</a> · <a href="chapters.html#shady-glade">Shady Glade clue variation</a></p></details>
+          <details class="route-pickup" id="clue-2-glade">
+            <summary>Optional clue · Ranger Box on Shady Glade</summary>
+            <p id="clue-h2" data-pickup-name="Ranger Box">Choose <strong>Shady Glade</strong> instead of Rocky Road for the <strong>Ranger Box</strong>. Follow the right edge to the tree camera. You can inspect it now, or <a href="#clue-h3">collect it in Chapter 3</a>. From the tree, take the left path to the metal box. If birds startle Abi first, choose <strong>Reassuring</strong> and turn left after the scene to find the box before the exit. Shady Glade gives up The Hanged Man. <a href="collectibles.html#item-h2">Journal and video</a></p>
+          </details>
           <ol start="2">
-            <li>Choose <strong>Uncertain</strong> if the trail conversation appears. Follow the trail to Abi’s sketch and choose <strong>Sincere</strong>.</li>
+            <li>Choose <strong>Uncertain</strong> if the Rocky Road conversation appears. Follow the trail to Abi’s sketch and choose <strong>Sincere</strong>.</li>
             <li>Take <strong>Save Abi</strong> at the boar charge. Pass <strong>Don’t Breathe</strong> and choose <strong>Cheerful</strong>.</li>
           </ol>
           <h3>The lake · Target practice and the campfire</h3>
@@ -216,7 +273,11 @@
           <h2>Trouble in Paradise</h2>
           <img class="chapter-banner" src="assets/chapters/3.webp" width="1350" height="138" alt="" loading="lazy">
           <h3>Abi · Find Nick and escape the attack</h3>
-          <ol><li>Follow the trail from where you regain control. If collecting tarot, take The Tower before going far enough to meet Nick.</li></ol>
+          <ol><li>Explore the woods before following the main trail far enough to meet Nick. Get the camera and The Tower first if you want them.</li></ol>
+          <details class="route-pickup" id="clue-3-woods">
+            <summary>Optional clue · Trail Camera</summary>
+            <p id="clue-h3">At the start as Abi, follow the side path along the right edge of the clearing to the small tree with the <strong>Trail Camera</strong>. Inspect it before moving on to Nick. This pickup works after either Chapter 2 trail. If Nick already collected it on Shady Glade, revisiting the tree adds a journal entry. <a href="collectibles.html#item-h3">Journal and both pickup videos</a></p>
+          </details>
           <details class="route-pickup" id="tarot-5"><summary>Optional tarot · The Tower</summary><p>Watch for the camera aiming up into the canopy on the main trail. Take the card before the scene with Nick. <a href="collectibles.html#item-t5">Card and pickup video</a></p></details>
           <ol start="2">
             <li>When Nick calls, take <strong>Call Back?</strong>. Choose <strong>Honest → Cautious</strong> and take <strong>Kiss?</strong>.</li>
@@ -226,6 +287,14 @@
           <h3>Jacob · The boathouse and the dive</h3>
           <ol><li>Walk off the dock toward the boathouse. Take The Star on the way if you’re collecting cards.</li></ol>
           <details class="route-pickup" id="tarot-4"><summary>Optional tarot · The Star</summary><p>Take the card at the first camera change as you leave the dock for the boathouse. If the prompt expires, back up and approach again. <a href="collectibles.html#item-t4">Card and pickup video</a></p></details>
+          <details class="route-pickup" id="clue-3-boathouse">
+            <summary>Optional clues · Three pickups around the boathouse</summary>
+            <ol>
+              <li id="clue-h4"><strong>No Swimming Sign.</strong> Go left toward the deck and inspect the railing facing the lake. <a href="collectibles.html#item-h4">Journal and video</a></li>
+              <li id="clue-f6"><strong>North Kill Gazette.</strong> Inspect the newspaper on the table across from the sign. <a href="collectibles.html#item-f6">Journal and video</a></li>
+              <li id="clue-h5"><strong>Old Camp Photo.</strong> Look behind the seating at the far end of the deck for the photo on a wooden beam. <a href="collectibles.html#item-h5">Journal and video</a></li>
+            </ol>
+          </details>
           <ol start="2">
             <li>Go upstairs and check the empty towel cabinet. Return to Emma and choose <strong>Enthusiastic</strong>, let <strong>Splash Emma</strong> expire, and choose <strong>Flirt</strong>.</li>
             <li>When you hear Abi scream, choose <strong>Help Abi</strong> to stay out of the water, or follow the evidence steps below to dive safely.</li>
@@ -256,8 +325,17 @@
           <ol><li>When Emma takes over at the dock, turn around for the card if you want it. Then head inland to the fork.</li></ol>
           <details class="route-pickup" id="tarot-7"><summary>Optional tarot · The Magician</summary><p>Walk back to the tip of the dock and press Interact at the camera change. Step away and approach again to retry. <a href="collectibles.html#item-t7">Card and pickup video</a></p></details>
           <ol start="2">
-            <li>For the island clues, first follow the ground path to the fire ring and inspect the matches. Then return to the stairs and check the window to the left of the treehouse door for the police keys. Both vlog choices are optional. Open the door when you’re ready.</li>
-            <li>Choose <strong>Search Bag → Use Taser</strong>. Opening the trapdoor before searching the bag kills Emma.</li>
+            <li>Explore both paths before opening the treehouse door if you want the island clues. Both vlog choices are optional.</li>
+          </ol>
+          <details class="route-pickup" id="clue-4-island">
+            <summary>Optional clues · Box of Matches and Police Car Keys</summary>
+            <ol>
+              <li id="clue-h7"><strong>Box of Matches.</strong> At the stairs, take the ground path to the fire ring. Inspect the matches and leave the ladder alone. <a href="collectibles.html#item-h7">Journal and video</a></li>
+              <li id="clue-h6"><strong>Police Car Keys.</strong> Backtrack and take the stairs. Inspect the window just left of the treehouse door before going in. <a href="collectibles.html#item-h6">Journal and video</a></li>
+            </ol>
+          </details>
+          <ol start="3">
+            <li>Open the treehouse door, then choose <strong>Search Bag → Use Taser</strong>. Opening the trapdoor before searching the bag kills Emma.</li>
           </ol>
           <details class="route-pickup" id="evidence-4"><summary>Optional evidence · Attack Photo</summary><p>Take <strong>Take Photo</strong> immediately after Emma uses the taser. Missing the interrupt loses the evidence and the chase still continues. <a href="collectibles.html#item-e4">Pickup video</a></p></details>
           <ol start="4">
@@ -282,11 +360,25 @@
           <h3>Nick and Kaitlyn · Escape the lodge</h3>
           <ol>
             <li>As Nick, choose <strong>Grateful</strong>, let <strong>Speak Up?</strong> expire, then choose <strong>Reassuring</strong>.</li>
-            <li>As Kaitlyn, press <strong>Right</strong> at the flashlight and <strong>Left</strong> at the banister. Pass <strong>Don’t Breathe</strong>, then press <strong>Down</strong> at the stairs. For the optional Ticket Stub in Chapter 10, <a href="chapters.html#ticket-stub-setup">use the table encounter instead</a>.</li>
+            <li>As Kaitlyn, press <strong>Right</strong> at the flashlight. For the <a href="#clue-f9">Ticket Stub</a>, use the table branch below. Otherwise press <strong>Left</strong> at the banister, pass <strong>Don’t Breathe</strong> and press <strong>Down</strong> at the stairs.</li>
+          </ol>
+          <details class="route-pickup" id="ticket-setup">
+            <summary>Optional clue setup · Expose the Ticket Stub for Chapter 10</summary>
+            <p>After the flashlight dodge, let the <strong>Left</strong> banister prompt expire. Press <strong>Left</strong> to dodge Bobby’s thrown vial. Bobby knocks down the frame as he lifts the table, before the shot. Hit the table within 4.4 seconds. If the shot misses or expires, press <strong>Up</strong> at the stairs. The frame stays down either way. <a href="chapters.html#ticket-stub-setup">Alternate inputs and recorded table shot</a></p>
+          </details>
+          <ol start="3">
             <li>Back as Nick, choose <strong>Confident → Intrigued → Hide</strong>. Pass <strong>Don’t Breathe</strong> to get out with Abi.</li>
           </ol>
           <h3>Dylan · Cabins and radio hut exterior</h3>
           <ol><li>Cross the cabin clearing toward the building with the radio tower. Finish your pickups before talking to Ryan at the steps.</li></ol>
+          <details class="route-pickup" id="clue-5-cabins">
+            <summary>Optional clues · Two new pickups and three possible recoveries</summary>
+            <ol>
+              <li id="clue-h8"><strong>Triggered Bear Trap.</strong> Check the ground by the fence at the far left of the clearing. <a href="collectibles.html#item-h8">Journal and video</a></li>
+              <li id="clue-c8"><strong>Letter to Camp Nurse.</strong> Inspect the paper on the ground outside Room 03. <a href="collectibles.html#item-c8">Journal and video</a></li>
+            </ol>
+            <p>Check your journal. Recover the <a href="#clue-c4">Camp Song Recording</a> at Room 08’s steps and the <a href="#clue-c5">Information Signpost</a> by the central tree if missing. For the <a href="#clue-f4">Newspaper Headline Scrap</a>, go into the cabin Abi opened and check by the bunks. <a href="collectibles.html#cabin-clue-recovery">Recovery conditions</a></p>
+          </details>
           <details class="route-pickup" id="tarot-8"><summary>Optional tarot · The Devil</summary><p>Walk between the central swing and the picnic tables. Press Interact when the camera shows the side of the table. <a href="collectibles.html#item-t8">Card and pickup video</a></p></details>
           <details class="route-pickup" id="evidence-5"><summary>Optional evidence · Claw Marks</summary><p>At the hut, look at the wall by the fan left of the entrance. <a href="collectibles.html#item-e5">Pickup video</a></p></details>
           <details class="route-pickup" id="tarot-9"><summary>Optional tarot · The Hermit</summary><p>Round the corner past the claw marks and approach the foot of the tower. Step away and return if the prompt expires. <a href="collectibles.html#item-t9">Card and pickup video</a></p></details>
@@ -295,7 +387,13 @@
           <ol>
             <li>Choose <strong>Interested → Concerned → Apologetic</strong>. Hold fire when Ryan aims at the ceiling.</li>
             <li>Choose <strong>Aggressive → Confident</strong> when Dylan proposes the feedback loop, then <strong>Calm</strong> at the broken microphone.</li>
-            <li>With the cabin still locked from Chapter 1, Ryan goes outside. Hold fire in the second aiming window. Press <strong>Left</strong>, then <strong>Down</strong> when Silas lunges. Dylan stays unbitten and keeps both hands.</li>
+            <li>With the cabin still locked from Chapter 1, Ryan goes outside. Hold fire in the second aiming window. Press <strong>Left</strong>, then <strong>Down</strong> when Silas lunges. Dylan stays unbitten and keeps both hands. If Abi broke in, use the amputation branch below instead.</li>
+          </ol>
+          <details class="route-pickup" id="amputation-branch">
+            <summary>Alternate route · Abi broke into the cabin</summary>
+            <p>When Silas bites Dylan, choose <strong>Desperate → Chainsaw</strong> and pass the mash. This stops the infection from making Dylan transform before the lodge and awards <strong>Just a Flesh Wound</strong>. Use <a href="#crane-road">the one-handed dialogue in Chapter 9</a>. <a href="dylan-routes.html#amputation">Amputation choices and recoveries</a></p>
+          </details>
+          <ol start="4">
             <li>Choose <strong>Reassuring</strong> when Kaitlyn asks if it’s safe. The group finds Kaylee in the pool. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <p class="meta"><a href="collectibles.html#collect-5">Chapter 5 clue locations and videos</a> · <a href="chapters.html#dylan-hand">If you broke into the cabin</a></p>
@@ -320,13 +418,21 @@
             <li>As Abi, collect anything you want before starting the conversation with Nick. The <a href="chapters.html#poolhouse-pickups">two clue interactions and checking Nick</a> count toward ending exploration, so grab The Moon first if you want it.</li>
           </ol>
           <details class="route-pickup" id="tarot-11"><summary>Optional tarot · The Moon</summary><p>Enter the third changing stall on the left and walk toward the back wall. If you miss the card prompt, leave the stall and re-enter. <a href="collectibles.html#item-t11">Card and pickup video</a></p></details>
+          <details class="route-pickup" id="clue-6-pool">
+            <summary>Optional clues · Campers Photo and Spooky Drawing</summary>
+            <ol>
+              <li id="clue-c11"><strong>Campers Photo.</strong> Check the board in the corner of the main room. <a href="collectibles.html#item-c11">Journal and video</a></li>
+              <li id="clue-c10"><strong>Spooky Drawing.</strong> Inspect the locker at the far end of the changing-room corridor. <a href="collectibles.html#item-c10">Journal and video</a></li>
+            </ol>
+          </details>
           <ol start="3">
             <li>Check Nick. Choose <strong>Calm → Compassionate</strong>. He throws Abi across the room.</li>
             <li><strong>Hit Nick with the shotgun.</strong> The base window is 6.5 seconds. The blast saves Abi. Nick survives, transforms and escapes.</li>
           </ol>
           <h3>Emma and Ryan · Hunters and a visitor</h3>
+          <details class="route-pickup" id="clue-6-firepit"><summary>Optional clue · Kid’s Letter Home</summary><p id="clue-c9">Turn right from the firepit and pick up <strong>Kid’s Letter Home</strong> on the ground by the yellow tent before going uphill. <a href="collectibles.html#item-c9">Journal and video</a></p></details>
           <ol>
-            <li>As Emma, check the yellow tent for <a href="collectibles.html#item-c9">Kid’s Letter Home</a> if you want the clue, then follow either trail uphill. When the hunters catch a werewolf, <strong>let Run expire</strong> to keep Emma unbitten.</li>
+            <li>As Emma, check the clearing before going uphill if you want the clue. Then follow either trail uphill. When the hunters catch a werewolf, <strong>let Run expire</strong> to keep Emma unbitten.</li>
             <li>As Ryan at the pool house, choose <strong>Reassuring → Suspicious → Interested</strong>. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 6 navigation"><a href="#chapter-5">← Chapter 5</a><a href="#chapters">Chapter list</a><a href="#chapter-7">Chapter 7 →</a></nav>
@@ -342,8 +448,9 @@
             <li>With Max, choose <strong>Concerned → Disappointed</strong>. Choose <strong>Compliant</strong> when Travis returns and <strong>Worried</strong> when Max struggles.</li>
           </ol>
           <details class="route-pickup" id="tarot-13"><summary>Optional tarot · The World</summary><p>Walk toward the bed, then back toward the bars. Take the card beneath the bed before using the spoon. If the camera prompt expires, repeat the walk. <a href="collectibles.html#item-t13">Card and pickup video</a></p></details>
+          <details class="route-pickup" id="clue-7-cell"><summary>Optional clue · Scrawled Limerick</summary><p id="clue-h9">Read the <strong>Scrawled Limerick</strong> on the wall opposite the loose brick. You can return here during station exploration if you missed it. <a href="collectibles.html#item-h9">Journal and video</a></p></details>
           <ol start="3">
-            <li>During the first cell exploration, inspect the loose brick to the left of the bed, then interact with the bed to use the spoon. Making the space ends exploration. Read the limerick on the opposite wall first if you want the clue.</li>
+            <li>During the first cell exploration, inspect the loose brick to the left of the bed, then interact with the bed to use the spoon. Making the space ends exploration.</li>
             <li>Choose <strong>Fearful → Serious → Reflective → Encouraging → Empathetic</strong>. Back at the pool house choose <strong>Calm</strong>, then continue the flashback with <strong>Curious → Optimistic → Skeptical</strong>.</li>
             <li>Let <strong>Call for Help?</strong> expire while Laura is cuffed. At sunset choose <strong>Compassionate</strong>. Max transforms and injures Laura’s eye on this branch.</li>
           </ol>
@@ -352,7 +459,13 @@
           <details class="route-pickup" id="tarot-12"><summary>Optional tarot · The Chariot</summary><p>Walk between the tables in the main room. Step away and return to the gap if the prompt expires. <a href="collectibles.html#item-t12">Card and pickup video</a></p></details>
           <details class="route-pickup" id="evidence-7"><summary>Optional evidence · Cease &amp; Desist Letter</summary><p>Go up the short steps at the lobby corner and inspect the paper across from the wooden door. <a href="collectibles.html#item-e7">Pickup video</a></p></details>
           <ol start="2"><li>Go upstairs. In the third office, open the locker and take the <strong>syringe</strong>. Pickups and the computer are still available before you go to sleep.</li></ol>
-          <details class="route-pickup"><summary>Optional achievement · Bizzare Yet Bonafide</summary><p>Read the birthday card in the first upstairs office and the calendar in the third. Visit the computer in the downstairs corner office. Laura uses Travis’s birthday as the password and plays the recording. The second upstairs office has the Charred Sheriff’s Badge clue. <a href="chapters.html#station-computer">Computer location and footage</a></p></details>
+          <details class="route-pickup" id="clue-7-station">
+            <summary>Optional clues · Charred Sheriff’s Badge and the podcast</summary>
+            <ol>
+              <li id="clue-f7"><strong>Charred Sheriff’s Badge.</strong> Go upstairs and enter the second office. Look on the right side of the room. <a href="collectibles.html#item-f7">Journal and video</a></li>
+              <li id="clue-h10"><strong>Bizarre Yet Bonafide Podcast.</strong> Read the birthday card in the first upstairs office and the calendar in the third. Use the computer in the downstairs corner office. Laura works out the password and plays the recording for the clue and the <a href="achievements.html#podcast-achievement">podcast achievement</a>. <a href="collectibles.html#item-h10">Journal and video</a></li>
+            </ol>
+          </details>
           <ol start="3"><li>Return to the cell and interact with the space behind the brick to <strong>hide the syringe</strong>. Interact with the bed and choose <strong>Go to Sleep</strong> after the syringe is hidden.</li></ol>
           <h3>Laura · Get out without shooting Travis</h3>
           <ol>
@@ -374,7 +487,14 @@
             <li>On the walk, choose <strong>Inquisitive → Reflective → Compassionate</strong>. They fall into the quarry.</li>
           </ol>
           <h3>Laura · The flooded quarry</h3>
-          <ol><li>Check the bottom of the stairs for Old Quarry Tools and the far side of the pool for the Miner’s Lunchbox if you want the clues. Climb up and follow the walkways.</li></ol>
+          <details class="route-pickup" id="clue-8-quarry">
+            <summary>Optional clues · Old Quarry Tools and Miner’s Lunchbox</summary>
+            <ol>
+              <li id="clue-h11"><strong>Old Quarry Tools.</strong> Inspect the ground beside the bottom of the first metal stairs. <a href="collectibles.html#item-h11">Journal and video</a></li>
+              <li id="clue-h12"><strong>Miner’s Lunchbox.</strong> Turn back and circle the pool. Inspect the metal lunchbox at the far end before climbing. <a href="collectibles.html#item-h12">Journal and video</a></li>
+            </ol>
+          </details>
+          <ol><li>Climb up and follow the walkways.</li></ol>
           <details class="route-pickup" id="tarot-15"><summary>Optional tarot · The Lovers</summary><p>After the railing breaks, keep left on the next ledge. Take the card before approaching the stairs ahead. <a href="collectibles.html#item-t15">Card and pickup video</a></p></details>
           <ol start="2"><li>Press <strong>Right</strong> when the stairs collapse. Search at the top before crossing the next metal walkway.</li></ol>
           <details class="route-pickup" id="evidence-8"><summary>Optional evidence · Scarred Flesh</summary><p>Inspect the patch on the ground before the next walkway. Both outcomes of the stair prompt leave it accessible. <a href="collectibles.html#item-e8">Pickup video</a></p></details>
@@ -385,6 +505,7 @@
           <ol><li>Choose <strong>Honest → Encouraging</strong>. If Emma stayed unbitten, there’s no werewolf fight at the van. If she attacks, <a href="chapters.html#van-fight">follow the van rescue steps and use Regular Shot</a>.</li></ol>
           <h3 id="cages">Ryan · Basement and the cages</h3>
           <ol><li>Use the side room and the straight corridor to explore before entering the red-lit passage.</li></ol>
+          <details class="route-pickup" id="clue-8-distillery"><summary>Optional clue · Rum Still</summary><p id="clue-h13">Turn left into the distillery. Inspect the equipment for the <strong>Rum Still</strong> clue. <a href="collectibles.html#item-h13">Journal and video</a></p></details>
           <details class="route-pickup" id="tarot-14"><summary>Optional tarot · The Empress</summary><p>Turn left from where you gain control and walk around the distillery room until the camera reveals the card. The Rum Still clue is in the same room. <a href="collectibles.html#item-t14">Card and pickup video</a></p></details>
           <details class="route-pickup" id="tarot-17"><summary>Optional tarot · The Emperor</summary><p>Return to the starting corridor and walk straight. Take the card before entering the tunnel lit in red. <a href="collectibles.html#item-t17">Card and pickup video</a></p></details>
           <ol start="2">
@@ -400,8 +521,8 @@
           <p class="eyebrow">Chapter 9</p>
           <h2>The Matriarch</h2>
           <img class="chapter-banner" src="assets/chapters/9.webp" width="1350" height="138" alt="" loading="lazy">
-          <h3>Dylan and Kaitlyn · On the road</h3>
-          <ol><li>With Dylan’s hands intact, choose <strong>Curious → Curious</strong> as they discuss Ryan and Laura. The <strong>Positive</strong> choice belongs to the amputation branch.</li></ol>
+          <h3 id="crane-road">Dylan and Kaitlyn · On the road</h3>
+          <ol><li>With Dylan’s hands intact, choose <strong>Curious → Curious</strong>. If Ryan amputated Dylan’s hand, choose <strong>Positive → Curious</strong>.</li></ol>
           <h3 id="constance">Laura and Ryan · Constance and the bedroom</h3>
           <ol>
             <li><strong>Fail the shotgun mash</strong> to spare Constance. Choose <strong>Run</strong>, then press <strong>Right</strong> to dodge her shot. Bobby stabs Ryan regardless.</li>
@@ -414,9 +535,16 @@
           </ol>
           <h3>Laura · Bathroom, house pickups and Jedediah</h3>
           <ol>
-            <li>Choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong> in the bathtub. In the blue room, check the Hunting Trophy Wall if you want the clue. Skip the piano to avoid an ambush.</li>
-            <li>Go upstairs. Inspect the Hackett Family Tree in the office if you want it. Continue to the next room and check the windows before approaching the door.</li>
+            <li>Choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong> in the bathtub. Skip the piano in the blue room to avoid an ambush.</li>
+            <li>Go upstairs and through the office. Check the windows in the next room before approaching the door.</li>
           </ol>
+          <details class="route-pickup" id="clue-9-house">
+            <summary>Optional clues · Hunting Trophy Wall and Hackett Family Tree</summary>
+            <ol>
+              <li id="clue-h15"><strong>Hunting Trophy Wall.</strong> Inspect the display next to the stairs in the blue room. <a href="collectibles.html#item-h15">Journal and video</a></li>
+              <li id="clue-h16"><strong>Hackett Family Tree.</strong> Go upstairs into the office. Inspect the framed chart beside the armchair. <a href="collectibles.html#item-h16">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="tarot-19"><summary>Optional tarot · The Sun</summary><p>Walk toward the windows in the room beyond the upstairs office. Take the card before you approach the door. Step away and approach again if the prompt expires. <a href="collectibles.html#item-t19">Card and pickup video</a></p></details>
           <ol start="3"><li>Approach the door when you’re done. Press <strong>Left, Left, Left</strong> against Jedediah, then choose <strong>Run</strong> to spare him. Laura cuts the power after the fight.</li></ol>
           <h3 id="ryan-bite">Ryan · Spare Bobby and accept the bite</h3>
@@ -426,14 +554,14 @@
             <li>When Laura finds Ryan, choose <strong>Sympathetic → Accept</strong>. Let <strong>Pull Away?</strong> expire. The bite stops Ryan from bleeding out after the attic fight.</li>
           </ol>
           <h3 id="kaitlyn-bite">Dylan · Give Kaitlyn the scrapyard bite</h3>
-          <ol>
-            <li>Follow the path right of the cars into the garage. If you want the Scrapyard Note, check the receipts at the end of the upstairs walkway.</li>
-            <li>Use the switch on the table by the downstairs stairs to open the gate. Go through and take the metal steps onto the containers.</li>
-          </ol>
-          <details class="route-pickup" id="tarot-20"><summary>Optional tarot · Judgement</summary><p>Walk across the container roofs after opening the gate. Take the card at the camera change. The green sign between the far staircases is the Discarded Signage clue. <a href="collectibles.html#item-t20">Card and pickup video</a></p></details>
+          <ol><li>Follow the path right of the cars into the garage.</li></ol>
+          <details class="route-pickup" id="clue-9-garage"><summary>Optional clue · Scrapyard Note</summary><p id="clue-h14">Go upstairs in the garage and inspect the receipts at the far end of the walkway for the <strong>Scrapyard Note</strong>. <a href="collectibles.html#item-h14">Journal and video</a></p></details>
+          <ol start="2"><li>Use the switch on the table by the downstairs stairs to open the gate. Go through and take the metal steps onto the containers.</li></ol>
+          <details class="route-pickup" id="tarot-20"><summary>Optional tarot · Judgement</summary><p>Walk across the container roofs after opening the gate. Take the card at the camera change. <a href="collectibles.html#item-t20">Card and pickup video</a></p></details>
+          <details class="route-pickup" id="clue-9-yard"><summary>Optional clue · Discarded Signage</summary><p id="clue-f8">Go down the far steps and inspect the green sign between the staircases for <strong>Discarded Signage</strong>. <a href="collectibles.html#item-f8">Journal and video</a></p></details>
           <ol start="3">
             <li>Descend on the far side. Cross through the wrecked bus, then go left to the yellow crane when you’re ready to start the fight.</li>
-            <li>Choose <strong>Encouraging → Warn Kaitlyn</strong>, then press <strong>Up</strong>. Choose <strong>Slam Car</strong> to skip the torch fight.</li>
+            <li>Choose <strong>Encouraging → Warn Kaitlyn</strong>, press <strong>Up</strong>, then choose <strong>Slam Car</strong> to skip the torch fight. If you choose <strong>Lift Car</strong> instead of Warn Kaitlyn, go straight to Slam Car.</li>
             <li><strong>Fail the lever mash</strong> as Silas approaches Kaitlyn. Watch for the ankle bite. Dylan drops the car afterward, and both reach the lodge.</li>
           </ol>
           <p class="notice">Confirm Kaitlyn took the bite before using the Chapter 10 beam failure. If you passed the lever mash, use the <a href="#silver-fallback">silver-shot fallback</a> to save the nine counselors.</p>
@@ -459,6 +587,17 @@
           <ol><li>Follow the path back to the dock. Choose <strong>Stay</strong> when offered the swim. Caleb kills Max if he swims to the other shore.</li></ol>
           <h3>Kaitlyn · Prepare the lodge</h3>
           <ol><li>Go upstairs from the main hall. The Ancestral Portrait is on the chimney wall. Choose <strong>Keep Looking</strong> if you inspect it before you’ve finished the pickups.</li></ol>
+          <details class="route-pickup" id="clue-10-lodge">
+            <summary>Optional clues · All five lodge pickups</summary>
+            <ol>
+              <li id="clue-c12"><strong>Camp Letter.</strong> From the first stairs, turn into the bunk room on the left and check the note on the floor. <a href="collectibles.html#item-c12">Journal and video</a></li>
+              <li id="clue-h19"><strong>Ancestral Portrait.</strong> Inspect the chimney wall midway along the landing. Choose <strong>Keep Looking</strong>. <a href="collectibles.html#item-h19">Journal and video</a></li>
+              <li id="clue-f9"><strong>Ticket Stub.</strong> Check the broken frame on the floor beside the portrait. If the frame is intact, <a href="#ticket-setup">the Chapter 5 table setup</a> was missed. <a href="collectibles.html#item-f9">Journal and video</a></li>
+              <li id="clue-h17"><strong>Chalkboard Doodle.</strong> Go past the portrait to the classroom and inspect the board. <a href="collectibles.html#item-h17">Journal and video</a></li>
+              <li id="clue-h18"><strong>Inscribed Jewelry.</strong> Leave the classroom, turn left up the stairs and inspect the couch. <a href="collectibles.html#item-h18">Journal and video</a></li>
+            </ol>
+            <p><a href="collectibles.html#lodge-pickup-map">Lodge pickup map</a></p>
+          </details>
           <details class="route-pickup" id="tarot-22"><summary>Optional tarot · The High Priestess</summary><p>Use the stairs next to the bunk room and walk toward the windows on the top floor. Take the card at the camera change. This is the last tarot pickup. <a href="collectibles.html#item-t22">Card and pickup video</a></p></details>
           <details class="route-pickup" id="evidence-10"><summary>Optional evidence · Trail Cam Footage</summary><p>Check the boxes near the couch on the upper floor before starting the attack. This is the last evidence pickup. <a href="collectibles.html#item-e10">Pickup video</a></p></details>
           <p class="meta"><a href="collectibles.html#collect-10">Lodge map and all five clue locations</a></p>
@@ -489,7 +628,7 @@
             <li>Stay through the podcast and credits for <a href="achievements.html#achievement-epilogue">Epilogue</a>. Check the final newspaper after the podcast for how the evidence affected the public account.</li>
           </ol>
           <p><a href="#route-cast">Who survives this route</a> · <a href="epilogue.html#cards">Compare your character recaps</a> · <a href="epilogue.html#headline-assets">Newspaper variants</a> · <a href="achievements.html#ending-replays">Choose a replay starting point</a></p>
-          <p class="source-note">Route audit · Steam PC build 11105655 scene rules and English prompts, cross-checked against recorded survival and pickup routes. <a href="reference.html#sources">Game-file and footage notes</a> · <a href="https://www.speedrun.com/the_quarry/guides/h7v74">Recorded Rough Night route notes</a> · <a href="https://www.powerpyx.com/the-quarry-walkthrough-everyone-survives/">PowerPyx · counselor survival route</a></p>
+          <p class="source-note">Route audit · Steam PC build 11105655 scene rules and English prompts, cross-checked against recorded survival and pickup routes. The clue branches check the Chapter 2 trail choice, Abi’s Chapter 3 camera pickup, the radio-hut bite and amputation, and the fallen frame. <a href="reference.html#sources">Game-file and footage notes</a> · <a href="https://www.speedrun.com/the_quarry/guides/h7v74">Recorded Rough Night route notes</a> · <a href="https://www.youtube.com/watch?v=wOZFC2bBcME">Recorded collectible locations</a></p>
           <nav class="jump chapter-nav" aria-label="Epilogue navigation"><a href="#chapter-10">← Chapter 10</a><a href="#chapters">Chapter list</a><a href="endings.html#endings">Other endings</a></nav>
         </section>
       </article>

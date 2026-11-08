@@ -173,6 +173,11 @@ for kind, prefix, numbers in (("tarot", "t", {6, 7, 8, 9, 11, 12, 13, 14, 15, 16
 blood_pact = pages["blood-pact.html"]
 assert {"setup", "prologue", "both-crane-bites", "mutually-assured", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= blood_pact.ids.keys()
 clues = {f"{prefix}{number}" for prefix, count in (("c", 12), ("f", 9), ("h", 19)) for number in range(1, count + 1)}
+assert {"all-clues-plan", "ticket-setup", "amputation-branch"} <= rough_night.ids.keys()
+assert {key for key in rough_night.ids if re.fullmatch(r"clue-[cfh]\d+", key)} == {f"clue-{key}" for key in clues}
+assert {("rough-night.html", f"clue-{key}") for key in clues} <= collectibles.page_links
+assert {("collectibles.html", f"item-{key}") for key in clues} <= rough_night.page_links
+assert ("rough-night.html", "all-clues-plan") in achievements.page_links & endings.page_links & walkthroughs.page_links
 pickups = {f"clue-{key}": f"item-{key}" for key in clues}
 pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(1, 23) if number != 3})
 pickups.update({f"evidence-{number}": f"item-e{number}" for number in range(1, 11)})
