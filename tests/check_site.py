@@ -125,7 +125,15 @@ assert {("reference.html", f"path-{n}") for n in range(1, 16)} <= story_paths.pa
 assert ("story-paths.html", "") in home.page_links & walkthroughs.page_links
 assert ("completion.html", "pickup-index") in story_paths.page_links
 search_route_options = (root / "index.html").read_text(encoding="utf-8").split('id="search-route"', 1)[1].split("</select>", 1)[0]
-assert set(re.findall(r'<option value="([^"]+\.html)"', search_route_options)) == route_pages
+pickup_options, scene_only_options = search_route_options.split("data-scenes-only", 1)
+assert set(re.findall(r'<option value="([^"]+\.html)"', pickup_options)) == route_pages
+scene_pages = {name for name in pages if 'class="wrap route-layout"' in (root / name).read_text(encoding="utf-8")}
+assert route_pages | set(re.findall(r'<option value="([^"]+\.html)"', scene_only_options)) == scene_pages
+for name in scene_pages:
+    html = (root / name).read_text(encoding="utf-8")
+    assert f'index.html?section=route-scenes&amp;route={name}#find' in html, name
+    article = html.split('class="route-content"', 1)[1].split("</article>", 1)[0]
+    assert not re.search(r'<h[34]>', article), name
 pickup_pattern = r"(clue-[cfh]\d+|tarot-\d+|evidence-\d+)"
 collectible_html = (root / "collectibles.html").read_text(encoding="utf-8")
 route_backlinks = set()

@@ -51,6 +51,8 @@ if (routeIndex) {
   for (const link of routeIndex.querySelectorAll('nav a')) {
     destination.add(new Option(link.textContent.trim(), link.getAttribute('href')));
   }
+  const routeSearch = document.querySelector('.site-header .search-link');
+  destination.add(new Option('Search this walkthrough', routeSearch.getAttribute('href')));
   go.className = 'button secondary';
   go.type = 'submit';
   go.textContent = 'Go';

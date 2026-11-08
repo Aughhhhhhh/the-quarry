@@ -3,6 +3,8 @@ const search = document.querySelector("#search");
 const searchSection = document.querySelector("#search-section");
 const searchRoute = document.querySelector("#search-route");
 const searchRouteControl = document.querySelector("#search-route-control");
+const searchRouteLabel = searchRouteControl.querySelector("label");
+const sceneRoutes = searchRoute.querySelector("[data-scenes-only]");
 const searchRouteNote = document.querySelector("#search-route-note");
 const searchResults = document.querySelector("#search-results");
 const searchCount = document.querySelector("#search-count");
@@ -26,6 +28,15 @@ const searchFiller = new Set("a an and are at can do does for from get how i in 
 
 function routeLink(anchor, label) {
   return anchor && { href: anchor.getAttribute("href"), label: label || anchor.textContent.trim() };
+}
+
+function followingText(heading) {
+  let body = "";
+  for (let next = heading.nextElementSibling; next && !next.matches("h2, h3, h4, dt, nav, .source-note"); next = next.nextElementSibling) {
+    body += ` ${next.textContent}`;
+    if (heading.matches("dt")) break;
+  }
+  return body;
 }
 
 function indexEntries(content, page) {
@@ -87,11 +98,6 @@ function indexEntries(content, page) {
     const chapter = walkthrough?.querySelector("summary .meta").textContent || "";
     const title = heading.textContent.trim();
     const context = entry.querySelector("summary strong, label, h3").textContent.trim();
-    let body = "";
-    for (let next = heading.nextElementSibling; next && !next.matches("h2, h3, h4, dt, nav, .source-note"); next = next.nextElementSibling) {
-      body += ` ${next.textContent}`;
-      if (heading.matches("dt")) break;
-    }
     entries.push({
       href: `${page}#${heading.id}`,
       title,
@@ -100,10 +106,48 @@ function indexEntries(content, page) {
       name: normalize(title),
       scope: normalize(chapter),
       detail: true,
-      text: normalize(`${chapter} ${context} ${title} ${body}`),
+      text: normalize(`${chapter} ${context} ${title} ${followingText(heading)}`),
     });
   }
   return entries;
+}
+
+function indexRouteScenes(content, page) {
+  const routeName = content.querySelector("h1").textContent.trim();
+  const links = new Map(Array.from(
+    content.querySelectorAll('.route-index a[href^="#"], .scene-links a[href^="#"]'),
+    link => [link.getAttribute("href").slice(1), link.textContent.trim()],
+  ));
+  const entries = [];
+  for (const section of content.querySelectorAll(".route-content > section[id]")) {
+    const chapter = section.querySelector(".eyebrow")?.textContent.split(" · ")[0].trim() || "";
+    for (const node of [section, ...section.querySelectorAll("h3[id], h4[id], dt[id], li[id], p[id], details[id]")]) {
+      if (/^(?:tarot|evidence|clue|checkpoint)-/.test(node.id)) continue;
+      const heading = node.matches("h3, h4, dt");
+      const title = (heading ? node : node.querySelector(":scope > h2, :scope > strong, :scope > summary"))?.textContent.trim();
+      if (!title) continue;
+      const detail = node !== section;
+      const terms = normalize(links.get(node.id) || "");
+      entries.push({
+        href: `${page}#${node.id}`,
+        title,
+        label: chapter ? `${routeName} · ${chapter}` : routeName,
+        section: "route-scenes",
+        name: normalize(title),
+        chapter: detail ? "" : normalize(chapter),
+        scope: normalize(chapter),
+        terms,
+        detail,
+        text: normalize(`${routeName} ${chapter} ${title} ${terms} ${heading ? followingText(node) : node.textContent}`),
+      });
+    }
+  }
+  return entries;
+}
+
+function selectedPages() {
+  if (searchSection.value === "route-scenes") return searchRoute.value ? [searchRoute.value] : [];
+  return searchSection.value ? [guidePages[searchSection.value]] : allPages;
 }
 
 let resultLimit = resultPageSize;
@@ -112,9 +156,10 @@ function renderSearch() {
   const query = normalize(search.value).replace(/\bch (?=\d+\b)/g, "chapter ");
   const section = searchSection.value;
   const routePage = section === "collectibles" ? searchRoute.value : "";
+  const walkthrough = section === "route-scenes";
   searchResults.replaceChildren();
   searchCount.textContent = "";
-  if (!query && !routePage) {
+  if (walkthrough ? !searchRoute.value : !query && !routePage) {
     searchMore.hidden = true;
     return;
   }
@@ -125,10 +170,11 @@ function renderSearch() {
   const patterns = words.map((word, index) => new RegExp(`(?:^| )${word}${
     index === words.length - 1 && !/^\d+$/.test(word) ? "" : "(?: |$)"
   }`));
-  const pages = section ? [guidePages[section]] : allPages;
+  const pages = selectedPages();
   const searchIndex = pages.flatMap(page => pageResults.get(page) || []);
   const matches = searchIndex.filter(entry => {
     if (section && entry.section !== section) return false;
+    if (walkthrough && chapter && /^chapter \d+$/.test(entry.scope) && entry.scope !== chapter) return false;
     const pickup = entry.pickupRoutes?.get(routePage);
     const pickupChapter = pickup && normalize(pickup.chapter);
     if (routePage && (!pickup || (chapter && pickupChapter !== chapter))) return false;
@@ -140,6 +186,7 @@ function renderSearch() {
     if (entry.name === query || entry.name === phrase) return 6;
     if (` ${entry.terms || ""} `.includes(` ${phrase} `)) return 5;
     if (entry.name.includes(query) || entry.name.includes(phrase)) return 4;
+    if (walkthrough && entry.detail && entry.text.includes(phrase)) return 3.5;
     const named = ` ${entry.scope || ""} ${entry.name} ${entry.terms || ""} `;
     if (words.every(word => named.includes(` ${word} `))) return 3;
     if (chapter && entry.scope === chapter) return 2;
@@ -213,7 +260,11 @@ async function loadResults(page) {
     if (!response.ok) throw new Error(response.statusText);
     const source = document.createElement("template");
     source.innerHTML = await response.text();
-    pageResults.set(page, page === "epilogue.html" ? indexArchive(source.content) : indexEntries(source.content, page));
+    let entries;
+    if (source.content.querySelector(".route-content")) entries = indexRouteScenes(source.content, page);
+    else if (page === "epilogue.html") entries = indexArchive(source.content);
+    else entries = indexEntries(source.content, page);
+    pageResults.set(page, entries);
   } catch {
     pageResults.set(page, null);
   }
@@ -231,10 +282,17 @@ find.hidden = false;
 document.querySelector(".search-link").hidden = false;
 function updateSearch() {
   const collectibles = searchSection.value === "collectibles";
-  searchRouteControl.hidden = searchRouteNote.hidden = !collectibles;
-  if (normalize(search.value) || (collectibles && searchRoute.value)) {
-    const pages = searchSection.value ? [guidePages[searchSection.value]] : allPages;
-    for (const page of pages) {
+  const walkthrough = searchSection.value === "route-scenes";
+  searchRouteControl.hidden = searchRouteNote.hidden = !collectibles && !walkthrough;
+  searchRouteLabel.textContent = walkthrough ? "Walkthrough" : "Pickup walkthrough";
+  searchRoute.options[0].textContent = walkthrough ? "Choose a walkthrough" : "Any walkthrough";
+  sceneRoutes.hidden = sceneRoutes.disabled = !walkthrough;
+  if (collectibles && sceneRoutes.contains(searchRoute.selectedOptions[0])) searchRoute.value = "";
+  searchRouteNote.textContent = walkthrough
+    ? "Choose a walkthrough, then search by chapter, scene, or on-screen prompt. For tarot, evidence or clues, switch to Collectibles."
+    : "Choose a walkthrough to browse its pickups, then search by name or chapter. Some steps require a branch or replay.";
+  if (normalize(search.value) || ((collectibles || walkthrough) && searchRoute.value)) {
+    for (const page of selectedPages()) {
       if (!pageRequests.has(page)) pageRequests.set(page, loadResults(page));
     }
   }
@@ -256,7 +314,11 @@ searchResults.addEventListener("click", event => {
   }, "");
 });
 const savedSearch = history.state?.guideSearch;
-if (new URLSearchParams(location.search).get("section") === "collectibles") searchSection.value = "collectibles";
+const searchParams = new URLSearchParams(location.search);
+const linkedSection = searchParams.get("section");
+if (Array.from(searchSection.options).some(option => option.value === linkedSection)) searchSection.value = linkedSection;
+const linkedRoute = searchParams.get("route");
+if (Array.from(searchRoute.options).some(option => option.value === linkedRoute)) searchRoute.value = linkedRoute;
 if (savedSearch) {
   search.value = savedSearch.query;
   searchSection.value = savedSearch.section;
