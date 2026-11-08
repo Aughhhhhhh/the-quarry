@@ -135,6 +135,17 @@ for kind, prefix, numbers in (("tarot", "t", {6, 7, 8, 9, 11, 12, 13, 14, 15, 16
     assert {("index.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
     assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= guide.page_links
 
+blood_pact = pages["blood-pact.html"]
+assert {"setup", "prologue", "both-crane-bites", "mutually-assured", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= blood_pact.ids.keys()
+clues = {f"{prefix}{number}" for prefix, count in (("c", 12), ("f", 9), ("h", 19)) for number in range(1, count + 1)}
+pickups = {f"clue-{key}": f"item-{key}" for key in clues}
+pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(1, 23) if number != 3})
+pickups.update({f"evidence-{number}": f"item-e{number}" for number in range(1, 11)})
+assert pickups.keys() <= blood_pact.ids.keys() and "tarot-3" not in blood_pact.ids
+for route_anchor, item in pickups.items():
+    assert ("blood-pact.html", route_anchor) in guide.page_links
+    assert ("index.html", item) in blood_pact.page_links
+
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates

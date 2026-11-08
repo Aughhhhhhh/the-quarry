@@ -18,7 +18,8 @@ document.querySelector('.route-options').hidden = false;
 
 function openLinkedStep() {
   const step = document.getElementById(location.hash.slice(1));
-  if (step?.matches('details.route-pickup')) step.open = true;
+  const pickup = step?.closest('details.route-pickup');
+  if (pickup) pickup.open = true;
 }
 
 window.addEventListener('hashchange', openLinkedStep);
