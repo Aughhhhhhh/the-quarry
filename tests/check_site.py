@@ -92,6 +92,7 @@ assert {
 } <= guide.ids.keys()
 assert guide.list_items == {
     "score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6,
+    "tarot-gallery-cards": 22, "death-art-variants": 8,
     "death-vision-options": 2, "sun-vision-order": 9, "judgement-vision-order": 4,
 }, guide.list_items
 epilogue = pages["epilogue.html"]
