@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="164" viewBox="0 0 320 164">
+  <rect width="320" height="164" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="10" y="10" width="145" height="116" rx="4"/>
+    <rect x="165" y="10" width="145" height="116" rx="4"/>
+  </g>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <g fill="#bfc6bd" font-size="13" font-weight="700">
+      <text x="82.5" y="32">EMMA IS THERE</text>
+      <text x="237.5" y="32">JACOB IS ALONE</text>
+    </g>
+    <g fill="#f2a674" font-size="24" font-weight="700">
+      <text x="82.5" y="64">→ Right</text>
+      <text x="237.5" y="64">↓ Down</text>
+    </g>
+    <g fill="#f6f1e7" font-size="13">
+      <text x="82.5" y="94">Miss → bite*</text>
+      <text x="237.5" y="94">Miss → climb mash</text>
+      <text x="237.5" y="113">Fail mash → death</text>
+      <text x="160" y="150">* Bobby’s blood blocks this bite.</text>
+    </g>
+  </g>
+</svg>
