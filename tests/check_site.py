@@ -183,6 +183,18 @@ for kind, prefix, numbers in (("tarot", "t", range(18, 23)), ("evidence", "e", (
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= alternate.page_links
 assert {("epilogue.html", headline) for headline in ("closing-shooting-self-defense", "closing-case-reopens")} <= alternate.page_links
 
+completion = pages["completion.html"]
+assert {"setup", "quick-starts", "prologue", "epilogue", "replays", "manual-combat",
+        *(f"chapter-{chapter}" for chapter in range(1, 11))} <= completion.ids.keys()
+assert {("completion.html", anchor) for anchor in ("setup", "replays", "manual-combat")} <= achievements.page_links
+completion_pickups = {f"clue-{prefix}{number}": f"item-{prefix}{number}" for prefix in ("c", "f") for number in range(1, 6)}
+for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
+    completion_pickups.update({f"{kind}-{number}": f"item-{prefix}{number}" for number in range(1, count + 1)})
+assert completion_pickups.keys() <= completion.ids.keys()
+assert {("collectibles.html", item) for item in completion_pickups.values()} <= completion.page_links
+assert {("completion.html", anchor) for anchor in completion_pickups} <= collectibles.page_links
+assert completion.list_items["completion-replay-list"] == 4
+
 epilogue = pages["epilogue.html"]
 assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
 assert len(epilogue.characters) == 17, epilogue.characters
