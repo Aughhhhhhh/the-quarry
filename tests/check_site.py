@@ -214,6 +214,18 @@ for route_anchor, item in pickups.items():
     assert ("blood-pact.html", route_anchor) in collectibles.page_links
     assert ("collectibles.html", item) in blood_pact.page_links
 
+blood_pact_html = (root / "blood-pact.html").read_text(encoding="utf-8")
+clue_checkpoint_table = blood_pact_html.split('id="clue-checkpoints"', 1)[1].split("</table>", 1)[0]
+clue_rows = re.findall(r'<tr><th scope="row"><a href="#([^"]+)">[^<]+</a></th><td>(\d+)</td><td>(\d+)</td></tr>', clue_checkpoint_table)
+assert [anchor for anchor, *_ in clue_rows] == ["prologue", *(f"chapter-{n}" for n in range(1, 11))]
+clues_so_far = set()
+for chapter, (anchor, early, recovered) in enumerate(clue_rows):
+    section = blood_pact_html.split(f'id="{anchor}">', 1)[1].split("</section>", 1)[0]
+    clues_so_far.update(re.findall(r'id="clue-([cfh]\d+)"', section))
+    assert int(early) == len(clues_so_far)
+    assert int(recovered) == len(clues_so_far) - (3 if 1 <= chapter <= 4 else 0)
+assert clues_so_far == clues
+
 finale = pages["finale.html"]
 finale_routes = {
     "motel", "nobodys-fool", "family-matters", "above-the-law", "white-wolf",
@@ -257,6 +269,13 @@ assert completion_pickups.keys() == {key for key in completion.ids if re.fullmat
 assert {("collectibles.html", item) for item in completion_pickups.values()} <= completion.page_links
 assert {("completion.html", anchor) for anchor in completion_pickups} <= collectibles.page_links
 assert completion.list_items["completion-replay-list"] == 4
+achievement_replays = pages["achievement-replays.html"]
+replay_stages = {"reunions", "massacre", "final-girl", "last-man-standing", "blood-pact"}
+assert replay_stages | {"setup", "single-awards"} <= achievement_replays.ids.keys()
+assert {("achievement-replays.html", stage) for stage in replay_stages} <= completion.page_links & achievements.page_links
+assert ("achievement-replays.html", "") in walkthroughs.page_links & reference.page_links
+assert {("blood-pact.html", "clue-checkpoints"), ("massacre.html", "final-girl-rabbit"),
+        ("massacre.html", "final-girl-no-rabbit"), ("massacre.html", "last-man-standing")} <= achievement_replays.page_links
 
 completion_html = (root / "completion.html").read_text(encoding="utf-8")
 checkpoint_table = completion_html.split('id="pickup-checkpoints"', 1)[1].split("</table>", 1)[0]

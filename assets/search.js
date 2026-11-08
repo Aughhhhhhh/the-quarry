@@ -58,6 +58,8 @@ function indexEntries(content, page) {
       route = routeLink(entry.querySelector(':scope > .entry-body > p > :is(a.button.primary, a[href^="massacre.html#sole-"])'), "Walkthrough");
     } else if (entry.dataset.search === "Story path") {
       route = routeLink(entry.querySelector('a[href^="story-paths.html#tape-"]'), "Unlock steps");
+    } else if (entry.id === "completion-plan") {
+      route = routeLink(entry.querySelector('a[href="achievement-replays.html"]'), "Replay guide");
     }
     return {
       href: `${page}#${entry.id}`,
