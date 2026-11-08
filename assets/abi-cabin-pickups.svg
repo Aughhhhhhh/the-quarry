@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="176" viewBox="0 0 320 176">
+  <rect width="320" height="176" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="10" y="10" width="142" height="100" rx="4"/>
+    <rect x="168" y="10" width="142" height="100" rx="4"/>
+    <rect x="75" y="134" width="170" height="32" rx="4"/>
+  </g>
+  <path d="M81 110v12h158v-12m-79 12v10m-4-4 4 4 4-4" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="14">
+    <g fill="#f2a674" font-weight="700">
+      <text x="81" y="35">After Break In</text>
+      <text x="239" y="35">On either route</text>
+      <text x="160" y="155">Emma at the buggy</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="63">Newspaper Scrap</text>
+      <text x="81" y="84">Stuffed rabbit</text>
+      <text x="239" y="57">Song Recording</text>
+      <text x="239" y="77">Empty Vial</text>
+      <text x="239" y="97">Information Signpost</text>
+    </g>
+  </g>
+</svg>
