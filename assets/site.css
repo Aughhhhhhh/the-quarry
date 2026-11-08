@@ -218,6 +218,9 @@ input::placeholder { color: #b2bcb2; }
 .route-index nav { display: grid; gap: 0; }
 .route-index nav a { padding: .3rem .15rem; }
 .route-index a:focus-visible { outline-offset: -2px; }
+.route-jump { display: none; }
+.scene-links nav { margin: .35rem 0 0; }
+.scene-links nav a { min-height: 2.75rem; display: inline-flex; align-items: center; }
 .route-content .section > h3 { margin-top: 1.6rem; line-height: 1.25; }
 .route-content .section > h3 + ol { margin-top: .65rem; }
 .route-content li::marker { color: var(--accent); font-weight: 700; }
@@ -262,6 +265,11 @@ input::placeholder { color: #b2bcb2; }
   .route-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .route-index { position: static; max-height: none; margin-top: 1rem; }
   .route-index nav { grid-template-columns: 1fr 1fr; gap: 0 .5rem; }
+  html:has(.route-jump) { scroll-padding-top: 4.5rem; }
+  .route-index:has(> .route-jump) { position: sticky; top: 0; z-index: 2; padding: .4rem; overflow: visible; }
+  .route-index:has(> .route-jump) > :is(h2, nav) { display: none; }
+  .route-jump { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
+  .route-jump select { min-width: 0; }
   .site-footer .bar { align-items: flex-start; flex-direction: column; padding-block: 1rem; gap: .6rem; }
 }
 @media (max-width: 440px) {

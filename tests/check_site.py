@@ -236,6 +236,11 @@ assert (reference.list_items + collectibles.list_items) == {
 }, (reference.list_items + collectibles.list_items)
 rough_night = pages["rough-night.html"]
 assert {"setup", "prologue", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= rough_night.ids.keys()
+rough_html = (root / "rough-night.html").read_text(encoding="utf-8")
+for chapter in ("prologue", *(f"chapter-{number}" for number in range(1, 11))):
+    section = rough_html.split(f'id="{chapter}">', 1)[1].split("</section>", 1)[0]
+    menu = section.split('class="route-pickup scene-links"', 1)[1].split("</details>", 1)[0]
+    assert re.findall(r'href="#([^"]+)"', menu) == re.findall(r'<h3 id="([^"]+)"', section), chapter
 tarot_order = [1, 2, 3, 5, 4, 7, 6, 8, 9, 10, 11, 13, 12, 15, 16, 14, 17, 18, 19, 20, 21, 22]
 gallery = (root / "collectibles.html").read_text(encoding="utf-8").split('id="tarot-gallery-cards"', 1)[1].split("</ul>", 1)[0]
 assert [int(number) for number in re.findall(r'href="#item-t(\d+)"', gallery)] == tarot_order

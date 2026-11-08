@@ -14,7 +14,8 @@ for (const button of document.querySelectorAll('[data-pickups]')) {
   for (const pickup of pickups) pickup.addEventListener('toggle', update);
   update();
 }
-document.querySelector('.route-options').hidden = false;
+const routeOptions = document.querySelector('.route-options');
+if (routeOptions) routeOptions.hidden = false;
 
 function openLinkedStep() {
   const step = document.getElementById(location.hash.slice(1));
@@ -27,6 +28,45 @@ function openLinkedStep() {
 
 window.addEventListener('hashchange', openLinkedStep);
 openLinkedStep();
+
+function jumpToStep(step) {
+  const pickup = step.closest('details.route-pickup');
+  if (pickup) pickup.open = true;
+  location.hash = step.id;
+  const focus = step.querySelector(':scope > summary') || step;
+  if (focus === step) step.tabIndex = -1;
+  focus.focus({preventScroll: true});
+  step.scrollIntoView();
+}
+
+const routeIndex = document.querySelector('.route-index');
+if (routeIndex) {
+  const jump = document.createElement('form');
+  const destination = document.createElement('select');
+  const go = document.createElement('button');
+  jump.className = 'route-jump';
+  destination.setAttribute('aria-label', 'Jump to chapter or route');
+  destination.required = true;
+  destination.add(new Option('Jump to chapter or route', ''));
+  for (const link of routeIndex.querySelectorAll('nav a')) {
+    destination.add(new Option(link.textContent.trim(), link.getAttribute('href')));
+  }
+  go.className = 'button secondary';
+  go.type = 'submit';
+  go.textContent = 'Go';
+  jump.append(destination, go);
+  routeIndex.append(jump);
+  jump.addEventListener('submit', event => {
+    event.preventDefault();
+    const href = destination.value;
+    if (!href.startsWith('#')) {
+      location.assign(href);
+      return;
+    }
+    const step = document.getElementById(href.slice(1));
+    if (step) jumpToStep(step);
+  });
+}
 
 const pickupFinder = document.querySelector('#pickup-index form');
 if (pickupFinder) {
@@ -65,13 +105,7 @@ if (pickupFinder) {
   listPickups();
   pickupFinder.addEventListener('submit', event => {
     event.preventDefault();
-    const step = document.getElementById(select.value);
-    step.closest('details.route-pickup').open = true;
-    location.hash = step.id;
-    const focus = step.querySelector('summary') || step;
-    if (focus === step) step.tabIndex = -1;
-    focus.focus({preventScroll: true});
-    step.scrollIntoView();
+    jumpToStep(document.getElementById(select.value));
   });
   pickupFinder.hidden = false;
 }
