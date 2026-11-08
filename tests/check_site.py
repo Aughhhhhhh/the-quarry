@@ -166,13 +166,17 @@ for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
         assert ("rough-night.html", f"{kind}-{number}") in collectibles.page_links
 
 massacre = pages["massacre.html"]
-assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
+assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", "ticket-setup", "jacob-pickups", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
 for survivor in sole_survivors:
     assert survivor in massacre.ids and ("massacre.html", survivor) in endings.page_links
-for kind, prefix, numbers in (("tarot", "t", {6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22}), ("evidence", "e", {5, 7, 8, 9, 10})):
+for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", range(4, 11))):
     assert {key for key in massacre.ids if key.startswith(kind + "-")} == {f"{kind}-{number}" for number in numbers}
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
     assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+massacre_clues = {f"{prefix}{number}" for prefix, start, end in (("c", 8, 12), ("f", 7, 9), ("h", 6, 19)) for number in range(start, end + 1)}
+assert {key for key in massacre.ids if re.fullmatch(r"clue-[cfh]\d+", key)} == {f"clue-{key}" for key in massacre_clues}
+assert {("massacre.html", f"clue-{key}") for key in massacre_clues} <= collectibles.page_links
+assert {("collectibles.html", f"item-{key}") for key in massacre_clues} <= massacre.page_links
 
 blood_pact = pages["blood-pact.html"]
 assert {"setup", "prologue", "both-crane-bites", "mutually-assured", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= blood_pact.ids.keys()

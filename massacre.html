@@ -64,34 +64,51 @@
           <div class="route-options" hidden>
             <button class="button secondary" type="button" data-pickups="tarot" aria-expanded="false">Show all tarot steps</button>
             <button class="button secondary" type="button" data-pickups="evidence" aria-expanded="false">Show all evidence steps</button>
+            <button class="button secondary" type="button" data-pickups="clue" aria-expanded="false">Show all clue steps</button>
           </div>
           <details class="route-pickup" id="pickup-index">
             <summary>Find a pickup on this route</summary>
-            <p>This list starts in Chapter 4. Use <a href="rough-night.html#pickup-index">Rough Night</a> for earlier pickups. The main massacre route skips some scenes. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <p>This list starts in Chapter 4. Use <a href="rough-night.html#pickup-index">Rough Night</a> for earlier pickups. Read the setup inside each step before you pass its chapter. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
             <form class="tools archive-tools" hidden>
               <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
               <button class="button secondary" type="submit">Jump to pickup</button>
             </form>
           </details>
-          <p class="meta">The main route skips Justice, the Attack Photo, the Memory Card and The Hierophant. The optional steps below cover pickups you can still reach with these choices.</p>
+          <p class="meta">The shortest massacre skips <a href="#evidence-4">Attack Photo</a> and <a href="#jacob-pickups">Justice and Memory Card</a>. The alternate deaths below let you collect them. Use the sole-survivor replays for <a href="#clue-c9">Kid’s Letter Home</a> and <a href="#tarot-21">The Hierophant</a>.</p>
         </section>
 
         <section class="section" id="chapter-4">
           <p class="eyebrow">Chapter 4</p>
           <h2>Don’t Panic</h2>
           <img class="chapter-banner" src="assets/chapters/4.webp" width="1350" height="138" alt="" loading="lazy">
-          <h3>Ryan · Shoot Jacob</h3>
+          <h3>Ryan · Shoot Jacob or keep him alive for pickups</h3>
           <ol>
             <li>At the firepit, take <strong>Apply Pressure?</strong>, pass the mash and choose <strong>Dismissive</strong>. Take <strong>Call Out?</strong> when the bushes move.</li>
             <li>Let the first aiming timer expire. Ryan raises the gun again after the second rustle. <strong>Aim at the movement in the bushes and fire in this second window.</strong> You have six seconds with standard timing.</li>
-            <li>If Jacob comes out of the bushes, the shot missed. If he was hit, Ryan gets a choice about leaving a note. Choose <strong>Dismissive</strong> and watch for Bobby finding Jacob’s body. <a href="chapters.html#firepit-jacob">Second shot outcomes</a></li>
+            <li>If Jacob comes out of the bushes, the shot missed. If he was hit, Ryan gets a choice about leaving a note. Choose <strong>Dismissive</strong> and watch for Bobby finding Jacob’s body. For Justice or the Memory Card, deliberately hold fire both times and use the <a href="#jacob-pickups">Chapter 6 death</a> instead. <a href="chapters.html#firepit-jacob">Second shot outcomes</a></li>
           </ol>
           <h3>Emma · Open the treehouse trapdoor</h3>
           <details class="route-pickup" id="tarot-7"><summary>Optional tarot · The Magician</summary><p>At the start of Emma’s section, turn around and walk to the tip of the dock. Take the card at the camera change before going inland. <a href="collectibles.html#item-t7">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-4-island">
+            <summary>Optional clues · Box of Matches and Police Car Keys</summary>
+            <img class="walkthrough-shot" src="assets/emma-island-route.svg" width="320" height="244" loading="lazy" decoding="async" alt="From the dock, follow the lower path to the matches, then return to the fork and take the upper stairs to the keys.">
+            <ol>
+              <li id="clue-h7"><strong>Box of Matches.</strong> At the fork by the stairs, take the lower path to the fire ring. Pick up the matches and leave the ladder alone so you can still get the keys. <a href="collectibles.html#item-h7">Journal and video</a></li>
+              <li id="clue-h6"><strong>Police Car Keys.</strong> Backtrack and take the stairs up to the treehouse. Inspect the window to the left of the door before entering. <a href="collectibles.html#item-h6">Journal and video</a></li>
+            </ol>
+          </details>
           <ol>
-            <li>From the dock, head inland and take the stairs up to the treehouse. Choose <strong>Compassionate</strong> at the vlog and stop outside the door if you want the police keys at the window to its left.</li>
-            <li>Open the door, then choose <strong>Open Trapdoor</strong> as soon as the game asks whether to search the bag. Max kills Emma. Her later zipline and Chapter 6 scenes are skipped.</li>
+            <li>From the dock, head inland and take the stairs up to the treehouse. Choose <strong>Compassionate</strong> at the vlog.</li>
+            <li>Open the door, then choose <strong>Open Trapdoor</strong> as soon as the game asks whether to search the bag. Max kills Emma. To take her photo first, use the alternate death below.</li>
           </ol>
+          <details class="route-pickup" id="evidence-4">
+            <summary>Optional evidence · Attack Photo</summary>
+            <ol>
+              <li>Inside the treehouse, choose <strong>Search Bag → Use Taser</strong>. Take <strong>Take Photo?</strong> as soon as it appears. <a href="collectibles.html#item-e4">Pickup video</a></li>
+              <li>Press <strong>Down</strong>, pass the first zipline mash, choose <strong>Spray</strong> and press <strong>Up, Up</strong> along the walkway. On the second visit inside, choose <strong>Use Trapdoor</strong>, press <strong>Down</strong> at the cabinet and pass the ladder mash.</li>
+              <li>After Dylan’s lodge scene, Emma reaches the zipline crank. Choose <strong>Reel Quickly → Jump</strong> and let the final <strong>Up</strong> expire. Emma falls to her death and the evidence stays in the journal. <a href="chapters.html#island-chase">Chase and zipline outcomes</a></li>
+            </ol>
+          </details>
           <h3>Dylan · Call from the lodge</h3>
           <details class="route-pickup" id="tarot-6"><summary>Optional tarot · Strength</summary><p>Take the card in the doorway cutscene while the group carries Nick inside. You have a base window of 3.5 seconds. <a href="collectibles.html#item-t6">Pickup video</a></p></details>
           <ol><li>Choose <strong>Optimistic → Hopeful → Determined → Suspicious → Calm → Defensive → Give Gun</strong>. Choose <strong>Move On</strong> if Eliza offers a reading.</li></ol>
@@ -105,12 +122,23 @@
           <h3>Kaitlyn and Nick · Leave the lodge</h3>
           <ol>
             <li>As Nick choose <strong>Grateful</strong> if Abi helped him in the woods. <strong>Compassionate</strong> is available either way. Let <strong>Speak Up?</strong> expire, then choose <strong>Reassuring</strong>.</li>
-            <li>As Kaitlyn, press <strong>Right</strong> at the flashlight and <strong>Left</strong> at the banister. Pass <strong>Don’t Breathe</strong> and press <strong>Down</strong> at the stairs. If you want the Ticket Stub, <a href="chapters.html#ticket-stub-setup">expose the frame using the table encounter</a>.</li>
+            <li>As Kaitlyn, press <strong>Right</strong> at the flashlight and <strong>Left</strong> at the banister. Pass <strong>Don’t Breathe</strong> and press <strong>Down</strong> at the stairs. For the Ticket Stub, use the table encounter below instead.</li>
             <li>Back as Nick, choose <strong>Confident → Intrigued → Hide</strong> and pass <strong>Don’t Breathe</strong>. If Abi kept the rabbit in Chapter 1, the toy stays available in the lodge kitchen.</li>
           </ol>
+          <details class="route-pickup" id="ticket-setup">
+            <summary>Optional setup · Knock down the Ticket Stub frame</summary>
+            <p>Press <strong>Right</strong> at the flashlight, then miss <strong>Left</strong> at the banister. Press <strong>Left</strong> when Bobby throws the vial. He lifts the table and knocks down the frame. Hit the table, or hold fire and press <strong>Up</strong> when he grabs Kaitlyn. Pick up the <a href="#clue-f9">Ticket Stub</a> in Chapter 10. <a href="chapters.html#ticket-stub-setup">Other table outcomes</a></p>
+          </details>
           <h3>Dylan and Ryan · Radio hut</h3>
           <ol><li>Cross the bridge and walk through the cabins toward the radio tower. Collect anything you want before talking to Ryan on the steps.</li></ol>
           <details class="route-pickup" id="tarot-8"><summary>Optional tarot · The Devil</summary><p>In the cabin clearing, walk between the swing and picnic tables. Take the card at the camera change. <a href="collectibles.html#item-t8">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-5-cabins">
+            <summary>Optional clues · Triggered Bear Trap and Letter to Camp Nurse</summary>
+            <ol>
+              <li id="clue-h8"><strong>Triggered Bear Trap.</strong> Inspect the ground by the fence at the far left of the cabin clearing. <a href="collectibles.html#item-h8">Journal and video</a></li>
+              <li id="clue-c8"><strong>Letter to Camp Nurse.</strong> Check the paper on the ground outside Room 03. <a href="collectibles.html#item-c8">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="evidence-5"><summary>Optional evidence · Claw Marks</summary><p>Inspect the wall by the fan left of the hut door. <a href="collectibles.html#item-e5">Pickup video</a></p></details>
           <details class="route-pickup" id="tarot-9"><summary>Optional tarot · The Hermit</summary><p>Round the corner past the claw marks and walk to the base of the tower. <a href="collectibles.html#item-t9">Pickup video</a></p></details>
           <ol start="2">
@@ -127,16 +155,29 @@
           <p class="eyebrow">Chapter 6</p>
           <h2>Prayers by Night</h2>
           <img class="chapter-banner" src="assets/chapters/6.webp" width="1350" height="138" alt="" loading="lazy">
+          <h3 id="jacob-pickups">Jacob · Pickups before the walkway death</h3>
+          <p>Skip this scene if Jacob is already dead. If you spared him in the bushes and Emma died on the island, Jacob explores alone. Get both pickups before taking the right-hand trail.</p>
+          <details class="route-pickup" id="evidence-6"><summary>Optional evidence · Memory Card</summary><p>Climb the wooden stairs and keep right at the fork. Inspect the camera lying on the walkway. <a href="collectibles.html#item-e6">Pickup video</a></p></details>
+          <details class="route-pickup" id="tarot-10"><summary>Optional tarot · Justice</summary><p>At the end of the walkway, take the left path first and approach the camera trigger. The right path starts the attack. <a href="collectibles.html#item-t10">Pickup video</a></p></details>
+          <p>Take the right-hand trail when ready. Let the <strong>Down</strong> dodge expire so Jacob hangs from the walkway, then fail the mash to pull himself up. He dies, even if Bobby marked him with blood. <a href="chapters.html#jacob-chase">Walkway death and other outcomes</a></p>
           <h3 id="pool-shot">Kaitlyn and Abi · Let Nick kill Abi</h3>
           <ol>
-            <li>With Jacob and Emma dead, the chapter skips Jacob’s boardwalk. As Kaitlyn, choose <strong>Compassionate</strong>, take <strong>Intervene</strong>, then choose <strong>Help Nick</strong> at the pool.</li>
-            <li>As Abi, explore the pool house before talking to Nick. The Campers Photo and Spooky Drawing are still available.</li>
+            <li>As Kaitlyn, choose <strong>Compassionate</strong>, take <strong>Intervene</strong>, then choose <strong>Help Nick</strong> at the pool.</li>
+            <li>As Abi, explore the pool house. Take The Moon before completing both clues and checking Nick, which together end the exploration.</li>
           </ol>
           <details class="route-pickup" id="tarot-11"><summary>Optional tarot · The Moon</summary><p>Enter the third changing stall on the left and approach its back wall. Take the card before finishing the clue interactions and checking Nick. <a href="collectibles.html#item-t11">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-6-pool">
+            <summary>Optional clues · Campers Photo and Spooky Drawing</summary>
+            <ol>
+              <li id="clue-c11"><strong>Campers Photo.</strong> Inspect the board in the corner of the main room. <a href="collectibles.html#item-c11">Journal and video</a></li>
+              <li id="clue-c10"><strong>Spooky Drawing.</strong> Check the locker at the far end of the changing-room corridor. <a href="collectibles.html#item-c10">Journal and video</a></li>
+            </ol>
+          </details>
           <ol start="3">
             <li>Check Nick and choose <strong>Calm → Compassionate</strong>. When Abi picks up the shotgun, <strong>let the aiming timer expire</strong>. Nick transforms and kills her, unlocking <strong>Lovers’ Quarrel</strong>.</li>
             <li>As Ryan, choose <strong>Hopeful → Suspicious → Interested</strong> at the pool house. Let Laura tell her story. Choose <strong>Move On</strong> if Eliza offers a reading.</li>
           </ol>
+          <details class="route-pickup" id="clue-6-firepit"><summary>Optional clue · Kid’s Letter Home (Emma replay)</summary><p id="clue-c9">Use the <a href="#sole-emma">Emma-only replay</a> to reach the firepit with Emma alive. Turn right and pick up <strong>Kid’s Letter Home</strong> from the ground by the yellow tent before going uphill. <a href="collectibles.html#item-c9">Journal and video</a></p></details>
           <nav class="jump chapter-nav" aria-label="Chapter 6 navigation"><a href="#chapter-5">← Chapter 5</a><a href="#chapters">Chapter list</a><a href="#chapter-7">Chapter 7 →</a></nav>
         </section>
 
@@ -150,16 +191,24 @@
             <li>Choose <strong>Concerned → Disappointed → Compliant → Worried</strong> as Laura and Max talk and Travis returns.</li>
           </ol>
           <details class="route-pickup" id="tarot-13"><summary>Optional tarot · The World</summary><p>During Laura’s first cell exploration, approach the bed and walk back toward the bars. Use Interact when the camera reveals the card under the bed. <a href="collectibles.html#item-t13">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-7-cell"><summary>Optional clue · Scrawled Limerick</summary><p id="clue-h9">Read the <strong>Scrawled Limerick</strong> on the wall opposite the loose brick. You can return to the cell during the next exploration if you miss it. <a href="collectibles.html#item-h9">Journal and video</a></p></details>
           <ol start="3">
-            <li>Inspect the brick by the bed, then inspect the bed to use the spoon and advance the scene. You can read the limerick on the opposite wall first.</li>
+            <li>Inspect the brick by the bed, then inspect the bed to use the spoon and advance the scene.</li>
             <li>Choose <strong>Fearful → Serious → Reflective → Encouraging → Empathetic</strong>. At the pool house choose <strong>Calm</strong>, then back in the flashback choose <strong>Curious → Optimistic → Skeptical</strong>.</li>
             <li>Let <strong>Call for Help?</strong> expire when Laura is cuffed. Choose <strong>Compassionate</strong> at Max’s cell. His transformation injures her eye, then the station opens for exploration.</li>
           </ol>
           <h3>Laura · Explore the station, then use the gun</h3>
           <details class="route-pickup" id="tarot-12"><summary>Optional tarot · The Chariot</summary><p>Walk between the tables in the main room. Step away and return if the camera prompt expires. <a href="collectibles.html#item-t12">Pickup video</a></p></details>
           <details class="route-pickup" id="evidence-7"><summary>Optional evidence · Cease &amp; Desist Letter</summary><p>Climb the short steps at the lobby corner and inspect the paper across from the wooden door. <a href="collectibles.html#item-e7">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-7-station">
+            <summary>Optional clues · Charred Sheriff’s Badge and the podcast</summary>
+            <ol>
+              <li id="clue-f7"><strong>Charred Sheriff’s Badge.</strong> Go upstairs, enter the second office and inspect the badge on the right. <a href="collectibles.html#item-f7">Journal and video</a></li>
+              <li id="clue-h10"><strong>Bizarre Yet Bonafide Podcast.</strong> Read the birthday card in the first upstairs office and the calendar in the third. Use the computer in the corner office downstairs. Laura works out the password and plays the podcast. Leave the syringe in the locker so Laura still uses the gun escape. <a href="collectibles.html#item-h10">Journal and video</a></li>
+            </ol>
+          </details>
           <ol>
-            <li>Leave the syringe in its locker. You can still <a href="chapters.html#station-computer">unlock the computer</a> before returning to the cell. Choose <strong>Go to Sleep</strong> at the bed when ready.</li>
+            <li>Leave the syringe in its locker. Return to the cell and choose <strong>Go to Sleep</strong> at the bed when ready.</li>
             <li>Choose <strong>Honest → Confident</strong>. Let the early <strong>Take Gun</strong> interrupt expire during the poem. Choose <strong>Confused → Encouraging → Resigned → Empathetic</strong> and press <strong>Up</strong> to listen to Travis and Chris.</li>
             <li>When Laura fakes an injury and Travis enters the cell, press <strong>Right</strong> to reach for the gun, then <strong>Right</strong> to dodge him. Choose <strong>Demanding → Shoot Travis</strong>. If a gun recovery prompt appears after a miss, pressing <strong>Right</strong> gets the gun back and failing it shoots him in the struggle. <a href="chapters.html#jail-escape">All gun branches</a></li>
             <li>Choose <strong>Anxious</strong> after the escape and <strong>Show Bite</strong> at the pool house. Jacob’s cage scene is skipped if he died. Choose <strong>Move On</strong> if Eliza offers a reading.</li>
@@ -176,8 +225,15 @@
           <ol>
             <li>At the pool house choose <strong>Uncertain → Curious</strong>. With Abi dead, choose <strong>Honest</strong> about the voice, then <strong>Guarded → Compassionate → Friendly</strong> as they discuss Chris.</li>
             <li>On the way choose <strong>Inquisitive → Reflective → Compassionate</strong>. They fall into the quarry.</li>
-            <li>As Laura, go up the stairs and along the metal walkways. Old Quarry Tools and the Miner’s Lunchbox are on the quarry floor if you want the clues.</li>
+            <li>As Laura, take the clues from the quarry floor before going up the stairs and along the metal walkways.</li>
           </ol>
+          <details class="route-pickup" id="clue-8-quarry">
+            <summary>Optional clues · Old Quarry Tools and Miner’s Lunchbox</summary>
+            <ol>
+              <li id="clue-h11"><strong>Old Quarry Tools.</strong> Inspect the ground at the foot of the first metal staircase. <a href="collectibles.html#item-h11">Journal and video</a></li>
+              <li id="clue-h12"><strong>Miner’s Lunchbox.</strong> Circle the pool and inspect the metal lunchbox at the far end before heading upstairs. <a href="collectibles.html#item-h12">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="tarot-15"><summary>Optional tarot · The Lovers</summary><p>After the railing breaks, walk near the left railing of the next ledge. Take the card before going to the stairs ahead. <a href="collectibles.html#item-t15">Pickup video</a></p></details>
           <ol start="4"><li>Press <strong>Right</strong> when the stairs collapse, then search at the top before crossing the next walkway.</li></ol>
           <details class="route-pickup" id="evidence-8"><summary>Optional evidence · Scarred Flesh</summary><p>Inspect the patch on the ground just before the next metal walkway. It’s available after either result of the stair prompt. <a href="collectibles.html#item-e8">Pickup video</a></p></details>
@@ -185,7 +241,8 @@
           <details class="route-pickup" id="tarot-16"><summary>Optional tarot · Wheel of Fortune</summary><p>Take the card at the camera change as you walk through the tunnel. If the timer expires, backtrack and approach the trigger again. <a href="collectibles.html#item-t16">Pickup video</a></p></details>
           <ol start="6"><li>Open the basement door to finish the quarry scene. Back at camp, Kaitlyn and Dylan check the van. Choose <strong>Optimistic</strong> and <strong>Encouraging</strong> as they talk. Emma’s death means there is no van fight.</li></ol>
           <h3 id="nick-cage">Ryan · Leave Nick in Laura’s sights</h3>
-          <details class="route-pickup" id="tarot-14"><summary>Optional tarot · The Empress</summary><p>Turn left at the start of Ryan’s basement section. Walk around the distillery room to reveal the card. The Rum Still clue is in the same room. <a href="collectibles.html#item-t14">Pickup video</a></p></details>
+          <details class="route-pickup" id="tarot-14"><summary>Optional tarot · The Empress</summary><p>Turn left at the start of Ryan’s basement section. Walk around the distillery room to reveal the card. <a href="collectibles.html#item-t14">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-8-distillery"><summary>Optional clue · Rum Still</summary><p id="clue-h13">Turn left into the distillery and inspect the equipment to record <strong>Rum Still</strong>. <a href="collectibles.html#item-h13">Journal and video</a></p></details>
           <details class="route-pickup" id="tarot-17"><summary>Optional tarot · The Emperor</summary><p>Return to the starting corridor and walk straight. Take the card before entering the red-lit passage. <a href="collectibles.html#item-t17">Pickup video</a></p></details>
           <ol>
             <li>Enter the red-lit passage and press <strong>Down</strong> at the slippery floor. With Jacob dead, the <strong>Open Cage?</strong> prompt is skipped.</li>
@@ -208,8 +265,15 @@
           <details class="route-pickup" id="tarot-18"><summary>Optional tarot · Death</summary><p>Walk across the bedroom toward the bed and take the card when the camera changes. <a href="collectibles.html#item-t18">Pickup video</a></p></details>
           <ol start="4">
             <li>Use the left door’s keyhole, choose <strong>Block Door</strong> and pass both mashes. This keeps Ryan’s knife available for the later replay.</li>
-            <li>As Laura choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong> in the bathtub. In the blue room, skip the piano and head upstairs. The wall downstairs and the tree in the office are optional clues.</li>
+            <li>As Laura choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong> in the bathtub. In the blue room, skip the piano and head upstairs.</li>
           </ol>
+          <details class="route-pickup" id="clue-9-house">
+            <summary>Optional clues · Hunting Trophy Wall and Hackett Family Tree</summary>
+            <ol>
+              <li id="clue-h15"><strong>Hunting Trophy Wall.</strong> Inspect the display beside the stairs in the blue room. <a href="collectibles.html#item-h15">Journal and video</a></li>
+              <li id="clue-h16"><strong>Hackett Family Tree.</strong> In the upstairs office, inspect the framed chart beside the armchair. <a href="collectibles.html#item-h16">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="tarot-19"><summary>Optional tarot · The Sun</summary><p>Go beyond the upstairs office and toward the windows. Take the card before approaching the next door. <a href="collectibles.html#item-t19">Pickup video</a></p></details>
           <ol start="6"><li>Approach the upstairs door. Press <strong>Left, Left, Left</strong> and choose <strong>Run</strong> when Laura fights Jedediah.</li></ol>
           <h3 id="bobby">Ryan · Bobby and the bite</h3>
@@ -218,12 +282,15 @@
             <li>As Ryan, choose <strong>Sympathetic → Accept</strong> when Laura offers the bite. Let <strong>Pull Away?</strong> expire. The bite keeps Ryan alive until the confrontation with Travis.</li>
           </ol>
           <h3 id="crane">Dylan · Fail the blowtorch mash</h3>
-          <ol><li>Follow the path right of the pile of cars into the garage. Use the switch on the table by the downstairs stairs to open the gate. The upstairs receipts are the Scrapyard Note clue.</li></ol>
-          <details class="route-pickup" id="tarot-20"><summary>Optional tarot · Judgement</summary><p>Go through the gate, climb the metal steps and cross the container roof to the camera trigger. Take the card before heading to the crane. The green sign between the far stairs is the Discarded Signage clue. <a href="collectibles.html#item-t20">Pickup video</a></p></details>
+          <ol><li>Follow the path right of the pile of cars into the garage. Use the switch on the table by the downstairs stairs to open the gate.</li></ol>
+          <details class="route-pickup" id="clue-9-garage"><summary>Optional clue · Scrapyard Note</summary><p id="clue-h14">Go upstairs in the garage and inspect the receipts at the end of the walkway for the <strong>Scrapyard Note</strong>. <a href="collectibles.html#item-h14">Journal and video</a></p></details>
+          <details class="route-pickup" id="tarot-20"><summary>Optional tarot · Judgement</summary><p>Go through the gate, climb the metal steps and cross the container roof to the camera trigger. Take the card before heading to the crane. <a href="collectibles.html#item-t20">Pickup video</a></p></details>
+          <details class="route-pickup" id="clue-9-yard"><summary>Optional clue · Discarded Signage</summary><p id="clue-f8">Go down the far steps and inspect the green sign between the staircases for <strong>Discarded Signage</strong>. <a href="collectibles.html#item-f8">Journal and video</a></p></details>
           <ol start="2">
             <li>Cross the clearing and walk through the wrecked bus. Go left toward the yellow crane stairs.</li>
             <li>Choose <strong>Encouraging → Warn Kaitlyn</strong> and press <strong>Up</strong>. Choose <strong>Sound Horn</strong>, then <strong>fail the first blowtorch mash</strong>. Silas kills uninfected Dylan before the lever prompt, and Kaitlyn leaves unbitten. <a href="chapters.html#crane-torch">Torch outcomes</a></li>
           </ol>
+          <details class="route-pickup" id="tarot-21"><summary>Optional tarot · The Hierophant (Abi or Emma replay)</summary><p>During the <a href="#sole-abi">Abi-only</a> or <a href="#sole-emma">Emma-only</a> replay, walk toward the shelter stairs and take the card at the camera change. Step away and return if it expires. Get the card before using the separate ladder. At Eliza’s flashback, press <strong>Left</strong> when the stake flies toward her. <a href="collectibles.html#item-t21">Pickup video</a></p></details>
           <h3 id="attic">Ryan · Shoot Chris, then lose to Travis</h3>
           <ol>
             <li>With Abi and Emma dead, the shelter exploration is skipped. As Laura, approach Chris in the attic to start the fight. She transforms and they fall through the floor.</li>
@@ -239,9 +306,19 @@
           <h2>The Final Girl</h2>
           <img class="chapter-banner" src="assets/chapters/10.webp" width="1350" height="138" alt="" loading="lazy">
           <h3 id="max-swims">Max · Swim to the mainland</h3>
-          <ol><li>Follow the path from the treehouse toward the docks, passing Emma’s body. At the dock choose <strong>Swim to Shore</strong>. Caleb kills Max as he climbs out.</li></ol>
+          <ol><li>Follow the path from the treehouse to the dock. If Max killed Emma in the treehouse, passing her body triggers the phone scene. That scene is skipped if she fell from the zipline. At the dock choose <strong>Swim to Shore</strong>. Caleb kills Max as he climbs out.</li></ol>
           <h3 id="lodge">Kaitlyn · Let Caleb catch her</h3>
           <ol><li>Go upstairs at the lodge. The portrait is on the chimney wall. Choose <strong>Keep Looking</strong> if you want to finish exploring first.</li></ol>
+          <details class="route-pickup" id="clue-10-lodge">
+            <summary>Optional clues · Five lodge clues before the attack</summary>
+            <ol>
+              <li id="clue-c12"><strong>Camp Letter.</strong> Turn left from the first stairs into the bunk room and inspect the note on the floor. <a href="collectibles.html#item-c12">Journal and video</a></li>
+              <li id="clue-h19"><strong>Ancestral Portrait.</strong> Inspect the portrait on the chimney wall midway along the landing and choose <strong>Keep Looking</strong>. <a href="collectibles.html#item-h19">Journal and video</a></li>
+              <li id="clue-f9"><strong>Ticket Stub.</strong> Inspect the fallen frame on the floor by the portrait. If it’s still on the wall, use the <a href="#ticket-setup">Chapter 5 setup</a> in a replay. <a href="collectibles.html#item-f9">Journal and video</a></li>
+              <li id="clue-h17"><strong>Chalkboard Doodle.</strong> Go past the portrait into the classroom and inspect the board. <a href="collectibles.html#item-h17">Journal and video</a></li>
+              <li id="clue-h18"><strong>Inscribed Jewelry.</strong> Leave the classroom, turn left up the stairs and inspect the couch. <a href="collectibles.html#item-h18">Journal and video</a></li>
+            </ol>
+          </details>
           <details class="route-pickup" id="tarot-22"><summary>Optional tarot · The High Priestess</summary><p>Take the stairs by the bunk room and walk toward the top-floor windows. Take the card at the camera change. <a href="collectibles.html#item-t22">Pickup video</a></p></details>
           <details class="route-pickup" id="evidence-10"><summary>Optional evidence · Trail Cam Footage</summary><p>Inspect the boxes beside the couch on the upper floor before starting the attack. <a href="collectibles.html#item-e10">Pickup video</a></p></details>
           <ol start="2">
@@ -307,8 +384,8 @@
           <h3 id="sole-abi">Only Abigail · Replay Chapter 6</h3>
           <ol>
             <li>At the pool house choose <strong>Calm → Compassionate</strong>, then <strong>hit Nick with the shotgun</strong>. He transforms and escapes while Abi lives. Choose <strong>Reassuring</strong> as Ryan when the group checks on her.</li>
-            <li>In Chapter 8 use the <a href="rough-night.html#chapter-8">pool-house and van dialogue for a living Abi</a>. With Emma dead there is no fight at the van. At the <a href="#nick-cage">cage</a>, still let <strong>Stop Laura</strong> expire to kill Nick.</li>
-            <li>When Abi explores the shelter in Chapter 9, take the <a href="rough-night.html#tarot-21">optional Hierophant</a> if wanted. Climb the ladder to the office. Follow the massacre attic and lodge deaths. <a href="https://www.youtube.com/watch?v=Twu65xkLVUs&amp;t=98s">Recorded Abi ending</a></li>
+            <li>In Chapter 8, choose <strong>Uncertain → Curious → Suspicious → Guarded → Compassionate → Friendly</strong> at the pool house. At the van choose <strong>Honest → Encouraging</strong>. With Emma dead there is no fight there. At the <a href="#nick-cage">cage</a>, still let <strong>Stop Laura</strong> expire to kill Nick.</li>
+            <li>When Abi explores the shelter in Chapter 9, take the <a href="#tarot-21">optional Hierophant</a> if wanted. Climb the ladder to the office. Follow the massacre attic and lodge deaths. <a href="https://www.youtube.com/watch?v=Twu65xkLVUs&amp;t=98s">Recorded Abi ending</a></li>
           </ol>
           <h3 id="sole-dylan">Only Dylan · Replay Chapter 5 after Break In</h3>
           <ol>
@@ -319,9 +396,9 @@
           </ol>
           <h3 id="sole-emma">Only Emma · Replay Chapter 4</h3>
           <ol>
-            <li>Kill Jacob in the bushes. At the treehouse, take the <a href="rough-night.html#chapter-4">unbitten island escape</a>, including <strong>Search Bag → Use Taser</strong>, the directional prompts, and the ladder mash. Choose <strong>Reel Slowly</strong> and let <strong>Speed Up</strong> expire.</li>
-            <li>Let Nick kill Abi. As Emma in the woods, <strong>let Run expire</strong> when the hunters catch the werewolf. Emma stays unbitten and the van fight is skipped.</li>
-            <li>In Chapter 9 climb the shelter ladder as Emma. Follow the massacre attic and Chapter 10 deaths. <a href="https://www.youtube.com/watch?v=88bP3Yq0NzM&amp;t=645s">Recorded Emma ending</a></li>
+            <li>Kill Jacob in the bushes. At the treehouse, use the <a href="#evidence-4">Attack Photo steps</a> through the ladder mash. At the second zipline, choose <strong>Reel Slowly</strong> and let <strong>Speed Up</strong> expire so Emma leaves alive and unbitten.</li>
+            <li>Let Nick kill Abi. Take <a href="#clue-c9">Kid’s Letter Home</a> before leaving the firepit as Emma. In the woods, <strong>let Run expire</strong> when the hunters catch the werewolf. Emma stays unbitten and the van fight is skipped.</li>
+            <li>In Chapter 9 take the <a href="#tarot-21">optional Hierophant</a>, then climb the shelter ladder as Emma. Follow the massacre attic and Chapter 10 deaths. <a href="https://www.youtube.com/watch?v=88bP3Yq0NzM&amp;t=645s">Recorded Emma ending</a></li>
           </ol>
           <h3 id="sole-jacob">Only Jacob · Replay Chapter 4</h3>
           <ol>
@@ -347,7 +424,7 @@
             <li>Continue the massacre from Chapter 9. Caleb and Silas remain alive and Nick remains infected. <a href="https://www.youtube.com/watch?v=osbx3VIpGu8&amp;t=850s">Recorded Nick ending</a></li>
           </ol>
           <p class="meta">For a cured Dylan or Nick, use their changes with the <a href="endings.html#no-soul-left">No Soul Left Alive</a> route. Follow the crash branch that lets Laura shoot Silas. <a href="https://www.youtube.com/watch?v=VIc6R4GmVl8&amp;t=19870s">Cured Dylan recap</a> · <a href="https://www.youtube.com/watch?v=eO7Lxh2tx-s&amp;t=100s">Cured Nick recap</a></p>
-          <p class="source-note">Audit · Steam PC build 11105655, Chapter 4 targeting, jail wound flag, scrapyard and lodge transitions, attic outcomes and ending achievement checks. <a href="https://www.powerpyx.com/the-quarry-how-to-kill-everyone-worst-ending-guide/">PowerPyx · recorded massacre and replay setup</a> · <a href="https://www.youtube.com/watch?v=IAaTkMVYbQk">Recorded second bushes shot</a> · <a href="reference.html#sources">Full audit notes</a></p>
+          <p class="source-note">Audit · Steam PC build 11105655, Chapter 4 targeting, Emma’s zipline, Jacob’s solo walkway, the fallen frame flag, the jail wound, attic and lodge transitions and ending achievement checks. <a href="https://www.powerpyx.com/the-quarry-how-to-kill-everyone-worst-ending-guide/">PowerPyx · recorded massacre and replay setup</a> · <a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=166s">Recorded island and walkway deaths</a> · <a href="https://www.youtube.com/watch?v=wOZFC2bBcME">Recorded collectible locations</a> · <a href="reference.html#sources">Full audit notes</a></p>
           <nav class="jump chapter-nav" aria-label="Sole survivors navigation"><a href="#chapters">Chapter list</a><a href="endings.html#endings">Other endings</a></nav>
         </section>
       </article>
