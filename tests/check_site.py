@@ -10,6 +10,8 @@ class Guide(HTMLParser):
         self.entries = Counter()
         self.items = Counter()
         self.fates = Counter()
+        self.recaps = Counter()
+        self.recap_alts = Counter()
         self.characters = set()
         self.anchors = set()
         self.files = set()
@@ -27,6 +29,10 @@ class Guide(HTMLParser):
             self.items[attrs["data-type"]] += 1
         if "data-fate" in attrs:
             self.fates[attrs["data-fate"]] += 1
+        if "data-recap" in attrs:
+            self.recaps[attrs["data-recap"]] += 1
+        if "data-recap-alt" in attrs:
+            self.recap_alts[attrs["data-recap-alt"]] += 1
         if "data-character" in attrs:
             self.characters.add(attrs["data-character"])
         if tag in ("ol", "ul"):
@@ -80,7 +86,10 @@ assert {
 assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6}, guide.list_items
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
-assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 72}, epilogue.fates
+assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
+assert sum(epilogue.recaps.values()) == 120, epilogue.recaps
+assert sum(epilogue.recap_alts.values()) == 57, epilogue.recap_alts
+assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 13, "unverified": 5}
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
 assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items

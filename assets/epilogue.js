@@ -42,7 +42,9 @@ function revealCard() {
     outcome.value = "";
     filterCards();
   }
-  group.open = true;
+  for (let details = group; details; details = details.parentElement.closest("details")) {
+    details.open = true;
+  }
 }
 
 filters.hidden = false;

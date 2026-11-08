@@ -162,6 +162,11 @@ input::placeholder { color: #b2bcb2; }
 .fate-card h3 a { color: var(--ink); text-decoration: none; }
 .fate-card h3 a:hover { color: var(--accent); text-decoration: underline; }
 .fate-card p:last-child { margin-bottom: 0; }
+.entry-body .recap-list { list-style: none; padding: 0; margin: 0; }
+.recap-list > li { padding: .55rem 0; }
+.recap-list > li + li { border-top: 1px solid var(--line); }
+.recap-list code { font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+.recap-list li ul { margin: .2rem 0 0; }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: 1rem; }
 .card-grid article { border: 1px solid var(--line); border-radius: .4rem; padding: 1rem; background: var(--panel); }
 .card-grid h3 { margin: .15rem 0 .35rem; }

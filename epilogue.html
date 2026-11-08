@@ -29,7 +29,7 @@
       <div class="wrap hero-content">
         <p class="eyebrow"><span class="signal"></span> HACKETT’S QUARRY <span class="line"></span> AFTER DAWN</p>
         <h1 id="title">Epilogue cards</h1>
-        <p class="hero-copy">Find the choices behind 165 documented fate-card records for 17 characters.</p>
+        <p class="hero-copy">Find the choices behind 166 documented fate-card records for 17 characters.</p>
         <div class="actions"><a class="button primary" href="#cards">Browse the cards</a><a class="button secondary" href="#after-the-night">Eliza and the headlines</a><a class="button secondary" href="./#endings">See ending routes</a></div>
       </div>
     </section>
@@ -38,7 +38,7 @@
         <p class="eyebrow">01 / FATE CARDS</p>
         <h2 id="cards-title">Find an outcome</h2>
         <p class="section-intro">Choose a character, outcome, or search term. Steps describe the choices that matter and assume the characters reach the relevant scene.</p>
-        <p class="notice"><strong>Story spoilers.</strong> Some cards share a scene or differ only in wording. The catalog counts card records. Entries with conflicting or incomplete conditions are marked for further verification. <a href="#audit">Read the audit notes.</a></p>
+        <p class="notice"><strong>Story spoilers.</strong> Some cards share a scene or differ only in wording. <a href="#recap-index">Browse the PC recap asset index</a> for the full file inventory and verification status.</p>
         <div class="tools archive-tools" id="fate-filters" hidden>
           <div><label for="fate-search">Search cards</label><input type="search" id="fate-search" placeholder="Try freezer or blood vial" autocomplete="off"></div>
           <div><label for="fate-character">Character</label><select id="fate-character"><option value="">Everyone</option><option value="abi">Abigail Blyg</option><option value="dylan">Dylan Lenivy</option><option value="emma">Emma Mountebank</option><option value="jacob">Jacob Custos</option><option value="kaitlyn">Kaitlyn Ka</option><option value="laura">Laura Kearney</option><option value="max">Max Brinly</option><option value="nick">Nick Furcillo</option><option value="ryan">Ryan Erzahler</option><option value="bobby">Bobby Hackett</option><option value="caleb">Caleb Hackett</option><option value="chris">Chris Hackett</option><option value="constance">Constance Hackett</option><option value="jedediah">Jedediah Hackett</option><option value="kaylee">Kaylee Hackett</option><option value="travis">Travis Hackett</option><option value="silas">Silas Vorez</option></select></div>
@@ -402,7 +402,7 @@
             </div>
           </details>
           <details class="entry" id="kaitlyn" data-character="kaitlyn">
-            <summary><strong>Kaitlyn Ka</strong><span class="meta">36 records</span></summary>
+            <summary><strong>Kaitlyn Ka</strong><span class="meta">37 records</span></summary>
             <div class="entry-body">
               <ul class="fate-list" role="list">
             <li class="fate-card" id="card-kaitlyn-1" data-fate="alive">
@@ -495,8 +495,8 @@
             </li>
             <li class="fate-card" id="card-kaitlyn-17" data-fate="dead">
               <span class="tag">Deceased</span>
-              <h3><a href="#card-kaitlyn-17">Killed while alone at the scrapyard</a></h3>
-              <p>After losing Dylan, miss a critical shot or escape prompt as uninfected Kaitlyn. One route is to go for the gun and then miss the shot.</p>
+              <h3><a href="#card-kaitlyn-17">Killed by Silas before escaping the scrapyard</a></h3>
+              <p>After losing Dylan, choose Gun when Silas first attacks and miss the shot. Letting Gun or Hide time out also selects this recap. <a href="#card-kaitlyn-37">Separate shot after hiding</a></p>
               <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=1382s">Scene footage at 23:02</a></p>
             </li>
             <li class="fate-card" id="card-kaitlyn-18" data-fate="dead">
@@ -598,6 +598,12 @@
               <span class="tag">Alive</span>
               <h3><a href="#card-kaitlyn-36">Survives locked in with Caleb</a></h3>
               <p>Follow the <a href="#card-kaitlyn-31">failed decoy setup with Dylan gone</a> and spare Silas. Kaitlyn’s infection protects her from Caleb and the cold. The card labels her Alive and still describes the werewolf immunity.</p>
+            </li>
+            <li class="fate-card" id="card-kaitlyn-37" data-fate="dead">
+              <span class="tag">Deceased</span>
+              <h3><a href="#card-kaitlyn-37">Killed after hiding in the scrapyard car</a></h3>
+              <p>Reach the scrapyard without Dylan. Choose Hide, pass Don’t Breathe, then let the shot expire. The recap uses a different card from the first shot on the Gun route.</p>
+              <p class="source-note">Checked the separate combat branches in <code>scrapkaitlyn_gameflow</code> and the two recap states in <code>scrapyardend_gameflow</code>.</p>
             </li>
               </ul>
               <p class="source-note">Sources · PC lodge, kitchen and Silas hunt rules for the silver and freezer variants. <a href="https://thequarry.fandom.com/wiki/Epilogue#Kaitlyn_Ka">Epilogue catalog · Kaitlyn Ka</a> · <a href="https://thequarry.fandom.com/wiki/Kaitlyn">Character reference</a></p>
@@ -830,7 +836,7 @@
             <li class="fate-card" id="card-caleb-2" data-fate="alive">
               <span class="tag">Alive</span>
               <h3><a href="#card-caleb-2">Returns to human form permanently</a></h3>
-              <p>In the recorded route, Kaitlyn is bitten at the scrapyard. At the lodge she investigates the knocking for silver, then lets the shot expire. Caleb leaves her alive. Laura kills Silas.</p>
+              <p>In the recorded route, infected Kaitlyn investigates the knocking for silver and lets the shot expire. Caleb leaves her alive. Laura kills Silas. The kitchen route uses the same wording if Caleb escapes the kitchen and Silas dies.</p>
               <p class="source-note"><a href="https://www.youtube.com/watch?v=LnTq9wHjrR0&amp;t=350s">Lodge choice at 5:50</a> · <a href="https://www.youtube.com/watch?v=3yioZpGoxdc&amp;t=2920s">Recorded recap at 48:40</a></p>
             </li>
             <li class="fate-card" id="card-caleb-3" data-fate="alive">
@@ -847,7 +853,7 @@
             <li class="fate-card" id="card-caleb-5" data-fate="infected">
               <span class="tag">Still infected</span>
               <h3><a href="#card-caleb-5">Returns to human form at dawn</a></h3>
-              <p>Spare Caleb in the lodge and leave Silas alive. Turning human at sunrise leaves the curse active.</p>
+              <p>Spare Caleb in the lodge and leave Silas alive. The kitchen sequence has its own copy of this recap when Caleb escapes the kitchen. Turning human at sunrise leaves the curse active.</p>
               <p class="source-note"><a href="https://www.youtube.com/watch?v=xd7gk8cvlyc&amp;t=42s">Recorded recap at 0:42</a></p>
             </li>
             <li class="fate-card" id="card-caleb-6" data-fate="infected">
@@ -1208,12 +1214,717 @@
         <p class="eyebrow">03 / SOURCES</p>
         <h2 id="audit-title">How the cards were checked</h2>
         <ul>
-          <li>The catalog starts with 120 community records and adds outcomes checked against the PC game and gameplay recordings. The game files contain 120 recap assets with 36 alternate text slots. Paired character cards, shared wording and disconnected scenes affect those counts. <a href="#unused-lodge-recaps">Disconnected lodge scenes</a> · <a href="https://thequarry.fandom.com/wiki/Epilogue#Ending_Slide_Variations">The Quarry Wiki · epilogue catalog</a></li>
+          <li>The PC files contain 120 recap assets. Of those, 36 have alternate text, with 57 alternate slots in total. A paired slide can appear under two characters in the guide, and separate assets can reuse the same text. <a href="#recap-index">Full asset index</a> · <a href="https://thequarry.fandom.com/wiki/Epilogue#Ending_Slide_Variations">The Quarry Wiki · epilogue catalog</a></li>
           <li>Chapter walkthroughs, recordings and the scene and recap rules in Steam PC build 11105655 were used to check prerequisites. Max’s alternate wording still needs footage from that build. <a href="#card-max-2">Max waits for Laura</a> · <a href="#recap-state">Scene and recap differences</a></li>
           <li>Scene links show the branch playing out. They may end before the recap card appears. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · choice and consequence guide</a> · <a href="https://www.reddit.com/user/GamingwithAbyss/comments/ve44zc/all_characters_death_scenes_in_the_quarry_all/">Gaming With Abyss · footage index</a></li>
           <li>Links labeled as recorded recaps or headlines jump directly to the on-screen result. The same paired freezer recap appears under Kaitlyn and Caleb so it can be found under either character. <a href="#headlines">Recorded headline pairs</a></li>
           <li>Creative director Will Byles reported 186 endings. This catalog counts individual character outcomes and wording variants. A playthrough usually shows several cards. The research found no official list that maps the 186 endings to exact inputs. <a href="https://www.gamespot.com/videos/there-are-186-endings-in-the-game-the-quarry-developer-interview/2300-6458528/">Will Byles interview</a></li>
         </ul>
+        <details class="entry" id="recap-index">
+          <summary><strong>PC recap asset index</strong><span class="meta">120 assets · 57 alternate text slots</span></summary>
+          <div class="entry-body">
+            <p>Open a location to see every recap asset used by the Steam PC epilogue. A link to a character card gives the route. Files only marks a slot the checked story rules cannot select in ordinary play. Route unverified means the text is present and the trigger still needs confirmation.</p>
+            <p>In build 11105655, 159 slots link to guide cards, 13 are files only, and five still have unverified routes. Each asset lists its default wording, then its alternatives. <a href="#recap-file-notes">Read the notes for variants without a confirmed route.</a></p>
+            <details class="entry chapter-choices" id="recaps-islandend">
+              <summary><strong>Island and lake</strong><span class="meta">6 assets · 1 alternate</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-islandend_emma_dead_island" data-recap="guide">
+                    <code>islandend_<wbr>emma_<wbr>dead_<wbr>island</code>
+                    <div>Emma · <a href="#card-emma-6">Killed by Max at the treehouse</a></div>
+                  </li>
+                  <li id="recap-islandend_emma_dead_islandrocks" data-recap="guide">
+                    <code>islandend_<wbr>emma_<wbr>dead_<wbr>islandrocks</code>
+                    <div>Emma · <a href="#card-emma-9">Falls to the rocks below the zipline</a></div>
+                  </li>
+                  <li id="recap-islandend_jacob_dead_drowned" data-recap="guide">
+                    <code>islandend_<wbr>jacob_<wbr>dead_<wbr>drowned</code>
+                    <div>Jacob · <a href="#card-jacob-11">Drowns looking for the rotor arm</a></div>
+                  </li>
+                  <li id="recap-islandend_laura_alive_island" data-recap="guide">
+                    <code>islandend_<wbr>laura_<wbr>alive_<wbr>island</code>
+                    <div>Laura · <a href="#card-laura-2">Reunites with Max on the island</a> / Max · <a href="#card-max-3">Reunites with Laura</a></div>
+                  </li>
+                  <li id="recap-islandend_max_alive_island" data-recap="guide">
+                    <code>islandend_<wbr>max_<wbr>alive_<wbr>island</code>
+                    <div>Max · <a href="#card-max-1">Cured and stays on the island</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Max · <a href="#card-max-2">Cured and waits for Laura</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-islandend_max_alive_werewolf" data-recap="guide">
+                    <code>islandend_<wbr>max_<wbr>alive_<wbr>werewolf</code>
+                    <div>Max · <a href="#card-max-4">Still has Chris’s curse</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-scrapyardend">
+              <summary><strong>Scrapyard</strong><span class="meta">5 assets · 1 alternate</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-scrapyardend_dylan_dead_scrapyard" data-recap="guide">
+                    <code>scrapyardend_<wbr>dylan_<wbr>dead_<wbr>scrapyard</code>
+                    <div>Dylan · <a href="#card-dylan-11">Killed at the scrapyard crane</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-20">Killed at the crane after losing his hand</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-scrapyardend_kaitlyn_alive_scrapyard" data-recap="guide">
+                    <code>scrapyardend_<wbr>kaitlyn_<wbr>alive_<wbr>scrapyard</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-7">Survives under the scrapyard debris</a></div>
+                  </li>
+                  <li id="recap-scrapyardend_kaitlyn_dead_crushed" data-recap="guide">
+                    <code>scrapyardend_<wbr>kaitlyn_<wbr>dead_<wbr>crushed</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-16">Crushed at the scrapyard</a></div>
+                  </li>
+                  <li id="recap-scrapyardend_kaitlyn_dead_scrapyardcar" data-recap="guide">
+                    <code>scrapyardend_<wbr>kaitlyn_<wbr>dead_<wbr>scrapyardcar</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-37">Killed after hiding in the scrapyard car</a></div>
+                  </li>
+                  <li id="recap-scrapyardend_kaitlyn_dead_scrapyardsilas" data-recap="guide">
+                    <code>scrapyardend_<wbr>kaitlyn_<wbr>dead_<wbr>scrapyardsilas</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-17">Killed by Silas before escaping the scrapyard</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-hacketthouseend">
+              <summary><strong>Hackett house</strong><span class="meta">24 assets · 7 alternates</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-hacketthouseend_bobby_alive_house" data-recap="guide">
+                    <code>hacketthouseend_<wbr>bobby_<wbr>alive_<wbr>house</code>
+                    <div>Bobby · <a href="#card-bobby-1">Fights off Chris</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_bobby_dead_chris" data-recap="guide">
+                    <code>hacketthouseend_<wbr>bobby_<wbr>dead_<wbr>chris</code>
+                    <div>Bobby · <a href="#card-bobby-2">Killed by Chris after being wounded</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_chris_dead_ryan" data-recap="guide">
+                    <code>hacketthouseend_<wbr>chris_<wbr>dead_<wbr>ryan</code>
+                    <div>Chris · <a href="#card-chris-3">Shot by Ryan</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_constance_alive_house" data-recap="guide">
+                    <code>hacketthouseend_<wbr>constance_<wbr>alive_<wbr>house</code>
+                    <div>Constance · <a href="#card-constance-1">Protected by Bobby</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_constance_dead_chris" data-recap="guide">
+                    <code>hacketthouseend_<wbr>constance_<wbr>dead_<wbr>chris</code>
+                    <div>Constance · <a href="#card-constance-3">Killed by Chris</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_constance_dead_laura" data-recap="guide">
+                    <code>hacketthouseend_<wbr>constance_<wbr>dead_<wbr>laura</code>
+                    <div>Constance · <a href="#card-constance-2">Shot during the struggle</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_jacob_dead_nick" data-recap="guide">
+                    <code>hacketthouseend_<wbr>jacob_<wbr>dead_<wbr>nick</code>
+                    <div>Jacob · <a href="#card-jacob-9">Nick kills Jacob when Ryan opens both cages</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-10">Nick kills Jacob after Ryan leaves him</a></li>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-16">Nick kills Jacob after the breaker rescue stalls</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-hacketthouseend_jed_alive_house" data-recap="guide">
+                    <code>hacketthouseend_<wbr>jed_<wbr>alive_<wbr>house</code>
+                    <div>Jedediah · <a href="#card-jedediah-1">Protected by Bobby</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_jed_dead_chris" data-recap="guide">
+                    <code>hacketthouseend_<wbr>jed_<wbr>dead_<wbr>chris</code>
+                    <div>Jedediah · <a href="#card-jedediah-3">Killed by Chris</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_jed_dead_laura" data-recap="guide">
+                    <code>hacketthouseend_<wbr>jed_<wbr>dead_<wbr>laura</code>
+                    <div>Jedediah · <a href="#card-jedediah-2">Killed by Laura</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_kayleebodyfinal" data-recap="guide">
+                    <code>hacketthouseend_<wbr>kayleebodyfinal</code>
+                    <div>Kaylee · <a href="#card-kaylee-1">Killed before the pool scene</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_laura_alive_basement" data-recap="guide">
+                    <code>hacketthouseend_<wbr>laura_<wbr>alive_<wbr>basement</code>
+                    <div>Laura · <a href="#card-laura-4">Cured and locked in the basement</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_laura_dead_ryan" data-recap="guide">
+                    <code>hacketthouseend_<wbr>laura_<wbr>dead_<wbr>ryan</code>
+                    <div>Laura · <a href="#card-laura-10">Shot by Ryan at the Hackett house</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_laura_dead_travis" data-recap="guide">
+                    <code>hacketthouseend_<wbr>laura_<wbr>dead_<wbr>travis</code>
+                    <div>Laura · <a href="#card-laura-7">Stabbed by Travis in revenge</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Laura · <a href="#card-laura-8">Dies fighting Travis</a> / Travis · <a href="#card-travis-6">Dies fighting Laura</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-hacketthouseend_nick_dead_laura" data-recap="guide">
+                    <code>hacketthouseend_<wbr>nick_<wbr>dead_<wbr>laura</code>
+                    <div>Nick · <a href="#card-nick-4">Shot by Laura in the cage</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_ryan_alive_hacketthouse" data-recap="guide">
+                    <code>hacketthouseend_<wbr>ryan_<wbr>alive_<wbr>hacketthouse</code>
+                    <div>Ryan · <a href="#card-ryan-3">Shoots Travis after Laura dies</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_ryan_dead_bledout" data-recap="guide">
+                    <code>hacketthouseend_<wbr>ryan_<wbr>dead_<wbr>bledout</code>
+                    <div>Ryan · <a href="#card-ryan-4">Bleeds out after the attic fight</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Ryan · <a href="#card-ryan-10">Bleeds out after shooting Chris and Travis</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-hacketthouseend_ryan_dead_bobby" data-recap="file-only">
+                    <code>hacketthouseend_<wbr>ryan_<wbr>dead_<wbr>bobby</code>
+                    <div><span class="meta">Files only</span> · <a href="#recap-slot-bobby">Default wording after Ryan shoots Travis</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Ryan · <a href="#card-ryan-9">Killed by Bobby after the shootout</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-hacketthouseend_ryan_dead_chris" data-recap="guide">
+                    <code>hacketthouseend_<wbr>ryan_<wbr>dead_<wbr>chris</code>
+                    <div>Ryan · <a href="#card-ryan-5">Killed by Chris in the attic</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_ryan_dead_travis" data-recap="guide">
+                    <code>hacketthouseend_<wbr>ryan_<wbr>dead_<wbr>travis</code>
+                    <div>Ryan · <a href="#card-ryan-7">Shot by Travis</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_travis_alive_house" data-recap="guide">
+                    <code>hacketthouseend_<wbr>travis_<wbr>alive_<wbr>house</code>
+                    <div>Travis · <a href="#card-travis-2">Keeps the gun after Ryan bleeds out</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Travis · <a href="#card-travis-3">Escapes the attic fight when Ryan shoots Laura</a></li>
+                      <li data-recap-alt="guide">Travis · <a href="#card-travis-4">Survives after killing Laura and Ryan</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-hacketthouseend_travis_dead_laura" data-recap="guide">
+                    <code>hacketthouseend_<wbr>travis_<wbr>dead_<wbr>laura</code>
+                    <div>Travis · <a href="#card-travis-6">Dies fighting Laura</a> / Laura · <a href="#card-laura-8">Dies fighting Travis</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_travis_dead_ryanshot" data-recap="guide">
+                    <code>hacketthouseend_<wbr>travis_<wbr>dead_<wbr>ryanshot</code>
+                    <div>Travis · <a href="#card-travis-7">Shot by Ryan after killing Laura</a></div>
+                  </li>
+                  <li id="recap-hacketthouseend_travis_dead_shot" data-recap="guide">
+                    <code>hacketthouseend_<wbr>travis_<wbr>dead_<wbr>shot</code>
+                    <div>Travis · <a href="#card-travis-11">Shot by Laura at the Hackett house</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-woodsend">
+              <summary><strong>Woods</strong><span class="meta">21 assets · 11 alternates</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-woodsend_abi_dead_nick" data-recap="guide">
+                    <code>woodsend_<wbr>abi_<wbr>dead_<wbr>nick</code>
+                    <div>Abigail · <a href="#card-abi-3">Killed by Nick at the pool house</a></div>
+                  </li>
+                  <li id="recap-woodsend_caleb_alive_woods" data-recap="guide">
+                    <code>woodsend_<wbr>caleb_<wbr>alive_<wbr>woods</code>
+                    <div>Caleb · <a href="#card-caleb-6">Stays in the woods until dawn</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-1">Cured when Laura kills Silas</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_chris_alive_snaretrap" data-recap="file-only">
+                    <code>woodsend_<wbr>chris_<wbr>alive_<wbr>snaretrap</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Standalone Chris snare recap</a></div>
+                  </li>
+                  <li id="recap-woodsend_chris_alive_woods" data-recap="guide">
+                    <code>woodsend_<wbr>chris_<wbr>alive_<wbr>woods</code>
+                    <div>Chris · <a href="#card-chris-1">Survives the attic confrontation</a></div>
+                    <ul>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-chris">Chris cured after surviving the house fight</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_dylan_alive_woods" data-recap="guide">
+                    <code>woodsend_<wbr>dylan_<wbr>alive_<wbr>woods</code>
+                    <div>Dylan · <a href="#card-dylan-4">Lives with the radio-hut infection</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-16">Turns after the radio-hut bite and is cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_emma_alive_werewolf" data-recap="guide">
+                    <code>woodsend_<wbr>emma_<wbr>alive_<wbr>werewolf</code>
+                    <div>Emma · <a href="#card-emma-4">Survives after transforming at the van</a></div>
+                    <ul>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-emma">Emma cured after transforming at the van</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_emma_alive_woods" data-recap="guide">
+                    <code>woodsend_<wbr>emma_<wbr>alive_<wbr>woods</code>
+                    <div>Emma · <a href="#card-emma-10">Cured and waits alone in the woods</a></div>
+                  </li>
+                  <li id="recap-woodsend_emma_alive_woodsescape" data-recap="guide">
+                    <code>woodsend_<wbr>emma_<wbr>alive_<wbr>woodsescape</code>
+                    <div>Emma · <a href="#card-emma-2">Fends off infected Jacob with the bracelet</a></div>
+                  </li>
+                  <li id="recap-woodsend_emma_dead_jacob" data-recap="guide">
+                    <code>woodsend_<wbr>emma_<wbr>dead_<wbr>jacob</code>
+                    <div>Emma · <a href="#card-emma-8">Killed by an infected Jacob</a> / Jacob · <a href="#card-jacob-6">Turns and kills Emma</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-18">Kills Emma, then is cured by Caleb’s death</a> / Emma · <a href="#card-emma-8">Killed by an infected Jacob</a></li>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-19">Kills Emma, then is cured by Silas’s death</a> / Emma · <a href="#card-emma-8">Killed by an infected Jacob</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_jacob_alive_werewolf" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>alive_<wbr>werewolf</code>
+                    <div>Jacob · <a href="#card-jacob-5">Survives the basement with the curse</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-17">Survives the cages and is cured by Caleb’s death</a></li>
+                      <li data-recap-alt="guide">Jacob · <a href="#card-jacob-3">Cured when Silas dies</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_jacob_alive_woods" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>alive_<wbr>woods</code>
+                    <div>Jacob · <a href="#card-jacob-1">Freed from the cages and survives</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_alive_woodsescape" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>alive_<wbr>woodsescape</code>
+                    <div>Jacob · <a href="#card-jacob-2">Escapes Chris’s snare in the woods</a> / Chris · <a href="#card-chris-2">Survives after chasing Jacob</a></div>
+                    <ul>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-chris">Chris cured after surviving the house fight</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_beartrap" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>beartrap</code>
+                    <div>Jacob · <a href="#card-jacob-12">Killed by a second bear trap</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_ryan" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>ryan</code>
+                    <div>Jacob · <a href="#card-jacob-7">Shot through the bushes</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_snaretrap" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>snaretrap</code>
+                    <div>Jacob · <a href="#card-jacob-14">Caught in the snare during Chris’s chase</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_treewalk" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>treewalk</code>
+                    <div>Jacob · <a href="#card-jacob-13">Killed by Caleb on the walkway</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_woods" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>woods</code>
+                    <div>Jacob · <a href="#card-jacob-8">Killed by Chris in the woods</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacob_dead_woodsheadless" data-recap="guide">
+                    <code>woodsend_<wbr>jacob_<wbr>dead_<wbr>woodsheadless</code>
+                    <div>Jacob · <a href="#card-jacob-15">Caught by Chris before the woods chase</a></div>
+                  </li>
+                  <li id="recap-woodsend_jacobemmaalive" data-recap="guide">
+                    <code>woodsend_<wbr>jacobemmaalive</code>
+                    <div>Jacob · <a href="#card-jacob-4">Reunites with Emma</a> / Emma · <a href="#card-emma-3">Reunites with Jacob in the woods</a></div>
+                  </li>
+                  <li id="recap-woodsend_max_dead_caleb" data-recap="guide">
+                    <code>woodsend_<wbr>max_<wbr>dead_<wbr>caleb</code>
+                    <div>Max · <a href="#card-max-5">Killed after swimming to shore</a></div>
+                  </li>
+                  <li id="recap-woodsend_nick_alive_werewolf" data-recap="guide">
+                    <code>woodsend_<wbr>nick_<wbr>alive_<wbr>werewolf</code>
+                    <div>Nick · <a href="#card-nick-3">Survives the full moon infected</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Nick · <a href="#card-nick-1">Cured when Silas dies</a></li>
+                      <li data-recap-alt="guide">Nick · <a href="#card-nick-2">Cured when Caleb dies</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-lodgeoutsideend">
+              <summary><strong>Outside the lodge</strong><span class="meta">4 assets</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-lodgeoutsideend_abi_dead_minivan" data-recap="guide">
+                    <code>lodgeoutsideend_<wbr>abi_<wbr>dead_<wbr>minivan</code>
+                    <div>Abigail · <a href="#card-abi-4">Killed by Emma at the van</a></div>
+                  </li>
+                  <li id="recap-lodgeoutsideend_dylan_dead_inminivan" data-recap="guide">
+                    <code>lodgeoutsideend_<wbr>dylan_<wbr>dead_<wbr>inminivan</code>
+                    <div>Dylan · <a href="#card-dylan-10">Killed inside the van</a></div>
+                  </li>
+                  <li id="recap-lodgeoutsideend_dylan_dead_outminivan" data-recap="guide">
+                    <code>lodgeoutsideend_<wbr>dylan_<wbr>dead_<wbr>outminivan</code>
+                    <div>Dylan · <a href="#card-dylan-9">Killed by Emma after the van opens</a></div>
+                  </li>
+                  <li id="recap-lodgeoutsideend_emma_dead_minivan" data-recap="guide">
+                    <code>lodgeoutsideend_<wbr>emma_<wbr>dead_<wbr>minivan</code>
+                    <div>Emma · <a href="#card-emma-7">Shot with silver at the van</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-lodgeend">
+              <summary><strong>Inside the lodge</strong><span class="meta">27 assets · 20 alternates</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-lodgeend_abi_alive_office" data-recap="guide">
+                    <code>lodgeend_<wbr>abi_<wbr>alive_<wbr>office</code>
+                    <div>Abigail · <a href="#card-abi-1">Safe in the surveillance room</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Abigail · <a href="#card-abi-2">Escapes werewolf Emma in the shelter</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_abi_dead_stormshelter" data-recap="guide">
+                    <code>lodgeend_<wbr>abi_<wbr>dead_<wbr>stormshelter</code>
+                    <div>Abigail · <a href="#card-abi-5">Killed by Emma in the storm shelter</a></div>
+                  </li>
+                  <li id="recap-lodgeend_caleb_alive_lodge" data-recap="guide">
+                    <code>lodgeend_<wbr>caleb_<wbr>alive_<wbr>lodge</code>
+                    <div>Caleb · <a href="#card-caleb-5">Returns to human form at dawn</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-2">Returns to human form permanently</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_caleb_dead_lodge" data-recap="guide">
+                    <code>lodgeend_<wbr>caleb_<wbr>dead_<wbr>lodge</code>
+                    <div>Caleb · <a href="#card-caleb-9">Shot using silver passed by the shelter group</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-10">Shot using silver passed by Abi alone</a></li>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-12">Shot using silver passed by Emma alone</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_dylan_alive_class" data-recap="guide">
+                    <code>lodgeend_<wbr>dylan_<wbr>alive_<wbr>class</code>
+                    <div>Dylan · <a href="#card-dylan-7">Hides in a classroom, infected</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-3">Hides in a classroom, uninfected</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-18">Hides in the classroom and is cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_dylan_alive_hall" data-recap="guide">
+                    <code>lodgeend_<wbr>dylan_<wbr>alive_<wbr>hall</code>
+                    <div>Dylan · <a href="#card-dylan-6">Spared during the lodge chase</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-8">Takes refuge after Kaitlyn misses the silver shot</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-1">Takes refuge during the silver handoff</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-17">Takes refuge during the silver handoff and is cured</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-19">Spared in the lodge chase and cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_dylan_dead_balcony" data-recap="guide">
+                    <code>lodgeend_<wbr>dylan_<wbr>dead_<wbr>balcony</code>
+                    <div>Dylan · <a href="#card-dylan-13">Killed at the start of the lodge attack</a></div>
+                  </li>
+                  <li id="recap-lodgeend_dylan_dead_blockedstairs" data-recap="file-only">
+                    <code>lodgeend_<wbr>dylan_<wbr>dead_<wbr>blockedstairs</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Dylan killed at the blocked staircase</a></div>
+                  </li>
+                  <li id="recap-lodgeend_dylan_dead_hall" data-recap="file-only">
+                    <code>lodgeend_<wbr>dylan_<wbr>dead_<wbr>hall</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Dylan killed in the hall</a></div>
+                  </li>
+                  <li id="recap-lodgeend_emma_alive_office" data-recap="guide">
+                    <code>lodgeend_<wbr>emma_<wbr>alive_<wbr>office</code>
+                    <div>Emma · <a href="#card-emma-1">Safe in the surveillance room</a></div>
+                  </li>
+                  <li id="recap-lodgeend_emma_alive_stormshelter" data-recap="guide">
+                    <code>lodgeend_<wbr>emma_<wbr>alive_<wbr>stormshelter</code>
+                    <div>Emma · <a href="#card-emma-5">Survives after transforming in the shelter</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Emma · <a href="#card-emma-12">Kills Abi in the shelter and is cured</a></li>
+                      <li data-recap-alt="guide">Emma · <a href="#card-emma-11">Cured after transforming in the shelter</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_alive_attic" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>attic</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-6">Spared on the window route</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-32">Spared in the attic and cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_alive_class" data-recap="file-only">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>class</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Kaitlyn spared in the classroom</a></div>
+                    <ul>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Kaitlyn spared in the classroom and cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_alive_dormitory" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>dormitory</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-11">Spared in the upstairs rooms</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-33">Spared in the dormitory and cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_alive_hall" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>hall</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-12">Misses the shot after receiving silver</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-1">Shoots Caleb with silver</a></li>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-27">Shoots Caleb and stays infected</a></li>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-26">Shoots Caleb and is cured by Silas’s death</a></li>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-35">Misses the silver shot and is cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_alive_hallfall" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>hallfall</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-10">Survives a fall from the beam</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-34">Survives the beam fall and is cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_attic" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>attic</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-19">Caught while choosing an attic escape</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_atticlanding" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>atticlanding</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-22">Caught before she hides upstairs</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_balcony" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>balcony</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-14">Killed at the start of the lodge attack</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_blockedstairs" data-recap="file-only">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>blockedstairs</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Kaitlyn killed at the blocked staircase</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_class" data-recap="file-only">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>class</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Kaitlyn killed in the classroom</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_dormitory" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>dormitory</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-23">Discovered while hiding upstairs</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_eaves" data-recap="file-only">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>eaves</code>
+                    <div><span class="meta">Files only</span> · <a href="#unused-lodge-recaps">Kaitlyn killed while hiding on the roof</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_hallfall" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>hallfall</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-21">Falls from the attic beam</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_hallstairs" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>hallstairs</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-24">Caught before taking the silver shell</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_office" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>office</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-25">Misses the silver shot at Caleb</a></div>
+                  </li>
+                  <li id="recap-lodgeend_kaitlyn_dead_roof" data-recap="guide">
+                    <code>lodgeend_<wbr>kaitlyn_<wbr>dead_<wbr>roof</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-20">Killed on the window route</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-kitchenend">
+              <summary><strong>Kitchen and freezer</strong><span class="meta">15 assets · 16 alternates</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-kitchenend_caleb_alive_freezer" data-recap="guide">
+                    <code>kitchenend_<wbr>caleb_<wbr>alive_<wbr>freezer</code>
+                    <div>Caleb · <a href="#card-caleb-4">Survives the freezer alone</a></div>
+                  </li>
+                  <li id="recap-kitchenend_caleb_alive_lodge" data-recap="guide">
+                    <code>kitchenend_<wbr>caleb_<wbr>alive_<wbr>lodge</code>
+                    <div>Caleb · <a href="#card-caleb-5">Returns to human form at dawn</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-2">Returns to human form permanently</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_caleb_dead_freezer" data-recap="guide">
+                    <code>kitchenend_<wbr>caleb_<wbr>dead_<wbr>freezer</code>
+                    <div>Caleb · <a href="#card-caleb-11">Freezes after losing the curse</a></div>
+                  </li>
+                  <li id="recap-kitchenend_dylan_alive_kaitlynfreezer" data-recap="unverified">
+                    <code>kitchenend_<wbr>dylan_<wbr>alive_<wbr>kaitlynfreezer</code>
+                    <div><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan frees Kaitlyn</a></div>
+                    <ul>
+                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Silas’s death cures him</a></li>
+                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Chris’s death cures him</a></li>
+                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and remains infected</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_dylan_alive_kitchen" data-recap="guide">
+                    <code>kitchenend_<wbr>dylan_<wbr>alive_<wbr>kitchen</code>
+                    <div>Dylan · <a href="#card-dylan-5">Spared by Caleb in the kitchen</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-2">Survives after Kaitlyn traps Caleb</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-14">Survives the rabbit trap, still cursed</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-15">Survives the rabbit trap and is cured</a></li>
+                      <li data-recap-alt="guide">Dylan · <a href="#card-dylan-21">Spared by Caleb in the kitchen and cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_dylan_dead_kitchen" data-recap="guide">
+                    <code>kitchenend_<wbr>dylan_<wbr>dead_<wbr>kitchen</code>
+                    <div>Dylan · <a href="#card-dylan-12">Killed by Caleb in the kitchen</a></div>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_alive_calebfreezer" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>alive_<wbr>calebfreezer</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-9">Rescued from the freezer with Caleb, still cursed</a> / Caleb · <a href="#card-caleb-7">Rescued from the freezer with Kaitlyn, still cursed</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-3">Rescued from the freezer with Caleb, then cured</a> / Caleb · <a href="#card-caleb-3">Freed from the freezer with Kaitlyn, then cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_alive_freezer" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>alive_<wbr>freezer</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-8">Survives the cold alone</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-36">Survives locked in with Caleb</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_alive_freezerrelease" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>alive_<wbr>freezerrelease</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-30">Freed by Dylan while both remain infected</a> / Dylan · <a href="#card-dylan-24">Frees Kaitlyn while both remain cursed</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-28">Uninfected and freed by Dylan</a> / Dylan · <a href="#card-dylan-22">Frees uninfected Kaitlyn and stays cursed</a></li>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-29">Freed by Dylan and both are cured</a> / Dylan · <a href="#card-dylan-23">Frees Kaitlyn and both are cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_alive_kitchen" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>alive_<wbr>kitchen</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-2">Traps Caleb with the rabbit</a></div>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_alive_kitcheninfected" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>alive_<wbr>kitcheninfected</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-5">Spared in the kitchen</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-4">Spared in the kitchen, then cured</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_dead_calebfreezer" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>dead_<wbr>calebfreezer</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-18">Pulled into the freezer by Caleb</a> / Caleb · <a href="#card-caleb-8">Kills Kaitlyn in the freezer</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Caleb · <a href="#card-caleb-13">Shown cured after killing Kaitlyn in the freezer</a> / Kaitlyn · <a href="#card-kaitlyn-18">Pulled into the freezer by Caleb</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_dead_freezer" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>dead_<wbr>freezer</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-13">Freezes while hiding inside</a></div>
+                    <ul>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-31">Freezes with Caleb after losing the curse</a></li>
+                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-solo">Kaitlyn’s solo freezer death after the cure</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_dead_kitchen" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>dead_<wbr>kitchen</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-15">Killed in the kitchen</a></div>
+                  </li>
+                  <li id="recap-kitchenend_kaitlyn_dead_wwfreezeralone" data-recap="guide">
+                    <code>kitchenend_<wbr>kaitlyn_<wbr>dead_<wbr>wwfreezeralone</code>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-18">Pulled into the freezer by Caleb</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-roadsideend">
+              <summary><strong>Car crash</strong><span class="meta">4 assets</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-roadsideend_laura_dead_carcrash" data-recap="guide">
+                    <code>roadsideend_<wbr>laura_<wbr>dead_<wbr>carcrash</code>
+                    <div>Laura · <a href="#card-laura-5">Kills Silas after the crash and dies</a></div>
+                  </li>
+                  <li id="recap-roadsideend_laura_dead_carcrashsilas" data-recap="guide">
+                    <code>roadsideend_<wbr>laura_<wbr>dead_<wbr>carcrashsilas</code>
+                    <div>Laura · <a href="#card-laura-6">Killed crawling out of the car</a></div>
+                  </li>
+                  <li id="recap-roadsideend_ryan_dead_carcrash" data-recap="guide">
+                    <code>roadsideend_<wbr>ryan_<wbr>dead_<wbr>carcrash</code>
+                    <div>Ryan · <a href="#card-ryan-6">Dies in the car crash</a></div>
+                  </li>
+                  <li id="recap-roadsideend_travis_dead_carcrash" data-recap="guide">
+                    <code>roadsideend_<wbr>travis_<wbr>dead_<wbr>carcrash</code>
+                    <div>Travis · <a href="#card-travis-8">Killed in the car</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-freakshowend">
+              <summary><strong>Silas’s nest</strong><span class="meta">10 assets · 1 alternate</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-freakshowend_laura_alive_freakshow" data-recap="guide">
+                    <code>freakshowend_<wbr>laura_<wbr>alive_<wbr>freakshow</code>
+                    <div>Laura · <a href="#card-laura-1">Kills Silas at his nest</a></div>
+                  </li>
+                  <li id="recap-freakshowend_laura_alive_lastsurvivor" data-recap="guide">
+                    <code>freakshowend_<wbr>laura_<wbr>alive_<wbr>lastsurvivor</code>
+                    <div>Laura · <a href="#card-laura-3">Protected by the blood vial</a></div>
+                  </li>
+                  <li id="recap-freakshowend_laura_dead_freakshowsilas" data-recap="guide">
+                    <code>freakshowend_<wbr>laura_<wbr>dead_<wbr>freakshowsilas</code>
+                    <div>Laura · <a href="#card-laura-9">Killed by Silas at the nest</a></div>
+                  </li>
+                  <li id="recap-freakshowend_ryan_alive_freakshow" data-recap="guide">
+                    <code>freakshowend_<wbr>ryan_<wbr>alive_<wbr>freakshow</code>
+                    <div>Ryan · <a href="#card-ryan-1">Survives the Silas hunt</a></div>
+                  </li>
+                  <li id="recap-freakshowend_ryan_alive_lastsurvivor" data-recap="guide">
+                    <code>freakshowend_<wbr>ryan_<wbr>alive_<wbr>lastsurvivor</code>
+                    <div>Ryan · <a href="#card-ryan-2">Protected by Bobby’s blood vial</a></div>
+                  </li>
+                  <li id="recap-freakshowend_ryan_dead_silas" data-recap="guide">
+                    <code>freakshowend_<wbr>ryan_<wbr>dead_<wbr>silas</code>
+                    <div>Ryan · <a href="#card-ryan-8">Killed by Silas at the nest</a></div>
+                  </li>
+                  <li id="recap-freakshowend_travis_alive_freakshow" data-recap="guide">
+                    <code>freakshowend_<wbr>travis_<wbr>alive_<wbr>freakshow</code>
+                    <div>Travis · <a href="#card-travis-1">Survives when the curse is lifted</a></div>
+                  </li>
+                  <li id="recap-freakshowend_travis_dead_freakshowlaura" data-recap="guide">
+                    <code>freakshowend_<wbr>travis_<wbr>dead_<wbr>freakshowlaura</code>
+                    <div>Travis · <a href="#card-travis-5">Shot during or after the struggle at the nest</a></div>
+                    <ul>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-state">Deliberate-shot wording</a></li>
+                    </ul>
+                  </li>
+                  <li id="recap-freakshowend_travis_dead_silas" data-recap="guide">
+                    <code>freakshowend_<wbr>travis_<wbr>dead_<wbr>silas</code>
+                    <div>Travis · <a href="#card-travis-9">Killed by Silas in the woods</a></div>
+                  </li>
+                  <li id="recap-freakshowend_travis_dead_silasfloor" data-recap="guide">
+                    <code>freakshowend_<wbr>travis_<wbr>dead_<wbr>silasfloor</code>
+                    <div>Travis · <a href="#card-travis-10">Killed by Silas after the gun struggle</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+            <details class="entry chapter-choices" id="recaps-helparrives">
+              <summary><strong>Silas’s final card</strong><span class="meta">4 assets</span></summary>
+              <div class="entry-body">
+                <ul class="recap-list" role="list">
+                  <li id="recap-helparrives_silas_alive_ambiguous" data-recap="guide">
+                    <code>helparrives_<wbr>silas_<wbr>alive_<wbr>ambiguous</code>
+                    <div>Silas · <a href="#card-silas-1">Survives as the White Wolf</a></div>
+                  </li>
+                  <li id="recap-helparrives_silas_alive_nest" data-recap="guide">
+                    <code>helparrives_<wbr>silas_<wbr>alive_<wbr>nest</code>
+                    <div>Silas · <a href="#card-silas-2">Survives as Silas Vorez</a></div>
+                  </li>
+                  <li id="recap-helparrives_silas_dead_freakshow" data-recap="guide">
+                    <code>helparrives_<wbr>silas_<wbr>dead_<wbr>freakshow</code>
+                    <div>Silas · <a href="#card-silas-3">Shot at the nest</a></div>
+                  </li>
+                  <li id="recap-helparrives_silas_dead_roadside" data-recap="guide">
+                    <code>helparrives_<wbr>silas_<wbr>dead_<wbr>roadside</code>
+                    <div>Silas · <a href="#card-silas-4">Shot after the car crash</a></div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+        <details class="entry" id="recap-file-notes">
+          <summary><strong>Text without a confirmed playable route</strong><span class="meta">File evidence</span></summary>
+          <div class="entry-body">
+            <dl class="choice-list">
+              <dt id="recap-slot-bobby">Ryan’s default Bobby wording</dt>
+              <dd>Ryan’s card can describe Bobby killing him after he shot Travis. The alternate flag is already set if Ryan pulled the knife out earlier. Both choices at the later knife prompt also set it. The documented route uses <a href="#card-ryan-9">the wording about Bobby surviving Chris’s attack</a>.</dd>
+              <dt id="recap-slot-chris">Chris surviving and being cured</dt>
+              <dd>Both Chris’s standalone woods card and his paired snare escape with Jacob have cured wording. Ryan has to shoot Chris to start the Silas hunt, so the Chapter 10 choices that cure the curse cannot produce these versions.</dd>
+              <dt id="recap-slot-emma">Emma cured after transforming at the van</dt>
+              <dd>The van transformation requires the bite from Max. Shooting Chris cures that lineage before the hunt. The Chapter 10 island sequence checks for a surviving Emma with Max’s bite and replaces her infected woods recap with <a href="#card-emma-10">the cured woods outcome</a>. The later shelter transformation has its own <a href="#card-emma-11">Silas cure card</a>.</dd>
+              <dt id="recap-slot-rescuer">Dylan’s solo rescue card</dt>
+              <dd>The kitchen recap would need Kaitlyn marked as having frozen and Dylan marked as having survived the kitchen. Hiding with infected Dylan available gives Kaitlyn the survival state. Killing Silas can change the joint freezer outcome to death when Dylan is absent. A route to the separate Dylan card and its three alternate wordings remains unverified. <a href="#card-dylan-23">Paired card that can be selected</a></dd>
+              <dt id="recap-slot-solo">Kaitlyn’s solo freezer death after the cure</dt>
+              <dd>There is an alternate death text for Kaitlyn losing her immunity while alone. The Hide route selects her survival state if she entered infected. The hunt’s freezer death check uses Caleb’s trap state. A standard route to the solo cured death wording remains unverified. <a href="#card-kaitlyn-31">Joint freezer death</a></dd>
+            </dl>
+            <p>See also <a href="#unused-lodge-recaps">the disconnected lodge and snare cards</a> and <a href="#recap-state">Travis’s alternate nest wording</a>.</p>
+            <p class="source-note">Checked <code>bleedingout_gameflow</code>, <code>maxisland_gameflow</code>, <code>kitchendefend_gameflow</code>, <code>silassearch_gameflow</code>, and the PC recap rules.</p>
+          </div>
+        </details>
         <details class="entry" id="recap-state">
           <summary><strong>When the recap differs from the scene</strong><span class="meta">Steam PC build 11105655</span></summary>
           <div class="entry-body">
