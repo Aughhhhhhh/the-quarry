@@ -104,8 +104,13 @@ endings = pages["endings.html"]
 walkthroughs = pages["walkthroughs.html"]
 route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
 assert len(route_pages) == 19
-assert {"full-runs", "pickup-routes", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
+assert {"full-runs", "pickup-routes", "character-routes", "finale-routes", "mode-guides"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
+game_modes = pages["game-modes.html"]
+assert {"single-player", "couch-co-op", "couch-assign", "couch-quick-start", "couch-handover", "wolf-pack", "wolf-pack-lobby",
+        "wolf-pack-voting", "wolf-pack-resume", "movie-mode", "movie-presets", "directors-chair"} <= game_modes.ids.keys()
+assert {("game-modes.html", anchor) for anchor in ("", "couch-co-op", "wolf-pack", "directors-chair")} <= reference.page_links & walkthroughs.page_links
+assert ("game-modes.html", "movie-mode") in achievements.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
 story_paths = pages["story-paths.html"]
 assert {"prologue", "tape-checkpoints", "optional-pickups", *(f"chapter-{n}" for n in range(1, 11))} <= story_paths.ids.keys()
