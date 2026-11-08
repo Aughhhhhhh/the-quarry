@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="244" viewBox="0 0 320 244">
+  <rect width="320" height="244" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="60" y="10" width="200" height="41" rx="4"/>
+    <rect x="60" y="72" width="200" height="41" rx="4"/>
+    <rect x="10" y="136" width="142" height="69" rx="4"/>
+    <rect x="168" y="136" width="142" height="69" rx="4"/>
+  </g>
+  <path d="M160 51v21m0 41v12m-79 11v-11h158v11" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="14">
+    <g fill="#f2a674" font-weight="700">
+      <text x="160" y="36">Island dock · The Magician</text>
+      <text x="160" y="98">Fork near Emma’s start</text>
+      <text x="81" y="158">Lower path</text>
+      <text x="239" y="158">Upper walkway</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="177">Box of Matches</text>
+      <text x="81" y="194">Return to the fork.</text>
+      <text x="239" y="177">Police Car Keys</text>
+      <text x="239" y="194">Open the door.</text>
+      <text x="160" y="229">The lower ladder also takes you inside.</text>
+    </g>
+  </g>
+</svg>
