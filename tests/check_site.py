@@ -270,6 +270,8 @@ sole_routes = pages["sole-survivors.html"]
 assert ("sole-survivors.html", "") in walkthroughs.page_links
 assert "pickup-replay" in massacre.ids and ("massacre.html", "pickup-index") in sole_routes.page_links
 assert {"sole-ryan-vial", "cured-sole-survivor", "finish-crane", "finish-attic", "finish-lodge", "finish-vial"} <= sole_routes.ids.keys()
+assert {"emma-island-only", "emma-shelter-only", "jacob-bitten-only", "finish-crash"} <= sole_routes.ids.keys()
+assert {("sole-survivors.html", anchor) for anchor in ("emma-island-only", "emma-shelter-only", "jacob-bitten-only")} <= endings.page_links
 for survivor in sole_survivors:
     assert survivor in massacre.ids
     if survivor.startswith("sole-"):
@@ -338,6 +340,8 @@ assert {("epilogue.html", headline) for headline in ("closing-shooting-self-defe
 
 early_epilogue = pages["early-epilogue.html"]
 assert {"setup", "delay-jacob", "radio-bite", "jacob-pickups", "van-abi", "van-dylan", "scrap", "attic", "epilogue", *(f"chapter-{chapter}" for chapter in range(4, 10))} <= early_epilogue.ids.keys()
+assert {"max-emma-only", "nick-fate"} <= early_epilogue.ids.keys()
+assert ("early-epilogue.html", "max-emma-only") in endings.page_links
 assert ("early-epilogue.html", "setup") in endings.page_links & alternate.page_links & walkthroughs.page_links
 early_pickups = {f"clue-{key}": f"item-{key}" for key in massacre_clues - {"c4", "c5", "f4", "c12", "f9", "h17", "h18", "h19"}}
 early_pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(6, 22)})

@@ -38,6 +38,7 @@
         <h2 id="chapter-list">Chapters</h2>
         <nav aria-label="Chapter 10 skip route">
           <a href="#setup">Before you start</a>
+          <a href="#max-emma-only">Only Max and Emma</a>
           <a href="#pickup-index">Find a pickup</a>
           <a href="#chapter-4">4 · Bushes and island</a>
           <a href="#chapter-5">5 · Radio hut</a>
@@ -51,7 +52,7 @@
       <article class="route-content" aria-label="Chapter 10 skip walkthrough">
         <section class="section" id="setup">
           <h2>Choose who survives</h2>
-          <p>Max, Emma and Nick survive infected on these branches. Jacob, Laura and Ryan die. Your choices at the pool, van, scrapyard and attic decide who joins the survivors.</p>
+          <p>Max and Emma survive infected on these branches. Jacob, Laura and Ryan die. Your choices at the pool, van, cages, scrapyard and attic decide who joins the survivors.</p>
           <dl class="choice-list">
             <dt><a href="#van-abi">Keep Abigail alive</a></dt>
             <dd>Keep Dylan uninfected in Chapter 5. Shoot Nick in Chapter 6 to save Abi. At the van, save Abi but let Emma kill Dylan. Abi can collect The Hierophant in Chapter 9.</dd>
@@ -59,6 +60,8 @@
             <dd>Break into the locked cabin in Chapter 1 and keep Dylan’s radio-hut bite. Let Nick kill Abi, then choose Run at the van. Emma spares infected Dylan.</dd>
             <dt><a href="#van-dylan">Lose Abigail and Dylan</a></dt>
             <dd>Keep Dylan uninfected in Chapter 5. Let Nick kill Abi, then choose Run at the van. Emma kills uninfected Dylan.</dd>
+            <dt><a href="#nick-fate">Choose Nick’s fate</a></dt>
+            <dd>Take <strong>Stop Laura?</strong> at the cage to spare Nick. If Jacob already died, you can let the prompt expire to kill Nick and still skip Chapter 10.</dd>
           </dl>
           <p>Each van route sends Kaitlyn to the scrapyard alone. You can <a href="#scrap">leave her alive under the scrap or kill her</a>. At the attic, <a href="#attic">shoot transformed Laura to save Travis or hold fire to let her kill him</a>.</p>
           <p><strong>On a completed save</strong>, replay Chapter 4 with Emma and Dylan alive. If you want Dylan to survive and Abi left the cabin locked, replay from <a href="rough-night.html#chapter-1">Chapter 1</a> and choose <strong>Break In</strong>. For a new game, follow <a href="rough-night.html#prologue">Rough Night through Chapter 3</a> with that change if needed. <a href="reference.html#saves">Chapter Select and save rules</a></p>
@@ -75,6 +78,17 @@
               <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
               <button class="button secondary" type="submit">Jump to pickup</button>
             </form>
+          </details>
+          <details class="route-pickup" id="max-emma-only">
+            <summary>Alternate route · Max and Emma are the only surviving counselors</summary>
+            <p>Start Chapter 8 if Emma has only Max’s bite, Jacob and Abi are dead, and Dylan is uninfected. Use Chapter 6 to change Abi’s fate or Emma’s encounter with the hunters, Chapter 5 to change Dylan’s bite, or Chapter 4 for Emma’s island bite and Jacob’s death.</p>
+            <ol>
+              <li>In Chapter 4, hit Jacob in the <a href="#chapter-4">second bushes window</a> and give Emma the island bite. If you want Justice or Memory Card, use the <a href="#jacob-pickups">Chapter 6 bear-trap death</a> instead. Jacob must be dead before the cage scene.</li>
+              <li>Keep Dylan <a href="#radio-bite">uninfected at the radio hut</a>. Let Nick kill Abi at the pool, and let Emma’s <strong>Run?</strong> expire when she sees the hunters. At the van choose <strong>Optimistic → Run</strong>. Emma kills Dylan and Kaitlyn leaves alone. <a href="#van-dylan">Van choice</a></li>
+              <li>In the red-lit basement passage, press <strong>Down</strong> at the slippery floor. Let <a href="#nick-fate"><strong>Stop Laura?</strong> expire</a> so she shoots Nick.</li>
+              <li>As Kaitlyn at the scrapyard choose <strong>Gun</strong> and let the 5.1-second base aiming window expire. In the attic, let Ryan’s shot expire. Chris kills Ryan, then Laura and Travis kill each other. Chris lives, so Max’s playable island scene is skipped. <a href="#scrap">Scrapyard and attic steps</a></li>
+            </ol>
+            <p>Max and Emma remain infected. The game goes to the epilogue after Eliza’s Chapter 9 interlude. <a href="epilogue.html#card-max-4">Max’s card</a> · <a href="epilogue.html#card-emma-4">Emma’s card</a></p>
           </details>
         </section>
 
@@ -293,7 +307,7 @@
           <details class="route-pickup" id="tarot-17"><summary>Optional tarot · The Emperor</summary><p>Return to the starting corridor and walk straight. Take the card before entering the tunnel lit in red. <a href="collectibles.html#item-t17">Card and pickup video</a></p></details>
           <ol start="2">
             <li>Go into the red-lit passage and press <strong>Down</strong> at the slippery floor. If Jacob survived, let <strong>Open Cage?</strong> expire.</li>
-            <li>Take <strong>Stop Laura?</strong> when Laura aims at Nick. This leaves him alive and infected. If Jacob reached the cage alive, choose <strong>Leave Jacob</strong>. Nick kills an uninfected Jacob when the power goes out. An infected Jacob survives the cage and triggers the woods scene in Chapter 10. <a href="chapters.html#cage-power-cut">Cage outcomes after the power cut</a></li>
+            <li id="nick-fate">Take <strong>Stop Laura?</strong> to keep Nick alive and infected. If Jacob is alive and uninfected, choose <strong>Leave Jacob</strong> so Nick kills him at the power cut. If Jacob is already dead, you can instead let <strong>Stop Laura?</strong> expire to kill Nick. A living Jacob can escape the power cut if Nick is dead or Jacob is infected, bringing back the Chapter 10 woods scene. <a href="chapters.html#cage-power-cut">Cage outcomes after the power cut</a></li>
             <li>At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 8 navigation"><a href="#chapter-7">← Chapter 7</a><a href="#chapters">Chapter list</a><a href="#chapter-9">Chapter 9 →</a></nav>
@@ -371,7 +385,7 @@
           <p>After Eliza, the game skips the island, lodge, woods and Silas hunt and goes straight to the fates. Chapter 10’s completion award and its lodge pickups are unavailable on this run.</p>
           <dl class="choice-list">
             <dt>Max, Emma and Nick</dt>
-            <dd>All three are still infected. <a href="epilogue.html#card-max-4">Max’s island fate</a> · <a href="epilogue.html#emma">Emma’s van fates</a> · <a href="epilogue.html#card-nick-3">Nick’s fate</a></dd>
+            <dd>Max and Emma are still infected. Nick is infected if you spared him in the cage, or deceased if Laura fired. <a href="epilogue.html#card-max-4">Max’s island fate</a> · <a href="epilogue.html#card-emma-4">Emma’s van fate</a> · <a href="epilogue.html#card-nick-3">Nick infected</a> · <a href="epilogue.html#card-nick-4">Nick shot</a></dd>
             <dt>Abi, Dylan and Kaitlyn</dt>
             <dd>Abi survives if you saved her at the van and used the shelter ladder. Dylan survives if he was bitten in Chapter 5 and you chose Run with Abi dead. Kaitlyn survives if she took the car bite and stayed under the scrap. <a href="epilogue.html#card-kaitlyn-7">Kaitlyn’s trapped recap</a></dd>
             <dt>Chris, Caleb, Silas and Travis</dt>
