@@ -64,6 +64,8 @@ function indexEntries(content, page) {
       route = routeLink(entry.querySelector('a[href="tarot-route.html"]'), "Tarot walkthrough");
     } else if (entry.id === "hard-pass") {
       route = routeLink(entry.querySelector('a[href="tarot-route.html#hard-pass"]'), "Hard Pass walkthrough");
+    } else if (entry.id === "butterpops") {
+      route = routeLink(entry.querySelector('a[href="completion.html#manual-combat"]'), "Manual combat walkthrough");
     } else if (entry.id === "conspiracy-theorist") {
       route = routeLink(entry.querySelector('a[href="evidence-route.html"]'), "Evidence walkthrough");
     } else if (entry.id === "meddling-kids") {

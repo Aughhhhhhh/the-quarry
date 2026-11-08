@@ -314,6 +314,8 @@ assert {"setup", "quick-starts", "prologue", "epilogue", "replays", "manual-comb
         *(f"chapter-{chapter}" for chapter in range(1, 11))} <= completion.ids.keys()
 assert {("completion.html", anchor) for anchor in ("setup", "replays", "manual-combat")} <= achievements.page_links
 assert ("completion.html", "pickup-checkpoints") in achievements.page_links & walkthroughs.page_links
+assert {"manual-range", "manual-rescue", "manual-firepit", "manual-radio", "manual-attic", "manual-lodge", "manual-replay"} <= completion.ids.keys()
+assert ("completion.html", "manual-replay") in achievements.page_links & pages["achievement-replays.html"].page_links
 assert ("completion.html", "all-clues-plan") in achievements.page_links
 completion_pickups = {f"clue-{key}": f"item-{key}" for key in clues}
 for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
