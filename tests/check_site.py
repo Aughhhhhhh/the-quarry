@@ -83,7 +83,10 @@ assert {
     "sole-abi", "sole-dylan", "sole-emma", "sole-jacob", "final-girl",
     "sole-laura", "sole-max", "sole-nick", "last-man-standing",
 } <= guide.ids.keys()
-assert guide.list_items == {"score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6}, guide.list_items
+assert guide.list_items == {
+    "score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6,
+    "death-vision-options": 2, "sun-vision-order": 9, "judgement-vision-order": 4,
+}, guide.list_items
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates

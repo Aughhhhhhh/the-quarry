@@ -380,9 +380,9 @@
       <li>At the Hackett house, pass the struggle over Constance’s shotgun. As Ryan, leave the knife in your side, barricade the door and pass the chase and hiding prompts. When Bobby catches Ryan, stab him.</li>
       <li>As Laura, pass the escape prompts. Check the piano room and upstairs rooms for clues. If going for Family Matters, choose Attack against Jedediah and win the struggle.</li>
       <li>As Ryan, choose Accept when Laura offers a bite and let Pull Away expire. This keeps Ryan alive long enough to get out.</li>
-      <li>At the scrapyard, collect everything before approaching the crane. Warn Kaitlyn, pass the prompts, sound the horn and complete the blowtorch mash to save Dylan. Use the Blood Pact variation to infect Kaitlyn instead.</li>
+      <li>At the scrapyard, collect everything before approaching the crane. Kaitlyn can collect the same three items if she explores alone. With Dylan present, warn Kaitlyn, pass the prompts, sound the horn and complete the blowtorch mash to save him. Use the Blood Pact variation to infect Kaitlyn instead.</li>
       <li>At the shelter, pick up The Hierophant and inspect the lit fuse-box area for the silver shells before exiting. You need a survivor in the shelter to get the shells to Kaitlyn.</li>
-      <li>After the attic collapse, have Ryan shoot Chris. Laura and Max are cured. If you spared Travis in Chapter 7, he can agree to work with Laura. Choose Suspicious in the following conversation.</li>
+      <li>After the attic collapse, have Ryan shoot Chris. Laura and Max are cured. If you spared Travis in Chapter 7 and Ryan survived his wound, both Inquisitive and Suspicious lead into the hunt for Silas.</li>
     </ol>
     <p><a href="#collect-9">Chapter 9 collectibles</a></p>
     <details class="entry chapter-choices" id="choices-9">
@@ -1012,7 +1012,40 @@
       <li><strong>Plan Chapter 9.</strong> Picking up The Hierophant forces a flashback and replaces the optional reading. Leave it behind if you want to see Death, The Sun, or Judgement. If the run skips Chapter 10, Eliza can also skip the optional reading. <a href="#item-t21">The Hierophant</a></li>
       <li><strong>Look up a card.</strong> Filter the checklist to Tarot to browse all 22. Pickup videos show where to find them. Open the spoiler toggle beside a card to see the scene and related choices.</li>
     </ul>
-    <p>The Hermit changes if Jacob has already died. Death, The Sun, and Judgement also have different clips. The Chapter 9 selections can show scenes that the current run cannot reach. Exact selection rules for those three cards are still unverified.</p>
+    <details class="entry chapter-choices" id="tarot-branches">
+      <summary><strong>Which vision plays</strong><span class="meta">The Hermit, Death, The Sun, and Judgement</span></summary>
+      <div class="entry-body">
+        <h3><a href="#vision-9">The Hermit</a></h3>
+        <p>Eliza checks whether Jacob is alive at the end of Chapter 5. If he is, she shows the bear trap. If he drowned in Chapter 3 or was shot in Chapter 4, she shows the Hacketts at the lake.</p>
+        <h3 id="death-vision"><a href="#vision-18">Death</a></h3>
+        <ul id="death-vision-options">
+          <li><strong>Silas hunt set up.</strong> The vision shows Silas killing Laura after the car crash. Reach the Chapter 9 alliance with Laura, Ryan, and Travis. Both responses when Travis proposes ending the curse lead into the hunt. <a href="#attic-outcomes">Attic setup</a></li>
+          <li><strong>Other routes with a reading.</strong> The vision shows Kaitlyn falling from the beam. The clip can play even if her bite would let her survive the fall. <a href="epilogue.html#card-kaitlyn-10">Infected beam outcome</a></li>
+        </ul>
+        <h3 id="sun-vision"><a href="#vision-19">The Sun</a></h3>
+        <p>The reading uses the first matching row in this order. It checks the state at the end of Chapter 9. The clip can show a future the player still has to earn.</p>
+        <ol id="sun-vision-order">
+          <li><strong>Emma in the surveillance room.</strong> Emma has reached the office from the storm shelter. <a href="epilogue.html#card-emma-1">Emma’s office route</a></li>
+          <li><strong>Emma in the woods.</strong> The selector checks whether Emma is in the woods and uninfected, with Jacob alive. The PC setup file prepares this combination for testing. The normal island cure occurs after the reading, and a standard route to this clip remains unverified. <a href="epilogue.html#card-emma-10">Emma’s cure scene</a></li>
+          <li><strong>Jacob in the woods.</strong> Jacob is alive at the reading. He can still be in danger in Chapter 10. <a href="#fate-jacob">Jacob’s routes</a></li>
+          <li><strong>Abigail in the surveillance room.</strong> Abi is alive. <a href="#fate-abi">Abi’s routes</a></li>
+          <li><strong>Laura and Max on the island.</strong> The attic outcome sends Laura to Max. <a href="#motel">Reunion setup</a></li>
+          <li><strong>Ryan in the woods.</strong> Ryan is alive and the Silas hunt is active. <a href="#white-wolf">Hunt setup</a></li>
+          <li><strong>Dylan.</strong> He is set to join Kaitlyn in the lodge defense. <a href="#fate-dylan">Dylan’s routes</a></li>
+          <li><strong>Kaitlyn at the lodge.</strong> Kaitlyn is alive. The selector can show this clip even if the current run has no safe exit for her. <a href="#choices-10">Lodge choices</a></li>
+          <li><strong>Max on the island.</strong> This is the fallback when no earlier row matches. <a href="epilogue.html#card-max-1">Stay on the island</a></li>
+        </ol>
+        <h3 id="judgement-vision"><a href="#vision-20">Judgement</a></h3>
+        <ol id="judgement-vision-order">
+          <li><strong>Laura shoots Travis at the nest.</strong> The Chapter 9 outcome starts the Silas hunt. <a href="#nest-outcomes">Nest choices</a></li>
+          <li><strong>Kaitlyn traps Caleb.</strong> The hunt is inactive and the lodge attack is set for Kaitlyn. The selector ignores whether Abi took the rabbit. <a href="#freezer-outcomes">Decoy setup</a></li>
+          <li><strong>Jacob evades Chris.</strong> The hunt and Kaitlyn’s lodge attack are both inactive, and Jacob and Chris are alive. Free Jacob in the cages. In the attic, aim at transformed Laura to leave Chris alive. <a href="#cage-puzzle">Cage solution</a></li>
+          <li><strong>Max stays on the island.</strong> This is the fallback if the preceding checks fail. For a route, have Ryan decline the bite and shoot Chris. Let Travis win Laura’s later struggle so she is taken to the basement and the Silas hunt stays inactive. <a href="#attic-outcomes">Attic choices</a></li>
+        </ol>
+        <p>For either of the last two clips, first reach the scrapyard <a href="#scrapyard-alone">as Kaitlyn alone</a>. Pick up Judgement before the crane. Let Silas kill her or leave her infected under the scrap pile so the lodge attack is skipped. Leave The Hierophant behind and choose Judgement at Eliza’s reading.</p>
+        <p class="source-note">Audit · Steam PC build 11105655. Checked <code>act5fortune_GameFlow</code>, the three Chapter 9 vision selectors, and both character triggers for Judgement in <code>scrapyardinvestigate_gameflow</code>. <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Recorded readings and clips</a> · <a href="https://www.youtube.com/watch?v=gnraJaD6bxU">Kaitlyn’s solo scrapyard scene</a></p>
+      </div>
+    </details>
     <p class="source-note">Sources · <a href="https://gamefaqs.gamespot.com/xbox-series-x/361619-the-quarry/faqs/80282">GameFAQs · tested variants</a> · <a href="https://thequarry.fandom.com/wiki/Tarots">The Quarry Wiki · card catalog</a> · <a href="https://primagames.com/gaming/the-quarry-tarot-cards-guide-premonitions-visions">Prima Games · how readings work</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Vision footage compilation</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/v9l0p7/the_quarry_all_collectibles_locations_guide_all/">MrWilliamThor · pickup footage timestamps</a></p>
   </div>
 </details>
@@ -1661,7 +1694,7 @@
         <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2019s" aria-label="Pickup video for Death at 33:39">Pickup video <span class="meta">· 33:39</span></a></p>
         <details class="tarot-vision" id="vision-18">
           <summary>Vision <span class="meta">· spoilers</span></summary>
-          <p>One clip shows Kaitlyn falling from the lodge beam. An uninfected Kaitlyn dies if she chooses Beam and misses both prompts. The other shows Silas killing Laura after the car crash. The beam clip has appeared in runs where Kaitlyn was infected and could survive the fall. <a href="#choices-10">Chapter 10 choices</a></p>
+          <p>Eliza shows Silas killing Laura after the car crash when the hunt is active. Otherwise she shows Kaitlyn falling from the lodge beam. An uninfected Kaitlyn dies if she chooses Beam and misses both prompts. <a href="#death-vision">How Death chooses its clip</a></p>
         </details>
       </div>
     </li>
@@ -1687,33 +1720,33 @@
         <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2115s" aria-label="Pickup video for The Sun at 35:15">Pickup video <span class="meta">· 35:15</span></a></p>
         <details class="tarot-vision" id="vision-19">
           <summary>Vision <span class="meta">· spoilers</span></summary>
-          <p>The card previews dawn through a counselor’s ending shot. Documented clips include Abi and Emma in the surveillance room, Emma and Jacob in the woods, Kaitlyn and Dylan at the lodge, Max on the island, Laura with Max or in the woods, and Ryan in the woods. A clip is a preview, so still complete the survival steps. <a href="epilogue.html">Ending card catalog</a></p>
+          <p>The card previews dawn through a counselor’s ending shot. The game checks Emma’s office outcome first, then works down a fixed list. <a href="#sun-vision">See the full priority list</a></p>
         </details>
       </div>
     </li>
     <li class="collectible" id="item-h14" data-type="clue" data-search="Collectible">
       <input type="checkbox" id="check-h14">
       <div><label for="check-h14">Scrapyard Note</label><span class="tag">Hackett History 14</span>
-        <p class="meta">Dylan · scrapyard</p>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
         <p>In the garage on the right, go up the stairs and check the end of the upper walkway.</p>
       </div>
     </li>
     <li class="collectible" id="item-t20" data-type="tarot" data-search="Collectible">
       <input type="checkbox" id="check-t20">
       <div><label for="check-t20">Judgement</label><span class="tag">Tarot 20</span>
-        <p class="meta">Dylan · scrapyard</p>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
         <p>Use the garage switch to open the gate. Cross the tops of the shipping containers before approaching the crane.</p>
         <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2192s" aria-label="Pickup video for Judgement at 36:32">Pickup video <span class="meta">· 36:32</span></a></p>
         <details class="tarot-vision" id="vision-20">
           <summary>Vision <span class="meta">· spoilers</span></summary>
-          <p>The card can show Travis being shot at Silas’s nest, Kaitlyn using the rabbit to trap Caleb, Max staying on the island, or Jacob escaping Chris in the woods. The rabbit scene has appeared in a reading without the toy in the run. To use the decoy in play, collect the rabbit in Chapter 1. <a href="#choices-10">Chapter 10 choices</a></p>
+          <p>The card prioritizes the nest clip when the hunt is active. Otherwise the lodge setup selects the rabbit decoy clip. If Kaitlyn picks up the card alone and never reaches the lodge, the reading can show Jacob’s escape or Max on the island. <a href="#judgement-vision">How Judgement chooses its clip</a></p>
         </details>
       </div>
     </li>
     <li class="collectible" id="item-f8" data-type="clue" data-search="Collectible">
       <input type="checkbox" id="check-f8">
       <div><label for="check-f8">Discarded Signage</label><span class="tag">Freakshow Fire 8</span>
-        <p class="meta">Dylan · scrapyard</p>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
         <p>Go down the container steps and inspect the painted green sign between the staircases.</p>
       </div>
     </li>
@@ -2544,7 +2577,7 @@
   <p class="section-intro">The platform lists establish the achievement names and counts. The publisher’s support pages establish the modes, platforms and edition differences. Walkthroughs, location guides and captured footage support the route instructions.</p>
 <ul>
   <li><strong>Collectible inventory.</strong> Checked 72 unique entries against the published chapter and category counts. Chapter 2’s Shady Glade and Rocky Road split is called out in the walkthrough and checklist.</li>
-  <li><strong>Tarot readings.</strong> All 22 card notes cover the documented scenes and link to pickup footage. The rules for exactly which Death, The Sun, or Judgement clip appears remain open. <a href="#tarot-readings">Sources and reading rules</a></li>
+  <li><strong>Tarot readings.</strong> All 22 card notes cover the documented scenes and link to pickup footage. The four branching selectors were traced in Steam PC build 11105655. The Sun’s Emma-in-the-woods clip still needs a verified route in ordinary play. <a href="#tarot-branches">Selection rules and sources</a></li>
   <li><strong>Different versions.</strong> 2K’s July 7, 2022 notes identify fixes for Hard Pass and Should’ve Gone to the Motel. Manual and automatic combat routes for Butterpops are cited separately. <a href="https://steamcommunity.com/games/1577120/announcements/detail/3335493590068003898">July 7 patch notes</a></li>
   <li><strong>Chapter branches.</strong> The chapter notes cover decisions that change later scenes, collectible access, or character outcomes, plus select dialogue branches. Puzzle outcomes were checked against a tested choice guide. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · choices and outcomes</a> · <a href="https://www.powerpyx.com/the-quarry-breaker-puzzle-solution-chapter-8-save-jacob-from-cage/">PowerPyx · breaker sequence</a></li>
   <li><strong>Ending coverage.</strong> Will Byles’s interview establishes the 186 figure. The site documents routes for the ending achievements and additional combinations. The epilogue catalog compares individual character outcomes with the PC game files and recorded scenes. The research found no official 186-entry route list to verify against. <a href="epilogue.html#audit">Epilogue audit notes</a></li>
