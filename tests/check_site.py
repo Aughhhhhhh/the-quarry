@@ -138,6 +138,20 @@ for item, links in re.findall(r'<li class="collectible" id="item-([a-z]\d+)"(?:(
             route_backlinks.add((page, anchor))
 assert route_backlinks == {(page, anchor) for page in route_pages for anchor in pages[page].ids if re.fullmatch(pickup_pattern, anchor)}
 
+for name, totals in (
+    ("rough-night.html", {"leave-bags": (22, 38), "full-deck": (22, 39), "all-clues": (21, 40), "shady-glade": (21, 39)}),
+    ("completion.html", {"full-deck": (22, 39), "all-clues": (21, 40)}),
+):
+    html = (root / name).read_text(encoding="utf-8")
+    picker = html.split('id="pickup-branch"', 1)[1].split("</select>", 1)[0]
+    assert set(re.findall(r'<option value="([^"]+)"', picker)) == totals.keys()
+    allowed = dict(re.findall(r'id="' + pickup_pattern + r'"[^>]*data-pickup-branches="([^"]+)"', html))
+    assert all(set(branches.split()) <= totals.keys() for branches in allowed.values())
+    for branch, (tarot, clues) in totals.items():
+        counts = Counter(anchor.split("-")[0] for anchor in pages[name].ids
+                         if re.fullmatch(pickup_pattern, anchor) and (anchor not in allowed or branch in allowed[anchor].split()))
+        assert counts == {"tarot": tarot, "evidence": 10, "clue": clues}, (name, branch, counts)
+
 tarot_route = pages["tarot-route.html"]
 assert {"setup", "replay", "pickup-index", "prologue", *(f"chapter-{n}" for n in range(1, 11))} <= tarot_route.ids.keys()
 assert {f"tarot-{n}" for n in range(1, 23)} == {key for key in tarot_route.ids if key.startswith("tarot-")}

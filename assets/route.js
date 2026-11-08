@@ -31,12 +31,12 @@ openLinkedStep();
 const pickupFinder = document.querySelector('#pickup-index form');
 if (pickupFinder) {
   const select = pickupFinder.querySelector('#route-item');
-  const replay = pickupFinder.querySelector('#pickup-replay');
+  const branch = pickupFinder.querySelector('select[name]');
   const placeholder = select.firstElementChild;
   function listPickups() {
     select.replaceChildren(placeholder);
     select.value = '';
-    const start = Number(replay?.selectedOptions[0].dataset.start || 0);
+    const start = Number(branch?.selectedOptions[0].dataset.start || 0);
     for (const [type, label] of [['tarot', 'Tarot cards'], ['evidence', 'Evidence'], ['clue', 'Clues']]) {
       const group = document.createElement('optgroup');
       group.label = label;
@@ -44,11 +44,9 @@ if (pickupFinder) {
       for (const step of document.querySelectorAll(`[id^="${type}-"]`)) {
         if (!(clue ? /^clue-[cfh]\d+$/ : /-\d+$/).test(step.id)) continue;
         const section = step.closest('section');
-        if (start) {
-          const chapterNumber = Number(section.id.split('-')[1]);
-          const replays = step.dataset.pickupReplays?.split(' ');
-          if (chapterNumber < start || (replays && !replays.includes(replay.value))) continue;
-        }
+        const branches = step.dataset.pickupBranches;
+        if (branch?.value && branches && !branches.split(' ').includes(branch.value)) continue;
+        if (start && Number(section.id.split('-')[1]) < start) continue;
         const [prefix, title] = clue
           ? ['', step.dataset.pickupName || step.querySelector('strong').textContent.replace(/\.$/, '')]
           : step.querySelector('summary').textContent.trim().split(' · ');
@@ -59,10 +57,10 @@ if (pickupFinder) {
     }
   }
 
-  if (replay) {
-    const survivor = new URLSearchParams(location.search).get('survivor');
-    if (Array.from(replay.options).some(option => option.value === survivor)) replay.value = survivor;
-    replay.addEventListener('change', listPickups);
+  if (branch) {
+    const preset = new URLSearchParams(location.search).get(branch.name);
+    if (Array.from(branch.options).some(option => option.value === preset)) branch.value = preset;
+    branch.addEventListener('change', listPickups);
   }
   listPickups();
   pickupFinder.addEventListener('submit', event => {

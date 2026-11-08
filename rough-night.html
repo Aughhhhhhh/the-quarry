@@ -8,7 +8,7 @@
   <title>Rough Night Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css?v=15">
-  <script src="assets/route.js?v=4" defer></script>
+  <script src="assets/route.js?v=6" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -71,7 +71,7 @@
               <li>In Chapter 5 use <a href="#ticket-setup">Kaitlyn’s table encounter</a> to expose the Ticket Stub. When Dylan gets bitten at the radio hut, choose <a href="#amputation-branch"><strong>Desperate → Chainsaw</strong></a> so he stays available for the crane and lodge.</li>
               <li>Open the clue steps as you play and collect all five lodge clues before preparing for the attack. The 40th clue awards <a href="achievements.html#meddling-kids">Meddling Kids!</a> Follow the same beam and Silas steps to finish Rough Night.</li>
             </ol>
-            <p><a href="clues-route.html">Full clue walkthrough</a> · <a href="clues-route.html#checkpoints">Check the three collections by chapter</a></p>
+            <p><a href="rough-night.html?pickups=all-clues#pickup-index">Find pickups on the all-clues branch</a> · <a href="clues-route.html">Full clue walkthrough</a> · <a href="clues-route.html#checkpoints">Check the three collections by chapter</a></p>
           </details>
           <div class="route-options" hidden>
             <button class="button secondary" type="button" data-pickups="tarot" aria-expanded="false">Show all tarot steps</button>
@@ -80,11 +80,21 @@
           </div>
           <details class="route-pickup" id="pickup-index">
             <summary>Find a pickup on this route</summary>
-            <p>Jump to any tarot, evidence or clue step. The newspaper, Ranger Box and Ticket Stub have setup choices. Check the <a href="#all-clues-plan">all-clues route</a> before starting. <a href="tarot-route.html">Full tarot walkthrough</a> · <a href="evidence-route.html">Full evidence walkthrough</a> · <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <p>Match the cabin and trail choices you’re playing. <strong>Leave Bags</strong> keeps Dylan’s hand and the cabin stays locked. <strong>Break In</strong> lets you collect the newspaper. On that branch, <a href="#amputation-branch">use the chainsaw</a> in Chapter 5 to keep Dylan human for the scrapyard. <strong>Shady Glade</strong> gives you the Ranger Box. <strong>Rocky Road</strong> gives you The Hanged Man.</p>
             <form class="tools archive-tools" hidden>
+              <div>
+                <label for="pickup-branch">Cabin and trail</label>
+                <select id="pickup-branch" name="pickups" aria-describedby="pickup-branch-note">
+                  <option value="leave-bags">Leave Bags · Rocky Road</option>
+                  <option value="full-deck">Break In · Rocky Road</option>
+                  <option value="all-clues">Break In · Shady Glade</option>
+                  <option value="shady-glade">Leave Bags · Shady Glade</option>
+                </select>
+              </div>
               <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
               <button class="button secondary" type="submit">Jump to pickup</button>
             </form>
+            <p class="meta" id="pickup-branch-note">All four choices support the 14-survivor ending and all ten evidence items. For Ticket Stub, use the <a href="#ticket-setup">Chapter 5 table encounter</a>. <a href="#all-clues-plan">All-clues setup</a> · <a href="tarot-route.html">Full tarot walkthrough</a> · <a href="evidence-route.html">Full evidence walkthrough</a></p>
           </details>
           <p><a href="reference.html#controls">Accessibility and controls</a> · <a href="characters.html#cast">Who’s who</a> · <a href="completion.html#setup">Achievement walkthrough with Auto combat</a> · <a href="massacre.html#setup">Massacre and sole-survivor replays</a> · <a href="alternate-endings.html#save-caleb">Caleb’s other survival routes</a></p>
         </section>
@@ -191,7 +201,7 @@
           </ol>
           <details class="route-pickup" id="clue-1-newspaper">
             <summary>Optional clue · Newspaper Headline Scrap and the cabin branch</summary>
-            <p id="clue-f4" data-pickup-name="Newspaper Headline Scrap">Choose <strong>Break In</strong> instead of Leave Bags. Check the floor between the first two rows of bunks on the left for the <strong>Newspaper Headline Scrap</strong>. Dylan can recover it in Chapter 5 if Abi opened the cabin. The rabbit is on the shelf if you want it. <a href="collectibles.html#item-f4">Journal and video</a></p>
+            <p id="clue-f4" data-pickup-name="Newspaper Headline Scrap" data-pickup-branches="full-deck all-clues">Choose <strong>Break In</strong> instead of Leave Bags. Check the floor between the first two rows of bunks on the left for the <strong>Newspaper Headline Scrap</strong>. Dylan can recover it in Chapter 5 if Abi opened the cabin. The rabbit is on the shelf if you want it. <a href="collectibles.html#item-f4">Journal and video</a></p>
             <p>Back at the lodge take <strong>Nudge?</strong> in place of the missing-bag dialogue. In Chapter 5, <a href="#amputation-branch">use the amputation branch</a> to keep Dylan available for the scrapyard and lodge.</p>
           </details>
           <details class="route-pickup" id="clue-1-cabins">
@@ -253,10 +263,10 @@
           <ol>
             <li>Choose <strong>Rocky Road</strong> for The Hanged Man. Take the left fork at the falling rocks sign before heading down the stairs. For the Ranger Box, choose <strong>Shady Glade</strong> and use the clue steps below instead.</li>
           </ol>
-          <details class="route-pickup" id="tarot-3"><summary>Optional tarot · The Hanged Man</summary><p>On Rocky Road, use Interact when the camera cuts to the ledge on the left fork. Shady Glade leads to the same story scene but has no Hanged Man. <a href="collectibles.html#item-t3">Card and pickup video</a> · <a href="chapters.html#shady-glade">Shady Glade clue variation</a></p></details>
+          <details class="route-pickup" id="tarot-3" data-pickup-branches="leave-bags full-deck"><summary>Optional tarot · The Hanged Man</summary><p>On Rocky Road, use Interact when the camera cuts to the ledge on the left fork. Shady Glade leads to the same story scene but has no Hanged Man. <a href="collectibles.html#item-t3">Card and pickup video</a> · <a href="chapters.html#shady-glade">Shady Glade clue variation</a></p></details>
           <details class="route-pickup" id="clue-2-glade">
             <summary>Optional clue · Ranger Box on Shady Glade</summary>
-            <p id="clue-h2" data-pickup-name="Ranger Box">Choose <strong>Shady Glade</strong> instead of Rocky Road for the <strong>Ranger Box</strong>. Follow the right edge to the tree camera. You can inspect it now, or <a href="#clue-h3">collect it in Chapter 3</a>. From the tree, take the left path to the metal box. If birds startle Abi first, choose <strong>Reassuring</strong> and turn left after the scene to find the box before the exit. Shady Glade gives up The Hanged Man. <a href="collectibles.html#item-h2">Journal and video</a></p>
+            <p id="clue-h2" data-pickup-name="Ranger Box" data-pickup-branches="all-clues shady-glade">Choose <strong>Shady Glade</strong> instead of Rocky Road for the <strong>Ranger Box</strong>. Follow the right edge to the tree camera. You can inspect it now, or <a href="#clue-h3">collect it in Chapter 3</a>. From the tree, take the left path to the metal box. If birds startle Abi first, choose <strong>Reassuring</strong> and turn left after the scene to find the box before the exit. Shady Glade gives up The Hanged Man. <a href="collectibles.html#item-h2">Journal and video</a></p>
           </details>
           <ol start="2">
             <li>Choose <strong>Uncertain</strong> if the Rocky Road conversation appears. Follow the trail to Abi’s sketch and choose <strong>Sincere</strong>.</li>

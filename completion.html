@@ -8,7 +8,7 @@
   <title>Achievement Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css?v=16">
-  <script src="assets/route.js?v=4" defer></script>
+  <script src="assets/route.js?v=6" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -74,7 +74,7 @@
               <li><strong>Decked Out and Hard Pass.</strong> Follow the main route and take <a href="#tarot-3">The Hanged Man</a> on <strong>Rocky Road</strong>. Take the Trail Camera as Abi in Chapter 3. You can collect 39 clues if you open every clue step. Get the Ranger Box on the <a href="#replays">all-clues replay</a>.</li>
               <li><strong>Meddling Kids! with all nine alive.</strong> Use <strong>Shady Glade</strong> in Chapter 2 and take the <a href="#clue-h2">Ranger Box and Trail Camera</a>. Open every clue step through the lodge. The Chapter 5 table scene still exposes the Ticket Stub, and the rest of the survival route stays the same. On the audited PC build, this route has 21 tarot cards and skips the Chapter 2 refusal credit. Replay from Chapter 2 on Rocky Road for Decked Out and Hard Pass, taking the later cards and refusal credits again.</li>
             </ul>
-            <p>All ten evidence items are available on either trail. Use the <a href="#pickup-checkpoints">chapter totals</a> to spot a missing pickup before your next replay.</p>
+            <p>All ten evidence items are available on either trail. <a href="completion.html?pickups=all-clues#pickup-index">Find pickups on the all-clues branch</a> · <a href="#pickup-checkpoints">Chapter totals</a></p>
           </details>
           <div class="route-options" hidden>
             <button class="button secondary" type="button" data-pickups="tarot" aria-expanded="false">Show all tarot steps</button>
@@ -83,11 +83,19 @@
           </div>
           <details class="route-pickup" id="pickup-index">
             <summary>Find a pickup on this route</summary>
-            <p>Jump to any of the 72 pickup steps. <a href="#all-clues-plan">Choose the Chapter 2 trail</a> before attempting the full deck or all 40 clues. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <p>Choose the Chapter 2 trail you’re playing. <strong>Rocky Road</strong> gives you The Hanged Man for Decked Out and the Chapter 2 refusal for Hard Pass. <strong>Shady Glade</strong> gives you the Ranger Box for Meddling Kids!</p>
             <form class="tools archive-tools" hidden>
+              <div>
+                <label for="pickup-branch">Chapter 2 trail</label>
+                <select id="pickup-branch" name="pickups" aria-describedby="pickup-branch-note">
+                  <option value="full-deck">Rocky Road · Full deck</option>
+                  <option value="all-clues">Shady Glade · All clues</option>
+                </select>
+              </div>
               <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
               <button class="button secondary" type="submit">Jump to pickup</button>
             </form>
+            <p class="meta" id="pickup-branch-note">Both trails have all ten evidence pickups. On Shady Glade, you can <a href="#clue-h2">take the Trail Camera as Nick</a> or get it as Abi in Chapter 3. <a href="#pickup-checkpoints">Chapter pickup totals</a> · <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
           </details>
           <p><a href="achievements.html#achievement-checklist">Track your unlocks</a> · <a href="story-paths.html#tape-checkpoints">Open all 15 story tapes on this run</a> · <a href="rough-night.html">Survival route that spares Caleb</a> · <a href="#manual-combat">Recorded manual combat route</a></p>
         </section>
@@ -246,10 +254,10 @@
           <ol>
             <li>Choose <strong>Rocky Road</strong> for the tarot route. Take the left fork at the falling rocks sign before heading down the stairs. For all clues, use Shady Glade instead.</li>
           </ol>
-          <details class="route-pickup" id="tarot-3"><summary>Optional tarot · The Hanged Man</summary><p>On Rocky Road, use Interact when the camera cuts to the ledge on the left fork. Shady Glade leads to the same story scene but has no Hanged Man. <a href="collectibles.html#item-t3">Card and pickup video</a> · <a href="chapters.html#shady-glade">Shady Glade clue variation</a></p></details>
+          <details class="route-pickup" id="tarot-3" data-pickup-branches="full-deck"><summary>Optional tarot · The Hanged Man</summary><p>On Rocky Road, use Interact when the camera cuts to the ledge on the left fork. Shady Glade leads to the same story scene but has no Hanged Man. <a href="collectibles.html#item-t3">Card and pickup video</a> · <a href="chapters.html#shady-glade">Shady Glade clue variation</a></p></details>
           <details class="route-pickup" id="clue-2-glade">
             <summary>Optional clues · Ranger Box and Trail Camera on Shady Glade</summary>
-            <p id="clue-h2" data-pickup-name="Ranger Box">Choose <strong>Shady Glade</strong> instead of Rocky Road for the <strong>Ranger Box</strong>. Follow the right edge to the tree camera. Inspect the <a href="#clue-h3">Trail Camera</a> now for the Chapter 2 checkpoint, or collect it in Chapter 3. From the tree, take the left path to the metal box. If birds startle Abi first, choose <strong>Reassuring</strong> and turn left after the scene to find the box before the exit. Shady Glade gives up The Hanged Man. <a href="collectibles.html#item-h2">Journal and video</a></p>
+            <p id="clue-h2" data-pickup-name="Ranger Box" data-pickup-branches="all-clues">Choose <strong>Shady Glade</strong> instead of Rocky Road for the <strong>Ranger Box</strong>. Follow the right edge to the tree camera. Inspect the <a href="#clue-h3">Trail Camera</a> now for the Chapter 2 checkpoint, or collect it in Chapter 3. From the tree, take the left path to the metal box. If birds startle Abi first, choose <strong>Reassuring</strong> and turn left after the scene to find the box before the exit. Shady Glade gives up The Hanged Man. <a href="collectibles.html#item-h2">Journal and video</a></p>
           </details>
           <ol start="2">
             <li>Choose <strong>Uncertain</strong> if the Rocky Road conversation appears. Follow the trail to Abi’s sketch and choose <strong>Sincere</strong>.</li>

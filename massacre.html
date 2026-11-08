@@ -8,7 +8,7 @@
   <title>Hackett’s Quarry Massacre Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css?v=15">
-  <script src="assets/route.js?v=5" defer></script>
+  <script src="assets/route.js?v=6" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -72,7 +72,7 @@
             <form class="tools archive-tools" hidden>
               <div>
                 <label for="pickup-replay">Replay</label>
-                <select id="pickup-replay" aria-describedby="pickup-replay-note">
+                <select id="pickup-replay" name="survivor" aria-describedby="pickup-replay-note">
                   <option value="">Massacre and alternate pickups</option>
                   <option value="abi" data-start="6">Abigail · Chapter 6</option>
                   <option value="dylan" data-start="5">Dylan · Chapter 5</option>
@@ -118,7 +118,7 @@
             <li>From the dock, head inland and take the stairs up to the treehouse. Choose <strong>Compassionate</strong> at the vlog.</li>
             <li>Open the door, then choose <strong>Open Trapdoor</strong> as soon as the game asks whether to search the bag. Max kills Emma. To take her photo first, use the alternate death below.</li>
           </ol>
-          <details class="route-pickup" id="evidence-4" data-pickup-replays="emma jacob">
+          <details class="route-pickup" id="evidence-4" data-pickup-branches="emma jacob">
             <summary>Optional evidence · Attack Photo</summary>
             <ol>
               <li>Inside the treehouse, choose <strong>Search Bag → Use Taser</strong>. Take <strong>Take Photo?</strong> as soon as it appears. <a href="collectibles.html#item-e4">Pickup video</a></li>
@@ -177,8 +177,8 @@
           <img class="chapter-banner" src="assets/chapters/6.webp" width="1350" height="138" alt="" loading="lazy">
           <h3 id="jacob-pickups">Jacob · Pickups before the walkway death</h3>
           <p>Skip this scene if Jacob is already dead. If you spared him in the bushes and Emma died on the island, Jacob explores alone. Get both pickups before taking the right-hand trail.</p>
-          <details class="route-pickup" id="evidence-6" data-pickup-replays="abi emma jacob"><summary>Optional evidence · Memory Card</summary><p>With Jacob alive, climb the wooden stairs and keep right at the fork. Inspect the camera lying on the walkway. <a href="collectibles.html#item-e6">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a></p></details>
-          <details class="route-pickup" id="tarot-10" data-pickup-replays="abi emma jacob"><summary>Optional tarot · Justice</summary><p>As Jacob at the end of the walkway, take the left path first and approach the camera trigger. The right path starts the attack. <a href="collectibles.html#item-t10">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a> · <a href="sole-survivors.html#sole-jacob">Keep Jacob alive afterward</a></p></details>
+          <details class="route-pickup" id="evidence-6" data-pickup-branches="abi emma jacob"><summary>Optional evidence · Memory Card</summary><p>With Jacob alive, climb the wooden stairs and keep right at the fork. Inspect the camera lying on the walkway. <a href="collectibles.html#item-e6">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a></p></details>
+          <details class="route-pickup" id="tarot-10" data-pickup-branches="abi emma jacob"><summary>Optional tarot · Justice</summary><p>As Jacob at the end of the walkway, take the left path first and approach the camera trigger. The right path starts the attack. <a href="collectibles.html#item-t10">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a> · <a href="sole-survivors.html#sole-jacob">Keep Jacob alive afterward</a></p></details>
           <p>Take the right-hand trail when ready. Let the <strong>Down</strong> dodge expire so Jacob hangs from the walkway, then fail the mash to pull himself up. He dies, even if Bobby marked him with blood. <a href="chapters.html#jacob-chase">Walkway death and other outcomes</a></p>
           <h3 id="pool-shot">Kaitlyn and Abi · Let Nick kill Abi</h3>
           <ol>
@@ -197,7 +197,7 @@
             <li>Check Nick and choose <strong>Calm → Compassionate</strong>. When Abi picks up the shotgun, <strong>let the aiming timer expire</strong>. Nick transforms and kills her, unlocking <strong>Lovers’ Quarrel</strong>.</li>
             <li>As Ryan, choose <strong>Hopeful → Suspicious → Interested</strong> at the pool house. Let Laura tell her story. Choose <strong>Move On</strong> if Eliza offers a reading.</li>
           </ol>
-          <details class="route-pickup" id="clue-6-firepit"><summary>Optional clue · Kid’s Letter Home (Emma replay)</summary><p id="clue-c9" data-pickup-replays="emma">Use the <a href="sole-survivors.html#sole-emma">Emma-only replay</a> to reach the firepit with Emma alive. Turn right and pick up <strong>Kid’s Letter Home</strong> from the ground by the yellow tent before going uphill. <a href="collectibles.html#item-c9">Journal and video</a></p></details>
+          <details class="route-pickup" id="clue-6-firepit"><summary>Optional clue · Kid’s Letter Home (Emma replay)</summary><p id="clue-c9" data-pickup-branches="emma">Use the <a href="sole-survivors.html#sole-emma">Emma-only replay</a> to reach the firepit with Emma alive. Turn right and pick up <strong>Kid’s Letter Home</strong> from the ground by the yellow tent before going uphill. <a href="collectibles.html#item-c9">Journal and video</a></p></details>
           <nav class="jump chapter-nav" aria-label="Chapter 6 navigation"><a href="#chapter-5">← Chapter 5</a><a href="#chapters">Chapter list</a><a href="#chapter-7">Chapter 7 →</a></nav>
         </section>
 
@@ -310,7 +310,7 @@
             <li>Cross the clearing and walk through the wrecked bus. Go left toward the yellow crane stairs.</li>
             <li>Choose <strong>Encouraging → Warn Kaitlyn</strong> and press <strong>Up</strong>. Choose <strong>Sound Horn</strong>, then <strong>fail the first blowtorch mash</strong>. Silas kills uninfected Dylan before the lever prompt, and Kaitlyn leaves unbitten. <a href="chapters.html#crane-torch">Torch outcomes</a></li>
           </ol>
-          <details class="route-pickup" id="tarot-21" data-pickup-replays="abi emma"><summary>Optional tarot · The Hierophant (Abi or Emma replay)</summary><p>During the <a href="sole-survivors.html#sole-abi">Abi-only</a> or <a href="sole-survivors.html#sole-emma">Emma-only</a> replay, walk toward the shelter stairs and take the card at the camera change. Step away and return if it expires. Get the card before using the separate ladder. At Eliza’s flashback, press <strong>Left</strong> when the stake flies toward her. <a href="collectibles.html#item-t21">Pickup video</a></p></details>
+          <details class="route-pickup" id="tarot-21" data-pickup-branches="abi emma"><summary>Optional tarot · The Hierophant (Abi or Emma replay)</summary><p>During the <a href="sole-survivors.html#sole-abi">Abi-only</a> or <a href="sole-survivors.html#sole-emma">Emma-only</a> replay, walk toward the shelter stairs and take the card at the camera change. Step away and return if it expires. Get the card before using the separate ladder. At Eliza’s flashback, press <strong>Left</strong> when the stake flies toward her. <a href="collectibles.html#item-t21">Pickup video</a></p></details>
           <h3 id="attic">Ryan · Shoot Chris, then lose to Travis</h3>
           <ol>
             <li>With Abi and Emma dead, the shelter exploration is skipped. As Laura, approach Chris in the attic to start the fight. She transforms and they fall through the floor.</li>
