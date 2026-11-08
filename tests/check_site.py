@@ -134,6 +134,9 @@ assert {f"tarot-{n}" for n in range(1, 23)} == {key for key in tarot_route.ids i
 assert {("collectibles.html", f"item-t{n}") for n in range(1, 23)} <= tarot_route.page_links
 assert {("rough-night.html", f"tarot-{n}") for n in range(1, 23)} <= tarot_route.page_links
 assert ("tarot-route.html", "replay") in achievements.page_links & collectibles.page_links
+assert {"hard-pass", "hard-pass-checkpoints", "hard-pass-chapter-9", "hard-pass-replay"} <= tarot_route.ids.keys()
+assert tarot_route.list_items["hard-pass-checkpoints"] == 10
+assert ("tarot-route.html", "hard-pass") in achievements.page_links & walkthroughs.page_links
 tarot_route_html = (root / "tarot-route.html").read_text(encoding="utf-8")
 tarot_counts = [(int(total), section.count('id="tarot-')) for total, section in
                 re.findall(r'· (\d+) of 22 after this (?:chapter|pickup)</p>(.*?)</section>', tarot_route_html, re.S)]
