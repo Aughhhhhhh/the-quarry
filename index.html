@@ -1038,16 +1038,35 @@
         <h3 id="sun-vision"><a href="#vision-19">The Sun</a></h3>
         <p>The reading uses the first matching row in this order. It checks the state at the end of Chapter 9. The clip can show a future the player still has to earn.</p>
         <ol id="sun-vision-order">
-          <li><strong>Emma in the surveillance room.</strong> Emma has reached the office from the storm shelter. <a href="epilogue.html#card-emma-1">Emma’s office route</a></li>
-          <li><strong>Emma in the woods.</strong> The selector checks whether Emma is in the woods and uninfected, with Jacob alive. The PC setup file prepares this combination for testing. The normal island cure occurs after the reading, and a standard route to this clip remains unverified. <a href="epilogue.html#card-emma-10">Emma’s cure scene</a></li>
-          <li><strong>Jacob in the woods.</strong> Jacob is alive at the reading. He can still be in danger in Chapter 10. <a href="#fate-jacob">Jacob’s routes</a></li>
-          <li><strong>Abigail in the surveillance room.</strong> Abi is alive. <a href="#fate-abi">Abi’s routes</a></li>
-          <li><strong>Laura and Max on the island.</strong> The attic outcome sends Laura to Max. <a href="#motel">Reunion setup</a></li>
-          <li><strong>Ryan in the woods.</strong> Ryan is alive and the Silas hunt is active. <a href="#white-wolf">Hunt setup</a></li>
-          <li><strong>Dylan.</strong> He is set to join Kaitlyn in the lodge defense. <a href="#fate-dylan">Dylan’s routes</a></li>
-          <li><strong>Kaitlyn at the lodge.</strong> Kaitlyn is alive. The selector can show this clip even if the current run has no safe exit for her. <a href="#choices-10">Lodge choices</a></li>
-          <li><strong>Max on the island.</strong> This is the fallback when no earlier row matches. <a href="epilogue.html#card-max-1">Stay on the island</a></li>
+          <li><strong>Emma in the surveillance room.</strong> Emma has reached the office from the storm shelter. <a href="epilogue.html#card-emma-1">Emma’s office route</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=747s">Clip at 12:27</a></li>
+          <li><strong>Emma in the woods.</strong> The selector requires Emma in the woods with no active infection and Jacob alive. <a href="#sun-emma-audit">PC timing and reported route</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=752s">Clip at 12:32</a></li>
+          <li><strong>Jacob in the woods.</strong> Jacob is alive at the reading. He can still be in danger in Chapter 10. <a href="#fate-jacob">Jacob’s routes</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=758s">Clip at 12:38</a></li>
+          <li><strong>Abigail in the surveillance room.</strong> Abi is alive. <a href="#fate-abi">Abi’s routes</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=763s">Clip at 12:43</a></li>
+          <li><strong>Laura and Max on the island.</strong> The attic outcome sends Laura to Max. <a href="#motel">Reunion setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=775s">Clip at 12:55</a></li>
+          <li><strong>Ryan in the woods.</strong> Ryan is alive and the Silas hunt is active. <a href="#white-wolf">Hunt setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=769s">Clip at 12:49</a></li>
+          <li><strong>Dylan.</strong> He is set to join Kaitlyn in the lodge defense. <a href="#fate-dylan">Dylan’s routes</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=781s">Clip at 13:01</a></li>
+          <li><strong>Kaitlyn at the lodge.</strong> Kaitlyn is alive. The selector can show this clip even if the current run has no safe exit for her. <a href="#choices-10">Lodge choices</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=787s">Clip at 13:07</a></li>
+          <li><strong>Max on the island.</strong> This is the fallback when no earlier row matches. <a href="#sun-max-route">Fallback setup</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vodtg9/">Clip from the game files</a></li>
         </ol>
+        <details class="entry chapter-choices" id="sun-emma-audit">
+          <summary><strong>Emma’s woods vision</strong><span class="meta">PC build 11105655</span></summary>
+          <div class="entry-body">
+            <p>An island bite followed by Emma’s escape from the van puts her in the woods. Shooting Chris in Chapter 9 makes her cure scene possible, but the scene that clears her infection runs in Chapter 10, after this reading. With Emma still infected at the reading and Jacob alive, the PC selector moves on to Jacob’s clip. <a href="epilogue.html#card-emma-10">Emma’s cure scene</a></p>
+            <p>The developer test setup explicitly clears Emma’s infection and sets her location and Jacob’s survival before the selector runs. Egg_meister reports seeing the woods vision after a Chapter 4 bite. The full route and game version for that observation are unspecified, and a normal route remains unverified on this PC build. <a href="https://gamefaqs.gamespot.com/xboxone/361621-the-quarry/faqs/80282">GameFAQs · playthrough report</a></p>
+          </div>
+        </details>
+        <details class="entry chapter-choices" id="sun-max-route">
+          <summary><strong>Set up Max’s island fallback</strong><span class="meta">Route traced in the PC files</span></summary>
+          <div class="entry-body">
+            <ol>
+              <li>At the Chapter 4 firepit, shoot Jacob in the second aiming window. Get Emma bitten on the island and keep her alive. In Chapter 6, let Nick kill Abi and skip Emma’s Run interrupt to avoid a second bite. <a href="#choices-4">Firepit and treehouse</a> · <a href="#choices-6">Pool house and hunters</a></li>
+              <li>Keep Dylan uninfected. In Chapter 8, withhold fire at the van so Emma kills him. In the solo scrapyard sequence, choose Gun and let the shot expire so Kaitlyn dies. <a href="#scrapyard-alone">Solo scrapyard setup</a></li>
+              <li>Sedate Travis in Chapter 7. Pick up The Sun as Laura in Chapter 9. Have Ryan refuse the bite, shoot Chris and bleed out. Let Travis win the struggle with Laura so he takes her to the basement. This keeps the hunt and the island reunion inactive. <a href="#choices-7">Syringe setup</a> · <a href="#attic-outcomes">Attic choices</a></li>
+              <li>Leave The Hierophant behind and choose The Sun when Eliza offers a reading. Killing Chris keeps Chapter 10 available. To get the matching survival outcome, stay on the island as Max. <a href="epilogue.html#card-max-1">Max’s survival recap</a></li>
+            </ol>
+          </div>
+        </details>
+        <p class="source-note">The PC files also include a solo Laura clip, with a pause-menu playback entry and no branch to it in the Chapter 9 selector. A Nick movie reference has no corresponding video in this installation. <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vodtg9/">Solo Laura and Max clips</a></p>
         <h3 id="judgement-vision"><a href="#vision-20">Judgement</a></h3>
         <ol id="judgement-vision-order">
           <li><strong>Laura shoots Travis at the nest.</strong> The Chapter 9 outcome starts the Silas hunt. <a href="#nest-outcomes">Nest choices</a></li>
@@ -1056,7 +1075,7 @@
           <li><strong>Max stays on the island.</strong> This is the fallback if the preceding checks fail. For a route, have Ryan decline the bite and shoot Chris. Let Travis win Laura’s later struggle so she is taken to the basement and the Silas hunt stays inactive. <a href="#attic-outcomes">Attic choices</a></li>
         </ol>
         <p>For either of the last two clips, first reach the scrapyard <a href="#scrapyard-alone">as Kaitlyn alone</a>. Pick up Judgement before the crane. Let Silas kill her or leave her infected under the scrap pile so the lodge attack is skipped. Leave The Hierophant behind and choose Judgement at Eliza’s reading.</p>
-        <p class="source-note">Audit · Steam PC build 11105655. Checked <code>act5fortune_GameFlow</code>, the three Chapter 9 vision selectors, and both character triggers for Judgement in <code>scrapyardinvestigate_gameflow</code>. <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Recorded readings and clips</a> · <a href="https://www.youtube.com/watch?v=gnraJaD6bxU">Kaitlyn’s solo scrapyard scene</a></p>
+        <p class="source-note">Audit · Steam PC build 11105655. Checked the Chapter 5 and Chapter 9 selectors, both characters’ Judgement pickup triggers, and the pause-menu replay. A reading stores the chosen clip for replay. The replay does not pick a different clip based on later choices. <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Recorded readings and clips</a> · <a href="https://www.youtube.com/watch?v=gnraJaD6bxU">Kaitlyn’s solo scrapyard scene</a></p>
       </div>
     </details>
     <p class="source-note">Sources · <a href="https://gamefaqs.gamespot.com/xbox-series-x/361619-the-quarry/faqs/80282">GameFAQs · tested variants</a> · <a href="https://thequarry.fandom.com/wiki/Tarots">The Quarry Wiki · card catalog</a> · <a href="https://primagames.com/gaming/the-quarry-tarot-cards-guide-premonitions-visions">Prima Games · how readings work</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Vision footage compilation</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/v9l0p7/the_quarry_all_collectibles_locations_guide_all/">MrWilliamThor · pickup footage timestamps</a></p>
