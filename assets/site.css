@@ -168,6 +168,9 @@ input::placeholder { color: #b2bcb2; }
 .tarot-art li { margin: 0; font-size: .88rem; }
 .tarot-art a { display: block; }
 .tarot-art img { display: block; width: min(100%, 7rem); height: auto; margin: 0 auto .3rem; border-radius: .2rem; }
+.vision-variants { display: flow-root; }
+.vision-variants li { clear: both; }
+.vision-variants img { float: right; width: clamp(4.5rem, 15vw, 7rem); height: auto; margin: 0 0 .4rem .65rem; border-radius: .2rem; }
 .tools { gap: .65rem 1.2rem; }
 .tools > div { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
 .tools label { font-size: .88rem; font-weight: 650; }
