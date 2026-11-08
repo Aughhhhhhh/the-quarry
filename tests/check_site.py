@@ -141,7 +141,7 @@ tarot_order = [1, 2, 3, 5, 4, 7, 6, 8, 9, 10, 11, 13, 12, 15, 16, 14, 17, 18, 19
 gallery = (root / "collectibles.html").read_text(encoding="utf-8").split('id="tarot-gallery-cards"', 1)[1].split("</ul>", 1)[0]
 assert [int(number) for number in re.findall(r'href="#item-t(\d+)"', gallery)] == tarot_order
 assert [int(key[6:]) for key in rough_night.ids if key.startswith("tarot-")] == tarot_order
-for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "emma-routes"):
+for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "emma-routes", "jacob-routes"):
     page = pages[f"{route}.html"]
     assert {"pickup-index", "route-item"} <= page.ids.keys()
     assert "pickup-index" in page.anchors
@@ -216,6 +216,14 @@ for kind, short, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", ran
     assert {f"{kind}-{number}" for number in numbers} <= emma_routes.ids.keys()
     assert {("emma-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
     assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= emma_routes.page_links
+jacob_routes = pages["jacob-routes.html"]
+assert {f"chapter-{chapter}" for chapter in (1, 3, 4, 6, 8, 9, 10)} <= jacob_routes.ids.keys()
+assert {("epilogue.html", f"card-jacob-{number}") for number in range(1, 20)} <= jacob_routes.page_links
+assert ("jacob-routes.html", "") in endings.page_links
+for kind, short, numbers in (("tarot", "t", (2, 4, 10, 14, 17, 21, 22)), ("evidence", "e", (3, 6))):
+    assert {f"{kind}-{number}" for number in numbers} <= jacob_routes.ids.keys()
+    assert {("jacob-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= jacob_routes.page_links
 newspapers = pages["newspapers.html"]
 headline_routes = dict(re.findall(
     r'<li id="((?:opening|closing)-[^"]+)"[^>]*>[^\n]*?href="newspapers.html#([^"]+)"',
