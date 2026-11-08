@@ -103,7 +103,7 @@ if (pickupFinder) {
       group.label = label;
       const clue = type === 'clue';
       for (const step of document.querySelectorAll(`[id^="${type}-"]`)) {
-        if (!(clue ? /^clue-[cfh]\d+$/ : /-\d+$/).test(step.id)) continue;
+        if (!(clue ? /^clue-[cfh]\d+$/ : /-\d+$/).test(step.dataset.pickupLocation || step.id)) continue;
         const section = step.closest('section');
         const branches = step.dataset.pickupBranches;
         if (branch?.value && branches && !branches.split(' ').includes(branch.value)) continue;
@@ -121,7 +121,7 @@ if (pickupFinder) {
     const matches = select.options.length - 1;
     if (terms.length && matches === 1) select.selectedIndex = 1;
     select.disabled = submit.disabled = matches === 0;
-    count.textContent = matches ? `${matches} ${matches === 1 ? 'pickup' : 'pickups'} on this route.` : 'No matching pickups on this route.';
+    count.textContent = matches ? `${matches} pickup ${matches === 1 ? 'location' : 'locations'} on this route.` : 'No matching pickups on this route.';
   }
 
   if (branch) {
