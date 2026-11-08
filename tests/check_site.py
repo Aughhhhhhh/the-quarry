@@ -174,6 +174,15 @@ for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", ra
     assert {("finale.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= finale.page_links
 
+alternate = pages["alternate-endings.html"]
+alternate_routes = {"save-caleb", "spare-chris", "caleb-with-chris", "silas-spared", "skip-chapter-10", "teens-acquitted"}
+assert alternate_routes | {"setup", "chapter-9", "dylan-freezer", "rabbit-rescue", "laura-captured"} <= alternate.ids.keys()
+assert {("alternate-endings.html", route) for route in alternate_routes} <= endings.page_links
+for kind, prefix, numbers in (("tarot", "t", range(18, 23)), ("evidence", "e", (9, 10))):
+    assert {("alternate-endings.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= alternate.page_links
+assert {("epilogue.html", headline) for headline in ("closing-shooting-self-defense", "closing-case-reopens")} <= alternate.page_links
+
 epilogue = pages["epilogue.html"]
 assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
 assert len(epilogue.characters) == 17, epilogue.characters
