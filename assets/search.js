@@ -56,10 +56,13 @@ function indexEntries(content, page) {
     const terms = normalize(`${entry.dataset.searchTerms || ""} ${pickupTerms} ${fateTerms}`);
     let route = null;
     let pickupRoutes;
+    let pickupText;
     if (entry.matches(".collectible")) {
       const key = entry.id.slice(5);
       const kind = entry.dataset.type;
       const step = `${kind}-${kind === "clue" ? key : key.slice(1)}`;
+      const links = entry.querySelector(".pickup-video");
+      pickupText = normalize(`${scope} ${terms} ${entry.textContent.replace(links?.textContent || "", " ")}`);
       pickupRoutes = new Map(Array.from(entry.querySelectorAll(`.pickup-video a[href$="#${step}"]`), anchor => [
         anchor.getAttribute("href").split("#")[0],
         { ...routeLink(anchor), chapter: anchor.dataset.pickupChapter || scope },
@@ -89,6 +92,7 @@ function indexEntries(content, page) {
       terms,
       route,
       pickupRoutes,
+      pickupText,
       text: normalize(`${title} ${scope} ${heading} ${parent} ${terms} ${entry.textContent}`),
     };
   });
@@ -141,12 +145,27 @@ function indexRouteScenes(content, page) {
         text: normalize(`${routeName} ${chapter} ${title} ${terms} ${heading ? followingText(node) : node.textContent}`),
       });
     }
+    for (const step of section.querySelectorAll('[data-pickup-location^="clue-"]')) {
+      const title = step.querySelector("strong").textContent.trim().replace(/\.$/, "");
+      const route = { href: `${page}#${step.id}`, chapter, requires: step.dataset.pickupRequires };
+      entries.push({
+        href: `collectibles.html#item-${step.dataset.pickupLocation.slice(5)}`,
+        title,
+        label: "Collectible",
+        section: "collectibles",
+        name: normalize(title),
+        scope: normalize(chapter),
+        pickupRoutes: new Map([[page, route]]),
+        text: normalize(`${routeName} ${chapter} clue clues ${step.textContent}`),
+      });
+    }
   }
   return entries;
 }
 
 function selectedPages() {
   if (searchSection.value === "route-scenes") return searchRoute.value ? [searchRoute.value] : [];
+  if (searchSection.value === "collectibles" && searchRoute.value) return [guidePages.collectibles, searchRoute.value];
   return searchSection.value ? [guidePages[searchSection.value]] : allPages;
 }
 
@@ -156,6 +175,7 @@ function renderSearch() {
   const query = normalize(search.value).replace(/\bch (?=\d+\b)/g, "chapter ");
   const section = searchSection.value;
   const routePage = section === "collectibles" ? searchRoute.value : "";
+  const routeName = routePage ? normalize(searchRoute.selectedOptions[0].textContent) : "";
   const walkthrough = section === "route-scenes";
   searchResults.replaceChildren();
   searchCount.textContent = "";
@@ -178,7 +198,7 @@ function renderSearch() {
     const pickup = entry.pickupRoutes?.get(routePage);
     const pickupChapter = pickup && normalize(pickup.chapter);
     if (routePage && (!pickup || (chapter && pickupChapter !== chapter))) return false;
-    const text = pickup ? `${pickupChapter} ${entry.text}` : entry.text;
+    const text = pickup ? `${pickupChapter} ${routeName} ${entry.pickupText || entry.text}` : entry.text;
     return patterns.every(pattern => pattern.test(text));
   });
   function rank(entry) {
@@ -207,7 +227,7 @@ function renderSearch() {
     const route = routePage ? entry.pickupRoutes.get(routePage) : entry.route;
     link.href = routePage ? route.href : entry.href;
     link.textContent = entry.title;
-    label.textContent = ` · ${routePage ? route.chapter : entry.label}`;
+    label.textContent = ` · ${routePage ? [route.chapter, route.requires].filter(Boolean).join(" · ") : entry.label}`;
     link.append(label);
     row.append(link);
     if (route) {

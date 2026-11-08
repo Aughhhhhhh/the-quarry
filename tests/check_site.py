@@ -136,6 +136,11 @@ for name in scene_pages:
     assert not re.search(r'<h[34]>', article), name
 pickup_pattern = r"(clue-[cfh]\d+|tarot-\d+|evidence-\d+)"
 collectible_html = (root / "collectibles.html").read_text(encoding="utf-8")
+for name in route_pages:
+    html = (root / name).read_text(encoding="utf-8")
+    for step, pickup in re.findall(r'id="([^"]+)"[^>]*data-pickup-location="([^"]+)"', html):
+        assert pickup.startswith("clue-") and step.startswith(pickup + "-"), (name, step, pickup)
+        assert f"item-{pickup[5:]}" in collectibles.ids, (name, step, pickup)
 route_backlinks = set()
 for item, links in re.findall(r'<li class="collectible" id="item-([a-z]\d+)"(?:(?!</li>).)*?<p class="pickup-video">([^\r\n]+?)</p>', collectible_html, re.S):
     kind = {"t": "tarot", "e": "evidence"}.get(item[0], "clue")
