@@ -208,6 +208,22 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 
 epilogue = pages["epilogue.html"]
+ryan_travis_routes = pages["ryan-travis-routes.html"]
+assert {"setup", "pickup-index", "attic", *(f"chapter-{chapter}" for chapter in (3, 4, 5, 7, 8, 9, 10))} <= ryan_travis_routes.ids.keys()
+for name, anchors in (
+    ("ryan", ("nest-shot", "vial-survival", "shoot-travis", "bleed-out", "mutual", "crash",
+              "travis-shoots", "nest-death", "bobby-kills", "two-shot-bleed-out")),
+    ("travis", ("nest-shot", "capture", "shoot-laura", "travis-shoots", "nest-travis-shot",
+                "mutual", "shoot-travis", "crash", "nest-death", "nest-travis-ground", "reunion")),
+):
+    assert {("epilogue.html", f"card-{name}-{number}") for number in range(1, len(anchors) + 1)} <= ryan_travis_routes.page_links
+    assert {("ryan-travis-routes.html", anchor) for anchor in anchors} <= epilogue.page_links
+assert ("ryan-travis-routes.html", "") in endings.page_links
+assert {("ryan-travis-routes.html", anchor) for anchor in ("attic", "mutual", "bite", "shoot-travis")} <= achievements.page_links
+for kind, short, numbers in (("tarot", "t", (6, 8, 9, *range(12, 20), 21, 22)), ("evidence", "e", (5, 7, 8, 9, 10))):
+    assert {("ryan-travis-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= ryan_travis_routes.page_links
+
 laura_max_routes = pages["laura-max-routes.html"]
 assert {"setup", "pickup-index", "prologue", "chapter-3", "chapter-4", "chapter-7", "chapter-8",
         "chapter-9", "chapter-10", "hunt"} <= laura_max_routes.ids.keys()
