@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="154" viewBox="0 0 320 154">
+  <rect width="320" height="154" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="10" y="10" width="142" height="44" rx="4"/>
+    <rect x="168" y="10" width="142" height="44" rx="4"/>
+    <rect x="168" y="98" width="142" height="46" rx="4"/>
+    <rect x="10" y="98" width="142" height="46" rx="4"/>
+  </g>
+  <path d="M153 32h13m-4-4 4 4-4 4m77 19v41m-4-4 4 4 4-4m-76 29h-13m4-4-4 4 4 4" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="14">
+    <g fill="#f2a674" font-weight="700">
+      <text x="81" y="29">Office door</text>
+      <text x="239" y="29">Wardrobe</text>
+      <text x="239" y="117">Monitors</text>
+      <text x="81" y="117">Charging phones</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="45">Beside the gun</text>
+      <text x="239" y="45">Find the hidden room</text>
+      <text x="239" y="134">Stay on for 10 sec.</text>
+      <text x="81" y="134">Choose Head to Party</text>
+    </g>
+  </g>
+</svg>
