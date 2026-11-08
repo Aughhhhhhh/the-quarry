@@ -75,10 +75,29 @@ if (pickupFinder) {
   const select = pickupFinder.querySelector('#route-item');
   const branch = pickupFinder.querySelector('select[name]');
   const placeholder = select.firstElementChild;
+  const submit = pickupFinder.querySelector('button[type="submit"]');
+  const filterField = document.createElement('div');
+  const filterLabel = document.createElement('label');
+  const filter = document.createElement('input');
+  const count = document.createElement('p');
+  filter.id = 'pickup-filter';
+  filter.type = 'search';
+  filter.autocomplete = 'off';
+  filter.placeholder = 'Name, chapter, or type';
+  filterLabel.htmlFor = filter.id;
+  filterLabel.textContent = 'Filter pickups';
+  filterField.append(filterLabel, filter);
+  select.parentElement.before(filterField);
+  count.className = 'meta';
+  count.setAttribute('role', 'status');
+  pickupFinder.after(count);
+
+  const normalize = value => value.toLowerCase().replace(/[’']/g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
   function listPickups() {
     select.replaceChildren(placeholder);
     select.value = '';
     const start = Number(branch?.selectedOptions[0].dataset.start || 0);
+    const terms = normalize(filter.value).split(' ').filter(Boolean);
     for (const [type, label] of [['tarot', 'Tarot cards'], ['evidence', 'Evidence'], ['clue', 'Clues']]) {
       const group = document.createElement('optgroup');
       group.label = label;
@@ -93,10 +112,16 @@ if (pickupFinder) {
           ? ['', step.dataset.pickupName || step.querySelector('strong').textContent.replace(/\.$/, '')]
           : step.querySelector('summary').textContent.trim().split(' · ');
         const chapter = section.querySelector('.eyebrow')?.textContent.split(' · ')[0] || prefix;
+        const words = normalize(`${chapter} ${title} ${label}`).split(' ');
+        if (!terms.every(term => /^\d+$/.test(term) ? words.includes(term) : words.some(word => word.startsWith(term)))) continue;
         group.append(new Option(`${chapter} · ${title}`, step.id));
       }
       if (group.children.length) select.append(group);
     }
+    const matches = select.options.length - 1;
+    if (terms.length && matches === 1) select.selectedIndex = 1;
+    select.disabled = submit.disabled = matches === 0;
+    count.textContent = matches ? `${matches} ${matches === 1 ? 'pickup' : 'pickups'} on this route.` : 'No matching pickups on this route.';
   }
 
   if (branch) {
@@ -104,10 +129,12 @@ if (pickupFinder) {
     if (Array.from(branch.options).some(option => option.value === preset)) branch.value = preset;
     branch.addEventListener('change', listPickups);
   }
+  filter.addEventListener('input', listPickups);
   listPickups();
   pickupFinder.addEventListener('submit', event => {
     event.preventDefault();
-    jumpToStep(document.getElementById(select.value));
+    const step = document.getElementById(select.value);
+    if (step) jumpToStep(step);
   });
   pickupFinder.hidden = false;
 }
