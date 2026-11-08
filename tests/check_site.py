@@ -456,9 +456,10 @@ for kind, short, numbers in (("tarot", "t", range(14, 23)), ("evidence", "e", ra
     assert {("kaitlyn-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
     assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= kaitlyn_routes.page_links
 newspapers = pages["newspapers.html"]
+epilogue_html = (root / "epilogue.html").read_text(encoding="utf-8")
 headline_routes = dict(re.findall(
     r'<li id="((?:opening|closing)-[^"]+)"[^>]*>[^\n]*?href="newspapers.html#([^"]+)"',
-    (root / "epilogue.html").read_text(encoding="utf-8"),
+    epilogue_html,
 ))
 assert len(headline_routes) == 35
 assert headline_routes.keys() <= epilogue.ids.keys()
@@ -469,6 +470,10 @@ assert ("newspapers.html", "") in endings.page_links and ("newspapers.html", "")
 assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
+fate_cards = re.findall(r'<li class="fate-card" id="([^"]+)"[^>]*>(.*?)</li>', epilogue_html, re.S)
+assert len(fate_cards) == sum(epilogue.fates.values())
+for card_id, body in fate_cards:
+    assert re.search(r'href="[a-z-]+-routes\.html#[^"]+"', body), card_id
 assert sum(epilogue.recaps.values()) == 120, epilogue.recaps
 assert sum(epilogue.recap_alts.values()) == 57, epilogue.recap_alts
 assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 18}
