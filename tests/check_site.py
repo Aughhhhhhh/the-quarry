@@ -102,7 +102,7 @@ reference = pages["reference.html"]
 endings = pages["endings.html"]
 walkthroughs = pages["walkthroughs.html"]
 route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
-assert len(route_pages) == 16
+assert len(route_pages) == 17
 assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
@@ -126,6 +126,18 @@ for item, links in re.findall(r'<li class="collectible" id="item-([a-z]\d+)"(?:(
             assert anchor == step, (item, page, anchor)
             route_backlinks.add((page, anchor))
 assert route_backlinks == {(page, anchor) for page in route_pages for anchor in pages[page].ids if re.fullmatch(pickup_pattern, anchor)}
+
+tarot_route = pages["tarot-route.html"]
+assert {"setup", "replay", "pickup-index", "prologue", *(f"chapter-{n}" for n in range(1, 11))} <= tarot_route.ids.keys()
+assert {f"tarot-{n}" for n in range(1, 23)} == {key for key in tarot_route.ids if key.startswith("tarot-")}
+assert {("collectibles.html", f"item-t{n}") for n in range(1, 23)} <= tarot_route.page_links
+assert {("rough-night.html", f"tarot-{n}") for n in range(1, 23)} <= tarot_route.page_links
+assert ("tarot-route.html", "replay") in achievements.page_links & collectibles.page_links
+tarot_route_html = (root / "tarot-route.html").read_text(encoding="utf-8")
+tarot_counts = [(int(total), section.count('id="tarot-')) for total, section in
+                re.findall(r'· (\d+) of 22 after this (?:chapter|pickup)</p>(.*?)</section>', tarot_route_html, re.S)]
+assert len(tarot_counts) == 11
+assert [total for total, _ in tarot_counts] == [sum(count for _, count in tarot_counts[:n]) for n in range(1, 12)]
 
 legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
 assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}

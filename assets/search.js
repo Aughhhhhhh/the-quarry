@@ -60,6 +60,8 @@ function indexEntries(content, page) {
       route = routeLink(entry.querySelector('a[href^="story-paths.html#tape-"]'), "Unlock steps");
     } else if (entry.id === "completion-plan") {
       route = routeLink(entry.querySelector('a[href="achievement-replays.html"]'), "Replay guide");
+    } else if (entry.id === "decked-out") {
+      route = routeLink(entry.querySelector('a[href="tarot-route.html"]'), "Tarot walkthrough");
     }
     return {
       href: `${page}#${entry.id}`,
