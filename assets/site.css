@@ -209,6 +209,20 @@ input::placeholder { color: #b2bcb2; }
 .card-grid p:last-child { margin-bottom: 0; }
 .site-footer { border-top: 1px solid var(--line); background: #101412; }
 .site-footer p { margin: 0; color: var(--muted); font-size: .82rem; }
+.route-layout { display: grid; grid-template-columns: 13rem minmax(0, 50rem); justify-content: center; gap: clamp(1.5rem, 5vw, 4rem); }
+.route-index { position: sticky; top: 5.25rem; align-self: start; max-height: calc(100vh - 6.25rem); overflow: auto; padding: 1rem; border: 1px solid var(--line); border-radius: .45rem; margin-top: 2rem; background: var(--panel); }
+.route-index h2 { font-size: 1.85rem; margin-bottom: .55rem; }
+.route-index nav { display: grid; gap: 0; }
+.route-index nav a { padding: .3rem .15rem; }
+.route-index a:focus-visible { outline-offset: -2px; }
+.route-content .section > h3 { margin-top: 1.6rem; line-height: 1.25; }
+.route-content .section > h3 + ol { margin-top: .65rem; }
+.route-content li::marker { color: var(--accent); font-weight: 700; }
+.route-options { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.route-pickup { margin-block: .45rem; padding: .5rem .85rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--panel); }
+.route-pickup:target { border-color: var(--accent); }
+.route-pickup summary { color: var(--accent); font-weight: 650; }
+.route-pickup p { margin: .5rem 0 .2rem; }
 @media (max-width: 920px) {
   .stats, .browse-grid, .card-grid { grid-template-columns: repeat(2, 1fr); }
   .stats a:nth-child(3) { border-left: 0; }
@@ -229,6 +243,9 @@ input::placeholder { color: #b2bcb2; }
   .stats a { gap: .45rem; padding: .8rem .65rem; }
   .stats strong { font-size: 2.1rem; }
   .section { padding-block: 2rem; }
+  .route-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .route-index { position: static; max-height: none; margin-top: 1rem; }
+  .route-index nav { grid-template-columns: 1fr 1fr; gap: 0 .5rem; }
   .site-footer .bar { align-items: flex-start; flex-direction: column; padding-block: 1rem; gap: .6rem; }
 }
 @media (max-width: 440px) {

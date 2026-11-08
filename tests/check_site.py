@@ -117,6 +117,15 @@ assert guide.list_items == {
     "tarot-gallery-cards": 22, "death-art-variants": 8,
     "death-vision-options": 2, "sun-vision-order": 9, "judgement-vision-order": 4,
 }, guide.list_items
+rough_night = pages["rough-night.html"]
+assert {"setup", "prologue", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= rough_night.ids.keys()
+for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
+    for number in range(1, count + 1):
+        assert f"{kind}-{number}" in rough_night.ids
+        assert ("index.html", f"item-{prefix}{number}") in rough_night.page_links
+        if kind == "tarot":
+            assert ("rough-night.html", f"tarot-{number}") in guide.page_links
+
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
