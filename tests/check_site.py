@@ -89,7 +89,7 @@ assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
 assert sum(epilogue.recaps.values()) == 120, epilogue.recaps
 assert sum(epilogue.recap_alts.values()) == 57, epilogue.recap_alts
-assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 13, "unverified": 5}
+assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 18}
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
 assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items

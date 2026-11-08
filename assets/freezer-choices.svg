@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="314" viewBox="0 0 320 314">
+  <rect width="320" height="314" rx="6" fill="#111513"/>
+  <g fill="#bfc6bd" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="90" y="23">INSIDE THE FREEZER</text>
+    <text x="240" y="23">IN THE KITCHEN</text>
+  </g>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="12" y="58" width="154" height="56" rx="4"/>
+    <rect x="12" y="150" width="154" height="56" rx="4"/>
+    <rect x="12" y="242" width="154" height="56" rx="4"/>
+  </g>
+  <path d="M20 78v16m0 76v16m0 76v16" fill="none" stroke="#8ab8c4" stroke-linecap="round" stroke-width="3"/>
+  <g fill="#f2a674" font-family="system-ui,sans-serif" font-size="18" font-weight="700">
+    <text x="12" y="49">Hide</text>
+    <text x="12" y="141">Use Decoy · pass the mash</text>
+    <text x="12" y="233">Use Decoy · fail the mash</text>
+  </g>
+  <g fill="#f6f1e7" font-family="system-ui,sans-serif" font-size="17" font-weight="700" text-anchor="middle">
+    <text x="92" y="92">Kaitlyn</text>
+    <text x="240" y="82">Caleb</text>
+    <text x="240" y="103">Dylan*</text>
+    <text x="92" y="184">Caleb</text>
+    <text x="240" y="174">Kaitlyn</text>
+    <text x="240" y="195">Dylan*</text>
+    <text x="92" y="266">Kaitlyn</text>
+    <text x="92" y="287">Caleb</text>
+    <text x="240" y="276">Dylan*</text>
+  </g>
+</svg>

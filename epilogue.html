@@ -147,7 +147,7 @@
             <li class="fate-card" id="card-dylan-12" data-fate="dead">
               <span class="tag">Deceased</span>
               <h3><a href="#card-dylan-12">Killed by Caleb in the kitchen</a></h3>
-              <p>Bring an uninfected Dylan into the Chapter 10 kitchen and choose Run instead of the freezer route.</p>
+              <p>Bring an uninfected Dylan into the Chapter 10 kitchen. Choose Run or have Kaitlyn hide in the freezer and leave him outside with Caleb. <a href="./#freezer-outcomes">Compare the kitchen outcomes</a></p>
               <p class="source-note"><a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=2915s">Scene footage at 48:35</a></p>
             </li>
             <li class="fate-card" id="card-dylan-13" data-fate="dead">
@@ -1223,8 +1223,8 @@
         <details class="entry" id="recap-index">
           <summary><strong>PC recap asset index</strong><span class="meta">120 assets · 57 alternate text slots</span></summary>
           <div class="entry-body">
-            <p>Open a location to see every recap asset used by the Steam PC epilogue. A link to a character card gives the route. Files only marks a slot the checked story rules cannot select in ordinary play. Route unverified means the text is present and the trigger still needs confirmation.</p>
-            <p>In build 11105655, 159 slots link to guide cards, 13 are files only, and five still have unverified routes. Each asset lists its default wording, then its alternatives. <a href="#recap-file-notes">Read the notes for variants without a confirmed route.</a></p>
+            <p>Open a location to see the recap assets referenced by the Steam PC epilogue. A link to a character card gives the route. Files only marks text whose conditions cannot occur in the checked story flow.</p>
+            <p>In build 11105655, 159 slots link to guide cards and 18 are files only. Each asset lists its default wording, then its alternatives. <a href="#recap-file-notes">Read why the files-only text is skipped.</a></p>
             <details class="entry chapter-choices" id="recaps-islandend">
               <summary><strong>Island and lake</strong><span class="meta">6 assets · 1 alternate</span></summary>
               <div class="entry-body">
@@ -1726,13 +1726,13 @@
                     <code>kitchenend_<wbr>caleb_<wbr>dead_<wbr>freezer</code>
                     <div>Caleb · <a href="#card-caleb-11">Freezes after losing the curse</a></div>
                   </li>
-                  <li id="recap-kitchenend_dylan_alive_kaitlynfreezer" data-recap="unverified">
+                  <li id="recap-kitchenend_dylan_alive_kaitlynfreezer" data-recap="file-only">
                     <code>kitchenend_<wbr>dylan_<wbr>alive_<wbr>kaitlynfreezer</code>
-                    <div><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan frees Kaitlyn</a></div>
+                    <div><span class="meta">Files only</span> · <a href="#recap-slot-rescuer">Dylan frees Kaitlyn</a></div>
                     <ul>
-                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Silas’s death cures him</a></li>
-                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Chris’s death cures him</a></li>
-                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and remains infected</a></li>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Silas’s death cures him</a></li>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and Chris’s death cures him</a></li>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-rescuer">Dylan freed Kaitlyn and remains infected</a></li>
                     </ul>
                   </li>
                   <li id="recap-kitchenend_dylan_alive_kitchen" data-recap="guide">
@@ -1794,7 +1794,7 @@
                     <div>Kaitlyn · <a href="#card-kaitlyn-13">Freezes while hiding inside</a></div>
                     <ul>
                       <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-31">Freezes with Caleb after losing the curse</a></li>
-                      <li data-recap-alt="unverified"><span class="meta">Route unverified</span> · <a href="#recap-slot-solo">Kaitlyn’s solo freezer death after the cure</a></li>
+                      <li data-recap-alt="file-only"><span class="meta">Files only</span> · <a href="#recap-slot-solo">Kaitlyn’s solo freezer death after the cure</a></li>
                     </ul>
                   </li>
                   <li id="recap-kitchenend_kaitlyn_dead_kitchen" data-recap="guide">
@@ -1907,7 +1907,7 @@
           </div>
         </details>
         <details class="entry" id="recap-file-notes">
-          <summary><strong>Text without a confirmed playable route</strong><span class="meta">File evidence</span></summary>
+          <summary><strong>Recap text skipped by the story</strong><span class="meta">File evidence</span></summary>
           <div class="entry-body">
             <dl class="choice-list">
               <dt id="recap-slot-bobby">Ryan’s default Bobby wording</dt>
@@ -1917,12 +1917,12 @@
               <dt id="recap-slot-emma">Emma cured after transforming at the van</dt>
               <dd>The van transformation requires the bite from Max. Shooting Chris cures that lineage before the hunt. The Chapter 10 island sequence checks for a surviving Emma with Max’s bite and replaces her infected woods recap with <a href="#card-emma-10">the cured woods outcome</a>. The later shelter transformation has its own <a href="#card-emma-11">Silas cure card</a>.</dd>
               <dt id="recap-slot-rescuer">Dylan’s solo rescue card</dt>
-              <dd>The kitchen recap would need Kaitlyn marked as having frozen and Dylan marked as having survived the kitchen. Hiding with infected Dylan available gives Kaitlyn the survival state. Killing Silas can change the joint freezer outcome to death when Dylan is absent. A route to the separate Dylan card and its three alternate wordings remains unverified. <a href="#card-dylan-23">Paired card that can be selected</a></dd>
+              <dd>This card and its three alternate wordings require the freezer-death flag for Kaitlyn and the kitchen-survival flag for Dylan at the same time. Hide with an infected Dylan sets survival for both and uses the paired card. If Kaitlyn freezes on the Hide route, Dylan has died or is elsewhere. If she freezes after a failed decoy, the Silas kill checks that Dylan is unavailable first. <a href="#card-dylan-23">Paired rescue card</a></dd>
               <dt id="recap-slot-solo">Kaitlyn’s solo freezer death after the cure</dt>
-              <dd>There is an alternate death text for Kaitlyn losing her immunity while alone. The Hide route selects her survival state if she entered infected. The hunt’s freezer death check uses Caleb’s trap state. A standard route to the solo cured death wording remains unverified. <a href="#card-kaitlyn-31">Joint freezer death</a></dd>
+              <dd>The solo wording requires Kaitlyn’s freezer-death flag, her earlier bite, Silas dead and the failed-decoy flag clear. Hide gives her the freezer-death flag only when she enters uninfected. Both Silas kill routes can mark an infected Kaitlyn dead when she is trapped with Caleb and Dylan is unavailable. That setup comes from the failed decoy, so it can select the joint wording instead. <a href="#card-kaitlyn-31">Joint freezer death</a></dd>
             </dl>
             <p>See also <a href="#unused-lodge-recaps">the disconnected lodge and snare cards</a> and <a href="#recap-state">Travis’s alternate nest wording</a>.</p>
-            <p class="source-note">Checked <code>bleedingout_gameflow</code>, <code>maxisland_gameflow</code>, <code>kitchendefend_gameflow</code>, <code>silassearch_gameflow</code>, and the PC recap rules.</p>
+            <p class="source-note">For the freezer rules, the audit scanned 1,017 PC chapter gameflow headers for the three ending variables and inspected the writers in the 19 matching packages. The checks are in <code>kitchendefend_gameflow</code>, <code>carattack_gameflow</code>, <code>silassearch_gameflow</code> and <code>kitchenend_GameFlow</code>.</p>
           </div>
         </details>
         <details class="entry" id="recap-state">
