@@ -221,10 +221,22 @@ input::placeholder { color: #b2bcb2; }
 .route-content .section > h3 + ol { margin-top: .65rem; }
 .route-content li::marker { color: var(--accent); font-weight: 700; }
 .route-options { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.route-cast { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.route-cast li + li { margin-top: 0; }
+.route-cast a { display: block; text-align: center; font-weight: 650; }
+.route-cast img { display: block; width: 100%; height: auto; margin-bottom: .25rem; border-radius: .25rem; }
+.route-checkpoints { list-style: none; padding: 0; }
+.route-checkpoints li { padding-block: .45rem; }
+.route-checkpoints label { display: flex; align-items: baseline; gap: .55rem; cursor: pointer; }
+.route-checkpoints input { flex: none; margin: 0; accent-color: var(--accent); }
+.route-checkpoints li > a { display: inline-block; margin-left: 1.5rem; font-size: .9rem; }
 .route-pickup { margin-block: .45rem; padding: .5rem .85rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--panel); }
 .route-pickup:target { border-color: var(--accent); }
 .route-pickup summary { color: var(--accent); font-weight: 650; }
 .route-pickup p { margin: .5rem 0 .2rem; }
+@media (min-width: 1200px) {
+  .route-cast { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+}
 @media (max-width: 920px) {
   .stats, .browse-grid, .card-grid { grid-template-columns: repeat(2, 1fr); }
   .stats a:nth-child(3) { border-left: 0; }

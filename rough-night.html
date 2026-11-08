@@ -7,8 +7,8 @@
   <meta name="description" content="A chapter-by-chapter Rough Night walkthrough for The Quarry. Save all nine counselors and Caleb, with optional tarot and evidence steps in play order.">
   <title>Rough Night Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=12">
-  <script src="assets/route.js" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=14">
+  <script src="assets/route.js?v=3" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
         <h1>Rough Night</h1>
         <p class="hero-sub">Save all nine counselors</p>
         <p class="hero-copy">Keep Dylan’s hand, save Caleb and four other Hacketts, and end the curse. Open the optional tarot and evidence steps as you play.</p>
-        <div class="actions"><a class="button primary" href="#prologue">Start at the prologue</a><a class="button secondary" href="#chapters">Jump to a chapter</a></div>
+        <div class="actions"><a class="button primary" href="#prologue">Start at the prologue</a><a class="button secondary" href="#route-checklist">Open the playthrough checklist</a></div>
       </div>
     </div>
     <div class="wrap route-layout">
@@ -39,6 +39,8 @@
         <h2 id="chapter-list">Chapters</h2>
         <nav aria-label="Rough Night chapters">
           <a href="#setup">Before you start</a>
+          <a href="#route-cast">Who survives</a>
+          <a href="#route-checklist">Playthrough checklist</a>
           <a href="#prologue">Prologue</a>
           <a href="#chapter-1">1 · Camp departure</a>
           <a href="#chapter-2">2 · Truth or Dare</a>
@@ -64,6 +66,45 @@
             <button class="button secondary" type="button" data-pickups="evidence" aria-expanded="false">Show all evidence steps</button>
           </div>
           <p><a href="reference.html#controls">Accessibility and controls</a> · <a href="characters.html#cast">Who’s who</a> · <a href="completion.html#setup">Achievement walkthrough with Auto combat</a> · <a href="massacre.html#setup">Massacre and sole-survivor replays</a> · <a href="alternate-endings.html#save-caleb">Caleb’s other survival routes</a></p>
+        </section>
+
+        <section class="section" id="route-cast">
+          <h2>Who survives</h2>
+          <p>This route has 14 survivors, including all nine playable counselors.</p>
+          <ul class="route-cast" id="route-counselors" role="list">
+            <li><a href="characters.html#person-1"><img src="assets/cast/abigail.webp" width="640" height="360" loading="lazy" alt="">Abigail</a></li>
+            <li><a href="characters.html#person-2"><img src="assets/cast/dylan.webp" width="640" height="360" loading="lazy" alt="">Dylan</a></li>
+            <li><a href="characters.html#person-3"><img src="assets/cast/emma.webp" width="640" height="360" loading="lazy" alt="">Emma</a></li>
+            <li><a href="characters.html#person-4"><img src="assets/cast/jacob.webp" width="640" height="360" loading="lazy" alt="">Jacob</a></li>
+            <li><a href="characters.html#person-5"><img src="assets/cast/kaitlyn.webp" width="640" height="360" loading="lazy" alt="">Kaitlyn</a></li>
+            <li><a href="characters.html#person-6"><img src="assets/cast/laura.webp" width="640" height="360" loading="lazy" alt="">Laura</a></li>
+            <li><a href="characters.html#person-7"><img src="assets/cast/max.webp" width="640" height="360" loading="lazy" alt="">Max</a></li>
+            <li><a href="characters.html#person-8"><img src="assets/cast/nick.webp" width="640" height="360" loading="lazy" alt="">Nick</a></li>
+            <li><a href="characters.html#person-9"><img src="assets/cast/ryan.webp" width="640" height="360" loading="lazy" alt="">Ryan</a></li>
+          </ul>
+          <p><strong>Also survive:</strong> Travis, Bobby, Constance, Jedediah and Caleb. <strong>Die:</strong> Kaylee, Chris and Silas. <a href="#epilogue">Epilogue and recap links</a></p>
+        </section>
+
+        <section class="section" id="route-checklist">
+          <h2>Playthrough checklist</h2>
+          <p>Mark each checkpoint as you play. Use the chapter links to jump to the full instructions for each scene.</p>
+          <p class="meta" data-route-progress role="status" hidden></p>
+          <ul class="route-checkpoints" id="route-checkpoints" role="list">
+            <li><label><input type="checkbox" value="bags"><span>Choose <strong>Leave Bags</strong> to keep Dylan’s hand.</span></label> <a href="#leave-bags">Chapter 1 · Locked cabin</a></li>
+            <li><label><input type="checkbox" value="nick"><span>Choose <strong>Help Nick</strong> as Abi, then let <strong>Throw Dirt?</strong> expire as Jacob.</span></label> <a href="#chapter-3">Chapter 3 · Woods and snare</a></li>
+            <li><label><input type="checkbox" value="island"><span>Hold fire in both windows, then choose <strong>Search Bag → Use Taser</strong> as Emma. Choose <strong>Reel Slowly</strong> and let <strong>Speed Up?</strong> expire.</span></label> <a href="#chapter-4">Chapter 4 · Bushes and island</a></li>
+            <li><label><input type="checkbox" value="pool"><span>Hit Nick with the shotgun as Abi.</span></label> <a href="#pool-house">Chapter 6 · Pool house</a></li>
+            <li><label><input type="checkbox" value="escape"><span>Hide the syringe behind the brick, then press <strong>Left</strong> to inject Travis during the escape.</span></label> <a href="#station-syringe">Chapter 7 · Police station</a></li>
+            <li><label><input type="checkbox" value="cages"><span>Take <strong>Stop Laura?</strong> and choose <strong>Help Jacob</strong>. Use breakers <strong>1 + 2 → Continue → 2 + 3</strong>.</span></label> <a href="#cages">Chapter 8 · Cages</a></li>
+            <li><label><input type="checkbox" value="hacketts"><span>Fail Constance’s shotgun mash, choose <strong>Run</strong> after fighting Jedediah, and let <strong>Stab?</strong> expire when Bobby catches Ryan.</span></label> <a href="#constance">Chapter 9 · Hackett house</a></li>
+            <li><label><input type="checkbox" value="ryan-bite"><span>Choose <strong>Accept</strong> as Ryan and let <strong>Pull Away?</strong> expire.</span></label> <a href="#ryan-bite">Chapter 9 · Laura’s bite</a></li>
+            <li><label><input type="checkbox" value="kaitlyn-bite"><span>Choose <strong>Warn Kaitlyn → Up → Slam Car</strong>. Fail the lever mash and confirm Kaitlyn’s ankle bite.</span></label> <a href="#kaitlyn-bite">Chapter 9 · Scrapyard</a></li>
+            <li><label><input type="checkbox" value="attic"><span>As Ryan, shoot Chris directly ahead. Choose <strong>Suspicious</strong> when Travis stands down.</span></label> <a href="#attic">Chapter 9 · Attic fight</a></li>
+            <li><label><input type="checkbox" value="max"><span>Choose <strong>Stay</strong> as Max.</span></label> <a href="#max-island">Chapter 10 · Island</a></li>
+            <li><label><input type="checkbox" value="beam"><span>With Kaitlyn bitten, choose <strong>Run → Beam</strong>, fail the balance mash and let the <strong>Up</strong> recovery expire.</span></label> <a href="#save-caleb">Chapter 10 · Lodge</a></li>
+            <li><label><input type="checkbox" value="silas"><span>Take <strong>Raise Gun?</strong> and shoot Silas as Laura.</span></label> <a href="#silas-hunt">Chapter 10 · The hunt</a></li>
+          </ul>
+          <button class="button secondary" type="button" data-route-reset hidden>Reset playthrough checklist</button>
         </section>
 
         <section class="section" id="prologue">
@@ -106,7 +147,7 @@
             <li>Pick up the bags beside the stairs to return to Kaitlyn. Choose <strong>Playful → Mischievous → Brave</strong>.</li>
             <li>Choose <strong>Steal Rotor Arm</strong> to allow the Chapter 3 evidence dive. Press <strong>Up</strong> to catch the phone and choose <strong>Friendly</strong>.</li>
           </ol>
-          <h3>Abi · Locked cabin and buggy</h3>
+          <h3 id="leave-bags">Abi · Locked cabin and buggy</h3>
           <ol>
             <li>Press <strong>Up</strong> at the opening prompt. Choose <strong>Leave Bags</strong>. This keeps the cabin locked and lets Dylan avoid his radio-hut bite in Chapter 5.</li>
             <li>Explore the cabins before talking to Emma at the buggy. The rabbit inside the locked cabin is unavailable on this route.</li>
@@ -188,7 +229,7 @@
             <li>When you see the hunter holding Nick, take <strong>Shout?</strong> and hit the hunter, Bobby. The shot leaves him alive and gives Ryan the blood vial. If you reach the bushes after Bobby has left, hold fire. <a href="chapters.html#nick-rescue-timing">Missed shortcut prompts</a></li>
           </ol>
           <h3>Jacob · The snare</h3>
-          <ol><li>Let <strong>Call Out?</strong> expire, pass the struggle mash and choose <strong>Pleading</strong>. Let <strong>Throw Dirt</strong> expire so Bobby marks Jacob with protective blood. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
+          <ol><li>Let <strong>Call Out?</strong> expire, pass the struggle mash and choose <strong>Pleading</strong>. Let <strong>Throw Dirt?</strong> expire so Bobby marks Jacob with protective blood. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
           <p class="meta"><a href="collectibles.html#collect-3">Chapter 3 clue locations and videos</a></p>
           <nav class="jump chapter-nav" aria-label="Chapter 3 navigation"><a href="#chapter-2">← Chapter 2</a><a href="#chapters">Chapter list</a><a href="#chapter-4">Chapter 4 →</a></nav>
         </section>
@@ -221,7 +262,7 @@
             <li>Choose <strong>Defensive → Give Gun</strong> to arm Kaitlyn.</li>
           </ol>
           <h3>Emma · The second zipline</h3>
-          <ol><li>Choose <strong>Reel Slowly</strong> at the crank. Let <strong>Speed Up</strong> expire. Emma should leave the island unbitten. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
+          <ol><li>Choose <strong>Reel Slowly</strong> at the crank. Let <strong>Speed Up?</strong> expire. Emma should leave the island unbitten. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
           <nav class="jump chapter-nav" aria-label="Chapter 4 navigation"><a href="#chapter-3">← Chapter 3</a><a href="#chapters">Chapter list</a><a href="#chapter-5">Chapter 5 →</a></nav>
         </section>
 
@@ -264,7 +305,7 @@
             <li>Take the path to the right. Choose <strong>Delighted → Apologetic</strong> and press <strong>Right</strong> when the werewolf attacks.</li>
             <li>Choose <strong>Hide</strong> and pass <strong>Don’t Breathe</strong>. Choose <strong>Pry Open</strong> at the trap. Jacob reaches the cages alive. <a href="chapters.html#jacob-chase">Chase and trap variations</a></li>
           </ol>
-          <h3>Kaitlyn and Abi · The pool house</h3>
+          <h3 id="pool-house">Kaitlyn and Abi · The pool house</h3>
           <ol>
             <li>As Kaitlyn, choose <strong>Compassionate</strong>, take <strong>Intervene</strong>, then choose <strong>Help Nick</strong> when he falls in.</li>
             <li>As Abi, collect anything you want before starting the conversation with Nick. The <a href="chapters.html#poolhouse-pickups">two clue interactions and checking Nick</a> count toward ending exploration, so grab The Moon first if you want it.</li>
@@ -297,7 +338,7 @@
             <li>Choose <strong>Fearful → Serious → Reflective → Encouraging → Empathetic</strong>. Back at the pool house choose <strong>Calm</strong>, then continue the flashback with <strong>Curious → Optimistic → Skeptical</strong>.</li>
             <li>Let <strong>Call for Help?</strong> expire while Laura is cuffed. At sunset choose <strong>Compassionate</strong>. Max transforms and injures Laura’s eye on this branch.</li>
           </ol>
-          <h3>Laura · Search the station and hide the syringe</h3>
+          <h3 id="station-syringe">Laura · Search the station and hide the syringe</h3>
           <ol><li>When the station opens, use the main room and lobby for the downstairs pickups before heading upstairs.</li></ol>
           <details class="route-pickup" id="tarot-12"><summary>Optional tarot · The Chariot</summary><p>Walk between the tables in the main room. Step away and return to the gap if the prompt expires. <a href="collectibles.html#item-t12">Card and pickup video</a></p></details>
           <details class="route-pickup" id="evidence-7"><summary>Optional evidence · Cease &amp; Desist Letter</summary><p>Go up the short steps at the lobby corner and inspect the paper across from the wooden door. <a href="collectibles.html#item-e7">Pickup video</a></p></details>
@@ -333,13 +374,13 @@
           <ol start="4"><li>Continue through the tunnel and open the basement door when you’re done exploring.</li></ol>
           <h3>Kaitlyn · Back at camp</h3>
           <ol><li>Choose <strong>Honest → Encouraging</strong>. If Emma stayed unbitten, there’s no werewolf fight at the van. If she attacks, <a href="chapters.html#van-fight">follow the van rescue steps and use Regular Shot</a>.</li></ol>
-          <h3>Ryan · Basement and the cages</h3>
+          <h3 id="cages">Ryan · Basement and the cages</h3>
           <ol><li>Use the side room and the straight corridor to explore before entering the red-lit passage.</li></ol>
           <details class="route-pickup" id="tarot-14"><summary>Optional tarot · The Empress</summary><p>Turn left from where you gain control and walk around the distillery room until the camera reveals the card. The Rum Still clue is in the same room. <a href="collectibles.html#item-t14">Card and pickup video</a></p></details>
           <details class="route-pickup" id="tarot-17"><summary>Optional tarot · The Emperor</summary><p>Return to the starting corridor and walk straight. Take the card before entering the tunnel lit in red. <a href="collectibles.html#item-t17">Card and pickup video</a></p></details>
           <ol start="2">
             <li>Go into the red-lit passage and press <strong>Down</strong> at the slippery floor. Let <strong>Open Cage?</strong> expire.</li>
-            <li><strong>Take Stop Laura</strong> when Laura aims at the werewolf. That’s Nick. Then choose <strong>Help Jacob</strong>.</li>
+            <li>Take <strong>Stop Laura?</strong> when Laura aims at the werewolf. That’s Nick. Then choose <strong>Help Jacob</strong>.</li>
             <li>Select <strong>breaker 1, then breaker 2</strong> to open Jacob’s cage. Choose <strong>Continue</strong>. Select <strong>breaker 2, then breaker 3</strong> to open the passage. Nick stays safely inside his cage. <a href="chapters.html#cage-retry">Recover after a wrong pair</a></li>
             <li>At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
@@ -352,7 +393,7 @@
           <img class="chapter-banner" src="assets/chapters/9.webp" width="1350" height="138" alt="" loading="lazy">
           <h3>Dylan and Kaitlyn · On the road</h3>
           <ol><li>With Dylan’s hands intact, choose <strong>Curious → Curious</strong> as they discuss Ryan and Laura. The <strong>Positive</strong> choice belongs to the amputation branch.</li></ol>
-          <h3>Laura and Ryan · Constance and the bedroom</h3>
+          <h3 id="constance">Laura and Ryan · Constance and the bedroom</h3>
           <ol>
             <li><strong>Fail the shotgun mash</strong> to spare Constance. Choose <strong>Run</strong>, then press <strong>Right</strong> to dodge her shot. Bobby stabs Ryan regardless.</li>
             <li>As Ryan, let <strong>Pull Knife?</strong> expire. The bedroom has a three-minute base timer on PC. Take the pickups and inspect the cabinet before using the left door.</li>
@@ -369,13 +410,13 @@
           </ol>
           <details class="route-pickup" id="tarot-19"><summary>Optional tarot · The Sun</summary><p>Walk toward the windows in the room beyond the upstairs office. Take the card before you approach the door. Step away and approach again if the prompt expires. <a href="collectibles.html#item-t19">Card and pickup video</a></p></details>
           <ol start="3"><li>Approach the door when you’re done. Press <strong>Left, Left, Left</strong> against Jedediah, then choose <strong>Run</strong> to spare him. Laura cuts the power after the fight.</li></ol>
-          <h3>Ryan · Spare Bobby and accept the bite</h3>
+          <h3 id="ryan-bite">Ryan · Spare Bobby and accept the bite</h3>
           <ol>
             <li>Press <strong>Left</strong> to squeeze through the gap and <strong>Right</strong> to catch the knife. Pass <strong>Don’t Breathe</strong>.</li>
-            <li><strong>Let Stab expire</strong> when Bobby catches up. He needs to be able to fight off Chris to protect himself, Constance and Jedediah.</li>
+            <li>Let <strong>Stab?</strong> expire when Bobby catches up. He needs to be able to fight off Chris to protect himself, Constance and Jedediah.</li>
             <li>When Laura finds Ryan, choose <strong>Sympathetic → Accept</strong>. Let <strong>Pull Away?</strong> expire. The bite stops Ryan from bleeding out after the attic fight.</li>
           </ol>
-          <h3>Dylan · Give Kaitlyn the scrapyard bite</h3>
+          <h3 id="kaitlyn-bite">Dylan · Give Kaitlyn the scrapyard bite</h3>
           <ol>
             <li>Follow the path right of the cars into the garage. If you want the Scrapyard Note, check the receipts at the end of the upstairs walkway.</li>
             <li>Use the switch on the table by the downstairs stairs to open the gate. Go through and take the metal steps onto the containers.</li>
@@ -391,7 +432,7 @@
           <ol><li>Emma can be with Abi here. If their conversation appears, choose <strong>Curious → Friendly</strong>. Finish any pickups before climbing the ladder.</li></ol>
           <details class="route-pickup" id="tarot-21"><summary>Optional tarot · The Hierophant</summary><p>Walk toward the staircase on the right to reveal the card. The staircase and the ladder are separate. Take the card before leaving by the ladder. <a href="collectibles.html#item-t21">Card and pickup video</a></p></details>
           <ol start="2"><li>Check the lit fuse box across from the stairs for silver as a fallback. Use the ladder to reach Chris’s office. Emma stays human on this route.</li></ol>
-          <h3>Laura and Ryan · The attic</h3>
+          <h3 id="attic">Laura and Ryan · The attic</h3>
           <ol>
             <li>As Laura, approach Chris after inspecting anything you want in the attic. She transforms and the two fall through the floor. Bobby fends off Chris if you spared him.</li>
             <li><strong>Shoot Chris as Ryan.</strong> Aim at the werewolf in front of Ryan. The target farther right is Laura. A timeout lets Chris kill Ryan. <a href="chapters.html#attic-targets">Compare the two targets</a></li>
@@ -405,7 +446,7 @@
           <p class="eyebrow">Chapter 10</p>
           <h2>Bricks &amp; Mortar</h2>
           <img class="chapter-banner" src="assets/chapters/10.webp" width="1350" height="138" alt="" loading="lazy">
-          <h3>Max · Stay on the island</h3>
+          <h3 id="max-island">Max · Stay on the island</h3>
           <ol><li>Follow the path back to the dock. Choose <strong>Stay</strong> when offered the swim. Caleb kills Max if he swims to the other shore.</li></ol>
           <h3>Kaitlyn · Prepare the lodge</h3>
           <ol><li>Go upstairs from the main hall. The Ancestral Portrait is on the chimney wall. Choose <strong>Keep Looking</strong> if you inspect it before you’ve finished the pickups.</li></ol>
@@ -423,11 +464,11 @@
             <summary>Fallback · Kaitlyn reached the lodge unbitten</summary>
             <p>With Abi in the office and carrying silver, choose <strong>Run → Beam</strong> and <strong>pass</strong> the balance mash or the Up recovery. Choose <strong>Run</strong> again, then <strong>Investigate</strong> when Abi knocks. Take the shell and hit Caleb within the three-second base aiming window. Caleb dies. Both counselors survive. <a href="chapters.html#lodge-silver">Silver handoff conditions</a></p>
           </details>
-          <h3>Laura · Stop the car and kill Silas</h3>
+          <h3 id="silas-hunt">Laura · Stop the car and kill Silas</h3>
           <ol>
             <li>In the car, choose <strong>Inquisitive</strong>. Press <strong>Right</strong> when Silas attacks. Choose <strong>Grab Gun → Take Cover</strong>, then press <strong>Down</strong> to pull the handbrake.</li>
             <li>Choose <strong>Determined</strong> once out of the car. Choose <strong>Give to Ryan</strong> if he offers the blood vial. The vial is optional when you hit Silas on the first shot.</li>
-            <li>In the woods, choose <strong>Probing → Reflective</strong>. At the nest take <strong>Raise Gun</strong> and <strong>shoot Silas</strong> in the cage. This keeps Travis, Laura and Ryan alive and lifts the remaining infections. <a href="endings.html#nest-outcomes">Nest prompt outcomes</a></li>
+            <li>In the woods, choose <strong>Probing → Reflective</strong>. At the nest take <strong>Raise Gun?</strong> and <strong>shoot Silas</strong> in the cage. This keeps Travis, Laura and Ryan alive and lifts the remaining infections. <a href="endings.html#nest-outcomes">Nest prompt outcomes</a></li>
           </ol>
           <nav class="jump chapter-nav" aria-label="Chapter 10 navigation"><a href="#chapter-9">← Chapter 9</a><a href="#chapters">Chapter list</a><a href="#epilogue">Epilogue →</a></nav>
         </section>
@@ -436,10 +477,9 @@
           <h2>Epilogue</h2>
           <ol>
             <li>Finish Eliza’s closing scene. <strong>Rough Night</strong> checks the nine counselors before the character cards. <strong>The White Wolf</strong> checks Silas’s death separately.</li>
-            <li>On the beam route, all nine counselors plus Travis, Bobby, Constance, Jedediah and Caleb survive. The three deaths on this route are Kaylee, Chris and Silas.</li>
             <li>Stay through the podcast and credits for <a href="achievements.html#achievement-epilogue">Epilogue</a>. Check the final newspaper after the podcast for how the evidence affected the public account.</li>
           </ol>
-          <p><a href="epilogue.html#cards">Compare your character recaps</a> · <a href="epilogue.html#headline-assets">Newspaper variants</a> · <a href="achievements.html#ending-replays">Choose a replay starting point</a></p>
+          <p><a href="#route-cast">Who survives this route</a> · <a href="epilogue.html#cards">Compare your character recaps</a> · <a href="epilogue.html#headline-assets">Newspaper variants</a> · <a href="achievements.html#ending-replays">Choose a replay starting point</a></p>
           <p class="source-note">Route audit · Steam PC build 11105655 scene rules and English prompts, cross-checked against recorded survival and pickup routes. <a href="reference.html#sources">Game-file and footage notes</a> · <a href="https://www.speedrun.com/the_quarry/guides/h7v74">Recorded Rough Night route notes</a> · <a href="https://www.powerpyx.com/the-quarry-walkthrough-everyone-survives/">PowerPyx · counselor survival route</a></p>
           <nav class="jump chapter-nav" aria-label="Epilogue navigation"><a href="#chapter-10">← Chapter 10</a><a href="#chapters">Chapter list</a><a href="endings.html#endings">Other endings</a></nav>
         </section>
