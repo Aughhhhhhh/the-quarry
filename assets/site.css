@@ -186,6 +186,7 @@ input::placeholder { color: #b2bcb2; }
 .recap-list li ul { margin: .2rem 0 0; }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: 1rem; }
 .card-grid article { border: 1px solid var(--line); border-radius: .4rem; padding: 1rem; background: var(--panel); }
+.card-grid img { width: 100%; height: auto; margin-bottom: .75rem; border-radius: .25rem; }
 .card-grid h3 { margin: .15rem 0 .35rem; }
 .card-grid p:last-child { margin-bottom: 0; }
 .site-footer { border-top: 1px solid var(--line); background: #101412; }
