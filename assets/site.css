@@ -122,6 +122,8 @@ input::placeholder { color: #b2bcb2; }
 .entry > summary::after { content: "+"; position: absolute; right: 1rem; top: .7rem; color: var(--accent); font-size: 1.15rem; }
 .entry[open] > summary::after { content: "−"; }
 .entry[open] > summary { border-bottom: 1px solid var(--line); }
+.entry[data-search="Achievement"] > summary { display: grid; grid-template-columns: 2rem minmax(0, 1fr); align-items: center; }
+.achievement-icon { grid-row: span 2; }
 .entry-body { padding: .85rem 1rem 1rem; max-width: 86ch; }
 .entry-body > :last-child { margin-bottom: 0; }
 .entry-body h3, .entry-body h4 { margin-block: .9rem .4rem; }
