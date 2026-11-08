@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="228" viewBox="0 0 320 228">
+  <rect width="320" height="228" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="10" y="10" width="142" height="64" rx="4"/>
+    <rect x="168" y="10" width="142" height="64" rx="4"/>
+    <rect x="71" y="103" width="178" height="43" rx="4"/>
+    <rect x="71" y="175" width="178" height="43" rx="4"/>
+  </g>
+  <path d="M81 74v14h158V74m-79 14v13m-4-4 4 4 4-4m-4 49v27m-4-4 4 4 4-4" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="13">
+    <g fill="#f2a674" font-weight="700">
+      <text x="81" y="32">Abi alive</text>
+      <text x="239" y="32">Abi dead</text>
+      <text x="160" y="121">Emma on the roof</text>
+      <text x="160" y="193">Dylan takes a bite</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="54">Shoot · 2.2 seconds</text>
+      <text x="239" y="54">Help · 4 seconds</text>
+      <text x="160" y="137">About 3 seconds</text>
+      <text x="160" y="209">Rescue shot · 3.9 seconds</text>
+    </g>
+  </g>
+</svg>
