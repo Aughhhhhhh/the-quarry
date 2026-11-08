@@ -101,7 +101,7 @@
       <dt>Chapter 9 · The Matriarch or Thicker Than Water</dt>
       <dd>Thicker Than Water plays if Travis grabs Laura at the end of Chapter 8. One way to trigger it is to stop Laura shooting Nick, choose Help Jacob, and shock Ryan twice. Choose breakers 1 and 3, choose Continue, then choose 1 and 3 again. The grab counts even if you skip Ryan’s follow-up interrupt. <a href="#cage-puzzle">Breaker outcomes</a> · <a href="https://www.youtube.com/watch?v=CiUSzV6rEbw&amp;t=21410s">Recorded title at 5:56:50</a></dd>
       <dt>Chapter 10 · Bricks &amp; Mortar or The Final Girl</dt>
-      <dd>Bricks &amp; Mortar is selected when both Kaitlyn and Dylan are set to fight at the lodge. The Final Girl is the default title and can appear even when other counselors survive. The PC files also define a title called The White Wolf. The hunt uses a separate flag, and a playable route to that title remains unverified. <a href="#skip-chapter-10">Finale scene checks</a> · <a href="#final-girl">The Final Girl achievement</a></dd>
+      <dd>Bricks &amp; Mortar is selected when both Kaitlyn and Dylan are set to fight at the lodge. The Final Girl is the default and can appear even when other counselors survive. The PC files also define The White Wolf. Its title flag is separate from the flag that starts the Silas hunt. The audit found no scene that sets the title flag in the 1,017 PC chapter gameflow assets checked. <a href="#skip-chapter-10">Finale scene checks</a> · <a href="#final-girl">The Final Girl achievement</a></dd>
     </dl>
     <p class="source-note">Audit · Steam PC build 11105655, chapter selection rules, scene flags and English title assets. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · tested breaker outcomes</a> · <a href="https://www.neoseeker.com/the-quarry/walkthrough/Chapter_10_-_Bricks_and_Mortar">Neoseeker · documented Chapter 10 titles</a></p>
   </div>
@@ -930,7 +930,7 @@
       <li>At the lodge choose Run, Beam, pass the mash, and choose Run again. If you hear knocking, choose Investigate to take the silver shell and shoot Caleb. For the rabbit route, continue to the kitchen and pass Don’t Breathe. Then choose Freezer and Use Decoy, and pass the mash.</li>
       <li>On the Silas hunt, pass the first dodge, choose Grab Gun and Take Cover, then pass the braking prompt. At the nest, raise the gun and shoot Silas to lift the curse. See Family Matters for the variation that kills Travis first.</li>
     </ol>
-    <p><a href="#collect-10">Chapter 10 collectibles</a> · <a href="#jacob-woods">Jacob and Emma in the woods</a> · <a href="#finale-scenes">Which scenes play</a> · <a href="#family-matters">Family Matters variation</a></p>
+    <p><a href="#collect-10">Chapter 10 collectibles</a> · <a href="#jacob-woods">Jacob and Emma in the woods</a> · <a href="#skip-chapter-10">Which scenes play and when Chapter 10 is skipped</a> · <a href="#family-matters">Family Matters variation</a></p>
     <details class="entry chapter-choices" id="choices-10">
       <summary><strong>Choices and consequences</strong><span class="meta">9 decisions</span></summary>
       <div class="entry-body">
@@ -1320,7 +1320,7 @@
       <dt id="solo-scrapyard-hide">Hide in the car</dt>
       <dd>Pass Don’t Breathe to stay unbitten, or fail it to take a bite to the leg. Both lead to a shot inside the car. Hit Silas to reach the support bar. If neither shot hits or the timer runs out, he kills Kaitlyn even after the bite. <a href="epilogue.html#card-kaitlyn-37">Car death recap</a></dd>
       <dt id="solo-scrapyard-dodge">Pull the bar and dodge the scrap</dt>
-      <dd>Pass the <strong>mash</strong> to pull the bar. If you fail it, Silas kills Kaitlyn even if she was bitten. After passing the mash, press <strong>Left</strong> to escape and play the Chapter 10 lodge scene. If you miss Left, the scrap falls on her. The bite keeps her alive under the pile. Without it, she dies. <a href="epilogue.html#card-kaitlyn-7">Trapped alive recap</a> · <a href="epilogue.html#card-kaitlyn-16">Crushed recap</a></dd>
+      <dd>Pass the <strong>mash</strong> to pull the bar. If you fail it, Silas kills Kaitlyn even if she was bitten. After passing the mash, press <strong>Left</strong> to escape and play the Chapter 10 lodge scene. If you miss Left, the scrap falls on her. The bite keeps her alive under the pile. Without it, she dies. <a href="epilogue.html#card-kaitlyn-7">Trapped alive recap</a> · <a href="epilogue.html#card-kaitlyn-16">Crushed recap</a> · <a href="#skip-chapter-10-abi">Route that skips the finale</a></dd>
     </dl>
     <figure class="reference-shot">
       <img class="walkthrough-shot" src="assets/scrap-dodge.svg" width="320" height="218" loading="lazy" decoding="async" alt="After hitting Silas, pass the mash to pull the bar. If the mash fails, Silas kills Kaitlyn. Press Left to escape. If Left fails, a bite lets Kaitlyn survive under the pile and an unbitten Kaitlyn dies.">
@@ -1404,23 +1404,33 @@
 <details class="entry" id="skip-chapter-10" data-search="Ending">
   <summary><strong>Which Chapter 10 scenes play</strong><span class="meta">Scene order and how to skip the finale</span></summary>
   <div class="entry-body">
-    <p id="finale-scenes">Chapter 10 runs the scenes below in order, skipping any whose conditions are unmet. The lodge check applies twice, with Jacob’s scene between the two lodge visits.</p>
+    <p id="finale-scenes">Chapter 10 runs the scenes below in order, skipping any whose conditions are unmet. If Kaitlyn survives trapped at the scrapyard, both lodge scenes are skipped.</p>
     <ol>
-      <li><strong>Island.</strong> If Chris died, Max wakes up cured. An eligible Emma cure scene plays first, and Laura’s arrival can replace Max’s dock choice. <a href="#fate-max">Max on the island</a> · <a href="#motel">Island reunion</a></li>
-      <li><strong>Lodge preparations.</strong> If Kaitlyn is set to defend the lodge, she explores and prepares for the attack. <a href="#collect-10">Lodge pickups</a></li>
+      <li><strong>Island.</strong> If Chris died, Max wakes up cured. Emma’s cure plays first if she survived with an active Chapter 4 island bite. Laura’s arrival can replace Max’s dock choice. <a href="epilogue.html#card-emma-10">Emma’s cure recap</a> · <a href="#fate-max">Max on the island</a> · <a href="#motel">Island reunion</a></li>
+      <li><strong>Lodge preparations.</strong> If Kaitlyn reaches the lodge after the scrapyard, she explores and prepares for the attack. <a href="#collect-10">Lodge pickups</a></li>
       <li><strong>Woods.</strong> If Jacob is alive, he gets a woods scene. His infection, Chris’s fate, and whether Emma reaches the woods change what plays. <a href="#fate-jacob">Jacob’s branches</a></li>
       <li><strong>Lodge defense.</strong> If the lodge fight is active, Kaitlyn faces Caleb. <a href="#choices-10">Lodge choices</a></li>
       <li><strong>Silas hunt.</strong> If the alliance is active, the car scene plays. The group reaches the nest if they avoid the crash. <a href="#car-outcomes">Car choices</a> · <a href="#nest-outcomes">Nest outcomes</a></li>
     </ol>
     <h3>Skip Chapter 10</h3>
-    <p>Keep Chris alive, end Jacob’s route before the woods and prevent both the lodge defense and the Silas hunt. The game goes from Eliza’s Chapter 9 interlude to the epilogue. The route below leaves Max, Emma and Nick infected. <a href="epilogue.html#eliza-no-cards">How tarot changes the farewell</a></p>
+    <p>Keep Chris alive, let Jacob die before the woods and prevent both the lodge defense and the Silas hunt. The game goes from Eliza’s Chapter 9 interlude to the epilogue. The following routes leave Max, Emma and Nick infected. <a href="epilogue.html#eliza-no-cards">How tarot changes the farewell</a></p>
+    <h4>Skip with Abigail, Dylan and Kaitlyn dead</h4>
     <ol>
-      <li>In Chapter 4, shoot Jacob during the second aiming window at the bushes. Then use the <a href="#nobodys-fool">treehouse bite setup</a> to infect Emma while keeping her alive.</li>
-      <li>Keep Dylan uninfected in Chapter 5. In Chapter 6, let Nick kill Abi. When Emma attacks at the van in Chapter 8, let her kill Dylan and leave Emma alive.</li>
+      <li>In Chapter 4, <a href="#firepit-jacob">shoot Jacob during the second aiming window at the bushes</a> and give Emma an <a href="#island-bites">island bite</a>. Skip Emma’s Chapter 6 Run interrupt at the hunters to preserve the island bite.</li>
+      <li>To keep Dylan uninfected, choose <a href="#cabin-break-in">Leave Bags</a> in Chapter 1 or amputate his hand if bitten in Chapter 5. In Chapter 6, let Nick kill Abi. When Emma attacks at the van in Chapter 8, choose Run. Emma kills Dylan inside the van.</li>
       <li>Kaitlyn now goes to the scrapyard alone. Choose the gun and miss the shot to kill her before she can reach the lodge.</li>
       <li>Let Ryan’s attic shot expire in Chapter 9. Chris survives, the Silas hunt stays inactive, and there is no one to play at the lodge or in the woods.</li>
     </ol>
-    <p class="source-note">Audit · Steam PC build 11105655, Chapter 9 exit and Chapter 10 opening rules. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · Chapter 10 skip conditions</a></p>
+    <h4 id="skip-chapter-10-abi">Skip with Abigail and Kaitlyn alive</h4>
+    <ol>
+      <li>Use the same Chapter 4 setup with Jacob dead and Emma carrying the island bite. Keep Dylan uninfected. In Chapter 6, shoot Nick in the pool house to save Abi and skip Emma’s Run interrupt at the hunters.</li>
+      <li>At the <a href="#van-fight">Chapter 8 van fight</a>, choose Shoot and hit Emma’s opening charge. Let the roof shot and the shot after Emma bites Dylan both expire. Dylan dies outside, Abi survives and Kaitlyn goes to the scrapyard alone.</li>
+      <li>At the <a href="#scrapyard-alone">scrapyard</a>, choose Hide, fail Don’t Breathe to take the bite, then shoot Silas inside the car. Pass the mash to pull the bar and miss Left. Kaitlyn survives under the scrap and misses the lodge fight.</li>
+      <li>In the attic, let Ryan’s shot expire to keep Chris alive. To also save Travis, <a href="#attic-targets">shoot the werewolf on the far right</a>, Laura. Chris kills Ryan and the hunt stays inactive.</li>
+    </ol>
+    <h4>Skip with Dylan and Kaitlyn alive</h4>
+    <p>Use the same Jacob and Emma setup and let Nick kill Abi. Choose Break In at the Chapter 1 cabin, then <a href="#dylan-hand">Terrified after Dylan’s radio-hut bite</a> to leave it untreated. Choose Run at the Chapter 8 van. Emma spares infected Dylan and Kaitlyn goes to the scrapyard alone. Use the same steps to leave Kaitlyn alive under the scrap and keep Chris alive in the attic.</p>
+    <p class="source-note">Audit · Steam PC build 11105655, van and scrapyard branches, Chapter 9 exit and Chapter 10 scene selection. The survivor combinations were traced through the game’s rules. <a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=766s">Dylan’s death outside the van</a> · <a href="https://www.youtube.com/watch?v=LxEei0ZWLPo&amp;t=370s">Solo scrapyard footage</a> · <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · Chapter 10 skip conditions</a></p>
   </div>
 </details>
 <details class="entry" id="teens-acquitted" data-search="Ending">
