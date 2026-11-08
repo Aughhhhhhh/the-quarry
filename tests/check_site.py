@@ -18,6 +18,7 @@ class Guide(HTMLParser):
         self.anchors = set()
         self.files = set()
         self.newspapers = Counter()
+        self.headline_openings = Counter()
         self.page_links = set()
         self.list_ids = []
         self.list_items = Counter()
@@ -55,11 +56,15 @@ class Guide(HTMLParser):
             self.pickup_times[int(seconds)] += 1
         if href.startswith("#"):
             self.anchors.add(href[1:])
+            if href.startswith("#opening-") and self.list_ids and self.list_ids[-1] == "headline-asset-outros":
+                self.headline_openings[href[1:]] += 1
         elif href.startswith("./") or (href.partition("#")[0].endswith(".html") and "://" not in href):
             page, _, anchor = href.partition("#")
             self.page_links.add(("index.html" if page == "./" else page, anchor))
         if tag == "label" and "for" in attrs:
             self.anchors.add(attrs["for"])
+        if tag == "option" and attrs.get("value", "").startswith("closing-"):
+            self.anchors.add(attrs["value"])
         if href.startswith("assets/"):
             self.files.add(href.partition("?")[0])
         if tag in ("img", "script"):
@@ -118,4 +123,8 @@ assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items
 for headline_list in ("headline-asset-intros", "headline-asset-outros"):
     assert epilogue.anchored_list_items[headline_list] == epilogue.list_items[headline_list], headline_list
 assert len(epilogue.newspapers) == sum(epilogue.newspapers.values()) == 35, epilogue.newspapers
+assert epilogue.headline_openings == {
+    opening: 2 if opening == "opening-no-soul" else 1
+    for opening in epilogue.ids if opening.startswith("opening-")
+}, epilogue.headline_openings
 print("Guide counts, anchors, and assets verified.")

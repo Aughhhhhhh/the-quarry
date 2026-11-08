@@ -58,32 +58,65 @@ const evidenceList = document.querySelector("#podcast-evidence-order");
 const evidenceOptions = Array.from(evidenceList.querySelectorAll("input"));
 const preview = document.querySelector("#podcast-preview");
 const previewCount = preview.querySelector("strong");
+const previewMessage = preview.querySelector("span");
 const previewLink = preview.querySelector("a");
+const opening = document.querySelector("#podcast-opening");
+const caleb = document.querySelector("#podcast-caleb");
+const hikers = document.querySelector("#podcast-hikers");
+const hikerChoice = document.querySelector("#podcast-hiker-choice");
+const openingClosings = new Map(Array.from(
+  document.querySelectorAll("#headline-asset-outros a[href^='#opening-']"),
+  link => [link.hash.slice(1), link.closest("li").id],
+));
+
+for (const item of document.querySelectorAll("#headline-asset-intros > li")) {
+  opening.add(new Option(item.dataset.previewLabel || item.querySelector("strong").textContent, item.id));
+}
 
 function updateEvidencePreview() {
   const selected = evidenceOptions.filter(item => item.checked);
-  let target = "#closing-camp-closed";
-  let headline = "The summer camp closes for good";
-  if (selected.length === evidenceOptions.length) {
-    target = "#closing-all-evidence";
-    headline = "Use your opening headline to find the closing";
-  } else if (selected.filter(item => item.name === "hiker").length === 3) {
-    target = "#closing-hiker-evidence";
-    headline = "Hiker remains recovered. Check which Hacketts survive";
+  const allEvidence = selected.length === evidenceOptions.length;
+  const needCaleb = allEvidence && opening.value === "opening-no-soul";
+  const needHikers = !allEvidence && selected.filter(item => item.name === "hiker").length === 3;
+  opening.parentElement.hidden = !allEvidence;
+  caleb.parentElement.hidden = !needCaleb;
+  hikerChoice.hidden = !needHikers;
+
+  let target = "closing-camp-closed";
+  let message = "";
+  if (needCaleb) {
+    target = caleb.value;
+    if (!target) message = "Choose whether Caleb survived.";
+  } else if (allEvidence) {
+    target = openingClosings.get(opening.value);
+    if (!target) message = "Choose the opening newspaper from the credits.";
+    if (opening.value === "opening-drowning") {
+      message = "Jacob’s drowning prevents the Chapter 6 Memory Card pickup. ";
+    }
+  } else if (needHikers) {
+    target = hikers.value;
+    if (!target) message = "Choose how many of the six Hacketts survived.";
   } else if (selected.some(item => item.name === "animal")) {
-    target = "#closing-animal-evidence";
-    headline = "Unidentified animals are loose in North Kill Forest";
+    target = "closing-animal-evidence";
   } else if (selected.some(item => item.name === "kaylee")) {
-    target = "#closing-kaylee-letter";
-    headline = "Evidence describes Kaylee’s private struggles";
+    target = "closing-kaylee-letter";
   }
   previewCount.textContent = `${selected.length} of ${evidenceOptions.length} selected`;
-  previewLink.href = target;
-  previewLink.textContent = headline;
+  previewMessage.textContent = message;
+  previewLink.hidden = !target;
+  if (target) {
+    previewLink.href = `#${target}`;
+    previewLink.textContent = target === "closing-teen-and-hikers"
+      ? "See the unused newspaper"
+      : document.getElementById(target).querySelector("strong").textContent;
+  }
 }
 
 for (const item of evidenceOptions) item.hidden = false;
 document.querySelector("#podcast-preview-instructions").hidden = false;
 preview.hidden = false;
 evidenceList.addEventListener("change", updateEvidencePreview);
+for (const choice of [opening, caleb, hikers]) {
+  choice.addEventListener("change", updateEvidencePreview);
+}
 updateEvidencePreview();
