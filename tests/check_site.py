@@ -317,6 +317,8 @@ for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", ra
 alternate = pages["alternate-endings.html"]
 alternate_routes = {"save-caleb", "spare-chris", "caleb-with-chris", "silas-spared", "teens-acquitted"}
 assert alternate_routes | {"setup", "chapter-9", "dylan-freezer", "rabbit-rescue", "laura-captured", "skip-chapter-10", "scrap"} <= alternate.ids.keys()
+assert {"van-bite-setup", "spare-chris-attic", "spare-chris-lodge", "lodge-start"} <= alternate.ids.keys()
+assert {("alternate-endings.html", route) for route in ("van-bite-setup", "dylan-freezer")} <= endings.page_links
 assert {("alternate-endings.html", route) for route in alternate_routes} <= endings.page_links
 for kind, prefix, numbers in (("tarot", "t", range(18, 23)), ("evidence", "e", (9, 10))):
     assert {("alternate-endings.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
