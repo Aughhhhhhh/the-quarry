@@ -6,12 +6,20 @@ const searchCount = document.querySelector("#search-count");
 const searchMore = document.querySelector("#search-more");
 const resultPageSize = 12;
 const normalize = value => value.toLowerCase().replace(/[’']/g, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+const searchFiller = new Set("a an and are at can do does for from get how i in is me of on the to what where".split(" "));
 const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry => {
   const title = entry.querySelector("summary strong, label, h3").textContent;
   const section = entry.closest(".section");
   const heading = section.querySelector("h2").textContent;
   const parent = entry.matches(".collectible") ? entry.closest("details").querySelector("summary strong").textContent : "";
   const chapter = entry.dataset.search === "Walkthrough" ? entry.querySelector("summary .meta").textContent : "";
+  const group = entry.closest("[data-chapter]");
+  const scope = group ? (group.dataset.chapter === "0" ? "Prologue" : `Chapter ${group.dataset.chapter}`) :
+    entry.closest('[data-search="Walkthrough"]')?.querySelector("summary .meta").textContent || "";
+  const types = entry.matches("[data-chapter]") ? [...new Set(Array.from(entry.querySelectorAll("[data-type]"), item => item.dataset.type))].join(" ") :
+    entry.dataset.type || "";
+  const fateTerms = entry.dataset.search === "Character fate" ? `save ${title} keep ${title} alive ${title} survive` : "";
+  const terms = normalize(`${entry.dataset.searchTerms || ""} ${types.replace(/\bclue\b/, "clue clues")} ${fateTerms}`);
   return {
     href: `#${entry.id}`,
     title: /^Chapter \d+$/.test(chapter) ? `${chapter} · ${title}` : title,
@@ -19,7 +27,9 @@ const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry
     section: section.id,
     name: normalize(title),
     chapter: normalize(chapter),
-    text: normalize(`${title} ${chapter} ${heading} ${parent} ${entry.textContent}`),
+    scope: normalize(scope),
+    terms,
+    text: normalize(`${title} ${scope} ${heading} ${parent} ${terms} ${entry.textContent}`),
   };
 });
 for (const heading of document.querySelectorAll("[data-search] :is(h3, h4, dt)[id]")) {
@@ -40,6 +50,7 @@ for (const heading of document.querySelectorAll("[data-search] :is(h3, h4, dt)[i
     section: entry.closest(".section").id,
     name: normalize(title),
     scope: normalize(chapter),
+    detail: true,
     text: normalize(`${chapter} ${context} ${title} ${body}`),
   });
 }
@@ -55,20 +66,26 @@ function renderSearch() {
     searchMore.hidden = true;
     return;
   }
-  const words = query.split(" ");
+  const words = query.split(" ").filter(word => !searchFiller.has(word));
+  if (!words.length) words.push(...query.split(" "));
+  const phrase = words.join(" ");
+  const chapter = query.match(/\bchapter \d+\b/)?.[0];
+  const patterns = words.map((word, index) => new RegExp(`(?:^| )${word}${
+    index === words.length - 1 && !/^\d+$/.test(word) ? "" : "(?: |$)"
+  }`));
   const section = searchSection.value;
   const matches = searchIndex.filter(entry => (!section || entry.section === section) &&
-    words.every(word => /^\d+$/.test(word)
-      ? ` ${entry.text} `.includes(` ${word} `)
-      : entry.text.includes(word)));
+    patterns.every(pattern => pattern.test(entry.text)));
   function rank(entry) {
-    if (entry.chapter === query) return 6;
-    if (entry.name === query) return 5;
-    if (entry.name.includes(query)) return 4;
-    const named = ` ${entry.scope || ""} ${entry.name} `;
+    if (entry.chapter === query) return 7;
+    if (entry.name === query || entry.name === phrase) return 6;
+    if (` ${entry.terms || ""} `.includes(` ${phrase} `)) return 5;
+    if (entry.name.includes(query) || entry.name.includes(phrase)) return 4;
+    const named = ` ${entry.scope || ""} ${entry.name} ${entry.terms || ""} `;
     if (words.every(word => named.includes(` ${word} `))) return 3;
-    if (!entry.text.includes(query)) return 0;
-    return entry.scope === undefined ? 1 : 2;
+    if (chapter && entry.scope === chapter) return 2;
+    if (entry.text.includes(query) || entry.text.includes(phrase)) return entry.detail ? 1.5 : 1;
+    return 0;
   }
   matches.sort((a, b) => rank(b) - rank(a));
   searchMore.hidden = matches.length <= resultLimit;
