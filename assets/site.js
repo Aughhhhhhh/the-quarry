@@ -150,15 +150,38 @@ async function loadArchive() {
 find.hidden = false;
 document.querySelector(".search-link").hidden = false;
 function updateSearch() {
-  resultLimit = resultPageSize;
   if (!archiveRequest && normalize(search.value) && (!searchSection.value || searchSection.value === "epilogue")) {
     archiveStatus = "Loading epilogue results…";
     archiveRequest = loadArchive();
   }
   renderSearch();
 }
-search.addEventListener("input", updateSearch);
-searchSection.addEventListener("change", updateSearch);
+function resetSearch() {
+  resultLimit = resultPageSize;
+  updateSearch();
+}
+search.addEventListener("input", resetSearch);
+searchSection.addEventListener("change", resetSearch);
+searchResults.addEventListener("click", event => {
+  const link = event.target.closest("a");
+  if (!link) return;
+  if (link.getAttribute("href").startsWith("#")) {
+    const target = document.getElementById(link.hash.slice(1));
+    if (target && !target.hasAttribute("tabindex")) target.tabIndex = -1;
+  } else {
+    history.replaceState({
+      ...history.state,
+      guideSearch: { query: search.value, section: searchSection.value, limit: resultLimit },
+    }, "");
+  }
+});
+const savedSearch = history.state?.guideSearch;
+if (savedSearch) {
+  search.value = savedSearch.query;
+  searchSection.value = savedSearch.section;
+  resultLimit = savedSearch.limit;
+  updateSearch();
+}
 searchMore.addEventListener("click", () => {
   const firstNewResult = resultLimit;
   resultLimit += resultPageSize;

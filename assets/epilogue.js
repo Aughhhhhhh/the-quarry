@@ -36,7 +36,8 @@ function revealCard() {
   const target = document.getElementById(location.hash.slice(1));
   const group = target?.closest("details");
   if (!group) return;
-  if (target.hidden || group.hidden) {
+  const filtered = target.closest("[hidden]");
+  if (filtered) {
     search.value = "";
     character.value = "";
     outcome.value = "";
@@ -45,12 +46,22 @@ function revealCard() {
   for (let details = group; details; details = details.parentElement.closest("details")) {
     details.open = true;
   }
+  if (filtered) {
+    target.tabIndex = -1;
+    target.focus({ preventScroll: true });
+    target.scrollIntoView();
+  }
 }
 
 filters.hidden = false;
 count.hidden = false;
 filters.addEventListener("input", filterCards);
 window.addEventListener("hashchange", revealCard);
+document.addEventListener("click", event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (link?.hash === location.hash && !event.defaultPrevented &&
+      !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) revealCard();
+});
 filterCards();
 revealCard();
 
