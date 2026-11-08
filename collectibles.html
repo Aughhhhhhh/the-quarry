@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111513">
+  <meta name="description" content="Find and track all 72 collectibles in The Quarry, with locations, journal images and pickup videos.">
+  <title>Collectibles | The Quarry Field Guide</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script src="assets/site.js?v=9" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html"><img src="assets/mark.svg" width="36" height="36" alt=""><span>THE QUARRY<small>FIELD GUIDE</small></span></a>
+      <nav aria-label="Main">
+        <a href="chapters.html#walkthrough">Walkthrough</a>
+        <a href="endings.html#endings">Endings</a>
+        <a href="#collectibles" aria-current="page">Collectibles</a>
+        <a href="achievements.html#achievements">Achievements</a>
+        <a href="characters.html#cast">Characters</a>
+        <a href="reference.html#camp-map">Map</a>
+        <a href="reference.html#reference">Reference</a>
+      </nav>
+      <a class="search-link" href="index.html#find">Find</a>
+    </div>
+  </header>
+  <main class="wrap" id="main" tabindex="-1">
+<section class="section" id="collectibles" aria-labelledby="collectibles-title">
+  <p class="eyebrow">04 / EXPLORATION</p>
+  <h1 id="collectibles-title">Collectible checklist</h1>
+  <p class="section-intro">Browse by chapter, item type, or clue collection. Each pickup has a timestamped video, and all 40 clues have journal photos. Checks are saved in this browser and can span separate runs. <a href="#tarot-deck">Tarot gallery</a> · <a href="#tarot-readings">Tarot readings</a> · <a href="#clue-entries">Extra clue entries</a> · <a href="epilogue.html#podcast-evidence">How evidence changes the ending</a></p>
+<p class="notice"><strong>Plan two routes.</strong> Rocky Road in Chapter 2 has a tarot card. Shady Glade has two clues. You need every item of a given type on the same in-game route to earn its achievement. <a href="#collectible-recovery">Recover a missed pickup</a> · <a href="reference.html#saves">Chapter Select rules</a></p>
+<div class="tools" id="collect-filters" hidden>
+  <div>
+    <label for="item-type">Type or collection</label>
+    <select id="item-type">
+      <option value="">All types</option>
+      <option value="tarot">Tarot</option>
+      <option value="clue">Clues</option>
+      <option value="evidence">Evidence</option>
+      <optgroup label="Clue collections">
+        <option value="camp-history">Camp History</option>
+        <option value="freakshow-fire">Freakshow Fire</option>
+        <option value="hackett-history">Hackett History</option>
+      </optgroup>
+    </select>
+  </div>
+  <div><label for="item-chapter">Chapter</label><select id="item-chapter"><option value="">All chapters</option><option value="0">Prologue</option><option value="1">Chapter 1</option><option value="2">Chapter 2</option><option value="3">Chapter 3</option><option value="4">Chapter 4</option><option value="5">Chapter 5</option><option value="6">Chapter 6</option><option value="7">Chapter 7</option><option value="8">Chapter 8</option><option value="9">Chapter 9</option><option value="10">Chapter 10</option></select></div>
+  <div><input type="checkbox" id="unchecked-only"><label for="unchecked-only">Show unchecked only</label></div>
+</div>
+<p id="collect-progress" class="meta" role="status" hidden></p>
+<noscript><p class="meta">You can read the whole guide. Enable JavaScript to filter items and keep checks after a reload.</p></noscript>
+<p class="source-note">Sources · Clue and evidence journal photos and letter artwork from Steam PC build 11105655 · <a href="https://www.powerpyx.com/the-quarry-all-collectible-locations-clues-evidence-tarot-cards/">PowerPyx · collectible locations</a> · <a href="https://platget.com/guides/the-quarry-collectibles-guide/">PlatGet · collectible locations</a> · <a href="https://www.youtube.com/watch?v=n7fbCRG1nis">MrWilliamThor · pickup footage</a></p>
+<details class="entry" id="collectible-recovery" data-search="Collectibles">
+  <summary><strong>Missed a pickup?</strong><span class="meta">Second chances and where to replay</span></summary>
+  <div class="entry-body">
+    <p>Use any later pickup listed below if it is still ahead in your run. Otherwise, <a href="reference.html#saves">Chapter Select</a> restores the start of the chosen chapter. To complete a collection, pick up the missing items and collect the rest of that type again from that point onward.</p>
+    <dl class="choice-list">
+      <dt>Chapter 1 cabin area</dt>
+      <dd>Dylan can recover the newspaper, camp song and signpost in <a href="#cabin-clue-recovery">Chapter 5</a>. If Abi left the cabin locked, replay Chapter 1 to get the newspaper. Use Chapter 1 for the <a href="#item-e1">Empty Vial</a> evidence.</dd>
+      <dt>Rocky Road and Shady Glade</dt>
+      <dd>Replay Chapter 2 to change the route for <a href="#item-t3">The Hanged Man</a> or the <a href="#item-h2">Ranger Box</a>. If you only need the <a href="#item-h3">Trail Camera</a>, Abi can get it at the start of Chapter 3.</dd>
+      <dt>Bloated Corpse and Attack Photo</dt>
+      <dd>For the <a href="#item-e3">corpse</a>, replay Chapter 3 if you already stole the rotor arm, or Chapter 1 to steal it. For the <a href="#item-e4">photo</a>, replay Chapter 4 and take it after Emma uses the taser.</dd>
+      <dt>Chapter 6 pickups if Jacob or Emma died</dt>
+      <dd>Jacob must be alive to reach the <a href="#item-e6">Memory Card</a> and <a href="#item-t10">Justice</a>. Start at Chapter 3 if he <a href="chapters.html#jacob-dive">drowned</a>, or Chapter 4 if he was <a href="chapters.html#firepit-jacob">shot in the bushes</a>. For Emma’s <a href="#item-c9">Kid’s Letter Home</a>, replay her <a href="chapters.html#island-chase">Chapter 4 island escape</a> and keep her alive.</dd>
+      <dt>Ticket Stub and the Chapter 10 lodge</dt>
+      <dd>If the frame beside the portrait is intact, replay <a href="chapters.html#ticket-stub-setup">Kaitlyn’s Chapter 5 encounter with Bobby</a> to expose it. If Kaitlyn missed the lodge after the scrapyard, replay Chapter 9 and get her out <a href="chapters.html#crane-outcomes">with Dylan at the crane</a> or <a href="endings.html#scrapyard-alone">on her own</a> to reach the <a href="#collect-10">lodge pickups</a>.</dd>
+    </dl>
+    <p class="source-note">Sources · Steam PC build 11105655, pickup and scene checks · <a href="https://www.powerpyx.com/the-quarry-all-collectible-locations-clues-evidence-tarot-cards/">PowerPyx · Chapter Select and pickup routes</a></p>
+  </div>
+</details>
+<details class="entry" id="tarot-deck" data-search="Collectibles">
+  <summary><strong>Tarot gallery</strong><span class="meta">22 cards · pickup order</span></summary>
+  <div class="entry-body">
+    <p>Select a card to open its pickup instructions and video.</p>
+    <ul class="tarot-art" id="tarot-gallery-cards" role="list">
+      <li><a href="#item-t1"><img src="assets/tarot/1.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Fool</a></li>
+      <li><a href="#item-t2"><img src="assets/tarot/2.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Temperance</a></li>
+      <li><a href="#item-t3"><img src="assets/tarot/3.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Hanged Man</a></li>
+      <li><a href="#item-t4"><img src="assets/tarot/4.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Star</a></li>
+      <li><a href="#item-t5"><img src="assets/tarot/5.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Tower</a></li>
+      <li><a href="#item-t6"><img src="assets/tarot/6.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Strength</a></li>
+      <li><a href="#item-t7"><img src="assets/tarot/7.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Magician</a></li>
+      <li><a href="#item-t8"><img src="assets/tarot/8.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Devil</a></li>
+      <li><a href="#item-t9"><img src="assets/tarot/9.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Hermit</a></li>
+      <li><a href="#item-t10"><img src="assets/tarot/10.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Justice</a></li>
+      <li><a href="#item-t11"><img src="assets/tarot/11.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Moon</a></li>
+      <li><a href="#item-t12"><img src="assets/tarot/12.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Chariot</a></li>
+      <li><a href="#item-t13"><img src="assets/tarot/13.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The World</a></li>
+      <li><a href="#item-t14"><img src="assets/tarot/14.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Empress</a></li>
+      <li><a href="#item-t15"><img src="assets/tarot/15.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Lovers</a></li>
+      <li><a href="#item-t16"><img src="assets/tarot/16.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Wheel of Fortune</a></li>
+      <li><a href="#item-t17"><img src="assets/tarot/17.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Emperor</a></li>
+      <li><a href="#item-t18"><img src="assets/tarot/18.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Death</a></li>
+      <li><a href="#item-t19"><img src="assets/tarot/19.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Sun</a></li>
+      <li><a href="#item-t20"><img src="assets/tarot/20.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Judgement</a></li>
+      <li><a href="#item-t21"><img src="assets/tarot/21.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The Hierophant</a></li>
+      <li><a href="#item-t22"><img src="assets/tarot/22.webp" width="144" height="256" loading="lazy" decoding="async" alt="">The High Priestess</a></li>
+    </ul>
+    <p class="source-note">Card fronts from Steam PC build 11105655. <a href="#death-art">Death artwork variants · spoilers</a></p>
+  </div>
+</details>
+<details class="entry" id="tarot-readings" data-search="Collectibles">
+  <summary><strong>Tarot readings</strong><span class="meta">How to see, replay, and skip visions</span></summary>
+  <div class="entry-body">
+    <ul>
+      <li><strong>Watch.</strong> Find a card and choose See More during Eliza’s interlude. If you found several cards in that chapter, choose one. Rewatch that vision from its card in the in-game Tarot menu. <a href="achievements.html#forewarned">Forewarned is Forearmed</a></li>
+      <li><strong>Skip.</strong> Choose Move On to decline optional visions. All 22 pickups count toward Decked Out even if you skip the readings. <a href="achievements.html#hard-pass">Hard Pass</a> · <a href="achievements.html#decked-out">Decked Out</a></li>
+      <li><strong>Plan Chapter 9.</strong> Picking up The Hierophant forces a flashback and replaces the optional reading. Leave it behind if you want to see Death, The Sun, or Judgement. If the run skips Chapter 10, Eliza can also skip the optional reading. <a href="#item-t21">The Hierophant</a></li>
+      <li><strong>Look up a card.</strong> Filter the checklist to Tarot to browse all 22. Pickup videos show where to find them. Open the spoiler toggle beside a card to see the scene and related choices.</li>
+    </ul>
+    <details class="entry chapter-choices" id="tarot-branches">
+      <summary><strong>Which vision plays</strong><span class="meta">The Hermit, Death, The Sun, and Judgement</span></summary>
+      <div class="entry-body">
+        <h3 id="hermit-vision"><a href="#vision-9">The Hermit</a></h3>
+        <ul class="vision-variants">
+          <li><img src="assets/tarot/visions/hermit-future.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Jacob and the bear trap.</strong> Keep Jacob alive through Chapter 5. <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=376s">Clip at 6:16</a></li>
+          <li><img src="assets/tarot/visions/hermit-past.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>The Hacketts at the lake.</strong> Let Jacob drown in Chapter 3 or shoot him at the firepit in Chapter 4. <a href="endings.html#fate-jacob">Jacob’s early deaths</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=404s">Clip at 6:44</a></li>
+        </ul>
+        <h3 id="death-vision"><a href="#vision-18">Death</a></h3>
+        <ul class="vision-variants" id="death-vision-options">
+          <li><img src="assets/tarot/visions/death-laura.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Silas hunt set up.</strong> The vision shows Silas killing Laura after the car crash. Reach the Chapter 9 alliance with Laura, Ryan, and Travis. Both responses when Travis proposes ending the curse lead into the hunt. <a href="chapters.html#attic-outcomes">Attic setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=704s">Clip at 11:44</a></li>
+          <li><img src="assets/tarot/visions/death-kaitlyn.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Other routes with a reading.</strong> The vision shows Kaitlyn falling from the beam. The clip can play even if her bite would let her survive the fall. <a href="epilogue.html#card-kaitlyn-10">Infected beam outcome</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=711s">Clip at 11:51</a></li>
+        </ul>
+        <details class="entry" id="death-art">
+          <summary><strong>Death artwork variants</strong><span class="meta">8 designs · spoilers</span></summary>
+          <div class="entry-body">
+            <p>Death has eight versions of its illustration. It can show the heads of Abigail, Emma and Jacob if they died earlier in the story. The heads on the card and the choice of vision are separate. <a href="#item-t18">Death pickup</a></p>
+            <ul class="tarot-art" id="death-art-variants" role="list">
+              <li><img src="assets/tarot/18.webp" width="144" height="256" loading="lazy" decoding="async" alt="">No heads</li>
+              <li><img src="assets/tarot/death-a.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Abigail</li>
+              <li><img src="assets/tarot/death-j.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Jacob</li>
+              <li><img src="assets/tarot/death-e.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Emma</li>
+              <li><img src="assets/tarot/death-aj.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Abigail and Jacob</li>
+              <li><img src="assets/tarot/death-ea.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Abigail and Emma</li>
+              <li><img src="assets/tarot/death-ej.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Emma and Jacob</li>
+              <li><img src="assets/tarot/death-eaj.webp" width="144" height="256" loading="lazy" decoding="async" alt="">Abigail, Emma and Jacob</li>
+            </ul>
+            <p class="source-note">Artwork and material variants from Steam PC build 11105655. <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vek35t/">Player observations · Death card appearances</a></p>
+          </div>
+        </details>
+        <h3 id="sun-vision"><a href="#vision-19">The Sun</a></h3>
+        <p>The reading uses the first matching row in this order. It checks the state at the end of Chapter 9. The clip can show a future the player still has to earn.</p>
+        <ol class="vision-variants" id="sun-vision-order">
+          <li><img src="assets/tarot/visions/sun-emma-office.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Emma in the surveillance room.</strong> Emma has reached the office from the storm shelter. <a href="epilogue.html#card-emma-1">Emma’s office route</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=747s">Clip at 12:27</a></li>
+          <li><img src="assets/tarot/visions/sun-emma-woods.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Emma in the woods.</strong> The selector requires Emma in the woods with no active infection and Jacob alive. The regular PC story reaches her cure after the reading. <a href="#sun-emma-audit">Timing and Jacob’s route</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=752s">Clip at 12:32</a></li>
+          <li><img src="assets/tarot/visions/sun-jacob.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Jacob in the woods.</strong> Jacob is alive at the reading. He can still be in danger in Chapter 10. <a href="endings.html#fate-jacob">Jacob’s routes</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=758s">Clip at 12:38</a></li>
+          <li><img src="assets/tarot/visions/sun-abi.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Abigail in the surveillance room.</strong> Abi is alive. <a href="endings.html#fate-abi">Abi’s routes</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=763s">Clip at 12:43</a></li>
+          <li><img src="assets/tarot/visions/sun-laura-max.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Laura and Max on the island.</strong> The attic outcome sends Laura to Max. <a href="endings.html#motel">Reunion setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=775s">Clip at 12:55</a></li>
+          <li><strong>Ryan in the woods.</strong> Ryan is alive and the Silas hunt is active. <a href="endings.html#white-wolf">Hunt setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=769s">Clip at 12:49</a></li>
+          <li><img src="assets/tarot/visions/sun-dylan.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Dylan.</strong> He is set to join Kaitlyn in the lodge defense. <a href="#sun-max-route">Dylan’s reading setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=781s">Clip at 13:01</a></li>
+          <li><img src="assets/tarot/visions/sun-kaitlyn.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Kaitlyn at the lodge.</strong> Kaitlyn is alive. The selector can show this clip even if the current run has no safe exit for her. <a href="#sun-max-route">Kaitlyn’s reading setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=787s">Clip at 13:07</a></li>
+          <li><strong>Max on the island.</strong> This is the fallback when no earlier row matches. <a href="#sun-max-route">Fallback setup</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vodtg9/">Clip from the game files</a></li>
+        </ol>
+        <details class="entry chapter-choices" id="sun-emma-audit" data-search="Tarot" data-search-terms="Emma woods vision Sun Emma forest">
+          <summary><strong>Emma’s woods vision</strong><span class="meta">PC build 11105655</span></summary>
+          <div class="entry-body">
+            <p>On Steam PC build 11105655, every regular story branch that sends Emma into the woods before the reading starts at the van with Max’s island bite active. Shooting Chris in Chapter 9 sets up Emma’s cure, but her infection flag clears in Chapter 10. The story never meets the woods clip’s conditions at the reading on this build.</p>
+            <figure class="reference-shot">
+              <img class="walkthrough-shot" src="assets/sun-emma-timing.svg" width="320" height="208" loading="lazy" decoding="async" alt="After Ryan shoots Chris, Emma’s infection clears in the Chapter 10 woods scene. She still carries Max’s bite when The Sun is read in Chapter 9.">
+            </figure>
+            <ol>
+              <li>Hold fire at the Chapter 4 firepit to spare Jacob. Get Emma bitten by Max on the island and keep her alive. In Chapter 6, let Emma’s Run interrupt expire to preserve her bite. Shoot Nick at the pool house to keep Abi alive. <a href="chapters.html#firepit-jacob">Firepit shot</a> · <a href="chapters.html#island-bites">Island bite</a> · <a href="chapters.html#choices-6">Hunters</a> · <a href="chapters.html#poolhouse-shot">Pool house shot</a></li>
+              <li>In Chapter 8, choose <strong>Shoot</strong> at the van, hit Emma on the approach and on the roof, then choose <strong>Regular Shot</strong> to drive her into the woods alive. Free Jacob with the breakers. <a href="chapters.html#van-ammo">Van shots</a> · <a href="chapters.html#cage-puzzle">Cage solution</a></li>
+              <li>Pick up The Sun, leave The Hierophant in the shelter and shoot Chris as Ryan. Choose The Sun at Eliza’s reading. With Jacob alive and Emma still flagged as infected, the selector shows Jacob in the woods. Emma wakes up cured in Chapter 10. <a href="#item-t19">The Sun pickup</a> · <a href="#item-t21">The Hierophant pickup</a> · <a href="chapters.html#attic-targets">Attic shot</a> · <a href="endings.html#emma-cures">Emma’s cure scene</a></li>
+            </ol>
+            <p class="source-note">The PC developer setup for this clip puts Emma in the woods, clears her infection and keeps Jacob alive before the reading. The GameFAQs entry lists a Chapter 4 bite as the trigger. Its version and full route are unspecified. <a href="https://gamefaqs.gamespot.com/xboxone/361621-the-quarry/faqs/80282">GameFAQs · vision list</a></p>
+          </div>
+        </details>
+        <details class="entry chapter-choices" id="sun-max-route">
+          <summary><strong>Set up Dylan, Kaitlyn or Max</strong><span class="meta">Three routes traced in the PC files</span></summary>
+          <div class="entry-body">
+            <ol>
+              <li>At the Chapter 4 firepit, shoot Jacob in the second aiming window. Get Emma bitten on the island and keep her alive. In Chapter 6, let Nick kill Abi and skip Emma’s Run interrupt to avoid a second bite. <a href="chapters.html#firepit-jacob">Firepit shot</a> · <a href="chapters.html#island-bites">Treehouse bite</a> · <a href="chapters.html#poolhouse-shot">Pool house shot</a> · <a href="chapters.html#choices-6">Hunters</a></li>
+              <li>Keep Dylan uninfected and sedate Travis in Chapter 7. For <strong>Dylan’s clip</strong>, choose Help at the van, hit Emma twice and keep Dylan with Kaitlyn. At the crane, choose Lift Car and Slam Car, then pass the lever mash. <a href="chapters.html#van-fight">Van shots</a> · <a href="chapters.html#crane-outcomes">Crane choices</a></li>
+              <li>For <strong>Kaitlyn’s clip</strong>, choose Run at the van so Emma kills Dylan. At the scrapyard, choose Gun, hit Silas, pass the mash and dodge Left. For <strong>Max’s clip</strong>, follow the same route to the scrapyard, then choose Gun and let the shot expire so Kaitlyn dies. <a href="endings.html#scrapyard-alone">Solo scrapyard choices</a></li>
+              <li>Pick up The Sun as Laura in Chapter 9. Have Ryan refuse the bite and shoot Chris. After Ryan bleeds out, let Travis win the struggle with Laura. Taking her to the basement keeps the hunt and the reunion inactive. <a href="chapters.html#choices-7">Syringe setup</a> · <a href="chapters.html#attic-outcomes">Attic choices</a></li>
+              <li>Choose The Sun when Eliza offers a reading. Killing Chris keeps Chapter 10 available even if Kaitlyn died. To match Max’s vision, stay on the island as Max. <a href="epilogue.html#card-max-1">Max’s survival recap</a></li>
+            </ol>
+          </div>
+        </details>
+        <p class="source-note">The PC files also include a solo Laura clip, with a pause-menu playback entry and no branch to it in the Chapter 9 selector. A Nick movie reference has no corresponding video in this installation. <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vodtg9/">Solo Laura and Max clips</a></p>
+        <h3 id="judgement-vision"><a href="#vision-20">Judgement</a></h3>
+        <ol class="vision-variants" id="judgement-vision-order">
+          <li><strong>Laura shoots Travis at the nest.</strong> The Chapter 9 outcome starts the Silas hunt. <a href="endings.html#nest-outcomes">Nest choices</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=821s">Clip at 13:41</a></li>
+          <li><strong>Kaitlyn traps Caleb.</strong> The hunt is inactive and the lodge attack is set for Kaitlyn. The selector ignores whether Abi took the rabbit. <a href="endings.html#freezer-outcomes">Decoy setup</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=867s">Clip at 14:27</a></li>
+          <li><img src="assets/tarot/visions/judgement-jacob.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Jacob evades Chris.</strong> The hunt and Kaitlyn’s lodge attack are both inactive, and Jacob and Chris are alive. Free Jacob in the cages. In the attic, aim at transformed Laura to leave Chris alive. <a href="chapters.html#cage-puzzle">Cage solution</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=883s">Clip at 14:43</a></li>
+          <li><img src="assets/tarot/visions/judgement-max.webp" width="160" height="120" loading="lazy" decoding="async" alt=""><strong>Max stays on the island.</strong> This is the fallback if the preceding checks fail. For a route, have Ryan decline the bite and shoot Chris. Let Travis win Laura’s later struggle so she is taken to the basement and the Silas hunt stays inactive. <a href="chapters.html#attic-outcomes">Attic choices</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=876s">Clip at 14:36</a></li>
+        </ol>
+        <p>For either of the last two clips, first reach the scrapyard <a href="endings.html#scrapyard-alone">as Kaitlyn alone</a>. Pick up Judgement before the crane. Let Silas kill her or leave her infected under the scrap pile so the lodge attack is skipped. Leave The Hierophant behind and choose Judgement at Eliza’s reading.</p>
+        <p>The PC installation also ships a combined Jacob and Max video. The Chapter 9 reading links to the two individual clips. The asset named Judgement3 points to the separate Max video, Judgement_3.bk2. <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vm5djk/">Combined clip from the game files</a></p>
+        <p class="source-note">Audit · Steam PC build 11105655. Checked the Chapter 5 and Chapter 9 selectors, the Judgement video references, both characters’ Judgement pickup triggers, and the pause-menu replay. A reading stores its chosen clip for replay even after later choices change the story. <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Moon · footage and stills</a> · <a href="https://www.youtube.com/watch?v=gnraJaD6bxU">Kaitlyn’s solo scrapyard scene</a></p>
+      </div>
+    </details>
+    <p class="source-note">Sources · <a href="https://gamefaqs.gamespot.com/xbox-series-x/361619-the-quarry/faqs/80282">GameFAQs · tested variants</a> · <a href="https://thequarry.fandom.com/wiki/Tarots">The Quarry Wiki · card catalog</a> · <a href="https://primagames.com/gaming/the-quarry-tarot-cards-guide-premonitions-visions">Prima Games · how readings work</a> · <a href="https://www.youtube.com/watch?v=SluYrb03Igs">Vision footage compilation</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/v9l0p7/the_quarry_all_collectibles_locations_guide_all/">MrWilliamThor · pickup footage timestamps</a></p>
+  </div>
+</details>
+<details class="entry" id="clue-entries" data-search="Collectibles">
+  <summary><strong>Extra clue entries</strong><span class="meta">39 journal notes · story spoilers</span></summary>
+  <div class="entry-body">
+    <p>Open Clues in the pause menu and select a collected item. Box 1 is the pickup. The entries below show what each later box reveals and how to unlock it. <a href="achievements.html#meddling-kids">Meddling Kids!</a> checks the 40 pickups. The first extra entry counts toward <a href="achievements.html#coming-together">It’s All Coming Together</a>.</p>
+    <nav class="jump" aria-label="Extra clue entry collections">
+      <a href="#journal-freakshow">Freakshow Fire</a>
+      <a href="#journal-hackett">Hackett History</a>
+      <a href="#journal-camp">Camp History</a>
+    </nav>
+    <p>Plan two dives for the <a href="#journal-h4">No Swimming Sign</a>. The two updates require opposite outcomes for Jacob. Keep him alive on the evidence run so he can collect the <a href="#item-e6">Memory Card</a> in Chapter 6.</p>
+    <p>For the late entries, sedate Travis in Chapter 7, then have Ryan accept the bite and shoot Chris in Chapter 9. Listen to Travis after the attic fight. Survive the Chapter 10 car attack to hear the rest of his account <a href="endings.html#silas-approach">in the woods</a>.</p>
+    <h3>Freakshow Fire</h3>
+    <dl class="choice-list" id="journal-freakshow">
+      <dt><a href="#item-f1">Harum Scarum Poster</a></dt>
+      <dd><strong>2.</strong> Find <a href="#item-f5">Damaged Memorabilia</a> in Chapter 2. The matching flyers connect the poster to Chris Hackett’s collection.</dd>
+      <dt><a href="#item-f3">Broken Cage</a></dt>
+      <dd><strong>2.</strong> Reach the <a href="endings.html#white-wolf">hunt for Silas in the woods</a> in Chapter 10. Silas stayed near the quarry after the fire and used his old cage as a den.</dd>
+      <dt><a href="#item-f4">Newspaper Headline Scrap</a></dt>
+      <dd><strong>2.</strong> Play the <a href="#item-h10">podcast</a> on Travis’s computer to hear the rumors that the fire was set deliberately. <strong>3.</strong> Reach the hunt in the woods to learn that Caleb and Kaylee started it to free Silas.</dd>
+      <dt><a href="#item-f5">Damaged Memorabilia</a></dt>
+      <dd><strong>2.</strong> Find the <a href="#item-f1">Harum Scarum Poster</a> first. The matching flyers raise the question of Chris’s connection to the show. <strong>3.</strong> Pick up the <a href="#item-f9">Ticket Stub</a> for the link to Chris and his children on the night of the fire. <strong>4.</strong> Reach the hunt in the woods. The journal places the start of Chris’s infection on the night of the fire.</dd>
+      <dt><a href="#item-f6">North Kill Gazette</a></dt>
+      <dd><strong>2.</strong> Find the <a href="#item-e3">Bloated Corpse</a> in the Chapter 3 dive. The journal suspects the body is one of the missing hikers.</dd>
+      <dt><a href="#item-f7">Charred Sheriff’s Badge</a></dt>
+      <dd><strong>2.</strong> Collect the <a href="#item-f4">Newspaper Headline Scrap</a>, then inspect the badge. The previous sheriff died in the fire and may have owned it. <strong>3.</strong> Use <a href="chapters.html#basement-stop-laura">Stop Laura</a> in Chapter 8 and reach the <a href="chapters.html#badge-trapdoor-note">trapdoor reunion</a> to learn how Travis used his office to cover for the Hacketts.</dd>
+      <dt><a href="#item-f8">Discarded Signage</a></dt>
+      <dd><strong>2.</strong> Reach the hunt in the woods. The Hacketts thought they had hauled the remaining show debris to the scrapyard.</dd>
+      <dt><a href="#item-f9">Ticket Stub</a></dt>
+      <dd><strong>2.</strong> Find <a href="#item-f5">Damaged Memorabilia</a> before picking up the stub. The journal suggests Chris kept it as a reminder of taking Caleb and Kaylee to the show.</dd>
+    </dl>
+    <h3>Hackett History</h3>
+    <dl class="choice-list" id="journal-hackett">
+      <dt><a href="#item-h1">Family Photo</a></dt>
+      <dd><strong>2.</strong> See Kaylee’s body in the pool in Chapter 6. <strong>3.</strong> Hear <a href="achievements.html#above-the-law">Travis’s explanation after the attic fight</a> in Chapter 9. Caleb infected Chris and Kaylee.</dd>
+      <dt><a href="#item-h2">Ranger Box</a></dt>
+      <dd><strong>2.</strong> Hear Travis’s explanation after the attic fight. The Hacketts left supplies for infected relatives who turned human again at dawn.</dd>
+      <dt><a href="#item-h3">Trail Camera</a></dt>
+      <dd><strong>2.</strong> As Dylan in Chapter 2, open the closet in Chris’s office and <a href="chapters.html#office-monitors">inspect the monitors</a>. Collect the camera as Nick on Shady Glade or as Abi in Chapter 3 to connect it to the surveillance room. <strong>3.</strong> Hear Travis’s explanation after the attic fight. Chris set up the cameras to help find Silas.</dd>
+      <dt id="journal-h4"><a href="#item-h4">No Swimming Sign</a></dt>
+      <dd><strong>2.</strong> Steal the rotor arm, dive and pass Grab to find the corpse. Choose Detangle to escape and see the journal’s suspicion that the sign kept swimmers from finding the body. <strong>3.</strong> Find the corpse on another run, then choose Pull twice or let a wire choice expire. This entry records that the lake claimed Jacob too. <a href="chapters.html#jacob-dive">Dive choices</a></dd>
+      <dt><a href="#item-h5">Old Camp Photo</a></dt>
+      <dd><strong>2.</strong> Hear Chris and Travis talking at the police station in Chapter 7 to identify the brothers in the old photo.</dd>
+      <dt><a href="#item-h6">Police Car Keys</a></dt>
+      <dd><strong>2.</strong> Finish Laura’s account at the pool house at the start of Chapter 8. She stole Travis’s car and left it in the lake.</dd>
+      <dt><a href="#item-h7">Box of Matches</a></dt>
+      <dd><strong>2.</strong> Finish Laura’s Chapter 7 flashback. She lit the island fire while waiting to hunt Chris. Kaitlyn’s photo in Chapter 2 is optional.</dd>
+      <dt><a href="#item-h8">Triggered Bear Trap</a></dt>
+      <dd><strong>2.</strong> Finish the radio-hut sequence and reach the group’s reunion outside. The journal questions whether a trap could catch a creature that fast.</dd>
+      <dt><a href="#item-h10">Bizarre Yet Bonafide Podcast</a></dt>
+      <dd><strong>2.</strong> Let Nick kill Abi in Chapter 6, play the podcast in Chapter 7, then choose Curious as Ryan when Laura mentions hearing a woman at the start of Chapter 8. Both Guarded and Honest connect her account to the podcast’s story. <a href="chapters.html#poolhouse-standoff-podcast">Podcast dialogue</a></dd>
+      <dt><a href="#item-h12">Miner’s Lunchbox</a></dt>
+      <dd><strong>2.</strong> Inspect the <a href="#item-h19">Ancestral Portrait</a> in Chapter 10. Septimus Hackett closed the quarry after the family’s fortunes declined.</dd>
+      <dt><a href="#item-h14">Scrapyard Note</a></dt>
+      <dd><strong>2.</strong> Collect the note, then approach the crane as Dylan or as Kaitlyn alone. The note concerns Max’s car, which Travis wanted kept off the books.</dd>
+      <dt><a href="#item-h15">Hunting Trophy Wall</a></dt>
+      <dd><strong>2.</strong> Agree to hunt Silas after the attic fight. The mounted animals had survived bites, and the Hacketts killed them with silver.</dd>
+      <dt><a href="#item-h17">Chalkboard Doodle</a></dt>
+      <dd><strong>2.</strong> Inspect the doodle after collecting the <a href="#item-c1">Bloodied Collar</a>. The campers drew Ian without knowing what Chris had done to him.</dd>
+    </dl>
+    <h3>Camp History</h3>
+    <dl class="choice-list" id="journal-camp">
+      <dt><a href="#item-c1">Bloodied Collar</a></dt>
+      <dd><strong>2.</strong> Inspect the <a href="#item-h17">Chalkboard Doodle</a> to identify Ian as the camp’s pet sheep. <strong>3.</strong> Reach the scene where Chris falls through the attic floor in Chapter 9. The entry reveals that Chris ate Ian in the storm shelter.</dd>
+      <dt><a href="#item-c2">Hunting Notice</a></dt>
+      <dd><strong>2.</strong> Inspect the <a href="#item-h15">Hunting Trophy Wall</a> in Chapter 9. The mounts give a possible reason for the drop in the deer population.</dd>
+      <dt><a href="#item-c6">Lodge Renovation Plans</a></dt>
+      <dd><strong>2.</strong> Find the <a href="#item-c12">Camp Letter</a>. Chris asked parents to help pay for repairs. <strong>3.</strong> Reach the Chapter 10 lodge attack as Kaitlyn to see why those repairs mattered.</dd>
+      <dt><a href="#item-c7">Counselor’s Ledger</a></dt>
+      <dd><strong>2.</strong> Finish Laura’s Chapter 7 flashback. Travis held Laura and Max, and Chris covered for him by keeping their absence quiet.</dd>
+      <dt><a href="#item-c8">Letter to Camp Nurse</a></dt>
+      <dd><strong>2.</strong> Hear Chris and Travis talking at the police station in Chapter 7. Chris wanted the nurse away from camp before he turned.</dd>
+      <dt><a href="#item-c9">Kid’s Letter Home</a></dt>
+      <dd><strong>2.</strong> Find the <a href="#item-c10">Spooky Drawing</a> to connect the letter to the ghost story. <strong>3.</strong> Reach the hunt in the woods in Chapter 10 to learn that Eliza’s ghost is still looking for Silas.</dd>
+      <dt><a href="#item-c10">Spooky Drawing</a></dt>
+      <dd><strong>2.</strong> Find <a href="#item-c9">Kid’s Letter Home</a> in Chapter 6. The letter and drawing describe the same ghost.</dd>
+      <dt><a href="#item-c12">Camp Letter</a></dt>
+      <dd><strong>2.</strong> Find the <a href="#item-c6">Lodge Renovation Plans</a> before picking up the letter. The journal suspects camp fees were too low to cover the work.</dd>
+    </dl>
+    <p class="source-note">Audit · Steam PC build 11105655, all 39 clue update assets, English journal text and scene rules. <a href="https://gamefaqs.gamespot.com/ps4/361620-the-quarry/faqs/80282">GameFAQs · tested entry routes</a> · <a href="https://thequarry.fandom.com/wiki/Clues">The Quarry Wiki · clue pages</a></p>
+  </div>
+</details>
+<div class="stack">
+<details class="entry" id="collect-0" data-search="Collectibles" data-chapter="0">
+  <summary><strong>Prologue collectibles</strong><span class="meta">5 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-t1" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t1">
+      <div><label for="check-t1">The Fool</label><span class="tag">Tarot 1</span>
+        <p class="meta">Laura · woods</p>
+        <p>Pass to the left of the large rock near the start of the forest path. The camera reveals the card as Laura goes by. <a href="chapters.html#prologue-fool-prompt">Pickup timer and retry</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=0s" aria-label="Pickup video for The Fool at 0:00">Pickup video <span class="meta">· 0:00</span></a> · <a href="rough-night.html#tarot-1">Rough Night route</a> · <a href="blood-pact.html#tarot-1">Blood Pact route</a></p>
+        <details class="tarot-vision" id="vision-1">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Jacob damages the van’s fuel line and the engine catches fire. Choose <strong>Break Fuel Line</strong> to see the fire at the end of Chapter 1. Choose <strong>Steal Rotor Arm</strong> to unlock the Chapter 3 dive for the Bloated Corpse evidence. <a href="chapters.html#van-fire">Van fire scene</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f1" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f1">
+      <div><label for="check-f1">Harum Scarum Poster</label><span class="tag">Freakshow Fire 1</span>
+        <p class="meta">Laura · woods</p>
+        <p>Check the tree on the right just past The Fool.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=22s" aria-label="Pickup video for Harum Scarum Poster at 0:22">Pickup video <span class="meta">· 0:22</span></a> · <a href="blood-pact.html#clue-f1">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/harum-scarum-poster.webp"><img src="assets/clues/harum-scarum-poster.webp" width="640" height="640" loading="lazy" decoding="async" alt="A Harum Scarum poster attached to a tree in the woods."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f2" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f2">
+      <div><label for="check-f2">Escapology Trunk</label><span class="tag">Freakshow Fire 2</span>
+        <p class="meta">Laura · woods</p>
+        <p>At the next left fork after the poster, follow the side path to a trunk.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=46s" aria-label="Pickup video for Escapology Trunk at 0:46">Pickup video <span class="meta">· 0:46</span></a> · <a href="blood-pact.html#clue-f2">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/escapology-trunk.webp"><img src="assets/clues/escapology-trunk.webp" width="640" height="640" loading="lazy" decoding="async" alt="An open trunk filled with equipment on the forest floor."></a>
+          <p>The journal suggests these tools once belonged to an escape artist.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f3" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f3">
+      <div><label for="check-f3">Broken Cage</label><span class="tag">Freakshow Fire 3</span>
+        <p class="meta">Laura · woods</p>
+        <p>After the trunk, take the right-hand side path to the damaged cage.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=77s" aria-label="Pickup video for Broken Cage at 1:17">Pickup video <span class="meta">· 1:17</span></a> · <a href="blood-pact.html#clue-f3">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/broken-cage.webp"><img src="assets/clues/broken-cage.webp" width="640" height="640" loading="lazy" decoding="async" alt="A broken cage and fallen sideshow sign among the trees."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c1" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c1">
+      <div><label for="check-c1">Bloodied Collar</label><span class="tag">Camp History 1</span>
+        <p class="meta">Laura · camp</p>
+        <p>Go down the steps outside the locked lodge, break into the storm shelter and walk forward inside. Laura picks up the collar automatically.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=108s" aria-label="Pickup video for Bloodied Collar at 1:48">Pickup video <span class="meta">· 1:48</span></a> · <a href="blood-pact.html#clue-c1">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/bloodied-collar.webp"><img src="assets/clues/bloodied-collar.webp" width="640" height="640" loading="lazy" decoding="async" alt="A bloodstained collar with the name Ian."></a>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-0">Open Prologue walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-1" data-search="Collectibles" data-chapter="1">
+  <summary><strong>Chapter 1 collectibles</strong><span class="meta">7 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-c2" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c2">
+      <div><label for="check-c2">Hunting Notice</label><span class="tag">Camp History 2</span>
+        <p class="meta">Jacob · lodge grounds</p>
+        <p>From the van, walk between the parked cars toward the sign at the edge of the grounds.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=163s" aria-label="Pickup video for Hunting Notice at 2:43">Pickup video <span class="meta">· 2:43</span></a> · <a href="blood-pact.html#clue-c2">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/hunting-notice.webp"><img src="assets/clues/hunting-notice.webp" width="640" height="640" loading="lazy" decoding="async" alt="A yellow notice canceling deer hunting for the year."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c3" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c3">
+      <div><label for="check-c3">Camp Plaque</label><span class="tag">Camp History 3</span>
+        <p class="meta">Jacob · lodge entrance</p>
+        <p>Go up to the main lodge door and inspect the plaque to its left.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=181s" aria-label="Pickup video for Camp Plaque at 3:01">Pickup video <span class="meta">· 3:01</span></a> · <a href="blood-pact.html#clue-c3">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/camp-plaque.webp"><img src="assets/clues/camp-plaque.webp" width="640" height="640" loading="lazy" decoding="async" alt="A wooden plaque with the camp&#x27;s founding year, 1953."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t2" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t2">
+      <div><label for="check-t2">Temperance</label><span class="tag">Tarot 2</span>
+        <p class="meta">Jacob · lodge kitchen</p>
+        <p>Enter through the open library window, cross the dining hall, then enter the kitchen by the main door. If the prompt expires, step out of the trigger and walk back in. <a href="chapters.html#temperance-prompt">Kitchen route and timer</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=198s" aria-label="Pickup video for Temperance at 3:18">Pickup video <span class="meta">· 3:18</span></a> · <a href="rough-night.html#tarot-2">Rough Night route</a> · <a href="blood-pact.html#tarot-2">Blood Pact route</a></p>
+        <details class="tarot-vision" id="vision-2">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Emma takes fireworks from the store safe in Chapter 2 and uses one against the werewolf in Chapter 6. Inspect the shotgun in the locked store room for the code. Take the fireworks, recover the leftovers at the firepit, then choose Run from the hunters and pass the firework prompt. <a href="reference.html#path-5">Playing with Fire</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f4" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f4">
+      <div><label for="check-f4">Newspaper Headline Scrap</label><span class="tag">Freakshow Fire 4</span>
+        <p class="meta">Abigail · cabin</p>
+        <p>Choose Break In. Inspect the scrap between the first two rows of bunks on the left. Keep the toy nearby for an optional finale escape. Dylan can recover the scrap from the opened cabin in <a href="#cabin-clue-recovery">Chapter 5</a>. <a href="reference.html#fire-date">Read the dated newspaper</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=261s" aria-label="Pickup video for Newspaper Headline Scrap at 4:21">Pickup video <span class="meta">· 4:21</span></a> · <a href="blood-pact.html#clue-f4">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/newspaper-headline-scrap.webp"><img src="assets/clues/newspaper-headline-scrap.webp" width="640" height="640" loading="lazy" decoding="async" alt="A torn North Kill Gazette report on the fire at Harum Scarum."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c4" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c4">
+      <div><label for="check-c4">Camp Song Recording</label><span class="tag">Camp History 4</span>
+        <p class="meta">Abigail · cabins</p>
+        <p>Look for the recorder on the ground outside Room 08, to the right when you face the central swing. Dylan can also pick it up in <a href="#cabin-clue-recovery">Chapter 5</a>.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=312s" aria-label="Pickup video for Camp Song Recording at 5:12">Pickup video <span class="meta">· 5:12</span></a> · <a href="blood-pact.html#clue-c4">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/camp-song-recording.webp"><img src="assets/clues/camp-song-recording.webp" width="640" height="640" loading="lazy" decoding="async" alt="A portable radio and cassette player outside the cabins."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e1" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e1">
+      <div><label for="check-e1">Empty Vial</label><span class="tag">Evidence 1</span>
+        <p class="meta">Abigail · cabins</p>
+        <p>Inspect the large tree beside the swing as Abi. On the audited PC build, this Chapter 1 interaction records the evidence. Dylan’s inspection of the same tree in Chapter 5 plays a scene only.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=338s" aria-label="Pickup video for Empty Vial at 5:38">Pickup video <span class="meta">· 5:38</span></a> · <a href="rough-night.html#evidence-1">Rough Night route</a> · <a href="blood-pact.html#evidence-1">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/empty-vial.webp"><img src="assets/evidence/empty-vial.webp" width="640" height="640" loading="lazy" decoding="async" alt="A small glass vial resting in a hollow in the tree."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c5" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c5">
+      <div><label for="check-c5">Information Signpost</label><span class="tag">Camp History 5</span>
+        <p class="meta">Abigail · cabins</p>
+        <p>Inspect the signpost beyond the central tree before leaving with Emma. Dylan can also collect the clue in <a href="#cabin-clue-recovery">Chapter 5</a>.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=387s" aria-label="Pickup video for Information Signpost at 6:27">Pickup video <span class="meta">· 6:27</span></a> · <a href="blood-pact.html#clue-c5">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/information-signpost.webp"><img src="assets/clues/information-signpost.webp" width="640" height="640" loading="lazy" decoding="async" alt="A post with wooden arrows pointing toward distant cities."></a>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-1">Open Chapter 1 walkthrough</a> · <a href="chapters.html#jacob-lodge">Lodge route</a> · <a href="chapters.html#abi-cabins">Cabin route</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-2" data-search="Collectibles" data-chapter="2">
+  <summary><strong>Chapter 2 collectibles</strong><span class="meta">8 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-f5" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f5">
+      <div><label for="check-f5">Damaged Memorabilia</label><span class="tag">Freakshow Fire 5</span>
+        <p class="meta">Emma · store</p>
+        <p>Walk behind the first shelf on the left after entering storage.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=430s" aria-label="Pickup video for Damaged Memorabilia at 7:10">Pickup video <span class="meta">· 7:10</span></a> · <a href="blood-pact.html#clue-f5">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/damaged-memorabilia.webp"><img src="assets/clues/damaged-memorabilia.webp" width="640" height="640" loading="lazy" decoding="async" alt="Harum Scarum flyers stacked on a shelf."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c6" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c6">
+      <div><label for="check-c6">Lodge Renovation Plans</label><span class="tag">Camp History 6</span>
+        <p class="meta">Emma · store</p>
+        <p>At the far end of storage, check the shelf beside the large wooden table.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=456s" aria-label="Pickup video for Lodge Renovation Plans at 7:36">Pickup video <span class="meta">· 7:36</span></a> · <a href="blood-pact.html#clue-c6">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/lodge-renovation-plans.webp"><img src="assets/clues/lodge-renovation-plans.webp" width="640" height="640" loading="lazy" decoding="async" alt="A blue plan showing repairs to the lodge chimney."></a>
+          <p>The plans concern the lodge's chimney column. Compare them with the Camp Letter in Chapter 10.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e2" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e2">
+      <div><label for="check-e2">Torn Bags</label><span class="tag">Evidence 2</span>
+        <p class="meta">Emma · locked storeroom</p>
+        <p>Have Jacob open the door. Check the right-hand corner near the shotgun after he gets the beer.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=503s" aria-label="Pickup video for Torn Bags at 8:23">Pickup video <span class="meta">· 8:23</span></a> · <a href="rough-night.html#evidence-2">Rough Night route</a> · <a href="blood-pact.html#evidence-2">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/torn-bags.webp"><img src="assets/evidence/torn-bags.webp" width="640" height="640" loading="lazy" decoding="async" alt="Two damaged hiking packs in the camp store."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h1" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h1">
+      <div><label for="check-h1">Family Photo</label><span class="tag">Hackett History 1</span>
+        <p class="meta">Dylan · Chris’s office</p>
+        <p>Inspect the photo on the desk to the left as soon as you can explore.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=539s" aria-label="Pickup video for Family Photo at 8:59">Pickup video <span class="meta">· 8:59</span></a> · <a href="blood-pact.html#clue-h1">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/family-photo.webp"><img src="assets/clues/family-photo.webp" width="640" height="640" loading="lazy" decoding="async" alt="A framed photo of Chris Hackett with Caleb and Kaylee."></a>
+          <p>This shows Chris and his children. The Campers Photo instead shows a young Ryan with Caleb and Kaylee.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c7" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c7">
+      <div><label for="check-c7">Counselor’s Ledger</label><span class="tag">Camp History 7</span>
+        <p class="meta">Dylan · Chris’s office</p>
+        <p>Investigate the hatch and choose Shut Trapdoor or Climb Down. Finish either dialogue choice after Dylan sits at the desk. He checks the drawer and collects the ledger. Shut Trapdoor keeps the ladder intact. <a href="reference.html#path-6">Watch Your Step</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=549s" aria-label="Pickup video for Counselor’s Ledger at 9:09">Pickup video <span class="meta">· 9:09</span></a> · <a href="blood-pact.html#clue-c7">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/counselors-ledger.webp"><img src="assets/clues/counselors-ledger.webp" width="640" height="640" loading="lazy" decoding="async" alt="An open ledger listing the counselors and their jobs."></a>
+          <p>Laura and Max are crossed off the list.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t3" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t3">
+      <div><label for="check-t3">The Hanged Man</label><span class="tag">Tarot 3</span>
+        <p class="meta">Nick · Rocky Road only</p>
+        <p>Choose Rocky Road, then take the left fork and use the prompt when the camera cuts to the ridge. <a href="chapters.html#rocky-road">Rocky Road walkthrough</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=700s" aria-label="Pickup video for The Hanged Man at 11:40">Pickup video <span class="meta">· 11:40</span></a> · <a href="rough-night.html#tarot-3">Rough Night route</a></p>
+        <details class="tarot-vision" id="vision-3">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>A snare leaves Jacob hanging upside down in Chapter 3. Use Throw Dirt to escape Bobby without being marked with blood. Let the interrupt expire if you want Bobby to mark Jacob, which protects him from an early bite in Chapter 6. <a href="reference.html#path-9">Distraction</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h3" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h3">
+      <div><label for="check-h3">Trail Camera</label><span class="tag">Hackett History 3</span>
+        <p class="meta">Nick in Chapter 2 or Abigail in Chapter 3 · Shady Glade</p>
+        <p>In Chapter 2, choose Shady Glade and follow its right edge to the camera fixed to a tree. If you missed it, inspect the same tree as Abi at the start of Chapter 3, before leaving the glade to meet Nick. <a href="chapters.html#shady-glade">Shady Glade walkthrough</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=650s" aria-label="Chapter 2 pickup video for Trail Camera at 10:50">Chapter 2 pickup <span class="meta">· 10:50</span></a> · <a href="https://www.youtube.com/watch?v=lpfmXrij0Wc&amp;t=75s">Chapter 3 pickup <span class="meta">· 1:15</span></a> · <a href="blood-pact.html#clue-h3">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/trail-camera.webp"><img src="assets/clues/trail-camera.webp" width="640" height="640" loading="lazy" decoding="async" alt="A camouflage trail camera strapped to a tree trunk."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h2" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h2">
+      <div><label for="check-h2">Ranger Box</label><span class="tag">Hackett History 2</span>
+        <p class="meta">Nick · Shady Glade only</p>
+        <p>From the trail camera, turn onto the left path and look for the metal box. If the birds startle Abi, turn left after the scene and check before continuing. <a href="chapters.html#shady-glade">Shady Glade walkthrough</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=616s" aria-label="Pickup video for Ranger Box at 10:16">Pickup video <span class="meta">· 10:16</span></a> · <a href="blood-pact.html#clue-h2">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/ranger-box.webp"><img src="assets/clues/ranger-box.webp" width="640" height="640" loading="lazy" decoding="async" alt="A weathered metal supply box in the woods."></a>
+          <p>The journal lists spare clothes and water inside. A later update explains why the Hacketts left supplies in the woods.</p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-2">Open Chapter 2 walkthrough</a> · <a href="chapters.html#camp-store">Camp store route</a> · <a href="chapters.html#chris-office">Office route</a> · <a href="chapters.html#firewood-routes">Choose a firewood trail</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-3" data-search="Collectibles" data-chapter="3">
+  <summary><strong>Chapter 3 collectibles</strong><span class="meta">6 locations</span></summary>
+  <div class="entry-body">
+    <p>Missed the <a href="#item-h3">Trail Camera</a> in Chapter 2? Abi can pick up the same clue before she leaves the woods. The Ranger Box requires the Chapter 2 Shady Glade route.</p>
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-t5" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t5">
+      <div><label for="check-t5">The Tower</label><span class="tag">Tarot 5</span>
+        <p class="meta">Abigail · woods</p>
+        <p>Follow the main trail from where you regain control. Watch for the camera pointing into the tree canopy before the scene with Nick.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=780s" aria-label="Pickup video for The Tower at 13:00">Pickup video <span class="meta">· 13:00</span></a> · <a href="rough-night.html#tarot-5">Rough Night route</a> · <a href="blood-pact.html#tarot-5">Blood Pact route</a></p>
+        <details class="tarot-vision" id="vision-5">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Emma misses the zipline and falls. To reproduce it, survive the treehouse chase, choose Reel Quickly and Jump, then miss the Up prompt. <a href="chapters.html#island-zipline">Chapter 4 zipline outcomes</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t4" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t4">
+      <div><label for="check-t4">The Star</label><span class="tag">Tarot 4</span>
+        <p class="meta">Jacob · boathouse</p>
+        <p>Walk off the dock toward the boathouse. Grab the card on the first camera change. If the prompt expires, back up and approach again. <a href="chapters.html#boathouse-exploration">Boathouse route</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=824s" aria-label="Pickup video for The Star at 13:44">Pickup video <span class="meta">· 13:44</span></a> · <a href="rough-night.html#tarot-4">Rough Night route</a> · <a href="blood-pact.html#tarot-4">Blood Pact route</a></p>
+        <details class="tarot-vision" id="vision-4">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Emma’s phone flash lights up the werewolf in the Chapter 4 treehouse. Choose Search Bag, use the taser, then take the photo when the interrupt appears. That also earns the Attack Photo evidence. <a href="#item-e4">Attack Photo</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h4" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h4">
+      <div><label for="check-h4">No Swimming Sign</label><span class="tag">Hackett History 4</span>
+        <p class="meta">Jacob · boathouse</p>
+        <p>Go left after The Star and inspect the railing that faces the lake.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=840s" aria-label="Pickup video for No Swimming Sign at 14:00">Pickup video <span class="meta">· 14:00</span></a> · <a href="blood-pact.html#clue-h4">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/no-swimming-sign.webp"><img src="assets/clues/no-swimming-sign.webp" width="640" height="640" loading="lazy" decoding="async" alt="A wooden sign reading No Swimming Without Supervision."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f6" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f6">
+      <div><label for="check-f6">North Kill Gazette</label><span class="tag">Freakshow Fire 6</span>
+        <p class="meta">Jacob · boathouse</p>
+        <p>Check the newspaper on the table across from the railing.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=853s" aria-label="Pickup video for North Kill Gazette at 14:13">Pickup video <span class="meta">· 14:13</span></a> · <a href="blood-pact.html#clue-f6">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/north-kill-gazette.webp"><img src="assets/clues/north-kill-gazette.webp" width="640" height="640" loading="lazy" decoding="async" alt="A North Kill Gazette front page showing the two missing hikers."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h5" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h5">
+      <div><label for="check-h5">Old Camp Photo</label><span class="tag">Hackett History 5</span>
+        <p class="meta">Jacob · boathouse</p>
+        <p>Go to the far end of the deck and look behind the seating for a photo on a wooden beam.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=868s" aria-label="Pickup video for Old Camp Photo at 14:28">Pickup video <span class="meta">· 14:28</span></a> · <a href="blood-pact.html#clue-h5">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/old-camp-photo.webp"><img src="assets/clues/old-camp-photo.webp" width="640" height="640" loading="lazy" decoding="async" alt="A faded framed photo of two boys at camp."></a>
+          <p>The journal dates the photo to the 1970s. The boys are identified in a later entry as Chris and Travis.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e3" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e3">
+      <div><label for="check-e3">Bloated Corpse</label><span class="tag">Evidence 3</span>
+        <p class="meta">Jacob · lake</p>
+        <p>Steal the rotor arm in Chapter 1. When Abi screams, choose Dive In and Grab, then press Up to spot the corpse. Choose Detangle to escape safely. <a href="chapters.html#jacob-dive">All dive outcomes</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=898s" aria-label="Pickup video for Bloated Corpse at 14:58">Pickup video <span class="meta">· 14:58</span></a> · <a href="rough-night.html#evidence-3">Rough Night route</a> · <a href="blood-pact.html#evidence-3">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo (graphic)</summary>
+          <a href="assets/evidence/bloated-corpse.webp"><img src="assets/evidence/bloated-corpse.webp" width="640" height="640" loading="lazy" decoding="async" alt="The body Jacob sees chained underwater."></a>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-3">Open Chapter 3 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-4" data-search="Collectibles" data-chapter="4">
+  <summary><strong>Chapter 4 collectibles</strong><span class="meta">5 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-t7" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t7">
+      <div><label for="check-t7">The Magician</label><span class="tag">Tarot 7</span>
+        <p class="meta">Emma · island dock</p>
+        <p>At the start of Emma’s section, turn around and walk to the end of the island dock. Use the timed prompt. If it expires, step away and approach the tip again. <a href="chapters.html#choices-4">Island route</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=988s" aria-label="Pickup video for The Magician at 16:28">Pickup video <span class="meta">· 16:28</span></a> · <a href="rough-night.html#tarot-7">Rough Night route</a> · <a href="massacre.html#tarot-7">Massacre route</a> · <a href="blood-pact.html#tarot-7">Blood Pact route</a> · <a href="finale.html#tarot-7">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-7">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Ryan uses a chainsaw to amputate Dylan’s bitten hand. Break into the cabin in Chapter 1 so the radio-hut bite happens in Chapter 5. Choose Desperate and the chainsaw to play out the vision and stop the infection. <a href="reference.html#path-10">Helping Hand</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h7" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h7">
+      <div><label for="check-h7">Box of Matches</label><span class="tag">Hackett History 7</span>
+        <p class="meta">Emma · island</p>
+        <p>Take the ground path at the stairs and check the fire ring near the ladder. Backtrack to the stairs for the keys before entering the treehouse. <a href="chapters.html#choices-4">Island route</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1008s" aria-label="Pickup video for Box of Matches at 16:48">Pickup video <span class="meta">· 16:48</span></a> · <a href="blood-pact.html#clue-h7">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/box-of-matches.webp"><img src="assets/clues/box-of-matches.webp" width="640" height="640" loading="lazy" decoding="async" alt="A red matchbox marked Harbinger Motel."></a>
+          <p>The journal notes the box has been used. Chapter 7 explains who lit the fire on the island.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h6" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h6">
+      <div><label for="check-h6">Police Car Keys</label><span class="tag">Hackett History 6</span>
+        <p class="meta">Emma · treehouse</p>
+        <p>Take the stairs to the treehouse. Inspect the window left of the door before entering.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1047s" aria-label="Pickup video for Police Car Keys at 17:27">Pickup video <span class="meta">· 17:27</span></a> · <a href="blood-pact.html#clue-h6">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/police-car-keys.webp"><img src="assets/clues/police-car-keys.webp" width="640" height="640" loading="lazy" decoding="async" alt="Two keys lying on a wooden board."></a>
+          <p>The journal identifies them as North Kill Police Department keys.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e4" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e4">
+      <div><label for="check-e4">Attack Photo</label><span class="tag">Evidence 4</span>
+        <p class="meta">Emma · treehouse</p>
+        <p>Choose Search Bag and Use Taser, then hit the Take Photo interrupt before it expires.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1139s" aria-label="Pickup video for Attack Photo at 18:59">Pickup video <span class="meta">· 18:59</span></a> · <a href="rough-night.html#evidence-4">Rough Night route</a> · <a href="blood-pact.html#evidence-4">Blood Pact route</a> · <a href="finale.html#evidence-4">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/attack-photo.webp"><img src="assets/evidence/attack-photo.webp" width="640" height="640" loading="lazy" decoding="async" alt="Emma's phone with a blurred close-up of the attacker."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t6" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t6">
+      <div><label for="check-t6">Strength</label><span class="tag">Tarot 6</span>
+        <p class="meta">Dylan · lodge doorway</p>
+        <p>When the group carries Nick into the lodge toward the nurse’s office, take the card during the brief doorway shot.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1180s" aria-label="Pickup video for Strength at 19:40">Pickup video <span class="meta">· 19:40</span></a> · <a href="rough-night.html#tarot-6">Rough Night route</a> · <a href="massacre.html#tarot-6">Massacre route</a> · <a href="blood-pact.html#tarot-6">Blood Pact route</a> · <a href="finale.html#tarot-6">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-6">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Nick lifts Bobby by the throat in the lodge. In Chapter 5, let Bobby catch the group by running or failing the breathing check. Pass Nick’s Right dodge and the following mash to throw Bobby down. <a href="chapters.html#nick-bobby">Chapter 5 lodge encounter</a></p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-4">Open Chapter 4 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-5" data-search="Collectibles" data-chapter="5">
+  <summary><strong>Chapter 5 collectibles</strong><span class="meta">5 locations</span></summary>
+  <div class="entry-body">
+    <details class="entry chapter-choices" id="cabin-clue-recovery" data-search="Collectibles">
+      <summary><strong>Recover three Chapter 1 clues</strong><span class="meta">Dylan · camp cabins</span></summary>
+      <div class="entry-body">
+        <p>Check the cabin area as Dylan before <a href="chapters.html#radio-hut-entry">entering the radio hut</a>. These pickups fill the same journal entries as Abi’s Chapter 1 pickups.</p>
+        <ul>
+          <li><a href="#item-f4">Newspaper Headline Scrap</a> · Go inside the cabin Abi opened with <a href="chapters.html#cabin-break-in">Break In</a> and inspect the scrap by the bunks.</li>
+          <li><a href="#item-c4">Camp Song Recording</a> · Look at the foot of the steps to Room 08. Either Chapter 1 cabin choice works.</li>
+          <li><a href="#item-c5">Information Signpost</a> · Check the signpost near the central tree. Either Chapter 1 cabin choice works.</li>
+        </ul>
+        <p class="source-note">Audit · Steam PC build 11105655, the radio-hut walk, cabin door flag and journal unlock actions. <a href="https://video-game-guide-walkthrough.supersoluce.com/solution/the-quarry-guide-walkthrough/the-quarry-collectibles/collectibles-chapter-5/">Game of Guides · cabin-area interactions</a></p>
+      </div>
+    </details>
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-h8" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h8">
+      <div><label for="check-h8">Triggered Bear Trap</label><span class="tag">Hackett History 8</span>
+        <p class="meta">Dylan · cabins</p>
+        <p>Check the ground at the far left of the cabin clearing near the fence.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1204s" aria-label="Pickup video for Triggered Bear Trap at 20:04">Pickup video <span class="meta">· 20:04</span></a> · <a href="blood-pact.html#clue-h8">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/triggered-bear-trap.webp"><img src="assets/clues/triggered-bear-trap.webp" width="640" height="640" loading="lazy" decoding="async" alt="A sprung bear trap lying in the grass."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c8" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c8">
+      <div><label for="check-c8">Letter to Camp Nurse</label><span class="tag">Camp History 8</span>
+        <p class="meta">Dylan · cabins</p>
+        <p>Check the paper on the ground outside Room 03.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1244s" aria-label="Pickup video for Letter to Camp Nurse at 20:44">Pickup video <span class="meta">· 20:44</span></a> · <a href="blood-pact.html#clue-c8">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/letter-to-camp-nurse.webp"><img src="assets/clues/letter-to-camp-nurse.webp" width="640" height="640" loading="lazy" decoding="async" alt="A handwritten note from Chris to the camp nurse."></a>
+          <p>Chris asks the nurse to leave a day early.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t8" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t8">
+      <div><label for="check-t8">The Devil</label><span class="tag">Tarot 8</span>
+        <p class="meta">Dylan · cabins</p>
+        <p>Walk between the central swing and the picnic tables. The camera shows the side of a table.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1281s" aria-label="Pickup video for The Devil at 21:21">Pickup video <span class="meta">· 21:21</span></a> · <a href="rough-night.html#tarot-8">Rough Night route</a> · <a href="massacre.html#tarot-8">Massacre route</a> · <a href="blood-pact.html#tarot-8">Blood Pact route</a> · <a href="finale.html#tarot-8">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-8">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Nick transforms and decapitates Abi in the pool house. Miss Nick or let the Chapter 6 aiming timer run out to reach this scene. Hit Nick to save Abi. <a href="chapters.html#poolhouse-shot">All shotgun outcomes</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e5" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e5">
+      <div><label for="check-e5">Claw Marks</label><span class="tag">Evidence 5</span>
+        <p class="meta">Dylan · radio hut exterior</p>
+        <p>Inspect the wall by the fan left of the hut’s entrance before <a href="chapters.html#radio-hut-entry">going inside with Ryan</a>.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1319s" aria-label="Pickup video for Claw Marks at 21:59">Pickup video <span class="meta">· 21:59</span></a> · <a href="rough-night.html#evidence-5">Rough Night route</a> · <a href="massacre.html#evidence-5">Massacre route</a> · <a href="blood-pact.html#evidence-5">Blood Pact route</a> · <a href="finale.html#evidence-5">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/claw-marks.webp"><img src="assets/evidence/claw-marks.webp" width="640" height="640" loading="lazy" decoding="async" alt="Long scratches in the wooden siding of the radio hut."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t9" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t9">
+      <div><label for="check-t9">The Hermit</label><span class="tag">Tarot 9</span>
+        <p class="meta">Dylan · radio hut exterior</p>
+        <p>Round the corner just past the claw marks and check the base of the tower before entering the hut.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1359s" aria-label="Pickup video for The Hermit at 22:39">Pickup video <span class="meta">· 22:39</span></a> · <a href="rough-night.html#tarot-9">Rough Night route</a> · <a href="massacre.html#tarot-9">Massacre route</a> · <a href="blood-pact.html#tarot-9">Blood Pact route</a> · <a href="finale.html#tarot-9">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-9">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>With Jacob alive after Chapter 5, the card shows his fatal bear-trap fall. In Chapter 6 an uninfected Jacob dies if he chooses Pull Free and fails the recovery prompt. If Jacob already died, Eliza shows a past scene of Bobby disposing of a body in the lake while Jedediah watches. <a href="endings.html#fate-jacob">Jacob’s routes</a></p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#radio-hut-exploration">Follow Dylan’s pickup route</a> · <a href="chapters.html#chapter-5">Open Chapter 5 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-6" data-search="Collectibles" data-chapter="6">
+  <summary><strong>Chapter 6 collectibles</strong><span class="meta">6 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-e6" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e6">
+      <div><label for="check-e6">Memory Card</label><span class="tag">Evidence 6</span>
+        <p class="meta">Jacob · wooden walkway</p>
+        <p>Head up the first stairs and take the right side at the walkway fork. Inspect the camera on the ground.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1390s" aria-label="Pickup video for Memory Card at 23:10">Pickup video <span class="meta">· 23:10</span></a> · <a href="rough-night.html#evidence-6">Rough Night route</a> · <a href="blood-pact.html#evidence-6">Blood Pact route</a> · <a href="finale.html#evidence-6">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/memory-card.webp"><img src="assets/evidence/memory-card.webp" width="640" height="640" loading="lazy" decoding="async" alt="The damaged camera Jacob finds on the wooden walkway."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t10" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t10">
+      <div><label for="check-t10">Justice</label><span class="tag">Tarot 10</span>
+        <p class="meta">Jacob · near walkway</p>
+        <p>After leaving the wooden walkway, turn left for the camera reveal before following the path to the right.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1454s" aria-label="Pickup video for Justice at 24:14">Pickup video <span class="meta">· 24:14</span></a> · <a href="rough-night.html#tarot-10">Rough Night route</a> · <a href="blood-pact.html#tarot-10">Blood Pact route</a> · <a href="finale.html#tarot-10">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-10">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Laura shoots Travis during the Chapter 7 jail escape. Without a successful syringe injection, fail the prompt to recover the gun after Travis gets it to trigger the accidental shot. Travis survives here and can take revenge in Chapter 9. <a href="chapters.html#choices-7">Chapter 7 escape</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c11" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c11">
+      <div><label for="check-c11">Campers Photo</label><span class="tag">Camp History 11</span>
+        <p class="meta">Abigail · pool house</p>
+        <p>Check the board in the corner. Collect all three pool house items before checking Nick. <a href="chapters.html#poolhouse-pickups">Pickup order</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1485s" aria-label="Pickup video for Campers Photo at 24:45">Pickup video <span class="meta">· 24:45</span></a> · <a href="blood-pact.html#clue-c11">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/campers-photo.webp"><img src="assets/clues/campers-photo.webp" width="640" height="640" loading="lazy" decoding="async" alt="A snapshot of a young Ryan with Kaylee and Caleb."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t11" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t11">
+      <div><label for="check-t11">The Moon</label><span class="tag">Tarot 11</span>
+        <p class="meta">Abigail · pool house</p>
+        <p>Go into the third changing stall on the left and move toward its back wall until the card comes into view.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1503s" aria-label="Pickup video for The Moon at 25:03">Pickup video <span class="meta">· 25:03</span></a> · <a href="rough-night.html#tarot-11">Rough Night route</a> · <a href="massacre.html#tarot-11">Massacre route</a> · <a href="blood-pact.html#tarot-11">Blood Pact route</a> · <a href="finale.html#tarot-11">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-11">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Laura sedates Travis with a syringe. In Chapter 7, get it from the upstairs locker, hide it behind the loose brick, and pass the injection prompt during the escape. <a href="achievements.html#above-the-law">Above the Law</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c10" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c10">
+      <div><label for="check-c10">Spooky Drawing</label><span class="tag">Camp History 10</span>
+        <p class="meta">Abigail · pool house</p>
+        <p>Inspect the locker at the far end of the changing-room corridor.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1525s" aria-label="Pickup video for Spooky Drawing at 25:25">Pickup video <span class="meta">· 25:25</span></a> · <a href="blood-pact.html#clue-c10">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/spooky-drawing.webp"><img src="assets/clues/spooky-drawing.webp" width="640" height="640" loading="lazy" decoding="async" alt="A drawing of a dark figure among the trees."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-c9" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c9">
+      <div><label for="check-c9">Kid’s Letter Home</label><span class="tag">Camp History 9</span>
+        <p class="meta">Emma · tents</p>
+        <p>Emma must escape the island. Turn right from the campfire and check the ground outside the yellow tent.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1547s" aria-label="Pickup video for Kid’s Letter Home at 25:47">Pickup video <span class="meta">· 25:47</span></a> · <a href="blood-pact.html#clue-c9">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/kids-letter-home.webp"><img src="assets/clues/kids-letter-home.webp" width="640" height="640" loading="lazy" decoding="async" alt="A torn letter from a camper to his mother."></a>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-6">Open Chapter 6 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-7" data-search="Collectibles" data-chapter="7">
+  <summary><strong>Chapter 7 collectibles</strong><span class="meta">6 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-t13" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t13">
+      <div><label for="check-t13">The World</label><span class="tag">Tarot 13</span>
+        <p class="meta">Laura · cell</p>
+        <p>Approach the bed and walk back toward the bars. Look for the card under the bed as the angle changes. Pick it up before using the spoon. If the prompt expires, walk toward the bed and back again. <a href="chapters.html#jail-cell">First cell exploration</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1581s" aria-label="Pickup video for The World at 26:21">Pickup video <span class="meta">· 26:21</span></a> · <a href="rough-night.html#tarot-13">Rough Night route</a> · <a href="massacre.html#tarot-13">Massacre route</a> · <a href="blood-pact.html#tarot-13">Blood Pact route</a> · <a href="finale.html#tarot-13">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-13">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>The vision shows Ryan falling while Laura looks down from above. In Chapter 8, both end up in the quarry, and Laura’s <a href="chapters.html#quarry-fall">Angry or Compassionate choice</a> changes how they fall. <a href="https://www.youtube.com/watch?v=SluYrb03Igs&amp;t=540s">Recorded vision at 9:00</a></p>
+          <figure class="reference-shot">
+            <img class="walkthrough-shot" src="assets/tarot/visions/world-laura.webp" width="512" height="360" loading="lazy" decoding="async" alt="Laura, wearing her eyepatch, looks down into the quarry.">
+            <figcaption class="meta">The World’s preview image from the PC game.</figcaption>
+          </figure>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h9" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h9">
+      <div><label for="check-h9">Scrawled Limerick</label><span class="tag">Hackett History 9</span>
+        <p class="meta">Laura · cell</p>
+        <p>Inspect the writing on the wall opposite the loose brick. If you missed it in the first cell scene, you can inspect it during the later station exploration.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1602s" aria-label="Pickup video for Scrawled Limerick at 26:42">Pickup video <span class="meta">· 26:42</span></a> · <a href="blood-pact.html#clue-h9">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/scrawled-limerick.webp"><img src="assets/clues/scrawled-limerick.webp" width="640" height="640" loading="lazy" decoding="async" alt="A limerick scratched into the brick wall of Laura&#x27;s cell."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t12" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t12">
+      <div><label for="check-t12">The Chariot</label><span class="tag">Tarot 12</span>
+        <p class="meta">Laura · police station</p>
+        <p>When the station opens for exploration, walk between the tables in the main room. If the prompt expires, step away and return to the gap between the tables.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1624s" aria-label="Pickup video for The Chariot at 27:04">Pickup video <span class="meta">· 27:04</span></a> · <a href="rough-night.html#tarot-12">Rough Night route</a> · <a href="massacre.html#tarot-12">Massacre route</a> · <a href="blood-pact.html#tarot-12">Blood Pact route</a> · <a href="finale.html#tarot-12">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-12">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Dylan and Kaitlyn open the van in Chapter 8. If Emma attacks, Regular Shot drives her away alive. <a href="chapters.html#van-fight">Chapter 8 van encounter</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e7" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e7">
+      <div><label for="check-e7">Cease &amp; Desist Letter</label><span class="tag">Evidence 7</span>
+        <p class="meta">Laura · police station</p>
+        <p>Use the short steps in the lobby corner and inspect the paper across from the wooden door.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1647s" aria-label="Pickup video for Cease &amp; Desist Letter at 27:27">Pickup video <span class="meta">· 27:27</span></a> · <a href="rough-night.html#evidence-7">Rough Night route</a> · <a href="massacre.html#evidence-7">Massacre route</a> · <a href="blood-pact.html#evidence-7">Blood Pact route</a> · <a href="finale.html#evidence-7">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/cease-and-desist.webp"><img src="assets/evidence/cease-and-desist.webp" width="640" height="640" loading="lazy" decoding="async" alt="Travis's letter lying beside a keyboard."></a>
+          <p>Travis asks the hosts to take down their episode about Hackett’s Quarry and warns that the owners may take legal action. <a href="assets/evidence/cease-and-desist-document.webp">Read the letter</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f7" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f7">
+      <div><label for="check-f7">Charred Sheriff’s Badge</label><span class="tag">Freakshow Fire 7</span>
+        <p class="meta">Laura · police station</p>
+        <p>Go upstairs and into the second office on the left. Check the right side of the room.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1676s" aria-label="Pickup video for Charred Sheriff’s Badge at 27:56">Pickup video <span class="meta">· 27:56</span></a> · <a href="blood-pact.html#clue-f7">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/charred-sheriffs-badge.webp"><img src="assets/clues/charred-sheriffs-badge.webp" width="640" height="640" loading="lazy" decoding="async" alt="A charred sheriff&#x27;s badge lying on a sheet of paper."></a>
+          <p>If you picked up the <a href="#item-f4">Newspaper Headline Scrap</a>, the journal connects the badge to the sheriff who died in the fire.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h10" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h10">
+      <div><label for="check-h10">Bizarre Yet Bonafide Podcast</label><span class="tag">Hackett History 10</span>
+        <p class="meta">Laura · police station</p>
+        <p>Read the birthday card in the first upstairs office and the calendar in the third. Go back down to the corner office and use the computer.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1717s" aria-label="Pickup video for Bizarre Yet Bonafide Podcast at 28:37">Pickup video <span class="meta">· 28:37</span></a> · <a href="blood-pact.html#clue-h10">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/bizarre-yet-bonafide-podcast.webp"><img src="assets/clues/bizarre-yet-bonafide-podcast.webp" width="640" height="640" loading="lazy" decoding="async" alt="The station computer with the podcast open."></a>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-7">Open Chapter 7 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-8" data-search="Collectibles" data-chapter="8">
+  <summary><strong>Chapter 8 collectibles</strong><span class="meta">8 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-h11" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h11">
+      <div><label for="check-h11">Old Quarry Tools</label><span class="tag">Hackett History 11</span>
+        <p class="meta">Laura · quarry</p>
+        <p>Check the ground on the left side of the first metal stairway.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1847s" aria-label="Pickup video for Old Quarry Tools at 30:47">Pickup video <span class="meta">· 30:47</span></a> · <a href="blood-pact.html#clue-h11">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/old-quarry-tools.webp"><img src="assets/clues/old-quarry-tools.webp" width="640" height="640" loading="lazy" decoding="async" alt="Rusty mining tools on the quarry floor."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h12" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h12">
+      <div><label for="check-h12">Miner’s Lunchbox</label><span class="tag">Hackett History 12</span>
+        <p class="meta">Laura · quarry</p>
+        <p>Before taking the stairs, turn back and circle the pool toward the metal lunchbox at the far end.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1873s" aria-label="Pickup video for Miner’s Lunchbox at 31:13">Pickup video <span class="meta">· 31:13</span></a> · <a href="blood-pact.html#clue-h12">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/miners-lunchbox.webp"><img src="assets/clues/miners-lunchbox.webp" width="640" height="640" loading="lazy" decoding="async" alt="An open lunchbox with a thermos and a miner&#x27;s termination letter."></a>
+          <p>The letter is signed by Septimus Hackett. He tells the miners he plans to flood the central quarry.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t15" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t15">
+      <div><label for="check-t15">The Lovers</label><span class="tag">Tarot 15</span>
+        <p class="meta">Laura · quarry</p>
+        <p>After the walkway crumbles, keep to the left railing on the next ledge. Take the card before approaching the stairs ahead.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1905s" aria-label="Pickup video for The Lovers at 31:45">Pickup video <span class="meta">· 31:45</span></a> · <a href="rough-night.html#tarot-15">Rough Night route</a> · <a href="massacre.html#tarot-15">Massacre route</a> · <a href="blood-pact.html#tarot-15">Blood Pact route</a> · <a href="finale.html#tarot-15">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-15">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Laura bites Ryan’s arm. In Chapter 9, accept her offer and let Pull Away expire. The infection stops him from bleeding out and lets him reach the Silas hunt if the other conditions are met. <a href="achievements.html#above-the-law">Alliance route</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e8" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e8">
+      <div><label for="check-e8">Scarred Flesh</label><span class="tag">Evidence 8</span>
+        <p class="meta">Laura · quarry</p>
+        <p>After the stairway prompt, check the ground before the next metal walkway. Passing or missing the prompt still lets you collect it. <a href="chapters.html#quarry-stairs">Stair outcomes</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1925s" aria-label="Pickup video for Scarred Flesh at 32:05">Pickup video <span class="meta">· 32:05</span></a> · <a href="rough-night.html#evidence-8">Rough Night route</a> · <a href="massacre.html#evidence-8">Massacre route</a> · <a href="blood-pact.html#evidence-8">Blood Pact route</a> · <a href="finale.html#evidence-8">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo (graphic)</summary>
+          <a href="assets/evidence/scarred-flesh.webp"><img src="assets/evidence/scarred-flesh.webp" width="640" height="640" loading="lazy" decoding="async" alt="A bloodied piece of tissue on the quarry walkway."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t16" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t16">
+      <div><label for="check-t16">Wheel of Fortune</label><span class="tag">Tarot 16</span>
+        <p class="meta">Laura · quarry tunnel</p>
+        <p>Continue through the tunnel and take the card when the camera swings around.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1949s" aria-label="Pickup video for Wheel of Fortune at 32:29">Pickup video <span class="meta">· 32:29</span></a> · <a href="rough-night.html#tarot-16">Rough Night route</a> · <a href="massacre.html#tarot-16">Massacre route</a> · <a href="blood-pact.html#tarot-16">Blood Pact route</a> · <a href="finale.html#tarot-16">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-16">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>The attic confrontation can end with Chris mauling Bobby and killing Ryan while transformed Laura and Travis kill each other. Stab Bobby earlier to leave him unable to fight Chris off. Let the attic shot expire for the mutual death branch. <a href="achievements.html#mutually-assured">Mutually Assured</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t14" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t14">
+      <div><label for="check-t14">The Empress</label><span class="tag">Tarot 14</span>
+        <p class="meta">Ryan · Hackett basement</p>
+        <p>From the basement entrance, turn left into the distillery side room and move around until you see the card.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1974s" aria-label="Pickup video for The Empress at 32:54">Pickup video <span class="meta">· 32:54</span></a> · <a href="rough-night.html#tarot-14">Rough Night route</a> · <a href="massacre.html#tarot-14">Massacre route</a> · <a href="blood-pact.html#tarot-14">Blood Pact route</a> · <a href="finale.html#tarot-14">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-14">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Werewolf Chris kills Constance. Leave her alive during the shotgun struggle and have Ryan stab Bobby. Bobby then cannot defend her during the attic attack. <a href="endings.html#family-matters">Family Matters</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h13" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h13">
+      <div><label for="check-h13">Rum Still</label><span class="tag">Hackett History 13</span>
+        <p class="meta">Ryan · Hackett basement</p>
+        <p>Inspect the distilling equipment in the same side room.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=1987s" aria-label="Pickup video for Rum Still at 33:07">Pickup video <span class="meta">· 33:07</span></a> · <a href="blood-pact.html#clue-h13">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/rum-still.webp"><img src="assets/clues/rum-still.webp" width="640" height="640" loading="lazy" decoding="async" alt="Copper distilling equipment in a corner of the basement."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t17" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t17">
+      <div><label for="check-t17">The Emperor</label><span class="tag">Tarot 17</span>
+        <p class="meta">Ryan · Hackett basement</p>
+        <p>Return to the starting corridor and walk straight through it. Take the card before following the red light.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2002s" aria-label="Pickup video for The Emperor at 33:22">Pickup video <span class="meta">· 33:22</span></a> · <a href="rough-night.html#tarot-17">Rough Night route</a> · <a href="massacre.html#tarot-17">Massacre route</a> · <a href="blood-pact.html#tarot-17">Blood Pact route</a> · <a href="finale.html#tarot-17">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-17">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Werewolf Chris kills Jedediah. As Laura, choose Run to leave Jedediah alive for the encounter. Have Ryan stab Bobby so he cannot protect him. <a href="endings.html#spare-chris">Hackett survival routes</a></p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-8">Open Chapter 8 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-9" data-search="Collectibles" data-chapter="9">
+  <summary><strong>Chapter 9 collectibles</strong><span class="meta">9 locations</span></summary>
+  <div class="entry-body">
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-e9" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e9">
+      <div><label for="check-e9">Kaylee’s Letter</label><span class="tag">Evidence 9</span>
+        <p class="meta">Ryan · Hackett house</p>
+        <p>Open the small jewelry box on the dresser to the right of the fireplace before leaving the bedroom. <a href="chapters.html#ryan-knife-chase">Bedroom route</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2035s" aria-label="Pickup video for Kaylee’s Letter at 33:55">Pickup video <span class="meta">· 33:55</span></a> · <a href="rough-night.html#evidence-9">Rough Night route</a> · <a href="massacre.html#evidence-9">Massacre route</a> · <a href="blood-pact.html#evidence-9">Blood Pact route</a> · <a href="finale.html#evidence-9">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/kaylees-letter.webp"><img src="assets/evidence/kaylees-letter.webp" width="640" height="640" loading="lazy" decoding="async" alt="A folded handwritten note in the open jewelry box."></a>
+          <p>Kaylee tells her grandmother she wants to leave, considers telling people what is happening, and describes nightmares about the fire. <a href="assets/evidence/kaylees-letter-document.webp">Read the letter</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t18" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t18">
+      <div><label for="check-t18">Death</label><span class="tag">Tarot 18</span>
+        <p class="meta">Ryan · Hackett house</p>
+        <p>Cross the bedroom toward the bed before checking the exit door or running out of <a href="chapters.html#ryan-knife-chase">exploration time</a>. If the tarot prompt expires, step away from the camera trigger and return.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2019s" aria-label="Pickup video for Death at 33:39">Pickup video <span class="meta">· 33:39</span></a> · <a href="rough-night.html#tarot-18">Rough Night route</a> · <a href="massacre.html#tarot-18">Massacre route</a> · <a href="blood-pact.html#tarot-18">Blood Pact route</a> · <a href="finale.html#tarot-18">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-18">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>Eliza shows Silas killing Laura after the car crash when the hunt is active. Otherwise she shows Kaitlyn falling from the lodge beam. An uninfected Kaitlyn dies if she chooses Beam and misses both prompts. <a href="#death-vision">How Death chooses its clip</a> · <a href="#death-art">Artwork variants</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h15" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h15">
+      <div><label for="check-h15">Hunting Trophy Wall</label><span class="tag">Hackett History 15</span>
+        <p class="meta">Laura · Hackett house</p>
+        <p>Check the wall beside the stairs in the blue room with a piano.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2066s" aria-label="Pickup video for Hunting Trophy Wall at 34:26">Pickup video <span class="meta">· 34:26</span></a> · <a href="blood-pact.html#clue-h15">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/hunting-trophy-wall.webp"><img src="assets/clues/hunting-trophy-wall.webp" width="640" height="640" loading="lazy" decoding="async" alt="An animal skull mounted on the wall."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h16" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h16">
+      <div><label for="check-h16">Hackett Family Tree</label><span class="tag">Hackett History 16</span>
+        <p class="meta">Laura · Hackett house</p>
+        <p>Go up to the office and inspect the framed chart by the armchair.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2082s" aria-label="Pickup video for Hackett Family Tree at 34:42">Pickup video <span class="meta">· 34:42</span></a> · <a href="blood-pact.html#clue-h16">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/hackett-family-tree.webp"><img src="assets/clues/hackett-family-tree.webp" width="640" height="640" loading="lazy" decoding="async" alt="A framed chart with the Hackett family&#x27;s names and dates."></a>
+          <p>The tree records several generations of Hacketts. It sits upstairs in the house.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t19" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t19">
+      <div><label for="check-t19">The Sun</label><span class="tag">Tarot 19</span>
+        <p class="meta">Laura · Hackett house</p>
+        <p>Skip <a href="chapters.html#hackett-house-extras">the piano</a> to avoid the ambush. Continue to the next upstairs room and walk toward the windows before approaching the door.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2115s" aria-label="Pickup video for The Sun at 35:15">Pickup video <span class="meta">· 35:15</span></a> · <a href="rough-night.html#tarot-19">Rough Night route</a> · <a href="massacre.html#tarot-19">Massacre route</a> · <a href="blood-pact.html#tarot-19">Blood Pact route</a> · <a href="finale.html#tarot-19">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-19">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>The card previews dawn through a counselor’s ending shot. The game checks Emma’s office outcome first, then works down a fixed list. <a href="#sun-vision">See the full priority list</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h14" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h14">
+      <div><label for="check-h14">Scrapyard Note</label><span class="tag">Hackett History 14</span>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
+        <p>In the garage on the right, go up the stairs and check the end of the upper walkway.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2138s" aria-label="Pickup video for Scrapyard Note at 35:38">Pickup video <span class="meta">· 35:38</span></a> · <a href="blood-pact.html#clue-h14">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/scrapyard-note.webp"><img src="assets/clues/scrapyard-note.webp" width="640" height="640" loading="lazy" decoding="async" alt="A scrapyard invoice with a handwritten note in red."></a>
+          <p>The note asks for an SUV with body damage to be kept off the books.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t20" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t20">
+      <div><label for="check-t20">Judgement</label><span class="tag">Tarot 20</span>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
+        <p>Use the garage switch to open the gate. Cross the tops of the shipping containers before approaching the crane. <a href="chapters.html#scrapyard-exploration">Full scrapyard route</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2192s" aria-label="Pickup video for Judgement at 36:32">Pickup video <span class="meta">· 36:32</span></a> · <a href="rough-night.html#tarot-20">Rough Night route</a> · <a href="massacre.html#tarot-20">Massacre route</a> · <a href="blood-pact.html#tarot-20">Blood Pact route</a> · <a href="finale.html#tarot-20">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-20">
+          <summary>Vision <span class="meta">· spoilers</span></summary>
+          <p>The card prioritizes the nest clip when the hunt is active. Otherwise the lodge setup selects the rabbit decoy clip. If Kaitlyn picks up the card alone and never reaches the lodge, the reading can show Jacob’s escape or Max on the island. <a href="#judgement-vision">How Judgement chooses its clip</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f8" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f8">
+      <div><label for="check-f8">Discarded Signage</label><span class="tag">Freakshow Fire 8</span>
+        <p class="meta">Dylan or Kaitlyn · scrapyard</p>
+        <p>Go down the container steps and inspect the painted green sign between the staircases.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2307s" aria-label="Pickup video for Discarded Signage at 38:27">Pickup video <span class="meta">· 38:27</span></a> · <a href="blood-pact.html#clue-f8">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/discarded-signage.webp"><img src="assets/clues/discarded-signage.webp" width="640" height="640" loading="lazy" decoding="async" alt="Broken pieces of painted Harum Scarum signage in the scrapyard."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t21" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t21">
+      <div><label for="check-t21">The Hierophant</label><span class="tag">Tarot 21</span>
+        <p class="meta">Abigail or Emma · storm shelter</p>
+        <p>Walk toward the staircase on the right before using the ladder. <a href="chapters.html#shelter-exploration">Shelter layout and silver pickup</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2337s" aria-label="Pickup video for The Hierophant at 38:57">Pickup video <span class="meta">· 38:57</span></a> · <a href="rough-night.html#tarot-21">Rough Night route</a> · <a href="blood-pact.html#tarot-21">Blood Pact route</a> · <a href="finale.html#tarot-21">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-21">
+          <summary>Flashback <span class="meta">· spoilers</span></summary>
+          <p>The card takes you back to the Harum Scarum fire and reveals Eliza’s connection to Silas. Picking it up replaces the usual Chapter 9 vision choice with the flashback. On the audited PC build, Eliza adds a <a href="achievements.html#hard-pass-chapter-9">Hard Pass credit</a> as she introduces the flashback. Leave this card in the shelter if you want to view Death, The Sun, or Judgement. <a href="reference.html#lore">Fire and curse</a></p>
+          <p>When Eliza approaches the body, pass the directional prompt to dodge the flying stake and inspect the sheriff’s badge. Missing the prompt lets the stake impale her. The Steam PC scene rules pass the dodge automatically in Couch Co-op and Movie Mode.</p>
+          <p class="source-note">Sources · Steam PC build 11105655, fire scene rules · <a href="https://www.youtube.com/watch?v=G2YWdSv9YJA&amp;t=155s">Dodge footage at 2:35</a> · <a href="https://www.youtube.com/watch?v=G2YWdSv9YJA&amp;t=258s">Miss footage at 4:18</a> · <a href="reference.html#song-devil-inside">Music in the extended cut</a></p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-9">Open Chapter 9 walkthrough</a></p>
+  </div>
+</details>
+<details class="entry" id="collect-10" data-search="Collectibles" data-chapter="10">
+  <summary><strong>Chapter 10 collectibles</strong><span class="meta">7 locations</span></summary>
+  <div class="entry-body">
+    <details class="entry chapter-choices" id="lodge-pickup-map">
+      <summary><strong>Lodge pickup map</strong><span class="meta">Locations by floor</span></summary>
+      <div class="entry-body">
+        <figure class="reference-shot">
+          <img class="walkthrough-shot" src="assets/lodge-pickups.svg" width="320" height="316" loading="lazy" alt="From the main hall, go upstairs. The landing has the Camp Letter, Ancestral Portrait, Ticket Stub and Chalkboard Doodle. The upper floor has The High Priestess, Inscribed Jewelry and Trail Cam Footage.">
+          <figcaption class="meta">* The Ticket Stub needs the Chapter 5 setup. Choose Keep Looking at the portrait until you finish the checklist. <a href="#item-f9">Ticket Stub setup</a> · <a href="chapters.html#lodge-preparation">Other lodge interactions</a></figcaption>
+        </figure>
+      </div>
+    </details>
+    <ul class="checklist" role="list">
+    <li class="collectible" id="item-c12" data-type="clue" data-clue-group="camp-history" data-search="Collectible">
+      <input type="checkbox" id="check-c12">
+      <div><label for="check-c12">Camp Letter</label><span class="tag">Camp History 12</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>Go up the first stairs and into the bunk room on the left. Look for the note on the floor.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2350s" aria-label="Pickup video for Camp Letter at 39:10">Pickup video <span class="meta">· 39:10</span></a> · <a href="blood-pact.html#clue-c12">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/camp-letter.webp"><img src="assets/clues/camp-letter.webp" width="640" height="640" loading="lazy" decoding="async" alt="A typed letter from Chris about the cost of repairs to the lodge."></a>
+          <p>Chris asks parents for extra money to cover lodge renovations.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-t22" data-type="tarot" data-search="Collectible">
+      <input type="checkbox" id="check-t22">
+      <div><label for="check-t22">The High Priestess</label><span class="tag">Tarot 22</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>Take the stairs next to the bunk room and walk toward the top-floor windows for the card. If the prompt expires, step away until the camera resets and approach again.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2404s" aria-label="Pickup video for The High Priestess at 40:04">Pickup video <span class="meta">· 40:04</span></a> · <a href="rough-night.html#tarot-22">Rough Night route</a> · <a href="massacre.html#tarot-22">Massacre route</a> · <a href="blood-pact.html#tarot-22">Blood Pact route</a> · <a href="finale.html#tarot-22">Finale routes</a></p>
+        <details class="tarot-vision" id="vision-22">
+          <summary>Card meaning <span class="meta">· spoilers</span></summary>
+          <p>The last card explains Eliza’s role. It has no selectable vision after Chapter 10. Collect it before preparing for the lodge attack to finish Decked Out if you have the first 21 cards. <a href="achievements.html#decked-out">Decked Out</a></p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h19" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h19">
+      <div><label for="check-h19">Ancestral Portrait</label><span class="tag">Hackett History 19</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>On the level below the top floor, check the portrait midway along the landing. Choose <a href="chapters.html#lodge-portrait-choice">Keep Looking</a> until you have every item.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2450s" aria-label="Pickup video for Ancestral Portrait at 40:50">Pickup video <span class="meta">· 40:50</span></a> · <a href="blood-pact.html#clue-h19">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/ancestral-portrait.webp"><img src="assets/clues/ancestral-portrait.webp" width="640" height="640" loading="lazy" decoding="async" alt="An oil portrait of Septimus Hackett holding a book."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-f9" data-type="clue" data-clue-group="freakshow-fire" data-search="Collectible">
+      <input type="checkbox" id="check-f9">
+      <div><label for="check-f9">Ticket Stub</label><span class="tag">Freakshow Fire 9</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>In Chapter 5, press Right at the flashlight. Miss Left at the banister, or pass it and fail Don’t Breathe. Bobby lifts the table and knocks down the frame before Kaitlyn aims. In Chapter 10, inspect the broken frame on the floor near the portrait.</p>
+        <p class="source-note">The Steam PC scene sets the fallen-picture flag before combat, and Chapter 10 uses it to show the pickup. <a href="chapters.html#ticket-stub-setup">Chapter 5 setup</a> · <a href="reference.html#fire-date">Read the dated ticket</a></p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2622s" aria-label="Pickup video for Ticket Stub at 43:42">Pickup video <span class="meta">· 43:42</span></a> · <a href="blood-pact.html#clue-f9">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/ticket-stub.webp"><img src="assets/clues/ticket-stub.webp" width="640" height="640" loading="lazy" decoding="async" alt="A Harum Scarum ticket lying beside a picture frame."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h17" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h17">
+      <div><label for="check-h17">Chalkboard Doodle</label><span class="tag">Hackett History 17</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>Go past the portrait to the classroom and inspect the board.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2487s" aria-label="Pickup video for Chalkboard Doodle at 41:27">Pickup video <span class="meta">· 41:27</span></a> · <a href="blood-pact.html#clue-h17">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/chalkboard-doodle.webp"><img src="assets/clues/chalkboard-doodle.webp" width="640" height="640" loading="lazy" decoding="async" alt="A sketch of a sheep on a classroom board with a message for Ian."></a>
+          <p>The drawing remembers Ian, the camp mascot. Compare it with the Bloodied Collar from the prologue.</p>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-h18" data-type="clue" data-clue-group="hackett-history" data-search="Collectible">
+      <input type="checkbox" id="check-h18">
+      <div><label for="check-h18">Inscribed Jewelry</label><span class="tag">Hackett History 18</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>Leave the classroom, turn left up the stairs and check the couch.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2521s" aria-label="Pickup video for Inscribed Jewelry at 42:01">Pickup video <span class="meta">· 42:01</span></a> · <a href="blood-pact.html#clue-h18">Blood Pact route</a></p>
+        <details class="headline-art">
+          <summary>Journal photo</summary>
+          <a href="assets/clues/inscribed-jewelry.webp"><img src="assets/clues/inscribed-jewelry.webp" width="640" height="640" loading="lazy" decoding="async" alt="A close-up of Bobby Hackett&#x27;s ring."></a>
+        </details>
+      </div>
+    </li>
+    <li class="collectible" id="item-e10" data-type="evidence" data-search="Collectible">
+      <input type="checkbox" id="check-e10">
+      <div><label for="check-e10">Trail Cam Footage</label><span class="tag">Evidence 10</span>
+        <p class="meta">Kaitlyn · lodge</p>
+        <p>Inspect the boxes on the upper floor near the couch before starting the attack.</p>
+        <p class="pickup-video"><a href="https://www.youtube.com/watch?v=n7fbCRG1nis&amp;t=2564s" aria-label="Pickup video for Trail Cam Footage at 42:44">Pickup video <span class="meta">· 42:44</span></a> · <a href="rough-night.html#evidence-10">Rough Night route</a> · <a href="massacre.html#evidence-10">Massacre route</a> · <a href="blood-pact.html#evidence-10">Blood Pact route</a> · <a href="finale.html#evidence-10">Finale routes</a></p>
+        <details class="headline-art">
+          <summary>Evidence photo</summary>
+          <a href="assets/evidence/trail-cam-footage.webp"><img src="assets/evidence/trail-cam-footage.webp" width="640" height="640" loading="lazy" decoding="async" alt="A group of tapes with labels marked Full Moon."></a>
+          <p>The journal says these recordings go back six years. The credits play the dedicated tape clip only if you also found the Empty Vial, Cease &amp; Desist Letter or Kaylee’s Letter. <a href="epilogue.html#podcast-discussion">Credits discussion</a></p>
+        </details>
+      </div>
+    </li>
+    </ul>
+    <p><a href="chapters.html#chapter-10">Open Chapter 10 walkthrough</a></p>
+  </div>
+</details>
+</div>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap bar">
+      <a class="brand" href="index.html"><img src="assets/mark.svg" width="36" height="36" alt=""><span>THE QUARRY<small>FIELD GUIDE</small></span></a>
+      <p>Unofficial fan guide. Game and screenshots © 2K / Supermassive Games.</p>
+      <a href="index.html#guide-index">Guide index ↑</a>
+      <a href="https://github.com/Aughhhhhhh/the-quarry">GitHub ↗</a>
+    </div>
+  </footer>
+</body>
+</html>

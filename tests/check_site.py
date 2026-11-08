@@ -2,6 +2,7 @@ from collections import Counter
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+import json
 import re
 
 
@@ -93,47 +94,63 @@ for page in pages.values():
     for target, anchor in page.page_links:
         assert target in pages and (not anchor or anchor in pages[target].ids), (target, anchor)
 
-guide = pages["index.html"]
-assert guide.items == {"clue": 40, "evidence": 10, "tarot": 22}, guide.items
-assert guide.clue_groups == {"camp-history": 12, "freakshow-fire": 9, "hackett-history": 19}, guide.clue_groups
-assert len(guide.pickup_times) == sum(guide.pickup_times.values()) == sum(guide.items.values()), guide.pickup_times
-assert {f"vision-{card}" for card in range(1, 23)} <= guide.ids.keys()
-assert guide.entries["Achievement"] == 41, guide.entries
-award_section = (root / "index.html").read_text(encoding="utf-8").split('id="achievements"', 1)[1].split("</section>", 1)[0]
+home = pages["index.html"]
+chapters = pages["chapters.html"]
+collectibles = pages["collectibles.html"]
+achievements = pages["achievements.html"]
+reference = pages["reference.html"]
+endings = pages["endings.html"]
+
+legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
+assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}
+legacy_ids = set()
+for name, anchors in legacy.items():
+    assert set(anchors) <= pages[name].ids.keys(), name
+    assert not legacy_ids.intersection(anchors), name
+    assert any(target == name for target, _ in home.page_links), name
+    legacy_ids.update(anchors)
+assert not legacy_ids.intersection(home.ids), "Moved references should live on their section pages"
+assert sum(len(anchors) for anchors in legacy.values()) == len(legacy_ids)
+assert collectibles.items == {"clue": 40, "evidence": 10, "tarot": 22}, collectibles.items
+assert collectibles.clue_groups == {"camp-history": 12, "freakshow-fire": 9, "hackett-history": 19}, collectibles.clue_groups
+assert len(collectibles.pickup_times) == sum(collectibles.pickup_times.values()) == sum(collectibles.items.values()), collectibles.pickup_times
+assert {f"vision-{card}" for card in range(1, 23)} <= collectibles.ids.keys()
+assert achievements.entries["Achievement"] == 41, achievements.entries
+award_section = (root / "achievements.html").read_text(encoding="utf-8").split('id="achievements"', 1)[1].split("</section>", 1)[0]
 award_values = re.findall(r"(Bronze|Silver|Gold)\s*·\s*(\d+)G\s*</span>", unescape(award_section))
 assert Counter(grade for grade, _ in award_values) == {"Bronze": 29, "Silver": 7, "Gold": 4}, award_values
 assert sum(int(score) for _, score in award_values) == 1000, award_values
-assert guide.entries["Walkthrough"] == 12, guide.entries
-assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()
-assert guide.entries["Puzzle"] == 1 and "cage-puzzle" in guide.ids
-assert guide.entries["Story path"] == 15, guide.entries
-assert guide.entries["Location"] == 15, guide.entries
+assert chapters.entries["Walkthrough"] == 12, chapters.entries
+assert {f"choices-{chapter}" for chapter in range(11)} <= chapters.ids.keys()
+assert chapters.entries["Puzzle"] == 1 and "cage-puzzle" in chapters.ids
+assert reference.entries["Story path"] == 15, reference.entries
+assert reference.entries["Location"] == 15, reference.entries
 sole_survivors = {
     "sole-abi", "sole-dylan", "sole-emma", "sole-jacob", "final-girl",
     "sole-laura", "sole-max", "sole-nick", "last-man-standing",
 }
-assert sole_survivors <= guide.ids.keys()
-assert guide.list_items == {
+assert sole_survivors <= endings.ids.keys()
+assert (reference.list_items + collectibles.list_items) == {
     "score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6,
     "tarot-gallery-cards": 22, "death-art-variants": 8,
     "death-vision-options": 2, "sun-vision-order": 9, "judgement-vision-order": 4,
-}, guide.list_items
+}, (reference.list_items + collectibles.list_items)
 rough_night = pages["rough-night.html"]
 assert {"setup", "prologue", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= rough_night.ids.keys()
 for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
     for number in range(1, count + 1):
         assert f"{kind}-{number}" in rough_night.ids
-        assert ("index.html", f"item-{prefix}{number}") in rough_night.page_links
-        assert ("rough-night.html", f"{kind}-{number}") in guide.page_links
+        assert ("collectibles.html", f"item-{prefix}{number}") in rough_night.page_links
+        assert ("rough-night.html", f"{kind}-{number}") in collectibles.page_links
 
 massacre = pages["massacre.html"]
 assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
 for survivor in sole_survivors:
-    assert survivor in massacre.ids and ("massacre.html", survivor) in guide.page_links
+    assert survivor in massacre.ids and ("massacre.html", survivor) in endings.page_links
 for kind, prefix, numbers in (("tarot", "t", {6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22}), ("evidence", "e", {5, 7, 8, 9, 10})):
     assert {key for key in massacre.ids if key.startswith(kind + "-")} == {f"{kind}-{number}" for number in numbers}
-    assert {("index.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
-    assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= guide.page_links
+    assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
+    assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
 
 blood_pact = pages["blood-pact.html"]
 assert {"setup", "prologue", "both-crane-bites", "mutually-assured", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= blood_pact.ids.keys()
@@ -143,8 +160,8 @@ pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(1, 23) 
 pickups.update({f"evidence-{number}": f"item-e{number}" for number in range(1, 11)})
 assert pickups.keys() <= blood_pact.ids.keys() and "tarot-3" not in blood_pact.ids
 for route_anchor, item in pickups.items():
-    assert ("blood-pact.html", route_anchor) in guide.page_links
-    assert ("index.html", item) in blood_pact.page_links
+    assert ("blood-pact.html", route_anchor) in collectibles.page_links
+    assert ("collectibles.html", item) in blood_pact.page_links
 
 finale = pages["finale.html"]
 finale_routes = {
@@ -152,10 +169,10 @@ finale_routes = {
     "no-soul-left", "no-soul-headline-replays",
 }
 assert finale_routes | {"setup", "no-soul-evidence", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= finale.ids.keys()
-assert {("finale.html", route) for route in finale_routes} <= guide.page_links
+assert {("finale.html", route) for route in finale_routes} <= endings.page_links | achievements.page_links
 for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", range(4, 11))):
-    assert {("finale.html", f"{kind}-{number}") for number in numbers} <= guide.page_links
-    assert {("index.html", f"item-{prefix}{number}") for number in numbers} <= finale.page_links
+    assert {("finale.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= finale.page_links
 
 epilogue = pages["epilogue.html"]
 assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
