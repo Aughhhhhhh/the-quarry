@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="218" viewBox="0 0 320 218">
+  <rect width="320" height="218" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="63" y="10" width="194" height="70" rx="4"/>
+    <rect x="10" y="104" width="142" height="57" rx="4"/>
+    <rect x="168" y="104" width="142" height="57" rx="4"/>
+    <rect x="89" y="185" width="142" height="23" rx="4"/>
+  </g>
+  <path d="M160 80v12H81v12m79-12h79v12M81 161v12h158v-12m-79 12v10m-4-4 4 4 4-4" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="13">
+    <g fill="#f2a674" font-weight="700">
+      <text x="160" y="30">Firepit and stairs</text>
+      <text x="81" y="126">Left trail</text>
+      <text x="239" y="126">Right trail</text>
+      <text x="160" y="201">Hunters</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="160" y="49">Kid’s Letter Home</text>
+      <text x="160" y="68">Firework and note if available</text>
+      <text x="81" y="147">Dead boar</text>
+      <text x="239" y="147">Snare and detour</text>
+    </g>
+  </g>
+</svg>
