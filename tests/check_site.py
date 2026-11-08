@@ -108,10 +108,11 @@ assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()
 assert guide.entries["Puzzle"] == 1 and "cage-puzzle" in guide.ids
 assert guide.entries["Story path"] == 15, guide.entries
 assert guide.entries["Location"] == 15, guide.entries
-assert {
+sole_survivors = {
     "sole-abi", "sole-dylan", "sole-emma", "sole-jacob", "final-girl",
     "sole-laura", "sole-max", "sole-nick", "last-man-standing",
-} <= guide.ids.keys()
+}
+assert sole_survivors <= guide.ids.keys()
 assert guide.list_items == {
     "score-tracks": 30, "licensed-tracks": 7, "library-tracks": 31, "podcast-episodes": 6,
     "tarot-gallery-cards": 22, "death-art-variants": 8,
@@ -123,8 +124,16 @@ for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
     for number in range(1, count + 1):
         assert f"{kind}-{number}" in rough_night.ids
         assert ("index.html", f"item-{prefix}{number}") in rough_night.page_links
-        if kind == "tarot":
-            assert ("rough-night.html", f"tarot-{number}") in guide.page_links
+        assert ("rough-night.html", f"{kind}-{number}") in guide.page_links
+
+massacre = pages["massacre.html"]
+assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
+for survivor in sole_survivors:
+    assert survivor in massacre.ids and ("massacre.html", survivor) in guide.page_links
+for kind, prefix, numbers in (("tarot", "t", {6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22}), ("evidence", "e", {5, 7, 8, 9, 10})):
+    assert {key for key in massacre.ids if key.startswith(kind + "-")} == {f"{kind}-{number}" for number in numbers}
+    assert {("index.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
+    assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= guide.page_links
 
 epilogue = pages["epilogue.html"]
 assert len(epilogue.characters) == 17, epilogue.characters
