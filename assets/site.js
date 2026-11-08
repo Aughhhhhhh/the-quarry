@@ -140,7 +140,7 @@ function filterChecklist() {
       const isChecked = item.querySelector("input").checked;
       checked += Number(isChecked);
       item.hidden = Boolean(
-        (type.value && type.value !== item.dataset.type) ||
+        (type.value && type.value !== item.dataset.type && type.value !== item.dataset.clueGroup) ||
         (chapter.value && chapter.value !== group.dataset.chapter) ||
         (unchecked.checked && isChecked)
       );

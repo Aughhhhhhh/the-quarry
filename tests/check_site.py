@@ -9,6 +9,7 @@ class Guide(HTMLParser):
         self.ids = Counter()
         self.entries = Counter()
         self.items = Counter()
+        self.clue_groups = Counter()
         self.pickup_times = Counter()
         self.fates = Counter()
         self.recaps = Counter()
@@ -29,6 +30,8 @@ class Guide(HTMLParser):
             self.entries[attrs["data-search"]] += 1
         if "data-type" in attrs:
             self.items[attrs["data-type"]] += 1
+        if attrs.get("data-type") == "clue":
+            self.clue_groups[attrs.get("data-clue-group")] += 1
         if "data-fate" in attrs:
             self.fates[attrs["data-fate"]] += 1
         if "data-recap" in attrs:
@@ -82,6 +85,7 @@ for page in pages.values():
 
 guide = pages["index.html"]
 assert guide.items == {"clue": 40, "evidence": 10, "tarot": 22}, guide.items
+assert guide.clue_groups == {"camp-history": 12, "freakshow-fire": 9, "hackett-history": 19}, guide.clue_groups
 assert len(guide.pickup_times) == sum(guide.pickup_times.values()) == sum(guide.items.values()), guide.pickup_times
 assert {f"vision-{card}" for card in range(1, 23)} <= guide.ids.keys()
 assert guide.entries["Achievement"] == 41, guide.entries
