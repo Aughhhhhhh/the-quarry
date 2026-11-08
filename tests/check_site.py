@@ -208,6 +208,23 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 
 epilogue = pages["epilogue.html"]
+laura_max_routes = pages["laura-max-routes.html"]
+assert {"setup", "pickup-index", "prologue", "chapter-3", "chapter-4", "chapter-7", "chapter-8",
+        "chapter-9", "chapter-10", "hunt"} <= laura_max_routes.ids.keys()
+for name, anchors in (
+    ("laura", ("nest-shot", "island-reunion", "vial-survival", "capture", "crash-shot",
+               "crash-death", "revenge", "mutual", "nest-death", "shoot-laura")),
+    ("max", ("stay", "wait-laura", "island-reunion", "max-infected", "swim")),
+):
+    assert {("epilogue.html", f"card-{name}-{number}") for number in range(1, len(anchors) + 1)} <= laura_max_routes.page_links
+    assert {("laura-max-routes.html", anchor) for anchor in anchors} <= epilogue.page_links
+assert ("laura-max-routes.html", "") in endings.page_links
+assert ("laura-max-routes.html", "island-reunion") in achievements.page_links
+for kind, short, numbers in (("tarot", "t", (1, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22)),
+                             ("evidence", "e", (4, 7, 8, 9, 10))):
+    assert {("laura-max-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= laura_max_routes.page_links
+
 abi_nick_routes = pages["abi-nick-routes.html"]
 assert {f"chapter-{chapter}" for chapter in (1, 2, 3, 5, 6, 8, 9, 10)} <= abi_nick_routes.ids.keys()
 for name, count in (("abi", 5), ("nick", 4)):
