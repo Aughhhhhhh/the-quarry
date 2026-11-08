@@ -7,8 +7,8 @@
   <meta name="description" content="Look up epilogue outcomes from The Quarry, with the choices that lead to each fate card.">
   <title>Epilogue cards · The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/epilogue.js" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=5">
+  <script src="assets/epilogue.js?v=2" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -1162,7 +1162,7 @@
               </ol>
               <p>Gunfire here refers to deaths of counselors. For example, Laura shooting Nick counts. Laura shooting Kaylee and Ryan shooting Chris do not add to that count.</p>
               <h3>Closing headlines</h3>
-              <p>With <a href="./#collectibles">all ten evidence items</a>, use the row linked to your opening. With fewer than ten, use the first matching evidence group at the end of the list. The missing-hikers variants count Bobby, Constance, Jedediah, Chris, Travis and Caleb.</p>
+              <p id="closing-all-evidence">With all ten evidence items, use the row linked to your opening. With fewer than ten, use the first matching evidence group at the end of the list. The missing-hikers variants count Bobby, Constance, Jedediah, Chris, Travis and Caleb. <a href="#podcast-evidence">Preview a set of evidence</a></p>
               <ol id="headline-asset-outros">
                 <li><strong>Teens acquitted after the shooting is ruled self-defense.</strong> All evidence and the <a href="#opening-all-alive">local-girl shooting opening</a>.</li>
                 <li><strong>Case reopens and the teens are acquitted.</strong> All evidence and the <a href="#opening-family-killed">family-killed opening</a>.</li>
@@ -1179,33 +1179,37 @@
                 <li><strong>A family is charged with murdering a teen and the missing hikers.</strong> The game files pair this with all evidence and the <a href="#opening-drowning">drowning opening</a>. In a standard run, Jacob’s drowning prevents him from reaching the Chapter 6 Memory Card.</li>
                 <li><strong>The deceased Hacketts are blamed for instigating the murders.</strong> All evidence and the <a href="#opening-mystery-family-dead">murder mystery opening that mentions police questioning the teens alone</a>.</li>
                 <li><strong>The Hacketts are arrested for killing one teen.</strong> All evidence and the <a href="#opening-mystery-family-alive">murder mystery opening that mentions police questioning the teens and a family</a>.</li>
-                <li><strong>Hiker remains recovered and multiple Hacketts charged.</strong> Collect <a href="./#item-e3">Bloated Corpse</a>, <a href="./#item-e6">Memory Card</a> and <a href="./#item-e2">Torn Bags</a>. At least two of the six Hacketts survive.</li>
+                <li id="closing-hiker-evidence"><strong>Hiker remains recovered and multiple Hacketts charged.</strong> Collect <a href="./#item-e3">Bloated Corpse</a>, <a href="./#item-e6">Memory Card</a> and <a href="./#item-e2">Torn Bags</a>. At least two of the six Hacketts survive.</li>
                 <li><strong>Hiker remains recovered and one Hackett charged.</strong> Collect the same three items with one of the six Hacketts alive.</li>
                 <li><strong>Hiker remains recovered and the deceased Hacketts blamed.</strong> Collect the same three items with all six Hacketts dead.</li>
-                <li><strong>Unidentified animals are loose in North Kill Forest.</strong> If you missed any of the three hiker items, collect at least one of <a href="./#item-e4">Attack Photo</a>, <a href="./#item-e8">Scarred Flesh</a> or <a href="./#item-e5">Claw Marks</a>.</li>
-                <li><strong>Evidence describes Kaylee’s private struggles.</strong> Collect <a href="./#item-e9">Kaylee’s Letter</a> and leave both earlier evidence groups incomplete. For the animal group, that means skipping all three items.</li>
-                <li><strong>The summer camp closes for good.</strong> Miss the hiker set, all three animal items and Kaylee’s Letter. Empty Vial, Cease &amp; Desist Letter and Trail Cam Footage can change the conversation while leaving this headline in place.</li>
+                <li id="closing-animal-evidence"><strong>Unidentified animals are loose in North Kill Forest.</strong> If you missed any of the three hiker items, collect at least one of <a href="./#item-e4">Attack Photo</a>, <a href="./#item-e8">Scarred Flesh</a> or <a href="./#item-e5">Claw Marks</a>.</li>
+                <li id="closing-kaylee-letter"><strong>Evidence describes Kaylee’s private struggles.</strong> Collect <a href="./#item-e9">Kaylee’s Letter</a> with an incomplete hiker set and none of the three animal items.</li>
+                <li id="closing-camp-closed"><strong>The summer camp closes for good.</strong> Miss the hiker set, all three animal items and Kaylee’s Letter. Empty Vial, Cease &amp; Desist Letter and Trail Cam Footage can change the conversation while leaving this headline in place.</li>
               </ol>
               <p class="source-note">Audit · Steam PC build 11105655. The rules come from <code>podcast_gameflow</code>, the evidence subgraphs and character ending enums. Each scene’s monitor material was traced to its newspaper artwork. The galleries show 34 variants and omit the foul-play reopening. <a href="#headlines">Recorded examples</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0lhw/all_the_newspaper_variants_pt_1/">Gallery 1</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0mud/all_the_newspaper_variants_pt_2/">Gallery 2</a></p>
             </div>
           </details>
           <details class="entry" id="podcast-evidence">
-            <summary><strong>Evidence in the credits podcast</strong><span class="meta">Ten items in discussion order</span></summary>
+            <summary><strong>Evidence in the credits podcast</strong><span class="meta">Discussion order · closing headline preview</span></summary>
             <div class="entry-body">
-              <p>Grace and Anton skip the items you missed. The first three are about the missing hikers. A break about the Hackett family follows, then the discussion turns to camp and werewolf evidence.</p>
+              <p>Grace and Anton first cover the missing hikers, then the Hacketts, then signs of a werewolf. They use different clips for each group depending on which items you found. An empty evidence run skips all three discussions and plays a shorter episode.</p>
+              <p id="podcast-preview-instructions" hidden>Select the evidence you collected in this run to preview the closing headline.</p>
               <ol id="podcast-evidence-order">
-                <li><a href="./#item-e3">Bloated Corpse</a></li>
-                <li><a href="./#item-e6">Memory Card</a></li>
-                <li><a href="./#item-e2">Torn Bags</a></li>
-                <li><a href="./#item-e9">Kaylee’s Letter</a></li>
-                <li><a href="./#item-e7">Cease &amp; Desist Letter</a></li>
-                <li><a href="./#item-e1">Empty Vial</a></li>
-                <li><a href="./#item-e10">Trail Cam Footage</a></li>
-                <li><a href="./#item-e4">Attack Photo</a></li>
-                <li><a href="./#item-e5">Claw Marks</a></li>
-                <li><a href="./#item-e8">Scarred Flesh</a></li>
+                <li><input type="checkbox" name="hiker" hidden aria-labelledby="podcast-item-e3"><a id="podcast-item-e3" href="./#item-e3">Bloated Corpse</a></li>
+                <li><input type="checkbox" name="hiker" hidden aria-labelledby="podcast-item-e6"><a id="podcast-item-e6" href="./#item-e6">Memory Card</a></li>
+                <li><input type="checkbox" name="hiker" hidden aria-labelledby="podcast-item-e2"><a id="podcast-item-e2" href="./#item-e2">Torn Bags</a></li>
+                <li><input type="checkbox" name="kaylee" hidden aria-labelledby="podcast-item-e9"><a id="podcast-item-e9" href="./#item-e9">Kaylee’s Letter</a></li>
+                <li><input type="checkbox" name="other" hidden aria-labelledby="podcast-item-e7"><a id="podcast-item-e7" href="./#item-e7">Cease &amp; Desist Letter</a></li>
+                <li><input type="checkbox" name="other" hidden aria-labelledby="podcast-item-e1"><a id="podcast-item-e1" href="./#item-e1">Empty Vial</a></li>
+                <li><input type="checkbox" name="other" hidden aria-labelledby="podcast-item-e10"><a id="podcast-item-e10" href="./#item-e10">Trail Cam Footage</a></li>
+                <li><input type="checkbox" name="animal" hidden aria-labelledby="podcast-item-e4"><a id="podcast-item-e4" href="./#item-e4">Attack Photo</a></li>
+                <li><input type="checkbox" name="animal" hidden aria-labelledby="podcast-item-e5"><a id="podcast-item-e5" href="./#item-e5">Claw Marks</a></li>
+                <li><input type="checkbox" name="animal" hidden aria-labelledby="podcast-item-e8"><a id="podcast-item-e8" href="./#item-e8">Scarred Flesh</a></li>
               </ol>
-              <p class="source-note">Sources · <a href="https://gamefaqs.gamespot.com/xbox-series-x/361619-the-quarry/faqs/80282">GameFAQs · recorded discussion order</a> · <a href="./#podcast-reference">Companion episodes</a></p>
+              <p class="notice" id="podcast-preview" role="status" hidden><strong></strong> · <a href="#closing-camp-closed"></a></p>
+              <p>With the full hiker set and fewer than ten items, the hosts plan to go to the police. Their dialogue checks Bobby, Constance, Jedediah, Chris and Travis. The closing headline also checks Caleb.</p>
+              <p>The hosts can discuss a partial hiker set and still use the camp-closure ending. The Empty Vial, Cease &amp; Desist Letter or Trail Cam Footage can give that ending different closing dialogue. The same headline can accompany either version. <a href="#headline-assets">All headline rules</a></p>
+              <p class="source-note">Audit · Steam PC build 11105655, evidence checks, discussion branches and closing selectors. <a href="https://gamefaqs.gamespot.com/xbox-series-x/361619-the-quarry/faqs/80282">GameFAQs · recorded discussion order</a> · <a href="./#podcast-reference">Companion episodes</a></p>
             </div>
           </details>
         </div>

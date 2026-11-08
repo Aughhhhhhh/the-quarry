@@ -137,6 +137,7 @@ input::placeholder { color: #b2bcb2; }
 .choice-list dt { font-weight: 750; }
 .choice-list dd { margin: .2rem 0 .8rem; }
 .choice-list dd + dt { border-top: 1px solid var(--line); padding-top: .65rem; }
+#podcast-evidence-order input { width: 1.2rem; height: 1.2rem; margin: 0 .6rem 0 0; accent-color: var(--accent); vertical-align: middle; }
 .cage-layout { display: grid; grid-template-columns: repeat(5, auto); align-items: stretch; gap: .25rem; max-width: 34rem; margin: 1rem 0; }
 .cage-layout span { display: grid; place-items: center; min-width: 0; padding: .5rem .22rem; border: 1px solid var(--line); border-radius: .3rem; font-size: .85rem; text-align: center; }
 .cage-layout b { color: var(--accent); }

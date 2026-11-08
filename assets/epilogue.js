@@ -53,3 +53,37 @@ filters.addEventListener("input", filterCards);
 window.addEventListener("hashchange", revealCard);
 filterCards();
 revealCard();
+
+const evidenceList = document.querySelector("#podcast-evidence-order");
+const evidenceOptions = Array.from(evidenceList.querySelectorAll("input"));
+const preview = document.querySelector("#podcast-preview");
+const previewCount = preview.querySelector("strong");
+const previewLink = preview.querySelector("a");
+
+function updateEvidencePreview() {
+  const selected = evidenceOptions.filter(item => item.checked);
+  let target = "#closing-camp-closed";
+  let headline = "The summer camp closes for good";
+  if (selected.length === evidenceOptions.length) {
+    target = "#closing-all-evidence";
+    headline = "Use your opening headline to find the closing";
+  } else if (selected.filter(item => item.name === "hiker").length === 3) {
+    target = "#closing-hiker-evidence";
+    headline = "Hiker remains recovered. Check which Hacketts survive";
+  } else if (selected.some(item => item.name === "animal")) {
+    target = "#closing-animal-evidence";
+    headline = "Unidentified animals are loose in North Kill Forest";
+  } else if (selected.some(item => item.name === "kaylee")) {
+    target = "#closing-kaylee-letter";
+    headline = "Evidence describes Kaylee’s private struggles";
+  }
+  previewCount.textContent = `${selected.length} of ${evidenceOptions.length} selected`;
+  previewLink.href = target;
+  previewLink.textContent = headline;
+}
+
+for (const item of evidenceOptions) item.hidden = false;
+document.querySelector("#podcast-preview-instructions").hidden = false;
+preview.hidden = false;
+evidenceList.addEventListener("change", updateEvidencePreview);
+updateEvidencePreview();
