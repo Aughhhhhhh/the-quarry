@@ -274,7 +274,16 @@ for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
 
 massacre = pages["massacre.html"]
 assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", "ticket-setup", "jacob-pickups", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
+assert ("massacre.html", "collection-routes") in tarot_route.page_links
+massacre_html = (root / "massacre.html").read_text(encoding="utf-8")
+massacre_branches = dict(re.findall(r'id="' + pickup_pattern + r'"[^>]*data-pickup-branches="([^"]+)"', massacre_html))
+for branch, cards in (("collection", 16), ("abi-collection", 17)):
+    assert f'<option value="{branch}" data-start="4">' in massacre_html
+    counts = Counter(anchor.split("-")[0] for anchor in massacre.ids
+                     if re.fullmatch(pickup_pattern, anchor) and (anchor not in massacre_branches or branch in massacre_branches[anchor].split()))
+    assert counts["tarot"] == cards and counts["evidence"] == 7, (branch, counts)
 sole_routes = pages["sole-survivors.html"]
+assert ("massacre.html", "collection-routes") in sole_routes.page_links
 assert ("sole-survivors.html", "") in walkthroughs.page_links
 assert "pickup-replay" in massacre.ids and ("massacre.html", "pickup-index") in sole_routes.page_links
 assert {"sole-ryan-vial", "cured-sole-survivor", "finish-crane", "finish-attic", "finish-lodge", "finish-vial"} <= sole_routes.ids.keys()

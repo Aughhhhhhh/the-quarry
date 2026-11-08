@@ -39,6 +39,7 @@
         <nav aria-label="Massacre chapters">
           <a href="#setup">Before you start</a>
           <a href="#pickup-index">Find a pickup</a>
+          <a href="#collection-routes">Collect cards and evidence</a>
           <a href="#chapter-4">4 · Jacob and Emma</a>
           <a href="#chapter-5">5 · Dylan’s hand</a>
           <a href="#chapter-6">6 · Abi and Nick</a>
@@ -74,6 +75,8 @@
                 <label for="pickup-replay">Replay</label>
                 <select id="pickup-replay" name="survivor" aria-describedby="pickup-replay-note">
                   <option value="">Massacre and alternate pickups</option>
+                  <option value="collection" data-start="4">All nine die · Cards and evidence</option>
+                  <option value="abi-collection" data-start="4">Only Abi survives · Full deck and evidence</option>
                   <option value="abi" data-start="6">Abigail · Chapter 6</option>
                   <option value="dylan" data-start="5">Dylan · Chapter 5</option>
                   <option value="emma" data-start="4">Emma · Shelter route</option>
@@ -92,7 +95,33 @@
             </form>
             <p class="meta" id="pickup-replay-note">Read the conditions inside each step. For example, Justice on the Abigail replay still needs Jacob alive at the start of Chapter 6. <a href="sole-survivors.html">Survivor walkthroughs</a> · <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
           </details>
-          <p class="meta">The shortest massacre skips <a href="#evidence-4">Attack Photo</a> and <a href="#jacob-pickups">Justice and Memory Card</a>. The alternate deaths below let you collect them. Use the sole-survivor replays for <a href="#clue-c9">Kid’s Letter Home</a> and <a href="#tarot-21">The Hierophant</a>.</p>
+          <p class="meta">The shortest massacre skips <a href="#evidence-4">Attack Photo</a> and <a href="#jacob-pickups">Justice and Memory Card</a>. Use the <a href="#collection-routes">collection routes</a> to get those pickups before the deaths. For <a href="#clue-c9">Kid’s Letter Home</a>, keep Emma alive into Chapter 6.</p>
+        </section>
+
+        <section class="section" id="collection-routes">
+          <h2>Collect cards and evidence before the deaths</h2>
+          <p>Choose whether all nine counselors die or Abi survives alone. Both routes can collect all ten evidence items. The all-nine-dead route below gets 21 cards and skips the shelter. The Abi route gets all 22 cards. Follow the numbered chapter walkthroughs for the scenes between these checkpoints.</p>
+          <p><a href="?survivor=collection#pickup-index">Find pickups when all nine die</a> · <a href="?survivor=abi-collection#pickup-index">Find pickups when only Abi survives</a></p>
+          <h3 id="collection-opening">Prologue through Chapter 3 · Five cards and three evidence</h3>
+          <ol>
+            <li>Follow <a href="rough-night.html#prologue">Rough Night</a> and take the first five cards. In Chapter 1, <strong>Steal Rotor Arm</strong> and take <a href="rough-night.html#evidence-1">Empty Vial</a>. In Chapter 2, take <a href="rough-night.html#evidence-2">Torn Bags</a> and choose <strong>Rocky Road</strong> for <a href="rough-night.html#tarot-3">The Hanged Man</a>.</li>
+            <li>In Chapter 3, choose <strong>Dive In → Grab</strong>, press <strong>Up</strong> to find <a href="rough-night.html#evidence-3">Bloated Corpse</a>, then choose <strong>Detangle</strong>. Keep Jacob alive for the Chapter 6 pickups. A Chapter 4 replay needs these five cards and three evidence items already in the save.</li>
+          </ol>
+          <h3 id="collection-deaths">Chapters 4–6 · Get the pickups before Emma and Jacob die</h3>
+          <ol>
+            <li><strong>Chapter 4 · 7 cards, 4 evidence.</strong> Hold fire in both bushes windows. Take <a href="#tarot-7">The Magician</a> on Emma’s dock, then follow the <a href="#evidence-4">photo and chase steps</a>. Take <a href="#tarot-6">Strength</a> during the lodge doorway cutscene. At Emma’s final zipline choose <strong>Reel Quickly → Jump</strong> and miss <strong>Up</strong>.</li>
+            <li><strong>Chapter 5 · 9 cards, 5 evidence.</strong> Get <a href="#tarot-8">The Devil</a>, <a href="#tarot-9">The Hermit</a> and <a href="#evidence-5">Claw Marks</a> before entering the hut. Follow the <a href="#chapter-5">radio-hut steps</a> to leave Dylan uninfected.</li>
+            <li><strong>Chapter 6 · 11 cards, 6 evidence.</strong> As Jacob, get <a href="#evidence-6">Memory Card</a> and <a href="#tarot-10">Justice</a>, then take the right path. Miss <strong>Down</strong> and fail the climb mash. At the pool house take <a href="#tarot-11">The Moon</a> as Abi. Let the shot at Nick expire for <a href="#pool-shot">the massacre</a>, or <a href="sole-survivors.html#chapter-6-shoot-nick">hit Nick</a> to keep Abi as the sole survivor.</li>
+          </ol>
+          <h3 id="collection-finale">Chapters 7–10 · Finish the collections and the ending</h3>
+          <ol>
+            <li><strong>Chapter 7 · 13 cards, 7 evidence.</strong> Take <a href="#tarot-13">The World</a>, <a href="#tarot-12">The Chariot</a> and the <a href="#evidence-7">Cease &amp; Desist Letter</a>. Use the <a href="#laura-explore-the-station-then-use-the-gun">gun escape</a> to wound Travis.</li>
+            <li><strong>Chapter 8 · 17 cards, 8 evidence.</strong> Get both <a href="#chapter-8">quarry cards</a> and <a href="#evidence-8">Scarred Flesh</a>. Get both <a href="#nick-cage">basement cards</a> before entering the red-lit passage. Let <strong>Stop Laura</strong> expire to kill Nick. If Abi survived the pool house, use her <a href="sole-survivors.html#chapters-7-8-shoot-travis-in-the-escape-then-let-laura-kill-nick">Chapter 8 dialogue</a>.</li>
+            <li><strong>Chapter 9 · 20 or 21 cards, 9 evidence.</strong> Take <a href="#tarot-18">Death</a>, <a href="#evidence-9">Kaylee’s Letter</a>, <a href="#tarot-19">The Sun</a> and <a href="#tarot-20">Judgement</a> before the <a href="#crane">crane death</a>. If Abi is alive, get <a href="#tarot-21">The Hierophant</a> before climbing to the office. If Abi died at the pool, the shelter scene is skipped. In both cases, <a href="#attic">shoot Chris and lose the fight with Travis</a>.</li>
+            <li><strong>Chapter 10 · 21 or 22 cards, 10 evidence.</strong> Choose <strong>Swim to Shore</strong> as Max. As Kaitlyn, get <a href="#tarot-22">The High Priestess</a> and <a href="#evidence-10">Trail Cam Footage</a> before <strong>Prepare for Attack</strong>. Choose <strong>Wait</strong> and let the shot expire. Caleb kills unbitten Kaitlyn before she can reach Abi’s office.</li>
+          </ol>
+          <p>Conspiracy Theorist unlocks at the footage pickup. With Abi’s shelter card, Decked Out unlocks at The High Priestess. To get both ending results with one save, finish the massacre first, then replay Chapter 6. Collect both cards and Memory Card again, shoot Nick as Abi, and follow the Abi version through the finale. <a href="reference.html#saves">Chapter Select rules</a></p>
+          <p class="source-note">Audit · Steam PC build 11105655, the Chapter 6 walkway, Chapter 9 shelter and Chapter 10 lodge conditions. The pickup and death scenes are recorded separately. <a href="https://www.youtube.com/watch?v=wOZFC2bBcME">Recorded collectible pickups</a> · <a href="https://www.youtube.com/watch?v=Twu65xkLVUs&amp;t=98s">Recorded Abi-only ending</a></p>
         </section>
 
         <section class="section" id="chapter-4">
@@ -119,12 +148,12 @@
             <li>From the dock, head inland and take the stairs up to the treehouse. Choose <strong>Compassionate</strong> at the vlog.</li>
             <li>Open the door, then choose <strong>Open Trapdoor</strong> as soon as the game asks whether to search the bag. Max kills Emma. To take her photo first, use the alternate death below.</li>
           </ol>
-          <details class="route-pickup" id="evidence-4" data-pickup-branches="emma emma-van jacob">
+          <details class="route-pickup" id="evidence-4" data-pickup-branches="collection abi-collection emma emma-van jacob">
             <summary>Optional evidence · Attack Photo</summary>
             <ol>
               <li>Inside the treehouse, choose <strong>Search Bag → Use Taser</strong>. Take <strong>Take Photo?</strong> as soon as it appears. <a href="collectibles.html#item-e4">Pickup video</a></li>
               <li>Press <strong>Down</strong>, pass the first zipline mash, choose <strong>Spray</strong> and press <strong>Up, Up</strong> along the walkway. On the second visit inside, choose <strong>Use Trapdoor</strong>. For the <a href="sole-survivors.html#emma-island-only">island-bite replay</a>, let <strong>Down</strong> expire at the cabinet, press <strong>Right</strong> and pass the ladder mash. For the other routes, press <strong>Down</strong> at the cabinet and pass the ladder mash.</li>
-              <li>After Dylan’s lodge scene, Emma reaches the zipline crank. For the massacre, choose <strong>Reel Quickly → Jump</strong> and let the final <strong>Up</strong> expire. Emma dies and the evidence stays in the journal. For <a href="sole-survivors.html#sole-emma">Emma as sole survivor</a>, choose <strong>Reel Slowly</strong> and let <strong>Speed Up?</strong> expire. <a href="chapters.html#island-chase">Chase and zipline outcomes</a></li>
+              <li>After Dylan’s lodge scene, Emma reaches the zipline crank. To kill Emma here, choose <strong>Reel Quickly → Jump</strong> and let the final <strong>Up</strong> expire. The evidence stays in the journal. For <a href="sole-survivors.html#sole-emma">Emma as sole survivor</a>, choose <strong>Reel Slowly</strong> and let <strong>Speed Up?</strong> expire. <a href="chapters.html#island-chase">Chase and zipline outcomes</a></li>
             </ol>
           </details>
           <h3 id="dylan-call-from-the-lodge">Dylan · Call from the lodge</h3>
@@ -178,8 +207,8 @@
           <img class="chapter-banner" src="assets/chapters/6.webp" width="1350" height="138" alt="" loading="lazy">
           <h3 id="jacob-pickups">Jacob · Pickups before the walkway death</h3>
           <p>Skip this scene if Jacob is already dead. If you spared him in the bushes and Emma died on the island, Jacob explores alone. Get both pickups before taking the right-hand trail.</p>
-          <details class="route-pickup" id="evidence-6" data-pickup-branches="abi emma emma-van jacob"><summary>Optional evidence · Memory Card</summary><p>With Jacob alive, climb the wooden stairs and keep right at the fork. Inspect the camera lying on the walkway. <a href="collectibles.html#item-e6">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a></p></details>
-          <details class="route-pickup" id="tarot-10" data-pickup-branches="abi emma emma-van jacob"><summary>Optional tarot · Justice</summary><p>As Jacob at the end of the walkway, take the left path first and approach the camera trigger. The right path starts the attack. <a href="collectibles.html#item-t10">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a> · <a href="sole-survivors.html#sole-jacob">Keep Jacob alive afterward</a></p></details>
+          <details class="route-pickup" id="evidence-6" data-pickup-branches="collection abi-collection abi emma emma-van jacob"><summary>Optional evidence · Memory Card</summary><p>With Jacob alive, climb the wooden stairs and keep right at the fork. Inspect the camera lying on the walkway. <a href="collectibles.html#item-e6">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a></p></details>
+          <details class="route-pickup" id="tarot-10" data-pickup-branches="collection abi-collection abi emma emma-van jacob"><summary>Optional tarot · Justice</summary><p>As Jacob at the end of the walkway, take the left path first and approach the camera trigger. The right path starts the attack. <a href="collectibles.html#item-t10">Pickup video</a> · <a href="sole-survivors.html#emma-walkway-pickups">Setup for Emma’s replay</a> · <a href="sole-survivors.html#sole-jacob">Keep Jacob alive afterward</a></p></details>
           <p>Take the right-hand trail when ready. Let the <strong>Down</strong> dodge expire so Jacob hangs from the walkway, then fail the mash to pull himself up. He dies, even if Bobby marked him with blood. <a href="chapters.html#jacob-chase">Walkway death and other outcomes</a></p>
           <h3 id="pool-shot">Kaitlyn and Abi · Let Nick kill Abi</h3>
           <ol>
@@ -311,7 +340,7 @@
             <li>Cross the clearing and walk through the wrecked bus. Go left toward the yellow crane stairs.</li>
             <li>Choose <strong>Encouraging → Warn Kaitlyn</strong> and press <strong>Up</strong>. Choose <strong>Sound Horn</strong>, then <strong>fail the first blowtorch mash</strong>. Silas kills uninfected Dylan before the lever prompt, and Kaitlyn leaves unbitten. <a href="chapters.html#crane-torch">Torch outcomes</a></li>
           </ol>
-          <details class="route-pickup" id="tarot-21" data-pickup-branches="abi emma"><summary>Optional tarot · The Hierophant (Abi or Emma replay)</summary><p>During the <a href="sole-survivors.html#sole-abi">Abi-only</a> or <a href="sole-survivors.html#sole-emma">Emma-only</a> replay, walk toward the shelter stairs and take the card at the camera change. Step away and return if it expires. Get the card before using the separate ladder. At Eliza’s flashback, press <strong>Left</strong> when the stake flies toward her. <a href="collectibles.html#item-t21">Pickup video</a></p></details>
+          <details class="route-pickup" id="tarot-21" data-pickup-branches="abi-collection abi emma"><summary>Optional tarot · The Hierophant (Abi or Emma replay)</summary><p>During the <a href="sole-survivors.html#sole-abi">Abi-only</a> or <a href="sole-survivors.html#sole-emma">Emma-only</a> replay, walk toward the shelter stairs and take the card at the camera change. Step away and return if it expires. Get the card before using the separate ladder. At Eliza’s flashback, press <strong>Left</strong> when the stake flies toward her. <a href="collectibles.html#item-t21">Pickup video</a></p></details>
           <h3 id="attic">Ryan · Shoot Chris, then lose to Travis</h3>
           <ol>
             <li>With Abi and Emma dead, the shelter exploration is skipped. As Laura, approach Chris in the attic to start the fight. She transforms and they fall through the floor.</li>
