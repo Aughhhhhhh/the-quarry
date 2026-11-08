@@ -9,6 +9,7 @@ class Guide(HTMLParser):
         self.ids = Counter()
         self.entries = Counter()
         self.items = Counter()
+        self.pickup_times = Counter()
         self.fates = Counter()
         self.recaps = Counter()
         self.recap_alts = Counter()
@@ -40,6 +41,11 @@ class Guide(HTMLParser):
         if tag == "li" and self.list_ids and self.list_ids[-1]:
             self.list_items[self.list_ids[-1]] += 1
         href = attrs.get("href", "")
+        pickup = "https://www.youtube.com/watch?v=n7fbCRG1nis&t="
+        if href.startswith(pickup):
+            seconds = href[len(pickup):-1]
+            assert href.endswith("s") and seconds.isdecimal(), href
+            self.pickup_times[int(seconds)] += 1
         if href.startswith("#"):
             self.anchors.add(href[1:])
         elif href.startswith("./") or (href.partition("#")[0].endswith(".html") and "://" not in href):
@@ -73,6 +79,7 @@ for page in pages.values():
 
 guide = pages["index.html"]
 assert guide.items == {"clue": 40, "evidence": 10, "tarot": 22}, guide.items
+assert len(guide.pickup_times) == sum(guide.pickup_times.values()) == sum(guide.items.values()), guide.pickup_times
 assert {f"vision-{card}" for card in range(1, 23)} <= guide.ids.keys()
 assert guide.entries["Achievement"] == 41, guide.entries
 assert guide.entries["Walkthrough"] == 12, guide.entries
