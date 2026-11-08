@@ -102,7 +102,7 @@ reference = pages["reference.html"]
 endings = pages["endings.html"]
 walkthroughs = pages["walkthroughs.html"]
 route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
-assert len(route_pages) == 15
+assert len(route_pages) == 16
 assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
@@ -206,13 +206,23 @@ for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", ra
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= finale.page_links
 
 alternate = pages["alternate-endings.html"]
-alternate_routes = {"save-caleb", "spare-chris", "caleb-with-chris", "silas-spared", "skip-chapter-10", "teens-acquitted"}
-assert alternate_routes | {"setup", "chapter-9", "dylan-freezer", "rabbit-rescue", "laura-captured"} <= alternate.ids.keys()
+alternate_routes = {"save-caleb", "spare-chris", "caleb-with-chris", "silas-spared", "teens-acquitted"}
+assert alternate_routes | {"setup", "chapter-9", "dylan-freezer", "rabbit-rescue", "laura-captured", "skip-chapter-10", "scrap"} <= alternate.ids.keys()
 assert {("alternate-endings.html", route) for route in alternate_routes} <= endings.page_links
 for kind, prefix, numbers in (("tarot", "t", range(18, 23)), ("evidence", "e", (9, 10))):
     assert {("alternate-endings.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= alternate.page_links
 assert {("epilogue.html", headline) for headline in ("closing-shooting-self-defense", "closing-case-reopens")} <= alternate.page_links
+
+early_epilogue = pages["early-epilogue.html"]
+assert {"setup", "delay-jacob", "radio-bite", "jacob-pickups", "van-abi", "van-dylan", "scrap", "attic", "epilogue", *(f"chapter-{chapter}" for chapter in range(4, 10))} <= early_epilogue.ids.keys()
+assert ("early-epilogue.html", "setup") in endings.page_links & alternate.page_links & walkthroughs.page_links
+early_pickups = {f"clue-{key}": f"item-{key}" for key in massacre_clues - {"c12", "f9", "h17", "h18", "h19"}}
+early_pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(6, 22)})
+early_pickups.update({f"evidence-{number}": f"item-e{number}" for number in range(4, 10)})
+assert early_pickups.keys() == {key for key in early_epilogue.ids if re.fullmatch(r"(?:clue-[cfh]|tarot-|evidence-)\d+", key)}
+assert {("collectibles.html", item) for item in early_pickups.values()} <= early_epilogue.page_links
+assert {("early-epilogue.html", step) for step in early_pickups} <= collectibles.page_links
 
 completion = pages["completion.html"]
 assert {"setup", "quick-starts", "prologue", "epilogue", "replays", "manual-combat",
