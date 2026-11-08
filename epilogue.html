@@ -115,7 +115,7 @@
               <span class="tag">Still infected</span>
               <h3><a href="#card-dylan-6">Spared during the lodge chase</a></h3>
               <p>Give Dylan the crane bite. Choose Wait and let Kaitlyn’s opening shot expire so Caleb spares him. As uninfected Kaitlyn, fail both beam prompts. Leave Silas alive for Dylan’s infected hall recap.</p>
-              <p class="source-note">The PC credits can skip this Dylan card if Kaitlyn’s later outcome takes the recap out of the main hall.</p>
+              <p class="source-note">Choose Window and fail Down on the same setup to skip Dylan’s card. <a href="#recap-missing-dylan">Compare the two credits paths</a></p>
             </li>
             <li class="fate-card" id="card-dylan-7" data-fate="infected">
               <span class="tag">Still infected</span>
@@ -699,7 +699,7 @@
             <li class="fate-card" id="card-max-4" data-fate="infected">
               <span class="tag">Still infected</span>
               <h3><a href="#card-max-4">Still has Chris’s curse</a></h3>
-              <p>Leave Chris alive in the Chapter 9 attic. Max’s playable island scene is skipped and this card still appears if Kaitlyn shoots Caleb. <a href="./#caleb-with-chris">Route for both outcomes</a></p>
+              <p>Leave Chris alive in the Chapter 9 attic. Max’s playable island scene is skipped. On the audited Steam PC build, the attic sets this recap even if Kaitlyn later shoots Caleb. <a href="./#caleb-with-chris">Route with Caleb dead</a> · <a href="#recap-missing-max">Launch recording with Max absent</a></p>
             </li>
             <li class="fate-card" id="card-max-5" data-fate="dead">
               <span class="tag">Deceased</span>
@@ -1417,7 +1417,7 @@
         <h2 id="audit-title">How the cards were checked</h2>
         <ul>
           <li>The PC files contain 120 recap assets. Of those, 36 have alternate text, with 57 alternate slots in total. A paired slide can appear under two characters in the guide, and separate assets can reuse the same text. <a href="#recap-index">Full asset index</a> · <a href="https://thequarry.fandom.com/wiki/Epilogue#Ending_Slide_Variations">The Quarry Wiki · epilogue catalog</a></li>
-          <li>Chapter walkthroughs, recordings and the scene and recap rules in Steam PC build 11105655 were used to check prerequisites. Max’s alternate wording still needs footage from that build. <a href="#card-max-2">Max waits for Laura</a> · <a href="#recap-state">Scene and recap differences</a></li>
+          <li>Chapter walkthroughs, recordings and the scene and recap rules in Steam PC build 11105655 were used to check prerequisites. Max’s alternate wording still needs footage from that build. <a href="#card-max-2">Max waits for Laura</a> · <a href="#recap-state">Scene and recap differences</a> · <a href="#recap-missing">Missing character cards</a></li>
           <li>Scene links show the branch playing out. They may end before the recap card appears. <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · choice and consequence guide</a> · <a href="https://www.reddit.com/user/GamingwithAbyss/comments/ve44zc/all_characters_death_scenes_in_the_quarry_all/">Gaming With Abyss · footage index</a></li>
           <li>Links labeled as recorded recaps or headlines jump directly to the on-screen result. The same paired freezer recap appears under Kaitlyn and Caleb so it can be found under either character. <a href="#headlines">Recorded headline pairs</a></li>
           <li id="ending-count">Creative director Will Byles used 186 to describe variations across the characters’ stories, including what happens to them along the way. A numbered list from the developers remains unverified. The catalog separates <a href="#eliza">Eliza’s speeches</a>, <a href="#cards">character fate cards</a> and <a href="#headline-assets">newspaper variants</a> so you can find each part of your ending. <a href="https://www.youtube.com/watch?v=V09WSp-9mRY&amp;t=122s">Will Byles on the character variations</a></li>
@@ -2138,6 +2138,18 @@
               <li><strong>Dylan’s duplicate death card.</strong> When Kaitlyn hides in the freezer and the kitchen recap has no surviving Dylan, it can play his kitchen death card even after showing an earlier death or his survival elsewhere. <a href="./#freezer-outcomes">Freezer choices</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1lm5opc/why_is_dylan_mentioned_twice_in_the_endingepilogue/">Recorded player example</a></li>
             </ul>
             <p class="source-note">Checked <code>silassearch_gameflow</code>, <code>carattack_gameflow</code>, <code>lodgeattacked_gameflow</code>, <code>aftermath_GameFlow</code>, <code>islandend_GameFlow</code>, <code>woodsend_GameFlow</code>, <code>kitchenend_GameFlow</code>, and the corresponding recap text assets.</p>
+          </div>
+        </details>
+        <details class="entry" id="recap-missing">
+          <summary><strong>When a character’s recap is missing</strong><span class="meta">Dylan and Max</span></summary>
+          <div class="entry-body">
+            <dl class="choice-list">
+              <dt id="recap-missing-dylan">Dylan after Kaitlyn’s Window route</dt>
+              <dd>Give Dylan the <a href="./#crane-outcomes">Chapter 9 crane bite</a> and keep Kaitlyn uninfected. In Chapter 10, choose <strong>Wait</strong> and let the opening shot expire. Caleb spares Dylan, and Kaitlyn continues alone. Choose <strong>Window</strong> and fail <strong>Down</strong>. Kaitlyn’s roof death takes the credits past Dylan’s hall card. Choose <strong>Beam</strong> and fail both crossing prompts instead to see <a href="#card-dylan-6">Dylan’s infected hall card</a> with Silas alive. Dylan survives both branches.</dd>
+              <dt id="recap-missing-max">Max when Chris lives and Caleb dies</dt>
+              <dd>A June 2022 recording goes through the credits without a Max card after Ryan spares Chris and Kaitlyn shoots Caleb. Other players report seeing his infected card in that outcome. Steam PC build 11105655 sets the island recap in the attic and retains it after the silver shot. Max survives because his swim scene is skipped. <a href="https://www.youtube.com/watch?v=T7Pn8exEkV8&amp;t=75s">Recorded credits</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/vdl2e6/">Recording’s route notes</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/14dxq5j/">Player report of the infected card</a></dd>
+            </dl>
+            <p class="source-note">Audit · Steam PC build 11105655. Traced the lodge shot and attic escape to the hall and roof recap selectors. The reason for Max’s omission in the June 2022 recording remains unverified.</p>
           </div>
         </details>
         <details class="entry" id="unused-lodge-recaps">
