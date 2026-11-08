@@ -141,7 +141,7 @@ tarot_order = [1, 2, 3, 5, 4, 7, 6, 8, 9, 10, 11, 13, 12, 15, 16, 14, 17, 18, 19
 gallery = (root / "collectibles.html").read_text(encoding="utf-8").split('id="tarot-gallery-cards"', 1)[1].split("</ul>", 1)[0]
 assert [int(number) for number in re.findall(r'href="#item-t(\d+)"', gallery)] == tarot_order
 assert [int(key[6:]) for key in rough_night.ids if key.startswith("tarot-")] == tarot_order
-for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "dylan-routes", "emma-routes", "jacob-routes"):
+for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "dylan-routes", "emma-routes", "jacob-routes", "kaitlyn-routes"):
     page = pages[f"{route}.html"]
     assert {"pickup-index", "route-item"} <= page.ids.keys()
     assert "pickup-index" in page.anchors
@@ -232,6 +232,14 @@ for kind, short, numbers in (("tarot", "t", (2, 4, 10, 14, 17, 21, 22)), ("evide
     assert {f"{kind}-{number}" for number in numbers} <= jacob_routes.ids.keys()
     assert {("jacob-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
     assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= jacob_routes.page_links
+kaitlyn_routes = pages["kaitlyn-routes.html"]
+assert {"early-setup", "chapter-8", "chapter-9", "chapter-10"} <= kaitlyn_routes.ids.keys()
+assert {("epilogue.html", f"card-kaitlyn-{number}") for number in range(1, 38)} <= kaitlyn_routes.page_links
+assert ("kaitlyn-routes.html", "") in endings.page_links
+for kind, short, numbers in (("tarot", "t", range(14, 23)), ("evidence", "e", range(8, 11))):
+    assert {f"{kind}-{number}" for number in numbers} <= kaitlyn_routes.ids.keys()
+    assert {("kaitlyn-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= kaitlyn_routes.page_links
 newspapers = pages["newspapers.html"]
 headline_routes = dict(re.findall(
     r'<li id="((?:opening|closing)-[^"]+)"[^>]*>[^\n]*?href="newspapers.html#([^"]+)"',
