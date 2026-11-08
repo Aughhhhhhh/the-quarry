@@ -227,8 +227,16 @@ for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
 
 massacre = pages["massacre.html"]
 assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", "ticket-setup", "jacob-pickups", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
+sole_routes = pages["sole-survivors.html"]
+assert ("sole-survivors.html", "") in walkthroughs.page_links
+assert {"sole-ryan-vial", "cured-sole-survivor", "finish-crane", "finish-attic", "finish-lodge", "finish-vial"} <= sole_routes.ids.keys()
 for survivor in sole_survivors:
-    assert survivor in massacre.ids and ("massacre.html", survivor) in endings.page_links
+    assert survivor in massacre.ids
+    if survivor.startswith("sole-"):
+        assert survivor in sole_routes.ids and survivor in sole_routes.anchors
+        assert ("sole-survivors.html", survivor) in endings.page_links & massacre.page_links
+    else:
+        assert ("massacre.html", survivor) in endings.page_links & sole_routes.page_links
 for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", range(4, 11))):
     assert {key for key in massacre.ids if key.startswith(kind + "-")} == {f"{kind}-{number}" for number in numbers}
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
