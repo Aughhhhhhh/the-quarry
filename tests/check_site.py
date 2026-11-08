@@ -208,6 +208,29 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 
 epilogue = pages["epilogue.html"]
+hackett_silas_routes = pages["hackett-silas-routes.html"]
+assert {"setup", "pickup-index", "early-setup", "chapter-9", "caleb-setup", "chapter-10",
+        "silver", "freezer", "hunt", "family-matters", "eliza"} <= hackett_silas_routes.ids.keys()
+for name, anchors in (
+    ("bobby", ("bobby-spared", "bobby-stabbed")),
+    ("caleb", ("woods-caleb", "caleb-cured", "joint-freezer", "trap-caleb", "caleb-dawn", "woods-caleb",
+               "joint-freezer", "caleb-kills-kaitlyn", "silver-both", "silver-abi", "trap-caleb",
+               "silver-emma", "caleb-kills-kaitlyn")),
+    ("chris", ("chris-alive", "chris-snare", "chris-dead")),
+    ("constance", ("bobby-spared", "constance-shot", "bobby-stabbed")),
+    ("jedediah", ("bobby-spared", "jedediah-attack", "bobby-stabbed")),
+    ("kaylee", ("kaylee",)),
+    ("silas", ("white-wolf-alive", "silas-spared", "silas-nest", "silas-crash")),
+):
+    assert {("epilogue.html", f"card-{name}-{number}") for number in range(1, len(anchors) + 1)} <= hackett_silas_routes.page_links
+    assert {("hackett-silas-routes.html", anchor) for anchor in anchors} <= epilogue.page_links
+assert ("hackett-silas-routes.html", "eliza") in epilogue.page_links
+assert {("hackett-silas-routes.html", anchor) for anchor in ("", "family-matters", "hunt")} <= endings.page_links
+assert {("hackett-silas-routes.html", anchor) for anchor in ("family-matters", "silas-nest", "silas-crash")} <= achievements.page_links
+for kind, short, numbers in (("tarot", "t", range(18, 23)), ("evidence", "e", (9, 10))):
+    assert {("hackett-silas-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= hackett_silas_routes.page_links
+
 ryan_travis_routes = pages["ryan-travis-routes.html"]
 assert {"setup", "pickup-index", "attic", *(f"chapter-{chapter}" for chapter in (3, 4, 5, 7, 8, 9, 10))} <= ryan_travis_routes.ids.keys()
 for name, anchors in (
