@@ -72,21 +72,32 @@ async function loadArchive() {
     if (!response.ok) throw new Error(response.statusText);
     const archive = document.createElement("template");
     archive.innerHTML = await response.text();
-    for (const card of archive.content.querySelectorAll("[data-fate], #after-the-night .entry[id], #recap-index")) {
-      const character = card.closest("[data-character]")?.querySelector("summary strong").textContent;
-      const title = card.querySelector("h3, summary strong").textContent;
-      searchIndex.push({
-        href: `epilogue.html#${card.id}`,
-        title,
-        label: character || "Epilogue",
-        section: "epilogue",
-        name: normalize(character ? `${character} ${title}` : title),
-        text: normalize(`Epilogue ${character || ""} ${title} ${card.textContent}`),
-      });
+    const sections = {
+      "Epilogue": "[data-fate], #after-the-night .entry[id], #audit > .entry[id]",
+      "Eliza’s speech": "#eliza li[id], #eliza-no-cards",
+      "Opening headline": "#headline-asset-intros > li[id]",
+      "Closing headline": "#headline-asset-outros > li[id]",
+      "Epilogue audit": "#recap-missing dt[id], #recap-file-notes dt[id]",
+    };
+    for (const [label, selector] of Object.entries(sections)) {
+      for (const entry of archive.content.querySelectorAll(selector)) {
+        const character = entry.closest("[data-character]")?.querySelector("summary strong").textContent;
+        const isTerm = entry.matches("dt");
+        const title = isTerm ? entry.textContent : entry.querySelector("h3, summary strong, :scope > strong").textContent;
+        const body = isTerm ? entry.nextElementSibling.textContent : entry.textContent;
+        searchIndex.push({
+          href: `epilogue.html#${entry.id}`,
+          title,
+          label: character || label,
+          section: "epilogue",
+          name: normalize(character ? `${character} ${title}` : title),
+          text: normalize(`Epilogue ${label} ${character || ""} ${title} ${body}`),
+        });
+      }
     }
     archiveStatus = "";
   } catch {
-    archiveStatus = "Epilogue search unavailable. Open Epilogue cards to browse.";
+    archiveStatus = "Epilogue search unavailable. Browse the epilogue to see those results.";
   }
   const focused = searchResults.contains(document.activeElement) && document.activeElement.getAttribute("href");
   renderSearch();
@@ -101,7 +112,7 @@ document.querySelector(".search-link").hidden = false;
 function updateSearch() {
   resultLimit = resultPageSize;
   if (!archiveRequest && normalize(search.value) && (!searchSection.value || searchSection.value === "epilogue")) {
-    archiveStatus = "Loading epilogue cards…";
+    archiveStatus = "Loading epilogue results…";
     archiveRequest = loadArchive();
   }
   renderSearch();

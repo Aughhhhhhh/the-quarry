@@ -21,6 +21,7 @@ class Guide(HTMLParser):
         self.page_links = set()
         self.list_ids = []
         self.list_items = Counter()
+        self.anchored_list_items = Counter()
 
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
@@ -44,6 +45,8 @@ class Guide(HTMLParser):
             self.list_ids.append(attrs.get("id"))
         if tag == "li" and self.list_ids and self.list_ids[-1]:
             self.list_items[self.list_ids[-1]] += 1
+            if attrs.get("id"):
+                self.anchored_list_items[self.list_ids[-1]] += 1
         href = attrs.get("href", "")
         pickup = "https://www.youtube.com/watch?v=n7fbCRG1nis&t="
         if href.startswith(pickup):
@@ -111,5 +114,7 @@ assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 18}
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
 assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items
+for headline_list in ("headline-asset-intros", "headline-asset-outros"):
+    assert epilogue.anchored_list_items[headline_list] == epilogue.list_items[headline_list], headline_list
 assert len(epilogue.newspapers) == sum(epilogue.newspapers.values()) == 35, epilogue.newspapers
 print("Guide counts, anchors, and assets verified.")
