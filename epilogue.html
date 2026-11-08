@@ -466,8 +466,8 @@
             </li>
             <li class="fate-card" id="card-kaitlyn-12" data-fate="infected">
               <span class="tag">Still infected</span>
-              <h3><a href="#card-kaitlyn-12">Misses the shot after receiving silver</a></h3>
-              <p>Have infected Kaitlyn Investigate the office. Withhold or miss the silver shot and leave Caleb and Silas alive. · <a href="kaitlyn-routes.html#silver-miss">Walkthrough</a></p>
+              <h3><a href="#card-kaitlyn-12">Spared in the hall and still infected</a></h3>
+              <p>Give Kaitlyn the scrapyard bite. At the office, let the handoff choice expire, or choose Investigate and miss or hold fire. Leave Silas alive. <a href="kaitlyn-routes.html#office-timeout">Choice timeout</a> · <a href="kaitlyn-routes.html#silver-miss">Silver-shot walkthrough</a></p>
             </li>
             <li class="fate-card" id="card-kaitlyn-13" data-fate="dead">
               <span class="tag">Deceased</span>
@@ -536,7 +536,7 @@
             <li class="fate-card" id="card-kaitlyn-24" data-fate="dead">
               <span class="tag">Deceased</span>
               <h3><a href="#card-kaitlyn-24">Caught before taking the silver shell</a></h3>
-              <p>Keep Kaitlyn uninfected and set up the silver handoff from the surveillance room. Let Investigate or Run time out. <a href="chapters.html#lodge-office-choice">Office choice and shot outcomes</a> · <a href="kaitlyn-routes.html#office-timeout">Walkthrough</a></p>
+              <p>Keep Kaitlyn uninfected and set up the silver handoff from the surveillance room. Let the Investigate or Run choice expire before taking silver. Caleb catches Kaitlyn whether or not Dylan is present. <a href="chapters.html#lodge-office-choice">Office choice and shot outcomes</a> · <a href="kaitlyn-routes.html#office-timeout">Walkthrough</a></p>
             </li>
             <li class="fate-card" id="card-kaitlyn-25" data-fate="dead">
               <span class="tag">Deceased</span>
@@ -591,8 +591,8 @@
             </li>
             <li class="fate-card" id="card-kaitlyn-35" data-fate="alive">
               <span class="tag">Alive</span>
-              <h3><a href="#card-kaitlyn-35">Misses the silver shot and is cured</a></h3>
-              <p>As infected Kaitlyn, take the office silver and miss Caleb. He spares her. Kill Silas for the cured hall recap. · <a href="kaitlyn-routes.html#silver-miss">Walkthrough</a></p>
+              <h3><a href="#card-kaitlyn-35">Spared in the hall and cured</a></h3>
+              <p>Follow the <a href="#card-kaitlyn-12">infected hall route</a>, then kill Silas. Letting the handoff expire or missing the silver shot leads to the same cured recap. <a href="kaitlyn-routes.html#office-timeout">Choice timeout</a> · <a href="kaitlyn-routes.html#silver-miss">Silver-shot walkthrough</a></p>
             </li>
             <li class="fate-card" id="card-kaitlyn-36" data-fate="alive">
               <span class="tag">Alive</span>
@@ -1878,12 +1878,12 @@
                   </li>
                   <li id="recap-lodgeend_kaitlyn_alive_hall" data-recap="guide">
                     <code>lodgeend_<wbr>kaitlyn_<wbr>alive_<wbr>hall</code>
-                    <div>Kaitlyn · <a href="#card-kaitlyn-12">Misses the shot after receiving silver</a></div>
+                    <div>Kaitlyn · <a href="#card-kaitlyn-12">Spared in the hall and still infected</a></div>
                     <ul>
                       <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-1">Shoots Caleb with silver</a></li>
                       <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-27">Shoots Caleb and stays infected</a></li>
                       <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-26">Shoots Caleb and is cured by Silas’s death</a></li>
-                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-35">Misses the silver shot and is cured</a></li>
+                      <li data-recap-alt="guide">Kaitlyn · <a href="#card-kaitlyn-35">Spared in the hall and cured</a></li>
                     </ul>
                   </li>
                   <li id="recap-lodgeend_kaitlyn_alive_hallfall" data-recap="guide">
@@ -2193,7 +2193,7 @@
               <li>Caleb catches infected Kaitlyn in the classroom and spares her.</li>
               <li>Caleb hears Kaitlyn breathing on the roof.</li>
               <li>Dylan follows Kaitlyn down the blocked staircase and is killed.</li>
-              <li>Caleb kills Dylan in the hall as Kaitlyn flees.</li>
+              <li>Caleb kills Dylan in the hall as Kaitlyn flees. The office timeout starts at Kaitlyn’s capture and bypasses the branch that checks for Dylan. <a href="kaitlyn-routes.html#office-timeout">Playable timeout outcome</a></li>
             </ul>
             <p>There is also a standalone Chris-in-the-snare recap with no incoming transition in the woods sequence. Chris’s fate appears on <a href="#card-chris-2">the paired card with Jacob</a> when Jacob escapes.</p>
             <p class="source-note">Checked the state writes in <code>lodgeattacked_gameflow</code> and the recap references in <code>lodgeend_GameFlow</code> and <code>woodsend_GameFlow</code>. <a href="chapters.html#lodge-fight">Playable lodge routes</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1uupadx/cut_content_during_lodge_fight/">Community discussion of the lodge assets</a></p>
