@@ -20,6 +20,11 @@ const pageRequests = new Map();
 const pageResults = new Map();
 const normalize = value => value.toLowerCase().replace(/[’']/g, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 const searchFiller = new Set("a an and are at can do does for from get how i in is me of on the to what where".split(" "));
+
+function routeLink(anchor, label) {
+  return anchor && { href: anchor.getAttribute("href"), label: label || anchor.textContent.trim() };
+}
+
 function indexEntries(content, page) {
   const entries = Array.from(content.querySelectorAll("[data-search]"), entry => {
     const title = entry.querySelector("summary strong, label, h3").textContent;
@@ -34,6 +39,14 @@ function indexEntries(content, page) {
       entry.dataset.type || "";
     const fateTerms = entry.dataset.search === "Character fate" ? `save ${title} keep ${title} alive ${title} survive` : "";
     const terms = normalize(`${entry.dataset.searchTerms || ""} ${types.replace(/\bclue\b/, "clue clues")} ${fateTerms}`);
+    let route = null;
+    if (entry.matches(".collectible")) {
+      const pickup = entry.querySelector('.pickup-video a[href^="rough-night.html#"]') ||
+        entry.querySelector('.pickup-video a[href^="completion.html#"], .pickup-video a[href^="blood-pact.html#"]');
+      route = routeLink(pickup);
+    } else if (page === "endings.html") {
+      route = routeLink(entry.querySelector(':scope > .entry-body > p > :is(a.button.primary, a[href^="massacre.html#sole-"])'), "Walkthrough");
+    }
     return {
       href: `${page}#${entry.id}`,
       title: /^Chapter \d+$/.test(chapter) ? `${chapter} · ${title}` : title,
@@ -43,6 +56,7 @@ function indexEntries(content, page) {
       chapter: normalize(chapter),
       scope: normalize(scope),
       terms,
+      route,
       text: normalize(`${title} ${scope} ${heading} ${parent} ${terms} ${entry.textContent}`),
     };
   });
@@ -120,6 +134,13 @@ function renderSearch() {
     label.textContent = ` · ${entry.label}`;
     link.append(label);
     row.append(link);
+    if (entry.route) {
+      const action = document.createElement("a");
+      action.href = entry.route.href;
+      action.textContent = entry.route.label;
+      action.setAttribute("aria-label", `${entry.route.label} for ${entry.title} · ${entry.label}`);
+      row.append(" · ", action);
+    }
     searchResults.append(row);
   }
 }
@@ -139,12 +160,16 @@ function indexArchive(content) {
       const isTerm = entry.matches("dt");
       const title = isTerm ? entry.textContent : entry.querySelector("h3, summary strong, :scope > strong").textContent;
       const body = isTerm ? entry.nextElementSibling.textContent : entry.textContent;
+      let walkthrough = null;
+      if (entry.matches("[data-fate]")) walkthrough = entry.querySelector('a[href*="-routes.html#"]');
+      else if (label.endsWith("headline")) walkthrough = entry.querySelector('a[href^="newspapers.html#"]');
       entries.push({
         href: `epilogue.html#${entry.id}`,
         title,
         label: character || label,
         section: "epilogue",
         name: normalize(character ? `${character} ${title}` : title),
+        route: routeLink(walkthrough, "Walkthrough"),
         text: normalize(`Epilogue ${label} ${character || ""} ${title} ${body}`),
       });
     }
@@ -162,10 +187,12 @@ async function loadResults(page) {
   } catch {
     pageResults.set(page, null);
   }
-  const focused = searchResults.contains(document.activeElement) && document.activeElement.getAttribute("href");
+  const focused = searchResults.contains(document.activeElement) && document.activeElement;
+  const focusedRow = focused && focused.parentElement.firstElementChild.getAttribute("href");
   renderSearch();
-  if (focused) {
-    const result = searchResults.querySelector(`a[href="${CSS.escape(focused)}"]`);
+  if (focusedRow) {
+    const row = searchResults.querySelector(`li > a:first-child[href="${CSS.escape(focusedRow)}"]`)?.parentElement;
+    const result = row?.querySelector(`a[href="${CSS.escape(focused.getAttribute("href"))}"]`);
     (result || search).focus({ preventScroll: true });
   }
 }

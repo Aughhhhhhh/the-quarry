@@ -100,6 +100,12 @@ collectibles = pages["collectibles.html"]
 achievements = pages["achievements.html"]
 reference = pages["reference.html"]
 endings = pages["endings.html"]
+walkthroughs = pages["walkthroughs.html"]
+route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
+assert len(route_pages) == 15
+assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
+assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
+assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
 
 legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
 assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}
