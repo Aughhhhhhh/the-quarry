@@ -7,8 +7,8 @@
   <meta name="description" content="Step-by-step routes for the opening and closing newspapers in The Quarry, with evidence pickups and Chapter Select starting points.">
   <title>Newspaper Walkthroughs | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=13">
-  <script src="assets/route.js?v=2" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=15">
+  <script src="assets/route.js?v=4" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -38,6 +38,7 @@
         <h2 id="route-list">Routes</h2>
         <nav aria-label="Newspaper walkthroughs">
           <a href="#setup">Before you start</a>
+          <a href="#pickup-index">Find a pickup</a>
           <a href="#evidence-plan">Ten evidence pickups</a>
           <a href="#acquittals">All nine survive</a>
           <a href="#massacres">Massacre and bloodbath</a>
@@ -66,6 +67,14 @@
           <div class="route-options" hidden>
             <button class="button secondary" type="button" data-pickups="evidence" aria-expanded="false">Show all evidence steps</button>
           </div>
+          <details class="route-pickup" id="pickup-index">
+            <summary>Find a pickup on this route</summary>
+            <p>The evidence steps below cover all ten items. For tarot cards, use <a href="rough-night.html#pickup-index">Rough Night’s pickup finder</a> or follow the base route for your headline. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <form class="tools archive-tools" hidden>
+              <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
+              <button class="button secondary" type="submit">Jump to pickup</button>
+            </form>
+          </details>
           <details class="route-pickup" id="evidence-1"><summary>Chapter 1 · Empty Vial</summary><p>As Abi, inspect the big tree next to the central swing. As Jacob earlier in the chapter, choose <strong>Steal Rotor Arm</strong> to allow the lake dive in Chapter 3. <a href="collectibles.html#item-e1">Empty Vial video</a></p></details>
           <details class="route-pickup" id="evidence-2"><summary>Chapter 2 · Torn Bags</summary><p>At the rear store door choose <strong>Call Jacob</strong>. Inspect the torn bags in the corner near the shotgun before going back to the safe. <a href="collectibles.html#item-e2">Torn Bags video</a></p></details>
           <details class="route-pickup" id="evidence-3"><summary>Chapter 3 · Bloated Corpse</summary><p>After stealing the rotor arm, choose <strong>Dive In → Grab</strong> and press <strong>Up</strong>. When Jacob gets caught in the wire, choose <strong>Detangle</strong> to save him for the Memory Card. <a href="collectibles.html#item-e3">Bloated Corpse video</a></p></details>

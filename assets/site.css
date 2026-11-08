@@ -234,6 +234,7 @@ input::placeholder { color: #b2bcb2; }
 .route-pickup:target { border-color: var(--accent); }
 .route-pickup summary { color: var(--accent); font-weight: 650; }
 .route-pickup p { margin: .5rem 0 .2rem; }
+#pickup-index .tools > div { min-width: 0; }
 @media (min-width: 1200px) {
   .route-cast { grid-template-columns: repeat(9, minmax(0, 1fr)); }
 }

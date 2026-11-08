@@ -7,8 +7,8 @@
   <meta name="description" content="A chapter-by-chapter achievement walkthrough for The Quarry, with all tarot cards, evidence and the replays for every unlock.">
   <title>Achievement Walkthrough | The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=13">
-  <script src="assets/route.js?v=2" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=15">
+  <script src="assets/route.js?v=4" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -39,6 +39,7 @@
         <h2 id="chapter-list">Chapters</h2>
         <nav aria-label="Achievement walkthrough chapters">
           <a href="#setup">Before you start</a>
+          <a href="#pickup-index">Find a pickup</a>
           <a href="#quick-starts">Two short unlocks</a>
           <a href="#prologue">Prologue</a>
           <a href="#chapter-1">1 · Camp departure</a>
@@ -71,6 +72,14 @@
             <button class="button secondary" type="button" data-pickups="evidence" aria-expanded="false">Show all evidence steps</button>
             <button class="button secondary" type="button" data-pickups="clue" aria-expanded="false">Show all clue steps</button>
           </div>
+          <details class="route-pickup" id="pickup-index">
+            <summary>Find a pickup on this route</summary>
+            <p>Find the tarot, evidence and clue steps used in this walkthrough. For all 40 clues, use <a href="blood-pact.html#pickup-index">the Blood Pact pickup finder</a>. <a href="collectibles.html#collectibles">Full collectible checklist</a></p>
+            <form class="tools archive-tools" hidden>
+              <div><label for="route-item">Pickup</label><select id="route-item" required><option value="">Choose a pickup</option></select></div>
+              <button class="button secondary" type="submit">Jump to pickup</button>
+            </form>
+          </details>
           <p><a href="achievements.html#achievement-checklist">Track your unlocks</a> · <a href="rough-night.html">Survival route that spares Caleb</a> · <a href="#manual-combat">Recorded manual combat route</a></p>
         </section>
 
@@ -110,7 +119,7 @@
           <h3>Laura · The camp</h3>
           <ol>
             <li>Walk down the steps to the yellow storm shelter doors below the lodge, in the direction of the car’s headlights.</li>
-            <li id="clue-c1">Choose <strong>Take Wrenches</strong>, then <strong>Confident</strong>. Go down and walk to the far end for the mandatory <strong>Bloodied Collar</strong>. Head back toward Max. <a href="collectibles.html#item-c1">Journal and video</a></li>
+            <li id="clue-c1" data-pickup-name="Bloodied Collar">Choose <strong>Take Wrenches</strong>, then <strong>Confident</strong>. Go down and walk to the far end for the mandatory <strong>Bloodied Collar</strong>. Head back toward Max. <a href="collectibles.html#item-c1">Journal and video</a></li>
             <li>Choose <strong>Help Max</strong> when he’s attacked. He is bitten on every route. At Eliza, choose <strong>Move On</strong> if she offers a reading.</li>
           </ol>
           <nav class="jump chapter-nav" aria-label="After the prologue"><a href="#chapters">Chapter list</a><a href="#chapter-1">Chapter 1 →</a></nav>
@@ -172,7 +181,7 @@
           <ol>
             <li>Take <strong>Kick Door?</strong> as Jacob works on the front lock. Look behind the first shelf on the left for the flyers before you reach the locked rear door.</li>
           </ol>
-          <details class="route-pickup" id="clue-2-flyers"><summary>Clue · Damaged Memorabilia</summary><p id="clue-f5">Inspect the flyers behind the first shelf on the left. With the Harum Scarum Poster from the prologue, this gives you the extra clue entry for <strong>It’s All Coming Together</strong>. <a href="collectibles.html#item-f5">Journal and video</a></p></details>
+          <details class="route-pickup" id="clue-2-flyers"><summary>Clue · Damaged Memorabilia</summary><p id="clue-f5" data-pickup-name="Damaged Memorabilia">Inspect the flyers behind the first shelf on the left. With the Harum Scarum Poster from the prologue, this gives you the extra clue entry for <strong>It’s All Coming Together</strong>. <a href="collectibles.html#item-f5">Journal and video</a></p></details>
           <ol start="2"><li>At the locked rear door choose <strong>Call Jacob</strong>. Pick up the shotgun inside for safe code <strong>7739</strong> and search the room before returning to the entrance.</li></ol>
           <details class="route-pickup" id="evidence-2"><summary>Optional evidence · Torn Bags</summary><p>After Jacob gets the beer, look in the right-hand corner near the shotgun. <a href="collectibles.html#item-e2">Pickup video</a></p></details>
           <ol start="3"><li>Talk to Jacob to leave the storeroom, then return to the safe by the entrance. Emma enters the code in the cutscene. Choose <strong>Leave Fireworks</strong>, then <strong>Affectionate</strong> when Jacob finds the snacks.</li></ol>

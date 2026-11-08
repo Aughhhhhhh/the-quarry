@@ -137,6 +137,15 @@ assert (reference.list_items + collectibles.list_items) == {
 }, (reference.list_items + collectibles.list_items)
 rough_night = pages["rough-night.html"]
 assert {"setup", "prologue", "epilogue", *(f"chapter-{chapter}" for chapter in range(1, 11))} <= rough_night.ids.keys()
+tarot_order = [1, 2, 3, 5, 4, 7, 6, 8, 9, 10, 11, 13, 12, 15, 16, 14, 17, 18, 19, 20, 21, 22]
+gallery = (root / "collectibles.html").read_text(encoding="utf-8").split('id="tarot-gallery-cards"', 1)[1].split("</ul>", 1)[0]
+assert [int(number) for number in re.findall(r'href="#item-t(\d+)"', gallery)] == tarot_order
+assert [int(key[6:]) for key in rough_night.ids if key.startswith("tarot-")] == tarot_order
+for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers"):
+    page = pages[f"{route}.html"]
+    assert {"pickup-index", "route-item"} <= page.ids.keys()
+    assert "pickup-index" in page.anchors
+    assert ("collectibles.html", "collectibles") in page.page_links
 assert rough_night.list_items["route-counselors"] == 9
 assert rough_night.list_items["route-checkpoints"] == 13
 assert ("rough-night.html", "route-checklist") in endings.page_links
