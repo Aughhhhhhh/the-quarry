@@ -7,7 +7,7 @@
   <meta name="description" content="Look up epilogue outcomes from The Quarry, with the choices that lead to each fate card.">
   <title>Epilogue cards · The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=5">
+  <link rel="stylesheet" href="assets/site.css?v=6">
   <script src="assets/epilogue.js?v=2" defer></script>
 </head>
 <body id="top">
@@ -1139,54 +1139,241 @@
             </div>
           </details>
           <details class="entry" id="headline-assets">
-            <summary><strong>What triggers each newspaper</strong><span class="meta">14 openings · 21 closings</span></summary>
+            <summary><strong>What triggers each newspaper</strong><span class="meta">14 openings · 21 closings · original artwork</span></summary>
             <div class="entry-body">
-              <p>The credits choose the first matching opening below. The closing depends on how much evidence you collected and can also depend on who survived. The entries summarize the headline and subheading.</p>
+              <p>The credits choose the first matching opening below. The closing depends on your evidence and can also depend on who survived. Expand a newspaper image to see the artwork used in the game.</p>
               <h3>Opening headlines</h3>
-              <p>In the all-counselors-alive check, the game looks at Bobby, Constance, Jedediah, Travis and Caleb. In the rest of this list, “the five Hacketts” means Bobby, Constance, Jedediah, Travis and <strong>Chris</strong>. A counselor who is still infected counts as alive.</p>
+              <p>In the all-counselors-alive check, the game looks at Bobby, Constance, Jedediah, Travis and Caleb. In the rest of this list, “the five Hacketts” means Bobby, Constance, Jedediah, Travis and <strong>Chris</strong>. A counselor who is still infected counts as alive. <a href="#headline-death-counts">How the credits count deaths</a></p>
               <ol id="headline-asset-intros">
-                <li id="opening-all-alive"><strong>Teens charged after a local girl is shot.</strong> All nine counselors and Bobby, Constance, Jedediah, Travis and Caleb survive.</li>
-                <li id="opening-family-killed"><strong>Teens charged after a local family is killed.</strong> All nine counselors survive and at least one of Bobby, Constance, Jedediah, Travis or Caleb dies.</li>
-                <li id="opening-no-soul"><strong>No Soul Left Alive.</strong> All nine counselors and the five Hacketts die. The article reports 17 bodies even though Caleb and Silas can still be alive. <a href="./#no-soul-left">All-deaths route</a></li>
-                <li id="opening-bear-bloodbath"><strong>Bear attack bloodbath at a remote camp.</strong> All nine counselors die, at least one of the five Hacketts survives, and the credits count at least six werewolf kills of counselors.</li>
-                <li id="opening-nine-dead"><strong>Bodies pile up and all nine counselors are reported dead.</strong> All nine counselors die, at least one of the five Hacketts survives, and the credits count fewer than six werewolf kills of counselors.</li>
-                <li id="opening-massacre-family-dead"><strong>Bodies pile up and police question the surviving teens.</strong> The credits count at least five counselor deaths, some counselors survive, and the five Hacketts are dead.</li>
-                <li id="opening-massacre-family-alive"><strong>Bodies pile up and police question the surviving teens and a local family.</strong> The credits count at least five counselor deaths, some counselors survive, and at least one of the five Hacketts survives.</li>
-                <li id="opening-teens-turn"><strong>Teens turn on one another.</strong> The credits count more counselor deaths by gunfire than by werewolf attack, with at least one by gunfire.</li>
-                <li id="opening-freak-bear"><strong>Freak bear attack leaves several dead.</strong> The credits count at least three counselor deaths by werewolf attack or at least one by gunfire. The werewolf count equals or exceeds the gunfire count.</li>
-                <li id="opening-crash"><strong>The sheriff and two passengers die in a crash.</strong> Silas causes the Chapter 10 car crash. <a href="./#car-outcomes">Car choices</a></li>
-                <li id="opening-accident"><strong>Tragedy at Hackett’s Quarry leaves teens dead.</strong> Emma dies on the rocks below the island, Jacob dies in the Chapter 6 bear trap, or Kaitlyn is crushed by the car at the scrapyard or dies in the lodge hall fall.</li>
-                <li id="opening-drowning"><strong>A teen’s body washes up on the lake shore.</strong> Jacob drowns while diving for the rotor arm in Chapter 3.</li>
-                <li id="opening-mystery-family-dead"><strong>Bodies recovered and police question the teens.</strong> The five Hacketts are dead and no earlier rule matches.</li>
-                <li id="opening-mystery-family-alive"><strong>Bodies recovered and police question the teens and a local family.</strong> At least one of the five Hacketts survives and no earlier rule matches.</li>
+                <li id="opening-all-alive"><strong>Teens charged after a local girl is shot.</strong> All nine counselors and Bobby, Constance, Jedediah, Travis and Caleb survive.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-all-survive.webp" aria-label="Open full-size newspaper for Teens charged after a local girl is shot"><img src="assets/newspapers/intro-all-survive.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-family-killed"><strong>Teens charged after a local family is killed.</strong> All nine counselors survive and at least one of Bobby, Constance, Jedediah, Travis or Caleb dies.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-psycho-teens-hacketts-dead.webp" aria-label="Open full-size newspaper for Teens charged after a local family is killed"><img src="assets/newspapers/intro-psycho-teens-hacketts-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-no-soul"><strong>No Soul Left Alive.</strong> All nine counselors and the five Hacketts die. The article reports 17 bodies even though Caleb and Silas can still be alive. <a href="./#no-soul-left">All-deaths route</a>
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-everyone-dead.webp" aria-label="Open full-size newspaper for No Soul Left Alive"><img src="assets/newspapers/intro-everyone-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-bear-bloodbath"><strong>Bear attack bloodbath at a remote camp.</strong> All nine counselors die, at least one of the five Hacketts survives, and the credits count at least six werewolf kills of counselors.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-bear-bloodbath-deaths.webp" aria-label="Open full-size newspaper for Bear attack bloodbath at a remote camp"><img src="assets/newspapers/intro-bear-bloodbath-deaths.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-nine-dead"><strong>Bodies pile up and all nine counselors are reported dead.</strong> All nine counselors die, at least one of the five Hacketts survives, and the credits count fewer than six werewolf kills of counselors.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-all-dead-hacketts-alive.webp" aria-label="Open full-size newspaper for Bodies pile up and all nine counselors are reported dead"><img src="assets/newspapers/intro-all-dead-hacketts-alive.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-massacre-family-dead"><strong>Bodies pile up and police question the surviving teens.</strong> The credits count at least five counselor deaths, some counselors survive, and the five Hacketts are dead.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-massacre-hacketts-dead.webp" aria-label="Open full-size newspaper for Bodies pile up and police question the surviving teens"><img src="assets/newspapers/intro-massacre-hacketts-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-massacre-family-alive"><strong>Bodies pile up and police question the surviving teens and a local family.</strong> The credits count at least five counselor deaths, some counselors survive, and at least one of the five Hacketts survives.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-massacre-hackets-alive.webp" aria-label="Open full-size newspaper for Bodies pile up and police question the surviving teens and a local family"><img src="assets/newspapers/intro-massacre-hackets-alive.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-teens-turn"><strong>Teens turn on one another.</strong> The credits count more counselor deaths by gunfire than by werewolf attack, with at least one by gunfire.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-teens-kill-teens.webp" aria-label="Open full-size newspaper for Teens turn on one another"><img src="assets/newspapers/intro-teens-kill-teens.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-freak-bear"><strong>Freak bear attack leaves several dead.</strong> The credits count at least three counselor deaths by werewolf attack or at least one by gunfire. The werewolf count equals or exceeds the gunfire count.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-at-least-one-dead.webp" aria-label="Open full-size newspaper for Freak bear attack leaves several dead"><img src="assets/newspapers/intro-at-least-one-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-crash"><strong>The sheriff and two passengers die in a crash.</strong> Silas causes the Chapter 10 car crash. <a href="./#car-outcomes">Car choices</a>
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-car-accident.webp" aria-label="Open full-size newspaper for The sheriff and two passengers die in a crash"><img src="assets/newspapers/intro-car-accident.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-accident"><strong>Tragedy at Hackett’s Quarry leaves teens dead.</strong> Emma dies on the rocks below the island, Jacob dies in the Chapter 6 bear trap, or Kaitlyn is crushed by the car at the scrapyard or dies in the lodge hall fall.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-tracig-accident.webp" aria-label="Open full-size newspaper for Tragedy at Hackett’s Quarry leaves teens dead"><img src="assets/newspapers/intro-tracig-accident.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-drowning"><strong>A teen’s body washes up on the lake shore.</strong> Jacob drowns while diving for the rotor arm in Chapter 3.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-jacob-drowned.webp" aria-label="Open full-size newspaper for A teen’s body washes up on the lake shore"><img src="assets/newspapers/intro-jacob-drowned.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-mystery-family-dead"><strong>Bodies recovered and police question the teens.</strong> The five Hacketts are dead and no earlier rule matches.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-hacketts-dead-mystery.webp" aria-label="Open full-size newspaper for Bodies recovered and police question the teens"><img src="assets/newspapers/intro-hacketts-dead-mystery.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="opening-mystery-family-alive"><strong>Bodies recovered and police question the teens and a local family.</strong> At least one of the five Hacketts survives and no earlier rule matches.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/intro-hacketts-alive-mystery.webp" aria-label="Open full-size newspaper for Bodies recovered and police question the teens and a local family"><img src="assets/newspapers/intro-hacketts-alive-mystery.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
               </ol>
-              <p>Gunfire here refers to deaths of counselors. For example, Laura shooting Nick counts. Laura shooting Kaylee and Ryan shooting Chris do not add to that count.</p>
+              <details class="entry chapter-choices" id="headline-death-counts">
+                <summary><strong>How the game counts deaths</strong><span class="meta">Gunfire · werewolf attacks · exceptions</span></summary>
+                <div class="entry-body">
+                  <p>The game keeps separate tallies for the five-death threshold, gunfire, and werewolf attacks. The nine-alive and nine-dead checks look at counselor status instead. The fate-card scenes update the tallies before the podcast.</p>
+                  <ul>
+                    <li><strong>Gunfire.</strong> The four recap deaths that add to the gunfire count are <a href="#card-jacob-7">Ryan shooting Jacob</a>, <a href="#card-emma-7">Kaitlyn shooting Emma</a>, <a href="#card-nick-4">Laura shooting Nick</a>, and <a href="#card-laura-10">Ryan shooting Laura</a>. <a href="#card-ryan-7">Travis shooting Ryan</a> adds to the overall tally only.</li>
+                    <li><strong>Drowning.</strong> <a href="#card-jacob-11">Jacob’s drowned recap</a> marks him dead for the nine-counselor checks. It skips the overall tally used for the five-death threshold.</li>
+                    <li><strong>Roadside attack.</strong> The game adds <a href="#card-laura-6">Silas killing Laura after the crash</a> to the overall tally only. The same crash can trigger its own opening when the earlier rules miss.</li>
+                    <li><strong>Duplicate kitchen card.</strong> When <a href="#recap-state">Dylan’s kitchen death card</a> plays after another death card for him, each card can add to the overall and werewolf tallies.</li>
+                  </ul>
+                  <p class="source-note">Audit · Steam PC build 11105655, recap counter updates and the podcast’s opening rules.</p>
+                </div>
+              </details>
               <h3>Closing headlines</h3>
               <p id="closing-all-evidence">With all ten evidence items, use the row linked to your opening. With fewer than ten, use the first matching evidence group at the end of the list. The missing-hikers variants count Bobby, Constance, Jedediah, Chris, Travis and Caleb. <a href="#podcast-evidence">Preview a set of evidence</a></p>
               <ol id="headline-asset-outros">
-                <li><strong>Teens acquitted after the shooting is ruled self-defense.</strong> All evidence and the <a href="#opening-all-alive">local-girl shooting opening</a>.</li>
-                <li><strong>Case reopens and the teens are acquitted.</strong> All evidence and the <a href="#opening-family-killed">family-killed opening</a>.</li>
-                <li><strong>Caleb is arrested and charged over the massacre.</strong> All evidence, the <a href="#opening-no-soul">No Soul Left Alive opening</a>, and Caleb survives.</li>
-                <li><strong>Evidence shows the teens were trying to defend themselves.</strong> All evidence, the <a href="#opening-no-soul">No Soul Left Alive opening</a>, and Caleb dies.</li>
-                <li><strong>Evidence casts doubt on the bear-attack explanation.</strong> All evidence and the <a href="#opening-bear-bloodbath">bear bloodbath opening</a>.</li>
-                <li><strong>The Hacketts are arrested for killing a group of teens.</strong> All evidence and the <a href="#opening-nine-dead">nine-dead opening</a>.</li>
-                <li><strong>The deceased Hacketts are blamed for instigating the massacre.</strong> All evidence and the <a href="#opening-massacre-family-dead">massacre opening that mentions police questioning the surviving teens alone</a>.</li>
-                <li><strong>The Hacketts are arrested for killing several teens.</strong> All evidence and the <a href="#opening-massacre-family-alive">massacre opening that mentions police questioning the surviving teens and a family</a>.</li>
-                <li><strong>Evidence shows the teens acted in self-defense.</strong> All evidence and the <a href="#opening-teens-turn">teens-turn-on-one-another opening</a>.</li>
-                <li><strong>The Hackett’s Quarry case reopens and evidence suggests foul play.</strong> All evidence and the <a href="#opening-freak-bear">freak bear attack opening</a>.</li>
-                <li><strong>An unidentified animal caused the crash.</strong> All evidence and the <a href="#opening-crash">car crash opening</a>.</li>
-                <li><strong>Unidentified animals caused the deaths and a local family is suspected.</strong> All evidence and the <a href="#opening-accident">camp tragedy opening</a>.</li>
-                <li><strong>A family is charged with murdering a teen and the missing hikers.</strong> The game files pair this with all evidence and the <a href="#opening-drowning">drowning opening</a>. In a standard run, Jacob’s drowning prevents him from reaching the Chapter 6 Memory Card.</li>
-                <li><strong>The deceased Hacketts are blamed for instigating the murders.</strong> All evidence and the <a href="#opening-mystery-family-dead">murder mystery opening that mentions police questioning the teens alone</a>.</li>
-                <li><strong>The Hacketts are arrested for killing one teen.</strong> All evidence and the <a href="#opening-mystery-family-alive">murder mystery opening that mentions police questioning the teens and a family</a>.</li>
-                <li id="closing-hiker-evidence"><strong>Hiker remains recovered and multiple Hacketts charged.</strong> Collect <a href="./#item-e3">Bloated Corpse</a>, <a href="./#item-e6">Memory Card</a> and <a href="./#item-e2">Torn Bags</a>. At least two of the six Hacketts survive.</li>
-                <li><strong>Hiker remains recovered and one Hackett charged.</strong> Collect the same three items with one of the six Hacketts alive.</li>
-                <li><strong>Hiker remains recovered and the deceased Hacketts blamed.</strong> Collect the same three items with all six Hacketts dead.</li>
-                <li id="closing-animal-evidence"><strong>Unidentified animals are loose in North Kill Forest.</strong> If you missed any of the three hiker items, collect at least one of <a href="./#item-e4">Attack Photo</a>, <a href="./#item-e8">Scarred Flesh</a> or <a href="./#item-e5">Claw Marks</a>.</li>
-                <li id="closing-kaylee-letter"><strong>Evidence describes Kaylee’s private struggles.</strong> Collect <a href="./#item-e9">Kaylee’s Letter</a> with an incomplete hiker set and none of the three animal items.</li>
-                <li id="closing-camp-closed"><strong>The summer camp closes for good.</strong> Miss the hiker set, all three animal items and Kaylee’s Letter. Empty Vial, Cease &amp; Desist Letter and Trail Cam Footage can change the conversation while leaving this headline in place.</li>
+                <li><strong>Teens acquitted after the shooting is ruled self-defense.</strong> All evidence and the <a href="#opening-all-alive">local-girl shooting opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-self-defence.webp" aria-label="Open full-size newspaper for Teens acquitted after the shooting is ruled self-defense"><img src="assets/newspapers/outro-self-defence.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Case reopens and the teens are acquitted.</strong> All evidence and the <a href="#opening-family-killed">family-killed opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-teens-aquitted.webp" aria-label="Open full-size newspaper for Case reopens and the teens are acquitted"><img src="assets/newspapers/outro-teens-aquitted.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Caleb is arrested and charged over the massacre.</strong> All evidence, the <a href="#opening-no-soul">No Soul Left Alive opening</a>, and Caleb survives.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-caleb-alive-all-dead.webp" aria-label="Open full-size newspaper for Caleb is arrested and charged over the massacre"><img src="assets/newspapers/outro-caleb-alive-all-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Evidence shows the teens were trying to defend themselves.</strong> All evidence, the <a href="#opening-no-soul">No Soul Left Alive opening</a>, and Caleb dies.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-self-defence-bloodshed.webp" aria-label="Open full-size newspaper for Evidence shows the teens were trying to defend themselves"><img src="assets/newspapers/outro-self-defence-bloodshed.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Evidence casts doubt on the bear-attack explanation.</strong> All evidence and the <a href="#opening-bear-bloodbath">bear bloodbath opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-not-bears.webp" aria-label="Open full-size newspaper for Evidence casts doubt on the bear-attack explanation"><img src="assets/newspapers/outro-not-bears.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The Hacketts are arrested for killing a group of teens.</strong> All evidence and the <a href="#opening-nine-dead">nine-dead opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-family-kill-group.webp" aria-label="Open full-size newspaper for The Hacketts are arrested for killing a group of teens"><img src="assets/newspapers/outro-family-kill-group.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The deceased Hacketts are blamed for instigating the massacre.</strong> All evidence and the <a href="#opening-massacre-family-dead">massacre opening that mentions police questioning the surviving teens alone</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hacketts-caused-massacre.webp" aria-label="Open full-size newspaper for The deceased Hacketts are blamed for instigating the massacre"><img src="assets/newspapers/outro-hacketts-caused-massacre.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The Hacketts are arrested for killing several teens.</strong> All evidence and the <a href="#opening-massacre-family-alive">massacre opening that mentions police questioning the surviving teens and a family</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hacketts-locked-up.webp" aria-label="Open full-size newspaper for The Hacketts are arrested for killing several teens"><img src="assets/newspapers/outro-hacketts-locked-up.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Evidence shows the teens acted in self-defense.</strong> All evidence and the <a href="#opening-teens-turn">teens-turn-on-one-another opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-blood-bath-self-defence.webp" aria-label="Open full-size newspaper for Evidence shows the teens acted in self-defense"><img src="assets/newspapers/outro-blood-bath-self-defence.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The Hackett’s Quarry case reopens and evidence suggests foul play.</strong> All evidence and the <a href="#opening-freak-bear">freak bear attack opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-unidentified-animals.webp" aria-label="Open full-size newspaper for The Hackett’s Quarry case reopens and evidence suggests foul play"><img src="assets/newspapers/outro-unidentified-animals.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>An unidentified animal caused the crash.</strong> All evidence and the <a href="#opening-crash">car crash opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-animal-car-accident.webp" aria-label="Open full-size newspaper for An unidentified animal caused the crash"><img src="assets/newspapers/outro-animal-car-accident.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Unidentified animals caused the deaths and a local family is suspected.</strong> All evidence and the <a href="#opening-accident">camp tragedy opening</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-family-animal.webp" aria-label="Open full-size newspaper for Unidentified animals caused the deaths and a local family is suspected"><img src="assets/newspapers/outro-family-animal.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>A family is charged with murdering a teen and the missing hikers.</strong> The game files pair this with all evidence and the <a href="#opening-drowning">drowning opening</a>. In a standard run, Jacob’s drowning prevents him from reaching the Chapter 6 Memory Card.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hacketts-kill-teen.webp" aria-label="Open full-size newspaper for A family is charged with murdering a teen and the missing hikers"><img src="assets/newspapers/outro-hacketts-kill-teen.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The deceased Hacketts are blamed for instigating the murders.</strong> All evidence and the <a href="#opening-mystery-family-dead">murder mystery opening that mentions police questioning the teens alone</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hackett-secrets.webp" aria-label="Open full-size newspaper for The deceased Hacketts are blamed for instigating the murders"><img src="assets/newspapers/outro-hackett-secrets.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>The Hacketts are arrested for killing one teen.</strong> All evidence and the <a href="#opening-mystery-family-alive">murder mystery opening that mentions police questioning the teens and a family</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-web-of-lies.webp" aria-label="Open full-size newspaper for The Hacketts are arrested for killing one teen"><img src="assets/newspapers/outro-web-of-lies.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="closing-hiker-evidence"><strong>Hiker remains recovered and multiple Hacketts charged.</strong> Collect <a href="./#item-e3">Bloated Corpse</a>, <a href="./#item-e6">Memory Card</a> and <a href="./#item-e2">Torn Bags</a>. At least two of the six Hacketts survive.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hiker-hacketts-alive.webp" aria-label="Open full-size newspaper for Hiker remains recovered and multiple Hacketts charged"><img src="assets/newspapers/outro-hiker-hacketts-alive.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Hiker remains recovered and one Hackett charged.</strong> Collect the same three items with one of the six Hacketts alive.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hiker-one-hackett.webp" aria-label="Open full-size newspaper for Hiker remains recovered and one Hackett charged"><img src="assets/newspapers/outro-hiker-one-hackett.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li><strong>Hiker remains recovered and the deceased Hacketts blamed.</strong> Collect the same three items with all six Hacketts dead.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hiker-hacketts-dead.webp" aria-label="Open full-size newspaper for Hiker remains recovered and the deceased Hacketts blamed"><img src="assets/newspapers/outro-hiker-hacketts-dead.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="closing-animal-evidence"><strong>Unidentified animals are loose in North Kill Forest.</strong> If you missed any of the three hiker items, collect at least one of <a href="./#item-e4">Attack Photo</a>, <a href="./#item-e8">Scarred Flesh</a> or <a href="./#item-e5">Claw Marks</a>.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-animal-in-forest.webp" aria-label="Open full-size newspaper for Unidentified animals are loose in North Kill Forest"><img src="assets/newspapers/outro-animal-in-forest.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="closing-kaylee-letter"><strong>Evidence describes Kaylee’s private struggles.</strong> Collect <a href="./#item-e9">Kaylee’s Letter</a> with an incomplete hiker set and none of the three animal items.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-hackett-girl.webp" aria-label="Open full-size newspaper for Evidence describes Kaylee’s private struggles"><img src="assets/newspapers/outro-hackett-girl.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
+                <li id="closing-camp-closed"><strong>The summer camp closes for good.</strong> Miss the hiker set, all three animal items and Kaylee’s Letter. Empty Vial, Cease &amp; Desist Letter and Trail Cam Footage can change the conversation while leaving this headline in place.
+                  <details class="headline-art">
+                    <summary>Newspaper image</summary>
+                    <a href="assets/newspapers/outro-camp-closed.webp" aria-label="Open full-size newspaper for The summer camp closes for good"><img src="assets/newspapers/outro-camp-closed.webp" width="1024" height="1024" loading="lazy" decoding="async" alt=""></a>
+                  </details>
+                </li>
               </ol>
-              <p class="source-note">Audit · Steam PC build 11105655. The rules come from <code>podcast_gameflow</code>, the evidence subgraphs and character ending enums. Each scene’s monitor material was traced to its newspaper artwork. The galleries show 34 variants and omit the foul-play reopening. <a href="#headlines">Recorded examples</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0lhw/all_the_newspaper_variants_pt_1/">Gallery 1</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0mud/all_the_newspaper_variants_pt_2/">Gallery 2</a></p>
+              <p class="source-note">Audit · Steam PC build 11105655. The rules come from <code>podcast_gameflow</code>, the evidence subgraphs and character ending enums. Each image comes from the texture used by its scene’s monitor. <a href="#headlines">Recorded examples</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0lhw/all_the_newspaper_variants_pt_1/">Community gallery 1</a> · <a href="https://www.reddit.com/r/TheQuarrySupermassive/comments/1gg0mud/all_the_newspaper_variants_pt_2/">Community gallery 2</a></p>
             </div>
           </details>
           <details class="entry" id="podcast-evidence">

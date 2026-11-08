@@ -16,6 +16,7 @@ class Guide(HTMLParser):
         self.characters = set()
         self.anchors = set()
         self.files = set()
+        self.newspapers = Counter()
         self.page_links = set()
         self.list_ids = []
         self.list_items = Counter()
@@ -57,6 +58,8 @@ class Guide(HTMLParser):
             self.files.add(href.partition("?")[0])
         if tag in ("img", "script"):
             self.files.add(attrs["src"].partition("?")[0])
+        if tag == "img" and attrs["src"].startswith("assets/newspapers/"):
+            self.newspapers[attrs["src"]] += 1
 
     def handle_endtag(self, tag):
         if tag in ("ol", "ul"):
@@ -104,4 +107,5 @@ assert epilogue.recaps + epilogue.recap_alts == {"guide": 159, "file-only": 18}
 assert epilogue.list_items["podcast-evidence-order"] == 10, epilogue.list_items
 assert epilogue.list_items["headline-asset-intros"] == 14, epilogue.list_items
 assert epilogue.list_items["headline-asset-outros"] == 21, epilogue.list_items
+assert len(epilogue.newspapers) == sum(epilogue.newspapers.values()) == 35, epilogue.newspapers
 print("Guide counts, anchors, and assets verified.")
