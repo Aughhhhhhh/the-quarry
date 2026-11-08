@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+  <rect width="320" height="220" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="65" y="10" width="190" height="43" rx="4"/>
+    <rect x="10" y="71" width="142" height="56" rx="4"/>
+    <rect x="168" y="71" width="142" height="56" rx="4"/>
+    <rect x="10" y="147" width="142" height="62" rx="4"/>
+    <rect x="168" y="147" width="142" height="62" rx="4"/>
+  </g>
+  <path d="M160 53v9m-79 9v-9h158v9m0 56v10m-158 10v-10h158v10" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="14">
+    <g fill="#f2a674" font-weight="700">
+      <text x="160" y="36">Raise Gun? · 6 seconds</text>
+      <text x="81" y="94">Press the button</text>
+      <text x="239" y="94">Let it expire</text>
+      <text x="81" y="168">Press Right</text>
+      <text x="239" y="168">Miss Right</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="114">Aim at Silas</text>
+      <text x="239" y="114">Travis lunges</text>
+      <text x="81" y="186">Travis falls.</text>
+      <text x="81" y="201">Aim at either target.</text>
+      <text x="239" y="186">Travis is shot.</text>
+      <text x="239" y="201">Aim at Silas.</text>
+    </g>
+  </g>
+</svg>
