@@ -133,6 +133,13 @@ input::placeholder { color: #b2bcb2; }
 .chapter-banner { width: 100%; height: clamp(4.5rem, 12vw, 7rem); object-fit: cover; border-radius: .3rem; }
 .reference-shot { margin: .9rem 0; }
 .reference-shot figcaption { margin-top: .35rem; }
+#camp-map { min-width: 0; }
+#camp-map > .entry-body { max-width: none; }
+.camp-map-scroll { overflow-x: auto; border-radius: .3rem; }
+.camp-map-image { position: relative; min-width: 56rem; }
+.camp-map-image img { display: block; width: 100%; height: auto; }
+.camp-map-image a { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border: 2px solid var(--accent); border-radius: 50%; background: var(--panel); color: var(--ink); font-size: .8rem; font-weight: 750; text-decoration: none; }
+.camp-map-image a:hover, .camp-map-image a:focus-visible { z-index: 1; background: var(--accent); color: var(--bg); }
 .headline-art { margin: .2rem 0 .7rem; }
 .headline-art summary { color: var(--accent); font-size: .88rem; }
 .headline-art img { height: auto; margin-top: .35rem; }
