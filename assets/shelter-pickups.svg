@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="212" viewBox="0 0 320 212">
+  <rect width="320" height="212" rx="6" fill="#111513"/>
+  <rect x="18" y="57" width="284" height="103" rx="5" fill="#181e1a" stroke="#657066" stroke-dasharray="4 3"/>
+  <g fill="none" stroke="#a8b2aa" stroke-width="1.5">
+    <path d="M34 130v-23m2 47 12 27m19-51 25-45m45 50 6 28m84-94V42m36 92v40"/>
+  </g>
+  <g fill="#f6f1e7">
+    <circle cx="34" cy="135" r="4"/>
+    <circle cx="36" cy="152" r="4"/>
+    <circle cx="137" cy="137" r="4"/>
+  </g>
+  <g fill="#f2a674">
+    <circle cx="67" cy="135" r="5"/>
+    <circle cx="227" cy="68" r="5"/>
+    <circle cx="263" cy="135" r="5"/>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">
+    <g fill="#f6f1e7">
+      <text x="39" y="102">Doors</text>
+      <text x="61" y="200">Scratch marks</text>
+      <text x="150" y="180">Eliza scene</text>
+    </g>
+    <g fill="#f2a674" font-weight="700">
+      <text x="110" y="81">The Hierophant</text>
+      <text x="227" y="35">Ladder</text>
+      <text x="263" y="191">Fuse box</text>
+    </g>
+  </g>
+</svg>
