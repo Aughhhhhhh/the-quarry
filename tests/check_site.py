@@ -106,6 +106,13 @@ assert len(route_pages) == 16
 assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
+story_paths = pages["story-paths.html"]
+assert {"prologue", "tape-checkpoints", "optional-pickups", *(f"chapter-{n}" for n in range(1, 11))} <= story_paths.ids.keys()
+assert {f"tape-{n}" for n in range(1, 16)} == {anchor for anchor in story_paths.ids if re.fullmatch(r"tape-\d+", anchor)}
+assert {("story-paths.html", f"tape-{n}") for n in range(1, 16)} <= reference.page_links
+assert {("reference.html", f"path-{n}") for n in range(1, 16)} <= story_paths.page_links
+assert ("story-paths.html", "") in home.page_links & walkthroughs.page_links
+assert ("completion.html", "pickup-index") in story_paths.page_links
 search_route_options = (root / "index.html").read_text(encoding="utf-8").split('id="search-route"', 1)[1].split("</select>", 1)[0]
 assert set(re.findall(r'<option value="([^"]+\.html)"', search_route_options)) == route_pages
 pickup_pattern = r"(clue-[cfh]\d+|tarot-\d+|evidence-\d+)"

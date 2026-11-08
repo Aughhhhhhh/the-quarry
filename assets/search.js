@@ -56,6 +56,8 @@ function indexEntries(content, page) {
       route = pickupRoutes.get("rough-night.html") || pickupRoutes.get("completion.html") || pickupRoutes.get("blood-pact.html");
     } else if (page === "endings.html") {
       route = routeLink(entry.querySelector(':scope > .entry-body > p > :is(a.button.primary, a[href^="massacre.html#sole-"])'), "Walkthrough");
+    } else if (entry.dataset.search === "Story path") {
+      route = routeLink(entry.querySelector('a[href^="story-paths.html#tape-"]'), "Unlock steps");
     }
     return {
       href: `${page}#${entry.id}`,
