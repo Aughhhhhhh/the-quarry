@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="232" viewBox="0 0 320 232">
+  <rect width="320" height="232" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="148" y="12" width="160" height="45" rx="4"/>
+    <rect x="148" y="81" width="160" height="72" rx="4"/>
+    <rect x="12" y="140" width="118" height="79" rx="4"/>
+    <rect x="148" y="176" width="160" height="43" rx="4"/>
+  </g>
+  <path d="M228 176v-23m-4 5 4-5 4 5m-4-77V57m-4 5 4-5 4 5M148 191h-18m5-4-5 4 5 4m-5 9h18m-5-4 5 4-5 4" fill="none" stroke="#f2a674" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="system-ui,sans-serif">
+    <g fill="#f2a674" font-size="13" font-weight="700">
+      <text x="158" y="31">RED-LIT PASSAGE</text>
+      <text x="158" y="102">STRAIGHT AHEAD</text>
+      <text x="22" y="160">TURN LEFT</text>
+      <text x="158" y="194">START AS RYAN</text>
+    </g>
+    <g fill="#f6f1e7" font-size="14" font-weight="650">
+      <text x="158" y="125">8 · The Emperor</text>
+      <text x="22" y="182">6 · The Empress</text>
+      <text x="22" y="202">7 · Rum Still</text>
+    </g>
+    <g fill="#bfc6bd" font-size="13">
+      <text x="158" y="47">Enter after all 3 pickups</text>
+      <text x="158" y="142">Main corridor</text>
+      <text x="158" y="210">Return from side room</text>
+    </g>
+  </g>
+</svg>
