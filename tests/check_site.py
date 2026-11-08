@@ -146,7 +146,19 @@ for route_anchor, item in pickups.items():
     assert ("blood-pact.html", route_anchor) in guide.page_links
     assert ("index.html", item) in blood_pact.page_links
 
+finale = pages["finale.html"]
+finale_routes = {
+    "motel", "nobodys-fool", "family-matters", "above-the-law", "white-wolf",
+    "no-soul-left", "no-soul-headline-replays",
+}
+assert finale_routes | {"setup", "no-soul-evidence", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= finale.ids.keys()
+assert {("finale.html", route) for route in finale_routes} <= guide.page_links
+for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", range(4, 11))):
+    assert {("finale.html", f"{kind}-{number}") for number in numbers} <= guide.page_links
+    assert {("index.html", f"item-{prefix}{number}") for number in numbers} <= finale.page_links
+
 epilogue = pages["epilogue.html"]
+assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
 assert sum(epilogue.recaps.values()) == 120, epilogue.recaps
