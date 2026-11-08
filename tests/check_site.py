@@ -102,7 +102,7 @@ reference = pages["reference.html"]
 endings = pages["endings.html"]
 walkthroughs = pages["walkthroughs.html"]
 route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
-assert len(route_pages) == 17
+assert len(route_pages) == 18
 assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
@@ -138,6 +138,16 @@ tarot_counts = [(int(total), section.count('id="tarot-')) for total, section in
                 re.findall(r'· (\d+) of 22 after this (?:chapter|pickup)</p>(.*?)</section>', tarot_route_html, re.S)]
 assert len(tarot_counts) == 11
 assert [total for total, _ in tarot_counts] == [sum(count for _, count in tarot_counts[:n]) for n in range(1, 12)]
+
+evidence_route = pages["evidence-route.html"]
+assert {"setup", "replay", "pickup-index", "podcast", *(f"chapter-{n}" for n in range(1, 11))} <= evidence_route.ids.keys()
+assert {f"evidence-{n}" for n in range(1, 11)} == {key for key in evidence_route.ids if key.startswith("evidence-")}
+assert {("collectibles.html", f"item-e{n}") for n in range(1, 11)} <= evidence_route.page_links
+assert {("rough-night.html", f"evidence-{n}") for n in range(1, 11)} <= evidence_route.page_links
+assert ("evidence-route.html", "replay") in achievements.page_links & collectibles.page_links & pages["newspapers.html"].page_links
+evidence_route_html = (root / "evidence-route.html").read_text(encoding="utf-8")
+assert re.findall(r'id="chapter-(\d+)">\s*<p class="eyebrow">Chapter (\d+) · (\d+) of 10</p>(?:(?!</section>).)*?id="evidence-(\d+)"',
+                  evidence_route_html, re.S) == [(str(n),) * 4 for n in range(1, 11)]
 
 legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
 assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}
