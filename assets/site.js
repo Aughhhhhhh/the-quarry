@@ -22,6 +22,27 @@ const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry
     text: normalize(`${title} ${chapter} ${heading} ${parent} ${entry.textContent}`),
   };
 });
+for (const heading of document.querySelectorAll("[data-search] :is(h3, h4, dt)[id]")) {
+  const entry = heading.closest("[data-search]");
+  const walkthrough = entry.closest('[data-search="Walkthrough"]');
+  const chapter = walkthrough?.querySelector("summary .meta").textContent || "";
+  const title = heading.textContent.trim();
+  const context = entry.querySelector("summary strong, label, h3").textContent.trim();
+  let body = "";
+  for (let next = heading.nextElementSibling; next && !next.matches("h2, h3, h4, dt, nav, .source-note"); next = next.nextElementSibling) {
+    body += ` ${next.textContent}`;
+    if (heading.matches("dt")) break;
+  }
+  searchIndex.push({
+    href: `#${heading.id}`,
+    title,
+    label: `${/^Chapter \d+$/.test(chapter) ? chapter : entry.dataset.search} · ${context}`,
+    section: entry.closest(".section").id,
+    name: normalize(title),
+    scope: normalize(chapter),
+    text: normalize(`${chapter} ${context} ${title} ${body}`),
+  });
+}
 let archiveRequest;
 let archiveStatus = "";
 let resultLimit = resultPageSize;
@@ -41,11 +62,13 @@ function renderSearch() {
       ? ` ${entry.text} `.includes(` ${word} `)
       : entry.text.includes(word)));
   function rank(entry) {
-    if (entry.chapter === query) return 5;
-    if (entry.name === query) return 4;
-    if (entry.name.includes(query)) return 3;
-    if (words.every(word => ` ${entry.name} `.includes(` ${word} `))) return 2;
-    return Number(entry.text.includes(query));
+    if (entry.chapter === query) return 6;
+    if (entry.name === query) return 5;
+    if (entry.name.includes(query)) return 4;
+    const named = ` ${entry.scope || ""} ${entry.name} `;
+    if (words.every(word => named.includes(` ${word} `))) return 3;
+    if (!entry.text.includes(query)) return 0;
+    return entry.scope === undefined ? 1 : 2;
   }
   matches.sort((a, b) => rank(b) - rank(a));
   searchMore.hidden = matches.length <= resultLimit;
