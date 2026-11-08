@@ -141,7 +141,7 @@ tarot_order = [1, 2, 3, 5, 4, 7, 6, 8, 9, 10, 11, 13, 12, 15, 16, 14, 17, 18, 19
 gallery = (root / "collectibles.html").read_text(encoding="utf-8").split('id="tarot-gallery-cards"', 1)[1].split("</ul>", 1)[0]
 assert [int(number) for number in re.findall(r'href="#item-t(\d+)"', gallery)] == tarot_order
 assert [int(key[6:]) for key in rough_night.ids if key.startswith("tarot-")] == tarot_order
-for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "emma-routes", "jacob-routes"):
+for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endings", "completion", "newspapers", "dylan-routes", "emma-routes", "jacob-routes"):
     page = pages[f"{route}.html"]
     assert {"pickup-index", "route-item"} <= page.ids.keys()
     assert "pickup-index" in page.anchors
@@ -208,6 +208,14 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 
 epilogue = pages["epilogue.html"]
+dylan_routes = pages["dylan-routes.html"]
+assert {f"chapter-{chapter}" for chapter in (1, 4, 5, 8, 9, 10)} <= dylan_routes.ids.keys()
+assert {("epilogue.html", f"card-dylan-{number}") for number in range(1, 25)} <= dylan_routes.page_links
+assert ("dylan-routes.html", "") in endings.page_links
+for kind, short, numbers in (("tarot", "t", (6, 8, 9, 20, 21, 22)), ("evidence", "e", (5, 10))):
+    assert {f"{kind}-{number}" for number in numbers} <= dylan_routes.ids.keys()
+    assert {("dylan-routes.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
+    assert {("collectibles.html", f"item-{short}{number}") for number in numbers} <= dylan_routes.page_links
 emma_routes = pages["emma-routes.html"]
 assert {f"chapter-{chapter}" for chapter in range(4, 11)} <= emma_routes.ids.keys()
 assert {("epilogue.html", f"card-emma-{number}") for number in range(1, 13)} <= emma_routes.page_links
