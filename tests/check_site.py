@@ -111,6 +111,11 @@ assert {"single-player", "couch-co-op", "couch-assign", "couch-quick-start", "co
         "wolf-pack-voting", "wolf-pack-resume", "movie-mode", "movie-presets", "directors-chair"} <= game_modes.ids.keys()
 assert {("game-modes.html", anchor) for anchor in ("", "couch-co-op", "wolf-pack", "directors-chair")} <= reference.page_links & walkthroughs.page_links
 assert ("game-modes.html", "movie-mode") in achievements.page_links
+rewind = pages["death-rewind.html"]
+assert {"setup", "checkpoints", "kitchen", "hunt", "lodge-beam", "travis-revenge",
+        *(f"chapter-{n}" for n in (3, 4, 6, 8, 9, 10))} <= rewind.ids.keys()
+assert ("death-rewind.html", "") in reference.page_links & walkthroughs.page_links
+assert ("death-rewind.html", "kitchen") in endings.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
 story_paths = pages["story-paths.html"]
 assert {"prologue", "tape-checkpoints", "optional-pickups", *(f"chapter-{n}" for n in range(1, 11))} <= story_paths.ids.keys()

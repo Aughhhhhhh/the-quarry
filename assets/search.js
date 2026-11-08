@@ -57,7 +57,7 @@ function indexEntries(content, page) {
     } else if (page === "endings.html") {
       route = routeLink(entry.querySelector(':scope > .entry-body > p > :is(a.button.primary, a[href^="sole-survivors.html#sole-"])'), "Walkthrough");
     } else if (page === "reference.html" && entry.dataset.search === "Reference") {
-      route = routeLink(entry.querySelector(':scope > .entry-body > p > a.button[href^="game-modes.html"]'), "Game mode walkthrough");
+      route = routeLink(entry.querySelector(':scope > .entry-body > p > a.button.primary'), "Walkthrough");
     } else if (entry.dataset.search === "Story path") {
       route = routeLink(entry.querySelector('a[href^="story-paths.html#tape-"]'), "Unlock steps");
     } else if (entry.id === "completion-plan") {
