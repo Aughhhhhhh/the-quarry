@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="202" viewBox="0 0 320 202">
+  <rect width="320" height="202" rx="6" fill="#111513"/>
+  <g fill="#181e1a" stroke="#657066">
+    <rect x="10" y="12" width="142" height="119" rx="4"/>
+    <rect x="168" y="12" width="142" height="119" rx="4"/>
+    <rect x="77" y="159" width="166" height="31" rx="4"/>
+  </g>
+  <path d="M154 72h12m-4-4 4 4-4 4m77 57v11h-79v13m-4-4 4 4 4-4" fill="none" stroke="#a8b2aa" stroke-width="1.5"/>
+  <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="13">
+    <g fill="#f2a674" font-weight="700">
+      <text x="81" y="35">Cabin clearing</text>
+      <text x="239" y="35">Radio hut exterior</text>
+      <text x="160" y="179">Talk to Ryan last</text>
+    </g>
+    <g fill="#f6f1e7">
+      <text x="81" y="62">Triggered Bear Trap</text>
+      <text x="81" y="84">Letter to Camp Nurse</text>
+      <text x="81" y="106">The Devil</text>
+      <text x="239" y="62">Claw Marks</text>
+      <text x="239" y="84">The Hermit</text>
+    </g>
+  </g>
+</svg>
