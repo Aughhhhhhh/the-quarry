@@ -1,6 +1,8 @@
 from collections import Counter
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 
 
 class Guide(HTMLParser):
@@ -97,6 +99,10 @@ assert guide.clue_groups == {"camp-history": 12, "freakshow-fire": 9, "hackett-h
 assert len(guide.pickup_times) == sum(guide.pickup_times.values()) == sum(guide.items.values()), guide.pickup_times
 assert {f"vision-{card}" for card in range(1, 23)} <= guide.ids.keys()
 assert guide.entries["Achievement"] == 41, guide.entries
+award_section = (root / "index.html").read_text(encoding="utf-8").split('id="achievements"', 1)[1].split("</section>", 1)[0]
+award_values = re.findall(r"(Bronze|Silver|Gold)\s*·\s*(\d+)G\s*</span>", unescape(award_section))
+assert Counter(grade for grade, _ in award_values) == {"Bronze": 29, "Silver": 7, "Gold": 4}, award_values
+assert sum(int(score) for _, score in award_values) == 1000, award_values
 assert guide.entries["Walkthrough"] == 12, guide.entries
 assert {f"choices-{chapter}" for chapter in range(11)} <= guide.ids.keys()
 assert guide.entries["Puzzle"] == 1 and "cage-puzzle" in guide.ids
