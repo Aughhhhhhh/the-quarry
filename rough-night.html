@@ -108,7 +108,7 @@
 
         <section class="section" id="route-checklist">
           <h2>Playthrough checklist</h2>
-          <p>Mark each checkpoint as you play. Use the chapter links to jump to the full instructions for each scene.</p>
+          <p>Mark each critical input as you play. The chapter links jump to the full steps. Each chapter also ends with a state check and links to the recovery steps that apply there.</p>
           <p class="meta" data-route-progress role="status" hidden></p>
           <ul class="route-checkpoints" id="route-checkpoints" role="list">
             <li><label><input type="checkbox" value="bags"><span>Choose <strong>Leave Bags</strong> to keep Dylan’s hand, or <strong>Break In</strong> for the newspaper and amputate in Chapter 5.</span></label> <a href="#leave-bags">Chapter 1 · Cabin choice</a></li>
@@ -159,6 +159,7 @@
           </ol>
           <details class="route-pickup" id="clue-0-shelter"><summary>Story clue · Bloodied Collar</summary><p id="clue-c1">Laura collects the <strong>Bloodied Collar</strong> automatically as you walk forward inside the shelter. <a href="collectibles.html#item-c1">Journal and video</a></p></details>
           <ol start="3"><li>Choose <strong>Help Max</strong> when he’s attacked. He is bitten on every route. At Eliza, choose <strong>Move On</strong> if she offers a reading.</li></ol>
+          <p class="notice" id="checkpoint-0"><strong>Prologue check.</strong> Max is bitten and Travis subdues Laura. Both survive. The attack happens even if Laura chooses Leave Max.</p>
           <nav class="jump chapter-nav" aria-label="After the prologue"><a href="#chapters">Chapter list</a><a href="#chapter-1">Chapter 1 →</a></nav>
         </section>
 
@@ -211,6 +212,7 @@
             <li>Outside, press <strong>Up</strong> to catch the keys. Choose <strong>Compliant → Insistent → Supportive → Reluctant</strong> as the group discusses the night. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <p class="meta"><a href="collectibles.html#collect-1">Chapter 1 clue locations and videos</a></p>
+          <p class="notice" id="checkpoint-1"><strong>Chapter 1 check.</strong> The group stays at camp. If Abi left the cabin locked, Dylan can keep both hands. If she broke in, plan to <a href="#amputation-branch">use the chainsaw in Chapter 5</a>. If you stole the rotor arm, the evidence dive will be available in Chapter 3.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 1 navigation"><a href="#prologue">← Prologue</a><a href="#chapters">Chapter list</a><a href="#chapter-2">Chapter 2 →</a></nav>
         </section>
 
@@ -267,6 +269,7 @@
             <li>At the fire, take <strong>Interrupt?</strong> when Dylan questions Abi. Choose <strong>Truth → Mischievous → Kaitlyn → Mischievous</strong>. Nick follows Abi after Emma’s dare on every route. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <p class="meta"><a href="collectibles.html#collect-2">Chapter 2 clue locations and videos</a></p>
+          <p class="notice" id="checkpoint-2"><strong>Chapter 2 check.</strong> Everyone survives. Shutting the office hatch leaves the shelter ladder intact. If Dylan climbed down, <a href="#recover-van">be ready for the recovery mash</a> if Emma chases Abi up the ladder in Chapter 9.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 2 navigation"><a href="#chapter-1">← Chapter 1</a><a href="#chapters">Chapter list</a><a href="#chapter-3">Chapter 3 →</a></nav>
         </section>
 
@@ -311,6 +314,7 @@
           <h3>Jacob · The snare</h3>
           <ol><li>Let <strong>Call Out?</strong> expire, pass the struggle mash and choose <strong>Pleading</strong>. Let <strong>Throw Dirt?</strong> expire so Bobby marks Jacob with protective blood. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
           <p class="meta"><a href="collectibles.html#collect-3">Chapter 3 clue locations and videos</a></p>
+          <p class="notice" id="checkpoint-3"><strong>Chapter 3 check.</strong> Nick is bitten and alive, Abi is alive, and Jacob is back on land. Bobby’s blood mark protects Jacob from a possible bite in Chapter 6. Ryan’s vial is optional. <a href="#recover-woods">Dive and rescue recovery</a> · <a href="chapters.html#abi-chase">If Abi was bitten</a></p>
           <nav class="jump chapter-nav" aria-label="Chapter 3 navigation"><a href="#chapter-2">← Chapter 2</a><a href="#chapters">Chapter list</a><a href="#chapter-4">Chapter 4 →</a></nav>
         </section>
 
@@ -352,6 +356,7 @@
           </ol>
           <h3>Emma · The second zipline</h3>
           <ol><li>Choose <strong>Reel Slowly</strong> at the crank. Let <strong>Speed Up?</strong> expire. Emma should leave the island unbitten. At Eliza, choose <strong>Move On</strong> if offered.</li></ol>
+          <p class="notice" id="checkpoint-4"><strong>Chapter 4 check.</strong> Jacob walks out of the bushes alive. Emma clears the island. If she took a bite on the walkway or ladder, <a href="#recover-van">plan for the van fight in Chapter 8</a>.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 4 navigation"><a href="#chapter-3">← Chapter 3</a><a href="#chapters">Chapter list</a><a href="#chapter-5">Chapter 5 →</a></nav>
         </section>
 
@@ -399,6 +404,7 @@
             <li>Choose <strong>Reassuring</strong> when Kaitlyn asks if it’s safe. The group finds Kaylee in the pool. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
           <p class="meta"><a href="collectibles.html#collect-5">Chapter 5 clue locations and videos</a> · <a href="chapters.html#dylan-hand">If you broke into the cabin</a></p>
+          <p class="notice" id="checkpoint-5"><strong>Chapter 5 check.</strong> Dylan is alive and kept both hands or had his bitten hand amputated. An untreated bite can leave him alive, but he’ll transform before the lodge. To keep him with Kaitlyn through the lodge, <a href="#amputation-branch">replay Chapter 5 and amputate</a>. Kaylee’s death is scripted.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 5 navigation"><a href="#chapter-4">← Chapter 4</a><a href="#chapters">Chapter list</a><a href="#chapter-6">Chapter 6 →</a></nav>
         </section>
 
@@ -437,6 +443,7 @@
             <li>As Emma, check the clearing before going uphill if you want the clue. Then follow either trail uphill. When the hunters catch a werewolf, <strong>let Run expire</strong> to keep Emma unbitten.</li>
             <li>As Ryan at the pool house, choose <strong>Reassuring → Suspicious → Interested</strong>. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
+          <p class="notice" id="checkpoint-6"><strong>Chapter 6 check.</strong> Jacob escapes the bear trap, Abi lives, and Nick escapes as a werewolf. Shooting Nick saves Abi and leaves him alive. If Emma took her first bite at the hunters, <a href="#recover-van">prepare for the shelter escape in Chapter 9</a>.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 6 navigation"><a href="#chapter-5">← Chapter 5</a><a href="#chapters">Chapter list</a><a href="#chapter-7">Chapter 7 →</a></nav>
         </section>
 
@@ -476,6 +483,7 @@
             <li>When Travis comes into the cell, press <strong>Left</strong> to inject him. If you miss it, <a href="#recover-jail">use the gun escape without shooting him</a>.</li>
             <li>Choose <strong>Anxious</strong> after the escape. At the pool house choose <strong>Reassuring</strong>, then <strong>Show Bite</strong> after the island flashback. As Jacob in the cage, choose <strong>Pleading</strong>. At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
+          <p class="notice" id="checkpoint-7"><strong>Chapter 7 check.</strong> Laura and Max escaped and Travis is unharmed. Check <strong>Paths → The White Whale</strong> if you used the gun escape. An entry saying Laura shot Travis means the attic alliance is lost. <a href="#recover-jail">Safe escape and replay point</a></p>
           <nav class="jump chapter-nav" aria-label="Chapter 7 navigation"><a href="#chapter-6">← Chapter 6</a><a href="#chapters">Chapter list</a><a href="#chapter-8">Chapter 8 →</a></nav>
         </section>
 
@@ -516,6 +524,7 @@
             <li>Select <strong>breaker 1, then breaker 2</strong> to open Jacob’s cage. Choose <strong>Continue</strong>. Select <strong>breaker 2, then breaker 3</strong> to open the passage. Nick stays safely inside his cage. <a href="#recover-cages">Recover after a wrong pair</a></li>
             <li>At Eliza, choose <strong>Move On</strong> if offered.</li>
           </ol>
+          <p class="notice" id="checkpoint-8"><strong>Chapter 8 check.</strong> Jacob leaves the basement, Nick stays alive in his cage, and Dylan goes to the scrapyard with Kaitlyn. Abi is alive and can take silver from the shelter if the lodge route changes. <a href="#recover-cages">If Jacob is still locked up</a> · <a href="#recover-van">If Emma attacked at the van</a></p>
           <nav class="jump chapter-nav" aria-label="Chapter 8 navigation"><a href="#chapter-7">← Chapter 7</a><a href="#chapters">Chapter list</a><a href="#chapter-9">Chapter 9 →</a></nav>
         </section>
 
@@ -566,7 +575,7 @@
             <li>Choose <strong>Encouraging → Warn Kaitlyn</strong>, press <strong>Up</strong>, then choose <strong>Slam Car</strong> to skip the torch fight. If you choose <strong>Lift Car</strong> instead of Warn Kaitlyn, go straight to Slam Car.</li>
             <li><strong>Fail the lever mash</strong> as Silas approaches Kaitlyn. Watch for the ankle bite. Dylan drops the car afterward, and both reach the lodge.</li>
           </ol>
-          <p class="notice">Confirm Kaitlyn took the bite before using the Chapter 10 beam failure. If you passed the lever mash, use the <a href="#silver-fallback">silver-shot fallback</a> to save the nine counselors.</p>
+          <p class="notice">Confirm Kaitlyn took the ankle bite before using the Chapter 10 beam failure. If you passed the lever mash or Kaitlyn went to the scrapyard alone, <a href="#recover-scrapyard">check which branches still work</a>.</p>
           <h3>Abi · The storm shelter</h3>
           <ol><li>Emma can be with Abi here. If their conversation appears, choose <strong>Curious → Friendly</strong>. Finish any pickups before climbing the ladder.</li></ol>
           <details class="route-pickup" id="tarot-21"><summary>Optional tarot · The Hierophant</summary><p>Walk toward the staircase on the right to reveal the card. The staircase and the ladder are separate. Take the card before leaving by the ladder. <a href="collectibles.html#item-t21">Card and pickup video</a></p></details>
@@ -578,6 +587,7 @@
             <li>Choose <strong>Suspicious</strong> after Travis stands down. This sets up the hunt and earns <strong>Above the Law</strong>.</li>
             <li>If you took The Hierophant, Eliza’s flashback replaces her usual offer. Press <strong>Left</strong> at the flying stake. Otherwise choose <strong>Move On</strong> if she offers a reading.</li>
           </ol>
+          <p class="notice" id="checkpoint-9"><strong>Chapter 9 check.</strong> Kaitlyn has her ankle bite and reaches the lodge. Chris is dead, Max and Laura change back, and Ryan, Laura and Travis agree to hunt Silas. Bobby, Constance and Jedediah are still alive. <a href="#recover-attic">If Travis turns on Laura or Ryan starts to bleed out</a> · <a href="#recover-scrapyard">If Kaitlyn misses the bite</a></p>
           <nav class="jump chapter-nav" aria-label="Chapter 9 navigation"><a href="#chapter-8">← Chapter 8</a><a href="#chapters">Chapter list</a><a href="#chapter-10">Chapter 10 →</a></nav>
         </section>
 
@@ -620,6 +630,7 @@
             <li>Choose <strong>Determined</strong> once out of the car. Choose <strong>Give to Ryan</strong> if he offers the blood vial. The vial is optional when you hit Silas on the first shot.</li>
             <li>In the woods, choose <strong>Probing → Reflective</strong>. At the nest take <strong>Raise Gun?</strong> and <strong>shoot Silas</strong> in the cage. This keeps Travis, Laura and Ryan alive and lifts the remaining infections. <a href="#recover-nest">If Raise Gun expires or the first shot misses</a></li>
           </ol>
+          <p class="notice" id="checkpoint-10"><strong>Chapter 10 check.</strong> Max stays on the island, Kaitlyn survives her fall, and Caleb leaves the lodge alive. Laura shoots Silas at the nest with Ryan and Travis still alive. Compare the <a href="#route-cast">14 survivors</a> with the epilogue cards.</p>
           <nav class="jump chapter-nav" aria-label="Chapter 10 navigation"><a href="#chapter-9">← Chapter 9</a><a href="#chapters">Chapter list</a><a href="#epilogue">Epilogue →</a></nav>
         </section>
 
@@ -688,6 +699,14 @@
               <li><strong>Ryan lost the knife.</strong> The later Stab prompt can disappear. To keep Bobby alive, continue to the bite offer. Choose <strong>Accept</strong>. If you pressed <strong>Pull Away?</strong>, Ryan still gets the bite. <a href="chapters.html#ryan-bedroom-choice">Bedroom recovery prompts</a></li>
               <li><strong>Constance, Jedediah or Bobby died.</strong> You can still save the nine counselors. To restore all 14, replay Chapter 9. Fail the shotgun mash, run from Jedediah and leave Bobby unstabbed.</li>
               <li><strong>Ryan’s first shot missed both werewolves.</strong> If time remains, aim at Chris directly ahead and fire again. The second miss or a timeout kills Ryan. Hitting Laura kills her and leaves Chris alive to kill Ryan. If Ryan declined the bite, hitting Chris still leaves Ryan on the bleed-out branch. <a href="ryan-travis-routes.html#attic">Attic targets and follow-up branches</a></li>
+            </ul>
+          </details>
+          <details class="route-pickup" id="recover-scrapyard">
+            <summary>Chapter 9 · Kaitlyn misses the bite or goes to the scrapyard alone</summary>
+            <ul>
+              <li><strong>Dylan passed the lever mash.</strong> Kaitlyn reaches the lodge unbitten. If Dylan has an active van bite and stays with her, use <a href="#recover-lodge">his freezer rescue</a> to save Caleb too. Otherwise, <a href="#silver-fallback">shoot Caleb with silver</a> to preserve Rough Night, or replay Chapter 9 and fail the lever mash for the 14-survivor beam route.</li>
+              <li><strong>Kaitlyn is alone at the scrapyard.</strong> To reach the lodge bitten, choose <strong>Hide</strong>, fail <strong>Don’t Breathe</strong> in the car and hit Silas within 2.3 seconds. Pass the support-bar mash, then press <strong>Left</strong>. Missing Left with the bite leaves Kaitlyn alive under the scrap and skips the lodge. <a href="kaitlyn-routes.html#solo-scrapyard">All solo scrapyard branches</a></li>
+              <li><strong>Kaitlyn died or was pinned under the scrap.</strong> Replay Chapter 9 to change the scrapyard outcome. If Dylan already died at the van, replay Chapter 8 to save him first.</li>
             </ul>
           </details>
           <details class="route-pickup" id="recover-lodge">

@@ -213,8 +213,9 @@ for route in ("rough-night", "massacre", "blood-pact", "finale", "alternate-endi
     assert ("collectibles.html", "collectibles") in page.page_links
 assert rough_night.list_items["route-counselors"] == 9
 assert rough_night.list_items["route-checkpoints"] == 13
+assert {f"checkpoint-{chapter}" for chapter in range(11)} <= rough_night.ids.keys()
 assert ("rough-night.html", "route-checklist") in endings.page_links
-recoveries = {f"recover-{scene}" for scene in ("woods", "emma", "jacob", "jail", "van", "cages", "attic", "lodge", "car", "nest")}
+recoveries = {f"recover-{scene}" for scene in ("woods", "emma", "jacob", "jail", "van", "cages", "attic", "scrapyard", "lodge", "car", "nest")}
 assert {"recover", "lodge-call", *recoveries} <= rough_night.ids.keys()
 assert {"recover", *recoveries} <= set(rough_night.anchors)
 assert ("rough-night.html", "recover") in endings.page_links
