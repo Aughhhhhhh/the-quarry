@@ -106,6 +106,19 @@ assert len(route_pages) == 16
 assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
+search_route_options = (root / "index.html").read_text(encoding="utf-8").split('id="search-route"', 1)[1].split("</select>", 1)[0]
+assert set(re.findall(r'<option value="([^"]+\.html)"', search_route_options)) == route_pages
+pickup_pattern = r"(clue-[cfh]\d+|tarot-\d+|evidence-\d+)"
+collectible_html = (root / "collectibles.html").read_text(encoding="utf-8")
+route_backlinks = set()
+for item, links in re.findall(r'<li class="collectible" id="item-([a-z]\d+)"(?:(?!</li>).)*?<p class="pickup-video">([^\r\n]+?)</p>', collectible_html, re.S):
+    kind = {"t": "tarot", "e": "evidence"}.get(item[0], "clue")
+    step = f"{kind}-{item if kind == 'clue' else item[1:]}"
+    for page, anchor in re.findall(r'href="([^"#]+\.html)#' + pickup_pattern + r'"', links):
+        if page in route_pages:
+            assert anchor == step, (item, page, anchor)
+            route_backlinks.add((page, anchor))
+assert route_backlinks == {(page, anchor) for page in route_pages for anchor in pages[page].ids if re.fullmatch(pickup_pattern, anchor)}
 
 legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
 assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}

@@ -1,6 +1,9 @@
 const find = document.querySelector("#find");
 const search = document.querySelector("#search");
 const searchSection = document.querySelector("#search-section");
+const searchRoute = document.querySelector("#search-route");
+const searchRouteControl = document.querySelector("#search-route-control");
+const searchRouteNote = document.querySelector("#search-route-note");
 const searchResults = document.querySelector("#search-results");
 const searchCount = document.querySelector("#search-count");
 const searchMore = document.querySelector("#search-more");
@@ -38,12 +41,19 @@ function indexEntries(content, page) {
     const types = entry.matches("[data-chapter]") ? [...new Set(Array.from(entry.querySelectorAll("[data-type]"), item => item.dataset.type))].join(" ") :
       entry.dataset.type || "";
     const fateTerms = entry.dataset.search === "Character fate" ? `save ${title} keep ${title} alive ${title} survive` : "";
-    const terms = normalize(`${entry.dataset.searchTerms || ""} ${types.replace(/\bclue\b/, "clue clues")} ${fateTerms}`);
+    const pickupTerms = types.replace(/\bclue\b/, "clue clues").replace(/\btarot\b/, "tarot card cards");
+    const terms = normalize(`${entry.dataset.searchTerms || ""} ${pickupTerms} ${fateTerms}`);
     let route = null;
+    let pickupRoutes;
     if (entry.matches(".collectible")) {
-      const pickup = entry.querySelector('.pickup-video a[href^="rough-night.html#"]') ||
-        entry.querySelector('.pickup-video a[href^="completion.html#"], .pickup-video a[href^="blood-pact.html#"]');
-      route = routeLink(pickup);
+      const key = entry.id.slice(5);
+      const kind = entry.dataset.type;
+      const step = `${kind}-${kind === "clue" ? key : key.slice(1)}`;
+      pickupRoutes = new Map(Array.from(entry.querySelectorAll(`.pickup-video a[href$="#${step}"]`), anchor => [
+        anchor.getAttribute("href").split("#")[0],
+        { ...routeLink(anchor), chapter: anchor.dataset.pickupChapter || scope },
+      ]));
+      route = pickupRoutes.get("rough-night.html") || pickupRoutes.get("completion.html") || pickupRoutes.get("blood-pact.html");
     } else if (page === "endings.html") {
       route = routeLink(entry.querySelector(':scope > .entry-body > p > :is(a.button.primary, a[href^="massacre.html#sole-"])'), "Walkthrough");
     }
@@ -57,6 +67,7 @@ function indexEntries(content, page) {
       scope: normalize(scope),
       terms,
       route,
+      pickupRoutes,
       text: normalize(`${title} ${scope} ${heading} ${parent} ${terms} ${entry.textContent}`),
     };
   });
@@ -89,24 +100,31 @@ let resultLimit = resultPageSize;
 
 function renderSearch() {
   const query = normalize(search.value).replace(/\bch (?=\d+\b)/g, "chapter ");
+  const section = searchSection.value;
+  const routePage = section === "collectibles" ? searchRoute.value : "";
   searchResults.replaceChildren();
   searchCount.textContent = "";
-  if (!query) {
+  if (!query && !routePage) {
     searchMore.hidden = true;
     return;
   }
-  const words = query.split(" ").filter(word => !searchFiller.has(word));
-  if (!words.length) words.push(...query.split(" "));
+  const words = query.split(" ").filter(word => word && !searchFiller.has(word));
+  if (query && !words.length) words.push(...query.split(" "));
   const phrase = words.join(" ");
   const chapter = query.match(/\bchapter \d+\b/)?.[0];
   const patterns = words.map((word, index) => new RegExp(`(?:^| )${word}${
     index === words.length - 1 && !/^\d+$/.test(word) ? "" : "(?: |$)"
   }`));
-  const section = searchSection.value;
   const pages = section ? [guidePages[section]] : allPages;
   const searchIndex = pages.flatMap(page => pageResults.get(page) || []);
-  const matches = searchIndex.filter(entry => (!section || entry.section === section) &&
-    patterns.every(pattern => pattern.test(entry.text)));
+  const matches = searchIndex.filter(entry => {
+    if (section && entry.section !== section) return false;
+    const pickup = entry.pickupRoutes?.get(routePage);
+    const pickupChapter = pickup && normalize(pickup.chapter);
+    if (routePage && (!pickup || (chapter && pickupChapter !== chapter))) return false;
+    const text = pickup ? `${pickupChapter} ${entry.text}` : entry.text;
+    return patterns.every(pattern => pattern.test(text));
+  });
   function rank(entry) {
     if (entry.chapter === query) return 7;
     if (entry.name === query || entry.name === phrase) return 6;
@@ -118,7 +136,7 @@ function renderSearch() {
     if (entry.text.includes(query) || entry.text.includes(phrase)) return entry.detail ? 1.5 : 1;
     return 0;
   }
-  matches.sort((a, b) => rank(b) - rank(a));
+  if (query) matches.sort((a, b) => rank(b) - rank(a));
   searchMore.hidden = matches.length <= resultLimit;
   searchCount.textContent = searchMore.hidden
     ? matches.length === 1 ? "1 match" : `${matches.length} matches`
@@ -129,16 +147,18 @@ function renderSearch() {
     const row = document.createElement("li");
     const link = document.createElement("a");
     const label = document.createElement("small");
-    link.href = entry.href;
+    const route = routePage ? entry.pickupRoutes.get(routePage) : entry.route;
+    link.href = routePage ? route.href : entry.href;
     link.textContent = entry.title;
-    label.textContent = ` · ${entry.label}`;
+    label.textContent = ` · ${routePage ? route.chapter : entry.label}`;
     link.append(label);
     row.append(link);
-    if (entry.route) {
+    if (route) {
       const action = document.createElement("a");
-      action.href = entry.route.href;
-      action.textContent = entry.route.label;
-      action.setAttribute("aria-label", `${entry.route.label} for ${entry.title} · ${entry.label}`);
+      const actionLabel = routePage ? "Checklist and video" : route.label;
+      action.href = routePage ? entry.href : route.href;
+      action.textContent = actionLabel;
+      action.setAttribute("aria-label", `${actionLabel} for ${entry.title} · ${entry.label}`);
       row.append(" · ", action);
     }
     searchResults.append(row);
@@ -200,7 +220,9 @@ async function loadResults(page) {
 find.hidden = false;
 document.querySelector(".search-link").hidden = false;
 function updateSearch() {
-  if (normalize(search.value)) {
+  const collectibles = searchSection.value === "collectibles";
+  searchRouteControl.hidden = searchRouteNote.hidden = !collectibles;
+  if (normalize(search.value) || (collectibles && searchRoute.value)) {
     const pages = searchSection.value ? [guidePages[searchSection.value]] : allPages;
     for (const page of pages) {
       if (!pageRequests.has(page)) pageRequests.set(page, loadResults(page));
@@ -214,21 +236,24 @@ function resetSearch() {
 }
 search.addEventListener("input", resetSearch);
 searchSection.addEventListener("change", resetSearch);
+searchRoute.addEventListener("change", resetSearch);
 searchResults.addEventListener("click", event => {
   const link = event.target.closest("a");
   if (!link) return;
   history.replaceState({
     ...history.state,
-    guideSearch: { query: search.value, section: searchSection.value, limit: resultLimit },
+    guideSearch: { query: search.value, section: searchSection.value, route: searchRoute.value, limit: resultLimit },
   }, "");
 });
 const savedSearch = history.state?.guideSearch;
+if (new URLSearchParams(location.search).get("section") === "collectibles") searchSection.value = "collectibles";
 if (savedSearch) {
   search.value = savedSearch.query;
   searchSection.value = savedSearch.section;
+  searchRoute.value = savedSearch.route || "";
   resultLimit = savedSearch.limit;
-  updateSearch();
 }
+updateSearch();
 searchMore.addEventListener("click", () => {
   const firstNewResult = resultLimit;
   resultLimit += resultPageSize;

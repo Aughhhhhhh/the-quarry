@@ -8,7 +8,7 @@
   <title>The Quarry Field Guide</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css?v=11">
-  <script src="assets/search.js?v=2" defer></script>
+  <script src="assets/search.js?v=3" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -64,7 +64,36 @@
               <option value="reference">Reference</option>
             </select>
           </div>
+          <div id="search-route-control" hidden>
+            <label for="search-route">Pickup walkthrough</label>
+            <select id="search-route" aria-describedby="search-route-note">
+              <option value="">Any walkthrough</option>
+              <optgroup label="Full playthroughs">
+                <option value="rough-night.html">Rough Night</option>
+                <option value="massacre.html">Hackett’s Quarry Massacre</option>
+                <option value="blood-pact.html">Blood Pact and All Clues</option>
+                <option value="completion.html">Achievement Walkthrough</option>
+              </optgroup>
+              <optgroup label="Character routes">
+                <option value="abi-nick-routes.html">Abi and Nick</option>
+                <option value="dylan-routes.html">Dylan</option>
+                <option value="emma-routes.html">Emma</option>
+                <option value="jacob-routes.html">Jacob</option>
+                <option value="kaitlyn-routes.html">Kaitlyn</option>
+                <option value="laura-max-routes.html">Laura and Max</option>
+                <option value="ryan-travis-routes.html">Ryan and Travis</option>
+                <option value="hackett-silas-routes.html">The Hacketts and Silas</option>
+              </optgroup>
+              <optgroup label="Finale and newspaper routes">
+                <option value="finale.html">Reunions and Finale Routes</option>
+                <option value="alternate-endings.html">Alternate Endings</option>
+                <option value="early-epilogue.html">Skip Chapter 10</option>
+                <option value="newspapers.html">Newspaper Walkthroughs</option>
+              </optgroup>
+            </select>
+          </div>
         </div>
+        <p class="meta" id="search-route-note" hidden>Choose a walkthrough to browse its pickups, then search by name or chapter. Some steps require a branch or replay.</p>
         <p class="meta">Browse <a href="walkthroughs.html">all walkthroughs</a>, <a href="epilogue.html#cards">epilogue cards by character</a>, or <a href="epilogue.html#headline-assets">all 35 newspapers</a>.</p>
         <p id="search-count" role="status"></p>
         <ul id="search-results"></ul>
