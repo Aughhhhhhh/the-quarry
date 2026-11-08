@@ -225,16 +225,32 @@ assert {("collectibles.html", item) for item in early_pickups.values()} <= early
 assert {("early-epilogue.html", step) for step in early_pickups} <= collectibles.page_links
 
 completion = pages["completion.html"]
-assert {"setup", "quick-starts", "prologue", "epilogue", "replays", "manual-combat",
+assert {"setup", "quick-starts", "prologue", "epilogue", "replays", "manual-combat", "pickup-checkpoints", "all-clues-plan", "table-shot",
         *(f"chapter-{chapter}" for chapter in range(1, 11))} <= completion.ids.keys()
 assert {("completion.html", anchor) for anchor in ("setup", "replays", "manual-combat")} <= achievements.page_links
-completion_pickups = {f"clue-{prefix}{number}": f"item-{prefix}{number}" for prefix in ("c", "f") for number in range(1, 6)}
+assert ("completion.html", "pickup-checkpoints") in achievements.page_links & walkthroughs.page_links
+assert ("completion.html", "all-clues-plan") in achievements.page_links
+completion_pickups = {f"clue-{key}": f"item-{key}" for key in clues}
 for kind, prefix, count in (("tarot", "t", 22), ("evidence", "e", 10)):
     completion_pickups.update({f"{kind}-{number}": f"item-{prefix}{number}" for number in range(1, count + 1)})
-assert completion_pickups.keys() <= completion.ids.keys()
+assert completion_pickups.keys() == {key for key in completion.ids if re.fullmatch(r"(?:clue-[cfh]|tarot-|evidence-)\d+", key)}
 assert {("collectibles.html", item) for item in completion_pickups.values()} <= completion.page_links
 assert {("completion.html", anchor) for anchor in completion_pickups} <= collectibles.page_links
 assert completion.list_items["completion-replay-list"] == 4
+
+completion_html = (root / "completion.html").read_text(encoding="utf-8")
+checkpoint_table = completion_html.split('id="pickup-checkpoints"', 1)[1].split("</table>", 1)[0]
+checkpoint_rows = re.findall(r'<tr><th scope="row"><a href="#([^"]+)">[^<]+</a></th><td>([^<]+)</td><td>(\d+)</td><td>([^<]+)</td></tr>', checkpoint_table)
+assert [anchor for anchor, *_ in checkpoint_rows] == ["prologue", *(f"chapter-{chapter}" for chapter in range(1, 11))]
+collected = set()
+for chapter, (anchor, tarot, evidence, clue) in enumerate(checkpoint_rows):
+    section = completion_html.split(f'id="{anchor}">', 1)[1].split("</section>", 1)[0]
+    collected.update(re.findall(r'id="((?:clue-[cfh]|tarot-|evidence-)\d+)"', section))
+    cards, items, names = (sum(key.startswith(kind) for key in collected) for kind in ("tarot-", "evidence-", "clue-"))
+    assert int(evidence) == items, anchor
+    assert tarot == (str(cards) if chapter < 2 else f"{cards} / {cards - 1}"), anchor
+    # Shady Glade moves the Trail Camera pickup from Chapter 3 to Chapter 2.
+    assert clue == (str(names) if chapter < 2 else f"{names - 1} / {names + (chapter == 2)}"), anchor
 
 epilogue = pages["epilogue.html"]
 hackett_silas_routes = pages["hackett-silas-routes.html"]

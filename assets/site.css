@@ -159,6 +159,7 @@ input::placeholder { color: #b2bcb2; }
 .choice-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
 .choice-table th, .choice-table td { padding: .4rem .55rem; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
 .choice-table th[scope="row"] { white-space: nowrap; }
+#pickup-checkpoints .choice-table :is(th, td) { padding-inline: .3rem; white-space: nowrap; }
 .entry .meta { font-size: .82rem; }
 .subhead { margin-block: 1.5rem .7rem; }
 .subhead .meta { margin-left: .35rem; font: 700 .8rem var(--mono); }
