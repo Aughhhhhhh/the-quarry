@@ -2,45 +2,95 @@ const find = document.querySelector("#find");
 const search = document.querySelector("#search");
 const searchResults = document.querySelector("#search-results");
 const searchCount = document.querySelector("#search-count");
-const normalize = value => value.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, "").trim();
+const normalize = value => value.toLowerCase().replace(/[’']/g, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 const searchIndex = Array.from(document.querySelectorAll("[data-search]"), entry => {
   const title = entry.querySelector("summary strong, label, h3").textContent;
   const heading = entry.closest(".section").querySelector("h2").textContent;
   const parent = entry.matches(".collectible") ? entry.closest("details").querySelector("summary strong").textContent : "";
+  const chapter = entry.dataset.search === "Walkthrough" ? entry.querySelector("summary .meta").textContent : "";
   return {
-    id: entry.id,
-    title,
+    href: `#${entry.id}`,
+    title: /^Chapter \d+$/.test(chapter) ? `${chapter} · ${title}` : title,
     label: entry.dataset.search,
     name: normalize(title),
-    text: normalize(`${heading} ${parent} ${entry.textContent}`),
+    chapter: normalize(chapter),
+    text: normalize(`${title} ${chapter} ${heading} ${parent} ${entry.textContent}`),
   };
 });
+let archiveRequest;
+let archiveStatus = "";
 
-find.hidden = false;
-document.querySelector(".search-link").hidden = false;
-search.addEventListener("input", () => {
-  const query = normalize(search.value);
+function renderSearch() {
+  const query = normalize(search.value).replace(/\bch (?=\d+\b)/g, "chapter ");
   searchResults.replaceChildren();
   searchCount.textContent = "";
   if (!query) return;
-  const words = query.split(/\s+/);
-  const matches = searchIndex.filter(entry => words.every(word => entry.text.includes(word)));
-  const rank = entry => entry.name === query ? 2 : Number(entry.name.includes(query));
+  const words = query.split(" ");
+  const matches = searchIndex.filter(entry => words.every(word => /^\d+$/.test(word)
+    ? ` ${entry.text} `.includes(` ${word} `)
+    : entry.text.includes(word)));
+  function rank(entry) {
+    if (entry.chapter === query) return 5;
+    if (entry.name === query) return 4;
+    if (entry.name.includes(query)) return 3;
+    if (words.every(word => ` ${entry.name} `.includes(` ${word} `))) return 2;
+    return Number(entry.text.includes(query));
+  }
   matches.sort((a, b) => rank(b) - rank(a));
   searchCount.textContent = matches.length > 12
     ? `Showing 12 of ${matches.length} matches. Add another word to narrow the list.`
     : matches.length === 1 ? "1 match" : `${matches.length} matches`;
+  if (archiveStatus) searchCount.textContent += ` · ${archiveStatus}`;
   for (const entry of matches.slice(0, 12)) {
     const row = document.createElement("li");
     const link = document.createElement("a");
     const label = document.createElement("small");
-    link.href = `#${entry.id}`;
+    link.href = entry.href;
     link.textContent = entry.title;
     label.textContent = ` · ${entry.label}`;
     link.append(label);
     row.append(link);
     searchResults.append(row);
   }
+}
+
+async function loadArchive() {
+  try {
+    const response = await fetch("epilogue.html");
+    if (!response.ok) throw new Error(response.statusText);
+    const archive = document.createElement("template");
+    archive.innerHTML = await response.text();
+    for (const card of archive.content.querySelectorAll("[data-fate], #after-the-night .entry[id], #recap-index")) {
+      const character = card.closest("[data-character]")?.querySelector("summary strong").textContent;
+      const title = card.querySelector("h3, summary strong").textContent;
+      searchIndex.push({
+        href: `epilogue.html#${card.id}`,
+        title,
+        label: character || "Epilogue",
+        name: normalize(character ? `${character} ${title}` : title),
+        text: normalize(`Epilogue ${character || ""} ${title} ${card.textContent}`),
+      });
+    }
+    archiveStatus = "";
+  } catch {
+    archiveStatus = "Epilogue search unavailable. Open Epilogue cards to browse.";
+  }
+  const focused = searchResults.contains(document.activeElement) && document.activeElement.getAttribute("href");
+  renderSearch();
+  if (focused) {
+    const result = searchResults.querySelector(`a[href="${CSS.escape(focused)}"]`);
+    (result || search).focus({ preventScroll: true });
+  }
+}
+
+find.hidden = false;
+document.querySelector(".search-link").hidden = false;
+search.addEventListener("input", () => {
+  if (!archiveRequest && normalize(search.value)) {
+    archiveStatus = "Loading epilogue cards…";
+    archiveRequest = loadArchive();
+  }
+  renderSearch();
 });
 
 const checklist = document.querySelector("#collectibles");
