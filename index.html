@@ -100,7 +100,7 @@
       <dt>Chapter 8 · The Belly of the Beast or Out For Blood</dt>
       <dd>Out For Blood plays if Laura shoots Travis while escaping the station in Chapter 7. <a href="#choices-7">Jail escape</a> · <a href="https://www.youtube.com/watch?v=HeMW-m5u_qc&amp;t=10s">Recorded title at 0:10</a></dd>
       <dt>Chapter 9 · The Matriarch or Thicker Than Water</dt>
-      <dd>Thicker Than Water plays if Travis grabs Laura at the end of Chapter 8. One way to trigger it is to stop Laura shooting Nick, choose Help Jacob, and shock Ryan twice. Choose breakers 1 and 3, choose Continue, then choose 1 and 3 again. The grab counts even if you skip Ryan’s follow-up interrupt. <a href="#cage-puzzle">Breaker outcomes</a> · <a href="https://www.youtube.com/watch?v=CiUSzV6rEbw&amp;t=21410s">Recorded title at 5:56:50</a></dd>
+      <dd>Thicker Than Water plays if the breaker puzzle ends with Travis grabbing Laura. One way to trigger it is to stop Laura shooting Nick, choose Help Jacob, and shock Ryan twice. Choose breakers 1 and 3, choose Continue, then choose 1 and 3 again. The title changes whether or not Ryan calls out afterward. If Laura shoots Nick, the game keeps The Matriarch. <a href="#cage-puzzle">Breaker outcomes</a> · <a href="https://www.youtube.com/watch?v=CiUSzV6rEbw&amp;t=21410s">Recorded title at 5:56:50</a></dd>
       <dt>Chapter 10 · Bricks &amp; Mortar or The Final Girl</dt>
       <dd>Bricks &amp; Mortar is selected when both Kaitlyn and Dylan are set to fight at the lodge. The Final Girl is the default and can appear even when other counselors survive. The PC files also define The White Wolf. Its title flag is separate from the flag that starts the Silas hunt. The audit found no scene that sets the title flag in the 1,017 PC chapter gameflow assets checked. <a href="#skip-chapter-10">Finale scene checks</a> · <a href="#final-girl">The Final Girl achievement</a></dd>
     </dl>
@@ -979,7 +979,7 @@
           <dt>Open Cage?</dt>
           <dd>This prompt appears if Jacob is alive. Let it expire to avoid shocking Ryan. Touching the electrified cage still leaves <strong>Stop Laura</strong> and <strong>Help Jacob</strong> available, with all breaker attempts intact.</dd>
           <dt id="basement-stop-laura">Stop Laura?</dt>
-          <dd>Use the interrupt to keep Nick alive, even if Jacob already died. If the prompt expires, Laura shoots Nick and the breaker puzzle is skipped. The <strong>Call Out?</strong> prompt comes too late to save Nick or start the rescue. If Jacob is still locked up, he can escape at the <a href="#cage-power-cut">Chapter 9 power cut</a>. <a href="epilogue.html#card-nick-4">Nick’s death recap</a></dd>
+          <dd>Use the interrupt to keep Nick alive, even if Jacob already died. Both versions have a six-second base timer in the PC files. If it expires, Laura shoots Nick and the breaker puzzle is skipped. The later <strong>Call Out?</strong> only changes Ryan’s response. If Jacob is still locked up, he escapes at the <a href="#cage-power-cut">Chapter 9 power cut</a>. <a href="epilogue.html#card-nick-4">Nick’s death recap</a></dd>
         </dl>
         <p class="source-note">Audit · Steam PC build 11105655, basement triggers, both slip outcomes and the cage interrupts. <a href="https://www.powerpyx.com/the-quarry-walkthrough-everyone-survives/">PowerPyx · pickup route and floor prompt</a> · <a href="https://www.youtube.com/watch?v=ZchCC5IEpu0&amp;t=922s">Recorded route where Laura shoots Nick</a></p>
       </div>
@@ -987,7 +987,11 @@
     <details class="entry chapter-choices" id="cage-puzzle" data-search="Puzzle" data-search-terms="free Jacob cage save Jacob cage breaker solution">
       <summary><strong>Cage puzzle</strong><span class="meta">Breaker pairs · retry · power cut</span></summary>
       <div class="entry-body">
-        <p>Use <strong>Stop Laura</strong> when she aims at Nick, then choose <strong>Help Jacob</strong>. Select <strong>1 + 2</strong> to open Jacob’s cage, choose <strong>Continue</strong>, then select <strong>2 + 3</strong> to open the passage out. Keep Nick’s door closed.</p>
+        <ol>
+          <li>Use <strong>Stop Laura</strong> when she aims at Nick, then choose <strong>Help Jacob</strong>.</li>
+          <li>Select <strong>1 + 2</strong> to open Jacob’s cage. Choose <strong>Continue</strong>.</li>
+          <li>Select <strong>2 + 3</strong> to open the passage out. Keep Nick’s door closed.</li>
+        </ol>
         <div class="cage-layout" aria-hidden="true">
           <span>Nick</span><span><b>7</b></span><span>Passage</span><span><b>3</b></span><span>Jacob</span>
           <span class="exit"><b>5</b> Exit</span>
@@ -997,7 +1001,7 @@
           <tbody>
             <tr><th scope="row">1 + 2</th><td>Opens door 3, Jacob’s cage.</td></tr>
             <tr><th scope="row">1 + 3</th><td>Shocks Ryan. There is no door 4.</td></tr>
-            <tr><th scope="row">1 + 4</th><td>Door 5 on attempts 1–2. Shock on attempt 3.</td></tr>
+            <tr><th scope="row">1 + 4</th><td>Opens door 5 on attempts 1–2 if it’s closed. Always shocks Ryan on attempt 3.</td></tr>
             <tr><th scope="row">2 + 3</th><td>Opens door 5, the exit.</td></tr>
             <tr><th scope="row">2 + 4</th><td>Shocks Ryan. There is no door 6.</td></tr>
             <tr><th scope="row">3 + 4</th><td>Opens door 7, Nick’s cage, and ends the rescue attempt.</td></tr>
@@ -1005,14 +1009,16 @@
         </table>
         <dl class="choice-list">
           <dt id="cage-retry">Recover after one shock</dt>
-          <dd>Choose <strong>Continue</strong>. Doors 3 and 5 can be opened in either order. Open whichever is still closed with <strong>1 + 2</strong> for Jacob and <strong>2 + 3</strong> for the exit. If both are still closed, you can use both remaining attempts. Trying to open an already open door shocks Ryan. The second shock ends the rescue and Travis grabs Laura. Touching the electrified cage before the puzzle does not use an attempt. <a href="#chapter-titles">Chapter title rules</a></dd>
+          <dd>Choose <strong>Continue</strong>. If only Jacob’s door is open, use <strong>2 + 3</strong>. If only the exit is open, use <strong>1 + 2</strong>. If both are closed, you have two attempts left. Repeating a pair for an open door shocks Ryan. The second breaker shock ends the rescue and Travis grabs Laura. The earlier <strong>Open Cage?</strong> shock doesn’t count toward those two.</dd>
           <dt id="cage-nick-door">Open Nick’s door</dt>
-          <dd>If door 7 opens first, Nick moves into the middle and Ryan leaves Jacob behind. If door 5 is already open, Laura slams it shut and Travis grabs her. If door 3 is already open, Nick kills an uninfected Jacob and spares an infected one. Travis grabs Laura on that branch too. <a href="epilogue.html#card-jacob-9">Immediate cage death recap</a></dd>
+          <dd>If both other doors are closed, Nick moves into the middle and Ryan leaves Jacob behind. If door 5 is already open, Laura slams it shut and Travis grabs her. If door 3 is already open, Nick kills an uninfected Jacob and spares an infected one. Travis grabs Laura on that branch too. <a href="epilogue.html#card-jacob-9">Immediate cage death recap</a></dd>
+          <dt id="cage-call-out">Call Out after a failed rescue</dt>
+          <dd>Travis grabs Laura after the second shock or if you open Nick’s door after opening Jacob’s door or the exit. Ryan can use <strong>Call Out?</strong>. Either response leaves Laura captured, and Chapter 9 opens with <strong>Thicker Than Water</strong>. <a href="#chapter-titles">Chapter title rules</a> · <a href="https://www.youtube.com/watch?v=kcayanKC3BA&amp;t=185s">Recorded interrupt near 3:09</a></dd>
           <dt id="cage-power-cut">When Laura cuts the power in Chapter 9</dt>
-          <dd>If Ryan freed Jacob, he is already out. If Jacob is still there, he escapes when Nick is dead or when Jacob’s bite protects him. A living Nick kills an uninfected Jacob who was left behind. You can leave Jacob behind with <strong>Leave Jacob</strong> or <strong>Abandon</strong>. <a href="epilogue.html#card-jacob-10">Power-cut death recap</a> · <a href="#death-rewind">Rewind checkpoint</a></dd>
+          <dd>If Ryan freed Jacob, he is already out. If Jacob is still there, he escapes when Nick is dead or when Jacob’s bite protects him. If Nick is alive and Jacob is uninfected, Nick kills him. Choosing <strong>Leave Jacob</strong> or <strong>Abandon</strong> gives the refusal recap. Getting shocked twice or opening Nick’s door and leaving Jacob behind gives the failed-rescue recap. <a href="epilogue.html#card-jacob-10">Refusal recap</a> · <a href="epilogue.html#card-jacob-16">Failed-rescue recap</a> · <a href="#death-rewind">Rewind checkpoint</a></dd>
         </dl>
-        <p id="badge-trapdoor-note">The third <a href="#item-f7">Charred Sheriff’s Badge</a> note unlocks when Ryan rejoins Laura at the trapdoor. Use <a href="#basement-stop-laura">Stop Laura</a>, then free Jacob, choose Leave Jacob or choose Abandon during the puzzle. If Jacob died earlier, using Stop Laura still leads to the clue update.</p>
-        <p class="source-note">Audit · Steam PC build 11105655, breaker matrices, localized choices, clue update and Chapter 9 power-cut outcomes. <a href="https://www.powerpyx.com/the-quarry-breaker-puzzle-solution-chapter-8-save-jacob-from-cage/">PowerPyx · recorded rescue sequence</a> · <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · tested breaker outcomes</a></p>
+        <p id="badge-trapdoor-note">The third <a href="#item-f7">Charred Sheriff’s Badge</a> note unlocks when Ryan rejoins Laura at the trapdoor. Use <a href="#basement-stop-laura">Stop Laura</a>, then free Jacob, choose Leave Jacob or Abandon, or open Nick’s door while the other two are closed. If Jacob died earlier, using Stop Laura still leads to the clue update.</p>
+        <p class="source-note">Audit · Steam PC build 11105655, all three breaker matrices, English prompts, clue update, chapter title and power-cut recap selectors. <a href="https://www.powerpyx.com/the-quarry-breaker-puzzle-solution-chapter-8-save-jacob-from-cage/">PowerPyx · rescue steps</a> · <a href="https://www.youtube.com/watch?v=Iox6clT0LqA">Recorded breaker solution</a> · <a href="https://gamefaqs.gamespot.com/ps5/361618-the-quarry/faqs/80282">GameFAQs · tested breaker outcomes</a></p>
       </div>
     </details>
     <details class="entry chapter-choices" id="van-fight" data-search="Ending" data-search-terms="minivan van fight emma abi dylan kaitlyn comfort honest dismissive optimistic defensive mean encouraging silver shot regular shot">
@@ -1504,7 +1510,7 @@
     <ol>
       <li>In Chapter 4, use either <a href="#island-bites">treehouse bite route</a> and pass its recovery prompt. At the later zipline, choose Reel Slowly and let Speed Up expire to get Emma off the island.</li>
       <li>Keep Jacob uninfected. In Chapter 6, pass his first dodge, choose Run, pass the chase mash and choose Pry Open. As Emma, let the Run interrupt expire at the hunters to keep her island infection.</li>
-      <li>In Chapter 8, shoot Emma as she chases Abi, hit Emma on the roof, then choose <a href="#van-ammo">Regular Shot</a>. Stop Laura from killing Nick if you want him alive. Free Jacob by choosing breakers 1 and 2, Continue, then 2 and 3.</li>
+      <li>In Chapter 8, shoot Emma as she chases Abi, hit Emma on the roof, then choose <a href="#van-ammo">Regular Shot</a>. To save Nick too, stop Laura and <a href="#cage-puzzle">free Jacob with the breakers</a>. If Laura shoots Nick, Jacob gets out at the <a href="#cage-power-cut">Chapter 9 power cut</a>.</li>
       <li>Shoot Chris in Chapter 9. In the Chapter 10 reunion, Honest, Remorseful and Apologetic is the recorded route. The audited PC branches also award it with the other final responses. <a href="#jacob-reunion">All reunion dialogue</a></li>
     </ol>
     <p class="source-note">Sources · <a href="https://www.powerpyx.com/the-quarry-trophy-guide-roadmap/">PowerPyx · trophy guide</a> · <a href="https://www.powerpyx.com/the-quarry-walkthrough-everyone-survives/">PowerPyx · survival walkthrough</a></p>
