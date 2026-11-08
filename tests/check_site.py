@@ -196,6 +196,17 @@ assert {("completion.html", anchor) for anchor in completion_pickups} <= collect
 assert completion.list_items["completion-replay-list"] == 4
 
 epilogue = pages["epilogue.html"]
+newspapers = pages["newspapers.html"]
+headline_routes = dict(re.findall(
+    r'<li id="((?:opening|closing)-[^"]+)"[^>]*>[^\n]*?href="newspapers.html#([^"]+)"',
+    (root / "epilogue.html").read_text(encoding="utf-8"),
+))
+assert len(headline_routes) == 35
+assert headline_routes.keys() <= epilogue.ids.keys()
+assert set(headline_routes.values()) <= newspapers.ids.keys()
+assert all(("epilogue.html", headline) in newspapers.page_links for headline in headline_routes)
+assert {f"evidence-{number}" for number in range(1, 11)} <= newspapers.ids.keys()
+assert ("newspapers.html", "") in endings.page_links and ("newspapers.html", "") in home.page_links
 assert {("finale.html", route) for route in ("no-soul-evidence", "no-soul-headline-replays")} <= epilogue.page_links
 assert len(epilogue.characters) == 17, epilogue.characters
 assert epilogue.fates == {"alive": 62, "infected": 31, "dead": 73}, epilogue.fates
