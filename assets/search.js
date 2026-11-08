@@ -64,6 +64,8 @@ function indexEntries(content, page) {
       route = routeLink(entry.querySelector('a[href="tarot-route.html"]'), "Tarot walkthrough");
     } else if (entry.id === "conspiracy-theorist") {
       route = routeLink(entry.querySelector('a[href="evidence-route.html"]'), "Evidence walkthrough");
+    } else if (entry.id === "meddling-kids") {
+      route = routeLink(entry.querySelector('a[href="clues-route.html"]'), "Clues walkthrough");
     }
     return {
       href: `${page}#${entry.id}`,

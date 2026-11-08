@@ -102,8 +102,8 @@ reference = pages["reference.html"]
 endings = pages["endings.html"]
 walkthroughs = pages["walkthroughs.html"]
 route_pages = {name for name, page in pages.items() if "pickup-index" in page.ids}
-assert len(route_pages) == 18
-assert {"full-runs", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
+assert len(route_pages) == 19
+assert {"full-runs", "pickup-routes", "character-routes", "finale-routes"} <= walkthroughs.ids.keys()
 assert {(name, anchor) for name in route_pages for anchor in ("", "pickup-index")} <= walkthroughs.page_links
 assert ("walkthroughs.html", "") in home.page_links & endings.page_links & chapters.page_links
 story_paths = pages["story-paths.html"]
@@ -148,6 +148,23 @@ assert ("evidence-route.html", "replay") in achievements.page_links & collectibl
 evidence_route_html = (root / "evidence-route.html").read_text(encoding="utf-8")
 assert re.findall(r'id="chapter-(\d+)">\s*<p class="eyebrow">Chapter (\d+) · (\d+) of 10</p>(?:(?!</section>).)*?id="evidence-(\d+)"',
                   evidence_route_html, re.S) == [(str(n),) * 4 for n in range(1, 11)]
+
+clues_route = pages["clues-route.html"]
+clue_steps = {f"{prefix}{n}" for prefix, size in (("f", 9), ("h", 19), ("c", 12)) for n in range(1, size + 1)}
+assert {"setup", "replay", "pickup-index", "checkpoints", "cabin-recovery", "camera-recovery", "ticket-setup"} <= clues_route.ids.keys()
+assert {f"clue-{key}" for key in clue_steps} == {key for key in clues_route.ids if re.fullmatch(r"clue-[cfh]\d+", key)}
+assert {("collectibles.html", f"item-{key}") for key in clue_steps} <= clues_route.page_links
+assert ("clues-route.html", "replay") in achievements.page_links & collectibles.page_links
+clues_route_html = (root / "clues-route.html").read_text(encoding="utf-8")
+counts_table = clues_route_html.split('id="checkpoints"', 1)[1].split("</table>", 1)[0]
+counts_rows = re.findall(r'<tr><th scope="row"><a href="#([^"]+)">[^<]+</a></th><td>(\d+)</td><td>(\d+)</td><td>(\d+)</td><td>(\d+)</td></tr>', counts_table)
+assert [anchor for anchor, *_ in counts_rows] == ["prologue", *(f"chapter-{n}" for n in range(1, 11))]
+collection_counts = Counter()
+for anchor, fire, hackett, camp, total in counts_rows:
+    chapter_html = clues_route_html.split(f'id="{anchor}">', 1)[1].split("</section>", 1)[0]
+    collection_counts.update(re.findall(r'id="clue-([cfh])\d+"', chapter_html))
+    assert tuple(map(int, (fire, hackett, camp, total))) == (
+        collection_counts["f"], collection_counts["h"], collection_counts["c"], sum(collection_counts.values()))
 
 legacy = json.loads((root / "assets/guide-anchors.json").read_text(encoding="utf-8"))
 assert set(legacy) == {"chapters.html", "collectibles.html", "achievements.html", "reference.html", "endings.html", "characters.html"}
