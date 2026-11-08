@@ -61,8 +61,9 @@ class Guide(HTMLParser):
             self.anchors.add(href[1:])
             if href.startswith("#opening-") and self.list_ids and self.list_ids[-1] == "headline-asset-outros":
                 self.headline_openings[href[1:]] += 1
-        elif href.startswith("./") or (href.partition("#")[0].endswith(".html") and "://" not in href):
+        elif href.startswith("./") or (href.partition("#")[0].partition("?")[0].endswith(".html") and "://" not in href):
             page, _, anchor = href.partition("#")
+            page = page.partition("?")[0]
             self.page_links.add(("index.html" if page == "./" else page, anchor))
         if tag == "label" and "for" in attrs:
             self.anchors.add(attrs["for"])
@@ -229,6 +230,7 @@ massacre = pages["massacre.html"]
 assert {"setup", "final-girl-rabbit", "final-girl-no-rabbit", "ticket-setup", "jacob-pickups", *(f"chapter-{chapter}" for chapter in range(4, 11))} <= massacre.ids.keys()
 sole_routes = pages["sole-survivors.html"]
 assert ("sole-survivors.html", "") in walkthroughs.page_links
+assert "pickup-replay" in massacre.ids and ("massacre.html", "pickup-index") in sole_routes.page_links
 assert {"sole-ryan-vial", "cured-sole-survivor", "finish-crane", "finish-attic", "finish-lodge", "finish-vial"} <= sole_routes.ids.keys()
 for survivor in sole_survivors:
     assert survivor in massacre.ids
@@ -241,7 +243,7 @@ for kind, prefix, numbers in (("tarot", "t", range(6, 23)), ("evidence", "e", ra
     assert {key for key in massacre.ids if key.startswith(kind + "-")} == {f"{kind}-{number}" for number in numbers}
     assert {("collectibles.html", f"item-{prefix}{number}") for number in numbers} <= massacre.page_links
     assert {("massacre.html", f"{kind}-{number}") for number in numbers} <= collectibles.page_links
-massacre_clues = {f"{prefix}{number}" for prefix, start, end in (("c", 8, 12), ("f", 7, 9), ("h", 6, 19)) for number in range(start, end + 1)}
+massacre_clues = {f"{prefix}{number}" for prefix, start, end in (("c", 8, 12), ("f", 7, 9), ("h", 6, 19)) for number in range(start, end + 1)} | {"c4", "c5", "f4"}
 assert {key for key in massacre.ids if re.fullmatch(r"clue-[cfh]\d+", key)} == {f"clue-{key}" for key in massacre_clues}
 assert {("massacre.html", f"clue-{key}") for key in massacre_clues} <= collectibles.page_links
 assert {("collectibles.html", f"item-{key}") for key in massacre_clues} <= massacre.page_links
@@ -297,7 +299,7 @@ assert {("epilogue.html", headline) for headline in ("closing-shooting-self-defe
 early_epilogue = pages["early-epilogue.html"]
 assert {"setup", "delay-jacob", "radio-bite", "jacob-pickups", "van-abi", "van-dylan", "scrap", "attic", "epilogue", *(f"chapter-{chapter}" for chapter in range(4, 10))} <= early_epilogue.ids.keys()
 assert ("early-epilogue.html", "setup") in endings.page_links & alternate.page_links & walkthroughs.page_links
-early_pickups = {f"clue-{key}": f"item-{key}" for key in massacre_clues - {"c12", "f9", "h17", "h18", "h19"}}
+early_pickups = {f"clue-{key}": f"item-{key}" for key in massacre_clues - {"c4", "c5", "f4", "c12", "f9", "h17", "h18", "h19"}}
 early_pickups.update({f"tarot-{number}": f"item-t{number}" for number in range(6, 22)})
 early_pickups.update({f"evidence-{number}": f"item-e{number}" for number in range(4, 10)})
 assert early_pickups.keys() == {key for key in early_epilogue.ids if re.fullmatch(r"(?:clue-[cfh]|tarot-|evidence-)\d+", key)}

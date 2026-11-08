@@ -30,22 +30,41 @@ openLinkedStep();
 
 const pickupFinder = document.querySelector('#pickup-index form');
 if (pickupFinder) {
-  const select = pickupFinder.querySelector('select');
-  for (const [type, label] of [['tarot', 'Tarot cards'], ['evidence', 'Evidence'], ['clue', 'Clues']]) {
-    const group = document.createElement('optgroup');
-    group.label = label;
-    const clue = type === 'clue';
-    for (const step of document.querySelectorAll(`[id^="${type}-"]`)) {
-      if (!(clue ? /^clue-[cfh]\d+$/ : /-\d+$/).test(step.id)) continue;
-      const [prefix, title] = clue
-        ? ['', step.dataset.pickupName || step.querySelector('strong').textContent.replace(/\.$/, '')]
-        : step.querySelector('summary').textContent.trim().split(' · ');
-      const chapter = step.closest('section').querySelector('.eyebrow')?.textContent.split(' · ')[0] || prefix;
-      group.append(new Option(`${chapter} · ${title}`, step.id));
+  const select = pickupFinder.querySelector('#route-item');
+  const replay = pickupFinder.querySelector('#pickup-replay');
+  const placeholder = select.firstElementChild;
+  function listPickups() {
+    select.replaceChildren(placeholder);
+    select.value = '';
+    const start = Number(replay?.selectedOptions[0].dataset.start || 0);
+    for (const [type, label] of [['tarot', 'Tarot cards'], ['evidence', 'Evidence'], ['clue', 'Clues']]) {
+      const group = document.createElement('optgroup');
+      group.label = label;
+      const clue = type === 'clue';
+      for (const step of document.querySelectorAll(`[id^="${type}-"]`)) {
+        if (!(clue ? /^clue-[cfh]\d+$/ : /-\d+$/).test(step.id)) continue;
+        const section = step.closest('section');
+        if (start) {
+          const chapterNumber = Number(section.id.split('-')[1]);
+          const replays = step.dataset.pickupReplays?.split(' ');
+          if (chapterNumber < start || (replays && !replays.includes(replay.value))) continue;
+        }
+        const [prefix, title] = clue
+          ? ['', step.dataset.pickupName || step.querySelector('strong').textContent.replace(/\.$/, '')]
+          : step.querySelector('summary').textContent.trim().split(' · ');
+        const chapter = section.querySelector('.eyebrow')?.textContent.split(' · ')[0] || prefix;
+        group.append(new Option(`${chapter} · ${title}`, step.id));
+      }
+      if (group.children.length) select.append(group);
     }
-    if (group.children.length) select.append(group);
   }
 
+  if (replay) {
+    const survivor = new URLSearchParams(location.search).get('survivor');
+    if (Array.from(replay.options).some(option => option.value === survivor)) replay.value = survivor;
+    replay.addEventListener('change', listPickups);
+  }
+  listPickups();
   pickupFinder.addEventListener('submit', event => {
     event.preventDefault();
     const step = document.getElementById(select.value);
